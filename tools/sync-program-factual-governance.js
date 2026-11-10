@@ -6,11 +6,9 @@ const path = require("path");
 const cheerio = require("cheerio");
 const {
   ROOT,
-  applicationWindowMarkup,
   archivedRobotsDecision,
   carouselPrograms,
   cofinancingSummaryText,
-  formatMoneyValue,
   fundingSummary,
   isPublicProgram,
   loadProgramConfig,
@@ -613,17 +611,95 @@ function textUpdate(file, transform) {
   return { file, before, after: transform(before) };
 }
 
+function renderFundingCalendar(programs) {
+  const entries = programs.filter(program => isPublicProgram(program) && program.indexable !== false && !program.discovery?.redirectTarget);
+  const phases = [
+    ["submission", "Depunere"],
+    ["preparation", "Pregătire și lansări programate"],
+    ["implementation", "Evaluare, contractare și implementare"],
+    ["per_call", "Programe cu calendare distincte pe apel"]
+  ];
+  const date = value => new Intl.DateTimeFormat("ro-RO", {
+    day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Bucharest"
+  }).format(new Date(value));
+  const time = value => `<time datetime="${escapeHtml(value)}">${escapeHtml(date(value))}${value.includes("T") ? `, ora ${escapeHtml(value.slice(11, 19).replace(/:00$/, ""))}` : ""}</time>`;
+  const deadline = program => {
+    const calendar = program.presentation.calendar;
+    if (calendar.components?.length) {
+      return `<p>Deschidere ${time(program.applicationStartAt || program.applicationStart)}.</p><ul>${calendar.components.map(component => `<li><strong>${escapeHtml(component.name)}</strong> până la ${time(component.endAt)}.</li>`).join("")}</ul>`;
+    }
+    if (calendar.phase === "preparation" && program.consultationEnd) {
+      return `<p>Observații la ghid până la ${time(program.consultationEnd)}.</p><p>Calendarul depunerii nu este publicat.</p>`;
+    }
+    if (!program.applicationStart && !program.applicationEnd) return "<p>Fără interval unic de depunere confirmat în sursa consultată.</p>";
+    return `${program.applicationStart ? `<p>Deschidere ${time(program.applicationStartAt || program.applicationStart)}.</p>` : ""}${program.applicationEnd ? `<p>Închidere ${time(program.applicationEndAt || program.applicationEnd)}.</p>` : ""}`;
+  };
+  const nearestDeadline = program => program.presentation.calendar.components?.[0]?.endAt || program.applicationEnd || program.consultationEnd || program.applicationStart || "9999";
+  const groups = phases.map(([phase, label]) => {
+    const rows = entries.filter(program => program.presentation?.calendar?.phase === phase)
+      .sort((left, right) => nearestDeadline(left).localeCompare(nearestDeadline(right)) || left.name.localeCompare(right.name, "ro"));
+    return `<tbody data-calendar-phase="${phase}"><tr><th scope="rowgroup" colspan="5">${label}</th></tr>${rows.map(program => {
+      const calendar = program.presentation.calendar;
+      const note = calendar.components?.length ? calendar.components[0].note : calendar.note;
+      return `<tr data-calendar-program="${escapeHtml(program.id)}">
+        <th scope="row"><a href="${escapeHtml(program.pageUrl)}">${escapeHtml(program.shortName)}</a><p>${escapeHtml(program.statusLabel)}</p></th>
+        <td>${escapeHtml(calendar.beneficiary)}</td><td>${escapeHtml(calendar.counties)}</td>
+        <td>${deadline(program)}<p>${escapeHtml(note)}</p></td>
+        <td><a href="${escapeHtml(program.sourceUrl)}" title="${escapeHtml(program.sourceName)}" target="_blank" rel="noopener noreferrer">${escapeHtml(new URL(program.sourceUrl).hostname.replace(/^www\./, ""))}</a><p>Verificat la ${time(program.verifiedAt)}.</p><details data-non-faq><summary>Versiunea documentului</summary><p>${escapeHtml(program.sourceVersion)}</p></details></td>
+      </tr>`;
+    }).join("\n")}</tbody>`;
+  }).join("\n");
+  return `<!-- FUNDING_CALENDAR_START -->
+      <section id="calendar-apeluri" aria-labelledby="calendar-apeluri-title">
+        <h2 id="calendar-apeluri-title">Calendarul programelor de finanțare</h2>
+        <p>Termenele de depunere sunt separate de pregătirea proiectelor, consultarea ghidurilor și implementarea contractelor. Orele sunt afișate în ora României. Verifică sursa și componenta înainte de transmiterea cererii.</p>
+        <p>Derulează în tabel pentru a consulta toate programele. Pe ecrane înguste, derulează și orizontal pentru celelalte coloane.</p>
+        <div class="table-wrap" role="region" aria-label="Calendarul apelurilor de finanțare" tabindex="0">
+          <table class="program-table funding-calendar"><caption>Calendare și surse pentru ${entries.length} programe publice. Datele reprezintă informația verificată în documentele indicate.</caption>
+            <thead><tr><th scope="col">Apel</th><th scope="col">Beneficiar</th><th scope="col">Județe</th><th scope="col">Termen</th><th scope="col">Sursă și verificare</th></tr></thead>
+            ${groups}
+          </table>
+        </div>
+      </section>
+      <!-- FUNDING_CALENDAR_END -->`;
+}
+
 function syncCalendar(source, programs) {
-  const program = programForRoute("/digitalizare-imm-regiunea-centru-apel-2", programs);
-  const marker = /<!-- CENTRU_APPLICATION_START -->[\s\S]*?<!-- CENTRU_APPLICATION_END -->/;
-  if (!marker.test(source)) throw new Error("Lipsește blocul calendarului pentru apelul ADR Centru.");
-  const grant = program?.grantSummary;
-  const block = isPublicProgram(program) ? `<!-- CENTRU_APPLICATION_START -->
-      <h2><a href="${escapeHtml(program.pageUrl)}">${escapeHtml(program.shortName)}</a></h2>
-      <p>Intervalul publicat pentru depunere în MySMIS este ${applicationWindowMarkup(program)}. Codul apelului este ${escapeHtml(program.applicationCode).replaceAll("/", "/<wbr>")}.</p>
-      ${grant?.minimum && grant?.maximum ? `<p>Grantul pe proiect este între ${escapeHtml(formatMoneyValue({ ...grant.minimum, unit: "" }))} și ${escapeHtml(formatMoneyValue({ ...grant.maximum, unit: "" }))}.</p>` : ""}
-      <!-- CENTRU_APPLICATION_END -->` : "<!-- CENTRU_APPLICATION_START --><!-- CENTRU_APPLICATION_END -->";
-  return source.replace(marker, block.replace(/\r?\n/g, source.includes("\r\n") ? "\r\n" : "\n"));
+  const marker = /<!-- FUNDING_CALENDAR_START -->[\s\S]*?<!-- FUNDING_CALENDAR_END -->|<!-- CENTRU_APPLICATION_START -->[\s\S]*?<!-- CENTRU_APPLICATION_END -->/;
+  if (!marker.test(source)) throw new Error("Lipsește blocul calendarului programelor de finanțare.");
+  return source.replace(marker, renderFundingCalendar(programs).replace(/\r?\n/g, source.includes("\r\n") ? "\r\n" : "\n"));
+}
+
+function renderGuideProgramStatus(program) {
+  return `<!-- GUIDE_PROGRAM_STATUS_START -->
+      <aside class="panel" data-guide-program-status="${escapeHtml(program.id)}" aria-label="Statutul programului">
+        <p><strong>${escapeHtml(program.shortName)} · ${escapeHtml(program.statusLabel)}.</strong></p>
+        <p>${escapeHtml(program.presentation.calendar.note)}</p>
+        <p>Consultă <a href="${escapeHtml(program.pageUrl)}">calendarul și documentele programului</a>. Verificat la <time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(program.verifiedAt)}</time>.</p>
+      </aside>
+      <!-- GUIDE_PROGRAM_STATUS_END -->`;
+}
+
+function guideStatusUpdates(programs) {
+  const updates = [];
+  for (const program of programs.filter(isPublicProgram)) {
+    for (const route of program.presentation?.guideRoutes || []) {
+      for (const file of filesForRoute(route)) {
+        if (!fs.existsSync(file)) continue;
+        const before = fs.readFileSync(file, "utf8");
+        const block = renderGuideProgramStatus(program).replace(/\r?\n/g, before.includes("\r\n") ? "\r\n" : "\n");
+        const marker = /<!-- GUIDE_PROGRAM_STATUS_START -->[\s\S]*?<!-- GUIDE_PROGRAM_STATUS_END -->/;
+        const intro = /(<p class="intro">[\s\S]*?<\/p>)/;
+        let after = before;
+        if (marker.test(before)) after = before.replace(marker, block);
+        else if (intro.test(before)) after = before.replace(intro, `$1\n${block}`);
+        else after = before.replace(/(<main\b[^>]*>)/, `$1\n${block}`);
+        if (after === before && !marker.test(before)) throw new Error(`${route}: lipsește conținutul ghidului pentru afișarea statutului.`);
+        updates.push({ file, before, after });
+      }
+    }
+  }
+  return updates;
 }
 
 function main() {
@@ -641,6 +717,7 @@ function main() {
     // produce outputs concurente pentru aceleași componente.
     textUpdate(FILES.llms, (value) => syncLlmsText(value, programs)),
     textUpdate(FILES.calendar, (value) => syncCalendar(value, programs)),
+    ...guideStatusUpdates(programs),
     ...pendingSurfaceUpdates(programs, approvalConfig),
     ...programHtmlUpdates(programs, approvalConfig)
   ].filter(Boolean);
@@ -660,6 +737,8 @@ if (require.main === module) main();
 module.exports = {
   FILES,
   renderHomepageSlide,
+  renderFundingCalendar,
+  renderGuideProgramStatus,
   syncBanners,
   syncCalendar,
   syncGuides,

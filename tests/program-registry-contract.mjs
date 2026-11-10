@@ -122,6 +122,29 @@ const calendarHtml = fs.readFileSync(path.join(ROOT, "calendar-fonduri-europene"
 const calendar = cheerio.load(calendarHtml);
 const centruBanner = banners.find((banner) => banner.programId === centru.id);
 assert.equal(syncCalendar(calendarHtml, programs), calendarHtml, "Calendarul ADR Centru trebuie generat din registru");
+const calendarPrograms = programs.filter(program => isPublicProgram(program) && program.indexable !== false && !program.discovery?.redirectTarget);
+assert.equal(calendarPrograms.length, 27, "Revizuirea trebuie să acopere cele 27 de înregistrări publice");
+assert.deepEqual(new Set(calendar('[data-calendar-program]').map((_, row) => calendar(row).attr('data-calendar-program')).get()), new Set(calendarPrograms.map(program => program.id)), "Calendarul trebuie să acopere întregul registru public");
+for (const program of calendarPrograms) {
+  const row = calendar(`[data-calendar-program="${program.id}"]`);
+  assert.equal(row.length, 1, `${program.id}: o singură fișă în tabel`);
+  assert.equal(row.closest('tbody').attr('data-calendar-phase'), program.presentation.calendar.phase, `${program.id}: etapa trebuie preluată din registru`);
+  assert.equal(row.find(`a[href="${program.sourceUrl}"]`).length, 1, `${program.id}: sursa oficială trebuie să fie accesibilă din tabel`);
+  assert(row.text().includes(program.sourceVersion), `${program.id}: versiunea sursei lipsește`);
+}
+const firstOpenCall = calendar('tbody[data-calendar-phase="submission"] [data-calendar-program]').first();
+assert.equal(firstOpenCall.attr('data-calendar-program'), 'dr12-afir', "Cel mai apropiat termen trebuie să includă componenta DR-12 Alte sectoare");
+assert.equal(firstOpenCall.find('time[datetime="2026-11-11T00:00:00+02:00"]').length, 1);
+assert.equal(firstOpenCall.find('time[datetime="2026-12-02T15:59:59+02:00"]').length, 1);
+assert.equal(calendar('[data-calendar-program="e-drive"] time[datetime="2026-11-18"]').length, 1, "Consultarea e-DRIVE trebuie afișată separat de depunere");
+const verification = JSON.parse(fs.readFileSync(path.join(ROOT, 'reports/funding-review-2026-11-10/official-sources.json'), 'utf8'));
+assert.deepEqual(new Set(verification.records.map(record => record.id)), new Set(calendarPrograms.map(program => program.id)), "Fiecare program public trebuie să aibă fișă de verificare");
+for (const record of verification.records) {
+  assert.equal(record.checkedAt, '2026-11-10');
+  assert(record.source.url && record.source.version && record.evidenceSummary && record.evidence.length);
+  assert(Object.hasOwn(record, 'applicationStart') && Object.hasOwn(record, 'applicationEnd'));
+  if (!record.lastmod.changed) assert.equal(record.lastmod.after, record.lastmod.before, `${record.id}: reverificarea singură păstrează lastmod`);
+}
 for (const field of ["applicationStartAt", "applicationEndAt"]) {
   assert.equal(centruBanner[field], centru[field], `${field}: caruselul trebuie să păstreze ora din registru`);
   assert.equal(calendar(`time[datetime="${centru[field]}"]`).length, 1, `${field}: calendarul trebuie să afișeze ora din registru`);

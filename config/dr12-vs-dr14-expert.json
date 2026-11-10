@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-11-04",
+  "reviewedAt": "2026-11-10",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
-  "metaDescription": "Compară DR-12 și DR-14: beneficiari, SO, granturi și documente. DR-12: depuneri până la 2 decembrie; DR-14: componente active până la 16 noiembrie 2026.",
+  "metaDescription": "Compară DR-12 și DR-14 după solicitant, SO și investiție. Verifică termenele distincte pe componente și documentele AFIR înainte de depunere.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "DR-12 și DR-14 au beneficiari și condiții diferite. DR-12 oferă maximum 200.000 EUR/proiect, intensități de 80% sau 65% și minimum 12.000 SO, cu depuneri până la 2 decembrie 2026. DR-14 oferă maximum 50.000 EUR și până la 85% pentru ferme mici; componentele active au termen 16 noiembrie 2026, iar achizițiile simple sunt închise din 6 octombrie. Alegerea depinde de solicitant, SO, investiție și disponibilul componentei.",
-  "statusStatement": "Verificat la 4 noiembrie 2026: DR-12 este deschis până la 2 decembrie, iar componentele active DR-14 până la 16 noiembrie. Componenta achiziții simple DR-14 este închisă; disponibilul se verifică în platforma AFIR.",
+  "directAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere. DR-14 are componente active până la 16 noiembrie, ora 16:00, iar achizițiile simple sunt închise din 6 octombrie.",
+  "statusStatement": "Verificat la 10 noiembrie 2026. DR-12 are termene pe componente. Alte sectoare până la 11 noiembrie, ora 00:00, zootehnic până la 2 decembrie. DR-14 are componente active până la 16 noiembrie 2026, înainte de ora 16:00. Componenta achiziții simple DR-14 este închisă din 6 octombrie.",
   "programs": [
     {
       "slug": "dr12-afir",
       "shortName": "DR 12",
       "status": "apel_deschis",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceLabel": "Ghidul final DR-12 și documentele AFIR ale sesiunii, verificare 04.11.2026",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "guideUrl": "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf",
@@ -23,7 +23,7 @@
       "slug": "dr14-afir",
       "shortName": "DR 14",
       "status": "apel_deschis",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceLabel": "AFIR – sesiunile active și disponibilul pe componente, verificare 04.11.2026",
       "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "guideUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
@@ -68,7 +68,7 @@
     },
     {
       "label": "Calendar",
-      "dr12": "Sesiune deschisă între 6 octombrie și 2 decembrie 2026, ora 16:00, în limita disponibilului pe componente.",
+      "dr12": "Deschidere la 6 octombrie 2026, ora 09:00. Alte sectoare până la 11 noiembrie 2026, ora 00:00. Sector zootehnic până la 2 decembrie 2026, înainte de ora 16:00.",
       "dr14": "Componente active prelungite până la 16 noiembrie 2026, ora 16:00; componenta achiziții simple este închisă din 6 octombrie."
     },
     {

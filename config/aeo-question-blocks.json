@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-04",
+  "reviewedAt": "2026-11-10",
   "gscEvidence": {
     "source": "reports/gsc-query-opportunities.csv",
     "exportArchive": "atelierdeconsultanta.ro-Performance-on-Search-2026-07-12.zip",
@@ -17,21 +17,21 @@
         {
           "id": "este-deschis-apelul-dr12",
           "question": "Este deschis apelul DR 12?",
-          "answer": "Da. Sesiunea DR-12 este deschisă între 6 octombrie 2026, ora 09:00, și 2 decembrie 2026, ora 16:00, conform AFIR. Verifică etapa lunară, pragul de punctaj și disponibilul pentru sectorul zootehnic sau alte sectoare înainte de depunere. Ghidul final păstrează finanțarea de maximum 200.000 EUR și regulile de eligibilitate, contribuție proprie și selecție.",
-          "evidenceTitle": "Ghid final și calendarul sesiunii",
+          "answer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere.",
+          "evidenceTitle": "Calendar pe componente în contorul AFIR",
           "evidence": [
-            "Anunț AFIR publicat la 29.09.2026",
-            "Sesiune activă 06.10–02.12.2026 în platforma AFIR",
-            "Disponibilul se verifică pe fiecare componentă"
+            "Deschidere la 6 octombrie 2026, ora 09:00",
+            "Alte sectoare până la 11 noiembrie, ora 00:00",
+            "Sector zootehnic până la 2 decembrie, ora 15:59:59"
           ],
           "selectionBasis": "GSC: „dr 12 afir lansare”, „dr 12 ghid final” și variante apropiate",
           "sources": [
             {
               "name": "AFIR",
-              "document": "Anunț sesiune DR-12 și contor sesiuni active",
-              "version": "Sesiunea 6 octombrie–2 decembrie 2026",
-              "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
-              "verifiedAt": "2026-11-04"
+              "document": "Contorul sesiunilor active DR-12",
+              "version": "Termene distincte pe componente, verificare 10.11.2026",
+              "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+              "verifiedAt": "2026-11-10"
             }
           ],
           "detailLinks": [

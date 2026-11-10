@@ -574,6 +574,41 @@ button:focus-visible,
   display: grid;
   gap: 10px;
 }
+
+.program-table.funding-calendar {
+  min-width: 900px;
+  table-layout: fixed;
+}
+#calendar-apeluri {
+  scroll-margin-top: 6.5rem;
+}
+#calendar-apeluri .table-wrap {
+  max-height: 75vh;
+}
+#calendar-apeluri .table-wrap:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+.funding-calendar thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.funding-calendar th[scope="row"] {
+  background: var(--gray-100);
+  color: var(--navy);
+  text-transform: none;
+  font-size: .95rem;
+}
+.funding-calendar th[scope="row"] p {
+  font-size: .85rem;
+  font-weight: 500;
+}
+.funding-calendar caption {
+  padding: 16px;
+  text-align: left;
+  color: var(--navy);
+}
 .process-list li {
   padding-left: 4px;
 }

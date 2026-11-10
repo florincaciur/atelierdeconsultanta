@@ -192,7 +192,7 @@
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-11-04",
+      "lastReviewed": "2026-11-10",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -243,7 +243,7 @@
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Aceasta este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-11-04",
+      "lastReviewed": "2026-11-10",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -286,14 +286,14 @@
         }
       ],
       "source": {
-        "document": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+        "document": "Ghid PoCIDIF 2.1, Ordinul MIPE 965/23.06.2026, modificat prin Ordinul 1500/29.09.2026",
         "institution": "Ministerul Investițiilor și Proiectelor Europene",
         "status": "Apel închis – depuneri încheiate la 30 octombrie 2026. Pagina oficială MIPE marchează apelul închis, cu data de închidere 30 octombrie 2026. Se consultă și modificările ghidului publicate după lansare.",
         "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
       },
       "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Aceasta este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
       "programId": "pocidif-21",
-      "lastReviewed": "2026-11-04",
+      "lastReviewed": "2026-11-10",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -343,7 +343,7 @@
         "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       },
       "programId": "femeia-antreprenor",
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-10",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -393,7 +393,7 @@
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Aceasta este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-11-04",
+      "lastReviewed": "2026-11-10",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }

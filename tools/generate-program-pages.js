@@ -53,7 +53,9 @@ const {
 } = require("./program-factual-governance");
 const {
   syncBanners,
-  syncLlmsText
+  syncLlmsText,
+  renderFundingCalendar,
+  renderGuideProgramStatus
 } = require("./sync-program-factual-governance");
 const { designFamilyForSlug } = require("./design-family-map");
 const { normalizeFaqPairs } = require("./faq-governance");
@@ -884,6 +886,12 @@ function renderSimpleTable(rows) {
 function renderContentSections(sections) {
   if (!Array.isArray(sections) || !sections.length) return "";
   return sections.map((section) => {
+    if (section.fundingCalendar) return renderFundingCalendar(loadProgramConfig().programs);
+    if (section.programStatusId) {
+      const program = loadProgramConfig().programs.find(program => program.id === section.programStatusId);
+      if (!program) throw new Error(`Program necunoscut pentru ghid: ${section.programStatusId}`);
+      return renderGuideProgramStatus(program);
+    }
     const title = section.title ? `<h2>${esc(section.title)}</h2>` : "";
     const body = Array.isArray(section.paragraphs)
       ? section.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("\n")
@@ -2929,7 +2937,7 @@ ${renderPocidifDiscoveryLink(page)}
   <meta name="twitter:image:alt" content="${esc(page.h1)} — FABER" />
   <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
-  <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
+  <link rel="stylesheet" href="/assets/seo-hub.css${page.slug === "calendar-fonduri-europene" ? "?v=20261110-1" : ""}" />${extraCss}
   <script type="application/ld+json">${schemaGraph(page, config, metadata)}</script>${extraJs}
 ${ANALYTICS_EVENTS_SCRIPT}
   <link rel="stylesheet" href="/assets/design-profiles.css">

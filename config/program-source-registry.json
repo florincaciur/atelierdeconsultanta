@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "registryReviewDate": "2026-11-04",
+  "registryReviewDate": "2026-11-10",
   "factualSnapshotDate": "2026-08-23",
   "programRegistry": "config/seo-programs.json#programs",
   "sourceCatalog": "official-guides.json",
@@ -13,7 +13,7 @@
       "documentType": "ghid final și anexe",
       "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
       "publishedAt": "2026-08-04",
-      "verifiedAt": "2026-11-04"
+      "verifiedAt": "2026-11-10"
     },
     "afir-energy-program": {
       "title": "Schema de Energie",
@@ -117,15 +117,15 @@
       "documentType": "platformă de sesiuni active",
       "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "publishedAt": null,
-      "verifiedAt": "2026-11-04"
+      "verifiedAt": "2026-11-10"
     },
     "afir-dr14-dr18-extension-2026": {
       "title": "Prelungire sesiune depunere proiecte de investiții aferente DR-14 și DR-18",
       "authority": "AFIR",
       "documentType": "anunț de prelungire",
-      "url": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
-      "publishedAt": "2026-10-29",
-      "verifiedAt": "2026-11-04"
+      "url": "https://www.afir.ro/comunicate/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-10"
     },
     "afir-public-energy-active-2026": {
       "title": "Depunere în curs a proiectelor în energie a entităților publice",
@@ -157,7 +157,7 @@
       "documentType": "anunț de lansare",
       "url": "https://energie.gov.ro/wp-content/uploads/2026/08/Anunt-lansare-apel-proiecte-STOCARE-STAND-ALONE_final.pdf",
       "publishedAt": "2026-08-14",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-10"
     },
     "pc1-storage-extension-2026": {
       "title": "Prelungire sesiune PC1 stocare stand-alone până la 15.11.2026",
@@ -165,7 +165,7 @@
       "documentType": "anunț de prelungire",
       "url": "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx",
       "publishedAt": "2026-10-22",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-10"
     },
     "afir-energy-final-selection-20261103": {
       "title": "Raport final de selecție Schema Energie – sesiunea 03/2026, solar peste 1 MW",
@@ -173,7 +173,7 @@
       "documentType": "raport final de selecție",
       "url": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
       "publishedAt": "2026-11-03",
-      "verifiedAt": "2026-11-04"
+      "verifiedAt": "2026-11-10"
     },
     "emove-amendment-821-2026": {
       "title": "OMTI 821/2026 – modificarea schemei e-MOVE RO",
@@ -237,7 +237,7 @@
       "documentType": "comunicat MEDAT",
       "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
       "publishedAt": "2026-09-22",
-      "verifiedAt": "2026-11-09"
+      "verifiedAt": "2026-11-10"
     },
     "sme-eco-tech-ordin-1773": {
       "title": "Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906, pagina 14",
@@ -254,6 +254,14 @@
       "url": "https://economie.gov.ro/mai-putine-conditii-mai-multe-investitii-sme-eco-tech-elimina-pragul-minim-de-2-milioane-de-lei-cifra-de-afaceri-pentru-microintreprinderi/",
       "publishedAt": "2026-08-13",
       "verifiedAt": "2026-11-09"
+    },
+    "pocidif-guide-amendment-1500": {
+      "title": "Ordinul MIPE nr. 1500/29.09.2026 de modificare a ghidului PoCIDIF 2.1",
+      "authority": "Ministerul Investițiilor și Proiectelor Europene",
+      "documentType": "ordin de modificare a ghidului și termenului",
+      "url": "https://mfe.gov.ro/wp-content/uploads/2026/07/da09bb1133d05f75c137a6f1fa2cea4b.pdf",
+      "publishedAt": "2026-09-29",
+      "verifiedAt": "2026-11-10"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

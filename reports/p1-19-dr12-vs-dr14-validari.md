@@ -1,6 +1,6 @@
 # P1.19 — Validări pentru „DR 12 vs DR 14”
 
-Revizie factuală și editorială: **04.11.2026**.
+Revizie factuală și editorială: **10.11.2026**.
 
 ## Surse oficiale folosite
 

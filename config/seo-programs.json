@@ -1,7 +1,7 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-11-04",
-  "lastReviewed": "2026-11-04",
+  "updatedAt": "2026-11-10",
+  "lastReviewed": "2026-11-10",
   "defaults": {
     "author": "FABER - Atelier de Consultanță",
     "contactUrl": "/contact",
@@ -104,7 +104,7 @@
       "statusRationale": "Catalogul agregă programe și apeluri cu stări diferite.",
       "statusLabel": "Programe active – statutul și calendarul se verifică pentru fiecare apel",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Registrul oficial MySMIS2021 al apelurilor validate 2021–2027",
@@ -154,7 +154,13 @@
         "order": 999,
         "icon": "ph-file-text",
         "image": null,
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Solicitanții definiți de fiecare apel regional",
+          "counties": "Regiunea și județele apelului selectat",
+          "note": "Hub de programe. Calendarul se stabilește separat pentru fiecare apel și cod MySMIS."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -182,12 +188,12 @@
       "canonicalStatus": "OPEN",
       "statusScope": "program_call",
       "statusRationale": "Sesiune activă confirmată în platforma AFIR și anunțul din 29.09.2026.",
-      "statusLabel": "Sesiune deschisă – depuneri 6 octombrie–2 decembrie 2026",
+      "statusLabel": "Alte sectoare până la 11 noiembrie, ora 00:00 · zootehnic până la 2 decembrie",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-      "sourceVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+      "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
       "sourceType": "official",
       "applicationStart": "2026-10-06",
       "applicationEnd": "2026-12-02",
@@ -214,15 +220,15 @@
         "ownContribution": "Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă."
       },
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Sesiune DR-12 deschisă până la 2 decembrie 2026: maximum 200.000 EUR, sprijin 80%/65% și minimum 12.000 SO, în condițiile ghidului final și ale componentei alese.",
-      "quickAnswer": "DR 12 AFIR 2026 oferă până la 200.000 EUR/proiect pentru consolidarea fermelor. Ghidul final, publicat la 18 septembrie 2026, prevede minimum 12.000 SO și sprijin de maximum 80% pentru tinerii fermieri sub 41 de ani care îndeplinesc condițiile ghidului, respectiv 65% pentru celelalte categorii eligibile. Contribuția proprie este de minimum 20% sau 35%, plus cheltuielile neeligibile. Grila are maximum 100 de puncte, cu praguri de 80 și 45 de puncte pentru cele două etape lunare. Verifică separat forma juridică, istoricul exploatației, documentele și investiția propusă înainte de pregătirea dosarului. Sesiunea de depunere este deschisă între 6 octombrie și 2 decembrie 2026, ora 16:00, cu verificarea disponibilității fiecărei componente în platforma AFIR.",
-      "metaTitle": "DR-12 AFIR 2026: apel deschis până la 2 decembrie",
-      "metaDescription": "DR-12 AFIR: depuneri până la 2 decembrie 2026, maximum 200.000 €/proiect, sprijin 80% sau 65%. Eligibilitate, SO, documente și calculator de punctaj.",
-      "editorialDisclaimer": "Depuneri în perioada 6 octombrie–2 decembrie 2026, ora 16:00, în condițiile ghidului final și ale disponibilității componentelor din platforma AFIR.",
+      "cardSummary": "DR-12 are termene distincte pe componente. Verifică data aplicabilă, grantul de maximum 200.000 EUR și eligibilitatea din ghidul final.",
+      "quickAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere.",
+      "metaTitle": "DR-12 AFIR 2026: calendar și termene pe componente",
+      "metaDescription": "DR-12 AFIR: alte sectoare până la 11 noiembrie, ora 00:00, zootehnic până la 2 decembrie 2026. Grant, eligibilitate, SO și documente oficiale.",
+      "editorialDisclaimer": "Contorul AFIR indică închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a componentei zootehnice la 2 decembrie 2026, înainte de ora 16:00. Verifică situația componentei înainte de transmitere.",
       "eligibleApplicants": [
         "Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).",
         "Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.",
@@ -232,7 +238,7 @@
         "Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.",
         "Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.",
         "Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.",
-        "Sesiune de depunere deschisă între 06.10.2026 și 02.12.2026, ora 16:00; disponibilitatea se verifică pe componente în platforma AFIR.",
+        "Termenele sunt distincte pe componente. Alte sectoare până la 11.11.2026, ora 00:00. Sector zootehnic până la 02.12.2026, înainte de ora 16:00. Verifică disponibilul în contorul AFIR.",
         "Costuri generale: maximum 10% cu construcții-montaj sau 3% pentru achiziții fără construcții-montaj; marketing maximum 5%. Minimum 50% materie primă proprie la procesare/condiționare/depozitare. Extrasul pentru cofinanțare se însoțește de angajamentul folosirii a minimum 50% din disponibil pentru proiect."
       ],
       "officialGuideKeys": [
@@ -277,7 +283,7 @@
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Sesiunea DR-12 este activă în platforma AFIR la 03.11.2026; disponibilul se verifică separat pe componente."
+        "notes": "Contorul AFIR separă închiderea componentei Alte sectoare la 11.11.2026, 00:00:00, de Sector zootehnic la 02.12.2026, 15:59:59. Comunicatul de lansare indică intervalul general și ora 16:00."
       },
       "presentation": {
         "carousel": true,
@@ -289,7 +295,35 @@
         "pageTitle": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
         "carouselOrder": 2,
         "heroOrder": 2,
-        "navigationOrder": 5
+        "navigationOrder": 5,
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "Fermieri instalați eligibili, inclusiv absolvenți sM 6.1",
+          "counties": "Național",
+          "note": "Alte sectoare până la 11 noiembrie 2026, ora 00:00. Sector zootehnic până la 2 decembrie 2026, înainte de ora 16:00.",
+          "components": [
+            {
+              "name": "Alte sectoare",
+              "startAt": "2026-10-06T09:00:00+03:00",
+              "endAt": "2026-11-11T00:00:00+02:00",
+              "state": "OPEN",
+              "note": "Închiderea afișată în contor este la miezul nopții dintre 10 și 11 noiembrie.",
+              "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
+            },
+            {
+              "name": "Sector zootehnic",
+              "startAt": "2026-10-06T09:00:00+03:00",
+              "endAt": "2026-12-02T15:59:59+02:00",
+              "state": "OPEN",
+              "note": "Termenul comunicat public este 2 decembrie, ora 16:00.",
+              "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
+            }
+          ],
+          "label": "DR-12 · termene distincte pe componente"
+        },
+        "guideRoutes": [
+          "/intrebari/ce-documente-sunt-necesare-pentru-dr12"
+        ]
       },
       "discovery": {
         "parentHub": "/afir",
@@ -304,7 +338,9 @@
         ],
         "listed": true
       },
-      "fundingBasis": "final"
+      "fundingBasis": "final",
+      "applicationStartAt": "2026-10-06T09:00:00+03:00",
+      "applicationEndAt": "2026-12-02T16:00:00+02:00"
     },
     {
       "id": "dr14-afir",
@@ -318,12 +354,12 @@
       "canonicalStatus": "OPEN",
       "statusScope": "session",
       "statusRationale": "Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă.",
-      "statusLabel": "Depuneri până la 16 noiembrie; componenta achiziții simple este închisă",
+      "statusLabel": "Depuneri până la 16 noiembrie · achizițiile simple sunt închise",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
-      "sourceVersion": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
+      "sourceVersion": "Cerere DR-14 v1.1/25.08.2026, clarificare 21.08.2026 și comunicat AFIR de prelungire din 30.10.2026",
       "sourceType": "official",
       "applicationStart": "2026-09-01",
       "applicationEnd": "2026-11-16",
@@ -349,7 +385,7 @@
         "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
       },
       "pageUrl": "/dr14",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -426,7 +462,10 @@
         "beneficiary": "Fermieri, cu excepția persoanelor fizice",
         "calendar": {
           "label": "Depuneri: 1 septembrie–16 noiembrie 2026",
-          "note": "Calendar oficial AFIR prelungit; componenta achiziții simple este închisă din 6 octombrie. Verifică disponibilul pe componente."
+          "note": "Legumicultură, zootehnie și alte sectoare. Achizițiile simple sunt închise din 6 octombrie 2026.",
+          "phase": "submission",
+          "beneficiary": "Fermieri organizați juridic, cu ferme mici eligibile",
+          "counties": "Național"
         },
         "carouselOrder": 11,
         "heroOrder": 11,
@@ -450,7 +489,9 @@
         "extendedEnd": "2026-11-16",
         "sourceRef": "registry:afir-dr14-dr18-extension-2026",
         "verifiedAt": "2026-11-04"
-      }
+      },
+      "applicationStartAt": "2026-09-01T09:00:00+03:00",
+      "applicationEndAt": "2026-11-16T16:00:00+02:00"
     },
     {
       "id": "dr18-afir",
@@ -466,7 +507,7 @@
       "statusRationale": "Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă.",
       "statusLabel": "Sesiune prelungită – depuneri până la 16 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
       "sourceVersion": "Ghidul final DR-18 și anunțul AFIR din 30.10.2026: prelungire până la 16.11.2026, prag 40 de puncte",
@@ -499,7 +540,7 @@
         "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
       },
       "pageUrl": "/dr18",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -577,7 +618,10 @@
         "beneficiary": "Fermieri organizați juridic, cooperative și grupuri de producători",
         "calendar": {
           "label": "Depuneri până la 16 noiembrie 2026",
-          "note": "Sesiune prelungită de AFIR; verifică disponibilul și regulile de închidere anticipată."
+          "note": "Depunerea depinde și de fondurile disponibile și de pragul de calitate aplicabil.",
+          "phase": "submission",
+          "beneficiary": "Fermieri, cooperative și organizații de producători eligibile",
+          "counties": "Național"
         },
         "carouselOrder": 15,
         "heroOrder": 15,
@@ -601,7 +645,9 @@
         "extendedEnd": "2026-11-16",
         "sourceRef": "registry:afir-dr14-dr18-extension-2026",
         "verifiedAt": "2026-11-04"
-      }
+      },
+      "applicationStartAt": "2026-09-01T09:00:00+03:00",
+      "applicationEndAt": "2026-11-16T16:00:00+02:00"
     },
     {
       "id": "start-up-nation",
@@ -615,17 +661,17 @@
       "statusRationale": "Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri.",
       "statusLabel": "Apel închis – înscrierile persoanelor juridice s-au încheiat la 29 mai 2026, ora 20:00",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
-      "sourceName": "Ministerul Economiei – platforma oficială MINIMIS",
-      "sourceUrl": "https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice",
-      "sourceVersion": "Start-Up Nation 2024 – transparența înscrierilor persoanelor juridice; ultima înscriere la 29.05.2026, ora 20:00",
+      "verifiedAt": "2026-11-10",
+      "sourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "sourceUrl": "https://economie.gov.ro/sesiunea-sun-editia-a-4-a-se-apropie-de-final-peste-16-000-persoane-au-finalizat-cursurile-de-formare-antreprenoriala/",
+      "sourceVersion": "Start-Up Nation, ediția 2024 – comunicat MEDAT din 21.05.2026 privind închiderea primei sesiuni pentru persoane juridice",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": "2026-05-29",
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/start-up-nation-2026",
-      "lastMeaningfulUpdate": "2026-05-29",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -656,7 +702,12 @@
           ],
           "annexes": [],
           "schemeOrder": [],
-          "sessionAnnouncement": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "program",
+              "label": "MEDAT: prima sesiune pentru firme se închide la 29 mai 2026, ora 20:00"
+            }
+          ],
           "corrigenda": [],
           "clarifications": []
         },
@@ -668,7 +719,20 @@
         "order": 9,
         "icon": "ph-rocket-launch",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "Firmele eligibile ale absolvenților cursurilor antreprenoriale",
+          "counties": "Național, cu alocări și condiții regionale",
+          "note": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat."
+        },
+        "guideRoutes": [
+          "/cod-caen-start-up-nation-2026",
+          "/start-up-nation-2026-conditii",
+          "/start-up-nation-2026-cheltuieli-eligibile",
+          "/start-up-nation-2026-idei-afaceri",
+          "/start-up-nation-2026-plan-de-afaceri"
+        ]
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -682,7 +746,8 @@
           "antreprenoriat"
         ],
         "listed": true
-      }
+      },
+      "applicationEndAt": "2026-05-29T20:00:00+03:00"
     },
     {
       "id": "femeia-antreprenor",
@@ -696,7 +761,7 @@
       "statusRationale": "Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri.",
       "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Economiei – platforma oficială MINIMIS",
       "sourceUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
       "sourceVersion": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
@@ -745,7 +810,13 @@
         "order": 7,
         "icon": "ph-user-circle",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "Firme eligibile potrivit ediției 2024",
+          "counties": "Național, potrivit procedurii ediției",
+          "note": "Este publicată ordinea finală la evaluare pentru ediția 2024. Un calendar de depunere pentru o ediție nouă nu este confirmat."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -774,7 +845,7 @@
       "statusRationale": "Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare.",
       "statusLabel": "Apel închis – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene",
       "sourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
       "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
@@ -834,7 +905,16 @@
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "navigationOrder": 15
+        "navigationOrder": 15,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "IMM-urile cu proiecte eligibile în apelul PNRR C9 I3",
+          "counties": "Conform proiectului și ediției contractate",
+          "note": "Apelul PNRR pentru granturi de până la 100.000 EUR este închis. Modificările implementării nu deschid o sesiune nouă."
+        },
+        "guideRoutes": [
+          "/pnrr-digitalizare-imm-cheltuieli-eligibile"
+        ]
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -864,7 +944,7 @@
       "statusRationale": "Pagina oficială ADR Nord-Est marchează explicit apelul 2 ca închis (28.09–28.10.2026).",
       "statusLabel": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
       "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
       "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
@@ -966,7 +1046,10 @@
         "beneficiary": "Microîntreprinderi din regiunea Nord-Est",
         "calendar": {
           "label": "Apel închis la 28 octombrie 2026",
-          "note": "Sesiune încheiată, conform paginii oficiale verificate la 3 noiembrie 2026."
+          "note": "Pagina ADR Nord-Est marchează Apelul 2 închis.",
+          "phase": "implementation",
+          "beneficiary": "Microîntreprinderi eligibile potrivit ghidului Apelului 2",
+          "counties": "Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui"
         },
         "carouselOrder": 9,
         "heroOrder": 9,
@@ -1000,7 +1083,7 @@
       "statusRationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT.",
       "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "MySMIS2021: apelurile pentru capacități regenerabile destinate autoconsumului sunt marcate FINALIZAT",
@@ -1048,7 +1131,13 @@
         "order": 15,
         "icon": "ph-solar-panel",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "Întreprinderile eligibile ale apelurilor istorice",
+          "counties": "Conform apelului și amplasamentului contractat",
+          "note": "Apelurile istorice urmărite sunt FINALIZAT în MySMIS. Contractele au propriile termene de implementare."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1077,7 +1166,7 @@
       "statusRationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT.",
       "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "MySMIS2021: apelurile pentru noi capacități din surse regenerabile sunt marcate FINALIZAT",
@@ -1126,7 +1215,13 @@
         "order": 11,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "Întreprinderile eligibile ale apelurilor istorice",
+          "counties": "Conform apelului și amplasamentului contractat",
+          "note": "Starea FINALIZAT aparține apelului din MySMIS. Verifică distinct implementarea fiecărui contract."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1155,7 +1250,7 @@
       "statusRationale": "Depunerea sesiunii 03/2026 s-a încheiat la 14.08.2026. AFIR a publicat la 03.11.2026 raportul final de selecție pentru solar peste 1 MW; contractarea proiectelor selectate urmează procedura AFIR și notificarea fiecărui solicitant.",
       "statusLabel": "Apel în curs de contractare – depunerea proiectelor s-a încheiat",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
       "sourceUrl": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
       "sourceVersion": "Raport final de selecție Schema de Energie, sesiunea 03/2026, solar peste 1 MW, publicat la 03.11.2026; Ghidul V7 aprobat prin OMADR 180/09.06.2026",
@@ -1266,7 +1361,16 @@
         "beneficiary": "întreprinderi agricole, procesatori și OUAI/FOUAI",
         "carouselOrder": 16,
         "heroOrder": 16,
-        "navigationOrder": 16
+        "navigationOrder": 16,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "Întreprinderi agricole și agroalimentare, OUAI și FOUAI eligibile",
+          "counties": "Național",
+          "note": "Sesiunea 03/2026 este în selecție și contractare. Raportul final consultat privește componenta solar peste 1 MW."
+        },
+        "guideRoutes": [
+          "/blog-afir-fotovoltaice-ferme-2026"
+        ]
       },
       "discovery": {
         "parentHub": "/afir",
@@ -1298,9 +1402,9 @@
       "statusRationale": "AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă.",
       "statusLabel": "Apel de proiecte deschis – depuneri până la 20 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Energiei / AFIR",
-      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
       "sourceType": "official",
       "applicationStart": "2026-09-28",
@@ -1327,7 +1431,7 @@
         "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
       },
       "pageUrl": "/autoconsum-public-fotovoltaice-institutii-publice",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -1399,7 +1503,13 @@
         "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
         "carouselOrder": 10,
         "heroOrder": 10,
-        "navigationOrder": 3
+        "navigationOrder": 3,
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "UAT și celelalte entități publice eligibile din ghid",
+          "counties": "Național",
+          "note": "Apelul AFIR din 2026 pentru producere solară cu stocare integrată."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1414,7 +1524,8 @@
         ],
         "listed": true
       },
-      "officialSourceUpdatedAt": "2026-09-11"
+      "officialSourceUpdatedAt": "2026-09-11",
+      "applicationEndAt": "2026-11-20T23:59:00+02:00"
     },
     {
       "id": "fondul-modernizare-pc1-stocare-entitati-publice",
@@ -1430,7 +1541,7 @@
       "statusRationale": "AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă.",
       "statusLabel": "Sesiune deschisă – depuneri până la 20 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Energiei / AFIR",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
@@ -1459,7 +1570,7 @@
         "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
       },
       "pageUrl": "/fondul-modernizare-pc1-stocare-entitati-publice",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -1530,7 +1641,13 @@
         "beneficiary": "entități publice cu instalații regenerabile existente",
         "carouselOrder": 13,
         "heroOrder": 13,
-        "navigationOrder": 9
+        "navigationOrder": 9,
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "UAT și celelalte entități publice eligibile din ghid",
+          "counties": "Național",
+          "note": "Apel distinct pentru capacități de stocare ale entităților publice."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1545,7 +1662,8 @@
         ],
         "listed": true
       },
-      "officialSourceUpdatedAt": "2026-09-11"
+      "officialSourceUpdatedAt": "2026-09-11",
+      "applicationEndAt": "2026-11-20T23:59:00+02:00"
     },
     {
       "id": "pro-infra",
@@ -1561,7 +1679,7 @@
       "statusRationale": "Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere.",
       "statusLabel": "Apel în curs de lansare – calendarul depunerii nu este anunțat",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Transporturilor și Infrastructurii",
       "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
       "sourceVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
@@ -1643,7 +1761,13 @@
         "beneficiary": null,
         "carouselOrder": 5,
         "navigationOrder": 10,
-        "heroOrder": 5
+        "heroOrder": 5,
+        "calendar": {
+          "phase": "preparation",
+          "beneficiary": "Întreprinderi eligibile pentru producția destinată infrastructurii de transport",
+          "counties": "Amplasamentele eligibile potrivit schemei",
+          "note": "Valabilitatea schemei și implementarea investiției au calendare distincte față de depunere."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1673,7 +1797,7 @@
       "statusRationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN.",
       "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
       "sourceUrl": "https://gal.afir.ro/",
       "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
@@ -1734,7 +1858,13 @@
         "order": 12,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Solicitanți eligibili în intervenția și strategia GAL",
+          "counties": "Localitățile din teritoriul fiecărui GAL",
+          "note": "Fiecare GAL stabilește apelurile, alocările și termenele proprii."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1764,7 +1894,7 @@
       "statusRationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN.",
       "statusLabel": "Apelurile și termenele se verifică separat pentru fiecare GAL",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
       "sourceUrl": "https://gal.afir.ro/",
       "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
@@ -1826,7 +1956,13 @@
         "order": 14,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Solicitanți eligibili în strategia de dezvoltare locală",
+          "counties": "Localitățile din teritoriul GAL selectat",
+          "note": "Platforma LEADER gestionează apeluri locale cu calendare distincte."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1856,7 +1992,7 @@
       "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
       "sourceUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
       "sourceVersion": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
@@ -1945,7 +2081,13 @@
         "beneficiary": null,
         "carouselOrder": 6,
         "heroOrder": 6,
-        "navigationOrder": 13
+        "navigationOrder": 13,
+        "calendar": {
+          "phase": "preparation",
+          "beneficiary": "Întreprinderi și alte categorii prevăzute de schemă",
+          "counties": "Amplasamentele eligibile din schema e-MOVE RO",
+          "note": "Schema este aprobată și modificată. Un calendar de depunere nu a fost identificat în pagina oficială de apeluri consultată."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1977,10 +2119,10 @@
       "statusRationale": "Pagina MIPE afișează stadiul Închis și data de închidere 30.10.2026; include Ordinul nr. 1500/29.09.2026.",
       "statusLabel": "Apel închis – depuneri încheiate la 30 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene",
       "sourceUrl": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
-      "sourceVersion": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+      "sourceVersion": "Ghid PoCIDIF 2.1, Ordinul MIPE 965/23.06.2026, modificat prin Ordinul 1500/29.09.2026",
       "sourceType": "official",
       "applicationStart": "2026-06-30",
       "applicationEnd": "2026-10-30",
@@ -2019,7 +2161,7 @@
         "ownContribution": "Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile."
       },
       "pageUrl": "/pocidif-21",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2072,7 +2214,12 @@
               "label": "Pagina MIPE: apel închis la 30.10.2026"
             }
           ],
-          "corrigenda": [],
+          "corrigenda": [
+            {
+              "ref": "registry:pocidif-guide-amendment-1500",
+              "label": "Ordinul MIPE 1500/29.09.2026, inclusiv termenul de închidere"
+            }
+          ],
           "clarifications": [
             {
               "ref": "guide:pocidif-21-qa",
@@ -2091,7 +2238,18 @@
         "beneficiary": null,
         "carouselOrder": 14,
         "heroOrder": 14,
-        "navigationOrder": 11
+        "navigationOrder": 11,
+        "calendar": {
+          "phase": "implementation",
+          "beneficiary": "IMM-uri TIC eligibile potrivit ghidului modificat",
+          "counties": "Național",
+          "note": "Depunerea s-a încheiat la 30 octombrie 2026, ora 17:00. Urmează etapele proiectelor deja depuse."
+        },
+        "guideRoutes": [
+          "/eligibilitate-pocidif-21",
+          "/cheltuieli-eligibile-pocidif-21",
+          "/documente-punctaj-pocidif-21"
+        ]
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -2107,7 +2265,9 @@
         ],
         "listed": true
       },
-      "quickAnswer": "PoCIDIF 2.1 finanțează dezvoltarea de servicii, aplicații și produse inovatoare de către IMM-uri din sectorul TIC. Pagina oficială MIPE marchează apelul închis, cu data de închidere 30 octombrie 2026, după modificarea ghidului prin Ordinul nr. 1500/29.09.2026. Proiectele presupun cercetare, dezvoltare și inovare, tehnologii avansate și introducerea rezultatelor pe piață; o achiziție IT obișnuită nu este suficientă. Intensitățile diferă în funcție de cost, regiune, dimensiunea firmei și tipul ajutorului. Eligibilitatea se verifică prin codurile CAEN, capacitatea echipei, documentele financiare, drepturile asupra soluției și bugetul justificat. Informațiile rămân utile pentru evaluare și contractare. O relansare sau o nouă sesiune necesită un anunț oficial distinct."
+      "quickAnswer": "PoCIDIF 2.1 finanțează dezvoltarea de servicii, aplicații și produse inovatoare de către IMM-uri din sectorul TIC. Pagina oficială MIPE marchează apelul închis, cu data de închidere 30 octombrie 2026, după modificarea ghidului prin Ordinul nr. 1500/29.09.2026. Proiectele presupun cercetare, dezvoltare și inovare, tehnologii avansate și introducerea rezultatelor pe piață; o achiziție IT obișnuită nu este suficientă. Intensitățile diferă în funcție de cost, regiune, dimensiunea firmei și tipul ajutorului. Eligibilitatea se verifică prin codurile CAEN, capacitatea echipei, documentele financiare, drepturile asupra soluției și bugetul justificat. Informațiile rămân utile pentru evaluare și contractare. O relansare sau o nouă sesiune necesită un anunț oficial distinct.",
+      "applicationStartAt": "2026-06-30T15:00:00+03:00",
+      "applicationEndAt": "2026-10-30T17:00:00+02:00"
     },
     {
       "id": "pnrr",
@@ -2123,7 +2283,7 @@
       "statusRationale": "Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
       "sourceUrl": "https://mfe.gov.ro/pnrr-dashboard/",
       "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
@@ -2169,7 +2329,13 @@
         "order": 25,
         "icon": "ph-chart-line-up",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Beneficiarii componentei și investiției PNRR vizate",
+          "counties": "Conform componentei și proiectului",
+          "note": "Dashboard-ul prezintă proiecte și contracte. Depunerea se verifică în anunțul investiției vizate."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -2197,7 +2363,7 @@
       "statusRationale": "Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată.",
       "statusLabel": "Program aprobat – în curs de operaționalizare la BID",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Banca de Investiții și Dezvoltare (BID)",
       "sourceUrl": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
       "sourceVersion": "Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026",
@@ -2272,7 +2438,13 @@
         "beneficiary": "români din diaspora care înființează o întreprindere în România",
         "carouselOrder": 3,
         "heroOrder": 3,
-        "navigationOrder": 7
+        "navigationOrder": 7,
+        "calendar": {
+          "phase": "preparation",
+          "beneficiary": "IMM-uri nou-înființate de români din diaspora eligibili",
+          "counties": "Investiții în România",
+          "note": "BID anunță operaționalizarea programului. Cererile vor fi primite prin instituțiile de credit partenere."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -2304,7 +2476,7 @@
       "statusRationale": "Anunțul MTI din 03.11.2026 confirmă consultarea ghidurilor Măsurilor 1 și 2 până la 18.11.2026 și precizează că apelurile nu sunt lansate.",
       "statusLabel": "Apel în curs de lansare – ghiduri în consultare până la 18 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
@@ -2413,7 +2585,13 @@
         "beneficiary": "IMM-uri și operatori de transport rutier de persoane",
         "carouselOrder": 4,
         "heroOrder": 4,
-        "navigationOrder": 4
+        "navigationOrder": 4,
+        "calendar": {
+          "phase": "preparation",
+          "beneficiary": "IMM-uri pentru Măsura 1 și transportatori eligibili pentru Măsura 2",
+          "counties": "Național, potrivit fiecărei măsuri",
+          "note": "Observații la ghiduri până la 18 noiembrie 2026. Calendarul depunerii cererilor urmează să fie comunicat."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2446,7 +2624,7 @@
       "statusRationale": "Anunțul MTI din 26.09.2026 confirmă ghidul aprobat și calendarul Submăsurii 1: 28.09–27.11.2026.",
       "statusLabel": "Submăsura 1 deschisă – depuneri până la 27 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
       "sourceVersion": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
@@ -2475,7 +2653,7 @@
         "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
       },
       "pageUrl": "/e-mobility",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2544,7 +2722,13 @@
         "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare",
         "carouselOrder": 7,
         "heroOrder": 7,
-        "navigationOrder": 14
+        "navigationOrder": 14,
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "Întreprinderi eligibile potrivit Submăsurii 1",
+          "counties": "Județele cu amplasamente pe rețeaua rutieră eligibilă CNAIR",
+          "note": "Calendarul privește exclusiv Submăsura 1, apelul PFM/1233/PFM_P9/NA/P9_OS3/FM_9.3."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2561,7 +2745,9 @@
         "listed": true
       },
       "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; schema exclude întreprinderile nou-înființate.",
-      "quickAnswer": "e-Mobility RO – Submăsura 1 este deschisă în MySMIS 2021 între 28 septembrie 2026, ora 12:00, și 27 noiembrie 2026, ora 23:59. Apelul PFM/1233/PFM_P9/NA/P9_OS3/FM_9.3 are 49,5 milioane EUR. Acest buget este distinct de bugetul total al schemei, de 299 milioane EUR, și de alocarea de 100 milioane EUR a Submăsurii 1 pentru toate procedurile. Se finanțează infrastructură publică de reîncărcare pe rețeaua rutieră eligibilă, cu maximum 30 milioane EUR pe întreprindere și selecție concurențială. Amplasamentul, racordarea, puterea, accesul public și documentele solicitantului trebuie verificate după ghidul aprobat prin OMTI nr. 886/2026."
+      "quickAnswer": "e-Mobility RO – Submăsura 1 este deschisă în MySMIS 2021 între 28 septembrie 2026, ora 12:00, și 27 noiembrie 2026, ora 23:59. Apelul PFM/1233/PFM_P9/NA/P9_OS3/FM_9.3 are 49,5 milioane EUR. Acest buget este distinct de bugetul total al schemei, de 299 milioane EUR, și de alocarea de 100 milioane EUR a Submăsurii 1 pentru toate procedurile. Se finanțează infrastructură publică de reîncărcare pe rețeaua rutieră eligibilă, cu maximum 30 milioane EUR pe întreprindere și selecție concurențială. Amplasamentul, racordarea, puterea, accesul public și documentele solicitantului trebuie verificate după ghidul aprobat prin OMTI nr. 886/2026.",
+      "applicationStartAt": "2026-09-28T12:00:00+03:00",
+      "applicationEndAt": "2026-11-27T23:59:00+02:00"
     },
     {
       "id": "fondul-modernizare-pc1-stocare",
@@ -2577,7 +2763,7 @@
       "statusRationale": "Anunțul oficial de lansare și prelungirea publicată la 22.10.2026 confirmă intervalul curent în MySMIS 2021.",
       "statusLabel": "Sesiune prelungită – depuneri până la 15 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Energiei",
       "sourceUrl": "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/",
       "sourceVersion": "Anunț de lansare 14.08.2026 și prelungire 22.10.2026: depuneri 01.09–15.11.2026; ghid aprobat prin OME nr. 915/2026",
@@ -2606,7 +2792,7 @@
         "ownContribution": "Costurile neeligibile, depășirile plafonului și diferența rezultată din regulile finale ori din procedura competitivă."
       },
       "pageUrl": "/fondul-modernizare-pc1-stocare",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2674,7 +2860,13 @@
         "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone",
         "carouselOrder": 12,
         "heroOrder": 12,
-        "navigationOrder": 8
+        "navigationOrder": 8,
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "Întreprinderi eligibile, inclusiv nou-înființate",
+          "counties": "Național, în condițiile amplasamentului eligibil",
+          "note": "Termenul este stabilit prin anunțul oficial de prelungire din 22 octombrie 2026."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2696,7 +2888,9 @@
         "extendedEnd": "2026-11-15",
         "sourceRef": "registry:pc1-storage-extension-2026",
         "verifiedAt": "2026-11-04"
-      }
+      },
+      "applicationStartAt": "2026-09-01T12:00:00+03:00",
+      "applicationEndAt": "2026-11-15T23:59:00+02:00"
     },
     {
       "id": "programul-tranzitie-justa",
@@ -2712,7 +2906,7 @@
       "statusRationale": "Apelurile din program au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
@@ -2769,7 +2963,13 @@
         "order": 26,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Solicitanții eligibili ai apelului și teritoriului selectat",
+          "counties": "Dolj, Gorj, Hunedoara, Galați, Prahova, Mureș, potrivit apelului",
+          "note": "Program cu mai multe apeluri. Starea unui apel nu se extinde la întregul program."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -2798,7 +2998,7 @@
       "statusRationale": "Apelurile Fondului pentru Modernizare au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
@@ -2844,7 +3044,13 @@
         "order": 27,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "calendar": {
+          "phase": "per_call",
+          "beneficiary": "Beneficiarii eligibili ai programului-cheie și apelului",
+          "counties": "Conform apelului și amplasamentului eligibil",
+          "note": "Depunerea, evaluarea și implementarea se urmăresc separat pentru fiecare apel."
+        }
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2981,7 +3187,13 @@
         "navigationOrder": 17,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": "IMM-uri cu investiții în Regiunea Centru"
+        "beneficiary": "IMM-uri cu investiții în Regiunea Centru",
+        "calendar": {
+          "phase": "preparation",
+          "beneficiary": "Microîntreprinderi și IMM-uri eligibile din Regiunea Centru",
+          "counties": "Alba, Brașov, Covasna, Harghita, Mureș, Sibiu",
+          "note": "Depuneri programate. Disponibilitatea efectivă în MySMIS se verifică la deschiderea sesiunii."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -3012,10 +3224,10 @@
       "statusRationale": "Sesiunea deschisă la 26 mai 2026 a fost prelungită până la 30 decembrie 2026, ora 20:00, potrivit calendarului publicat de Instituția Prefectului – Județul Vrancea.",
       "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
       "publicationState": "public",
-      "verifiedAt": "2026-11-09",
-      "sourceName": "Instituția Prefectului – Județul Vrancea",
-      "sourceUrl": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/",
-      "sourceVersion": "Calendarul SME Eco-Tech, informarea oficială din octombrie 2026",
+      "verifiedAt": "2026-11-10",
+      "sourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "sourceUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
+      "sourceVersion": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
       "officialSourceUpdatedAt": "2026-10-30",
       "sourceType": "official",
       "applicationStart": "2026-05-26",
@@ -3039,7 +3251,7 @@
         "ownContribution": "Credit de minimum 60% din cheltuielile eligibile, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat."
       },
       "pageUrl": "/sme-eco-tech",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -3089,12 +3301,8 @@
           ],
           "sessionAnnouncement": [
             {
-              "ref": "program",
-              "label": "Calendarul publicat de Instituția Prefectului – Județul Vrancea"
-            },
-            {
               "ref": "registry:sme-eco-tech-prelungire",
-              "label": "Comunicarea MEDAT de prelungire"
+              "label": "MEDAT: prelungirea înscrierilor până la 30 decembrie 2026, ora 20:00"
             }
           ],
           "corrigenda": [],
@@ -3116,7 +3324,13 @@
         "navigationOrder": 1,
         "icon": "ph-leaf",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": "IMM-uri cu investiții verzi și digitale în România"
+        "beneficiary": "IMM-uri cu investiții verzi și digitale în România",
+        "calendar": {
+          "phase": "submission",
+          "beneficiary": "Microîntreprinderi și IMM-uri private eligibile",
+          "counties": "Național",
+          "note": "Grant și credit bancar. Înscrierea, analiza băncii și implementarea au etape distincte."
+        }
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -3133,7 +3347,8 @@
         ],
         "listed": true
       },
-      "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România."
+      "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România.",
+      "applicationEndAt": "2026-12-30T20:00:00+02:00"
     }
   ],
   "factualChanges": [
@@ -3243,11 +3458,11 @@
       "faq": [
         [
           "Este deschis apelul DR 12?",
-          "Da. Sesiunea DR-12 este deschisă între 6 octombrie 2026, ora 09:00, și 2 decembrie 2026, ora 16:00. AFIR confirmă intervalul în anunț și în platforma sesiunilor active; disponibilul se verifică pe fiecare componentă."
+          "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
         ],
         [
           "Care este termenul de depunere pentru DR 12?",
-          "Sesiunea DR-12 a început la 6 octombrie 2026, ora 09:00, și se încheie la 2 decembrie 2026, ora 16:00. Ghidul prevede praguri de 80 și 45 de puncte pe etape lunare; înainte de depunere se verifică etapa, componenta și disponibilul în platforma AFIR."
+          "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
         ],
         [
           "Cine poate aplica și care este limita de vârstă?",
@@ -3451,7 +3666,7 @@
       "decisionIntro": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar contribuția proprie este realistă.",
       "decisionClose": "Dacă vârstă, SO, documentele de exploatație sau bugetul nu susțin proiectul, recomandarea prudentă este ajustarea înainte de depunere.",
       "finalCtaTitle": "Verifică documentele fermei înainte de buget",
-      "finalCtaText": "Verificăm profilul fermierului, SO, investiția, contribuția proprie și documentele de punctaj conform ghidului final. Sesiunea este deschisă până la 2 decembrie 2026, în condițiile AFIR.",
+      "finalCtaText": "Verificăm profilul fermierului, SO, investiția, contribuția proprie și documentele de punctaj. Precizează componenta DR-12 și verifică termenul din contorul AFIR înainte de transmitere.",
       "heroPrimaryCta": "Cere verificarea inițială a fermei",
       "finalPrimaryCta": "Cere o verificare inițială a fermei cu un consultant FABER",
       "inlineCtaTitle": "Documente pentru verificarea DR12",
@@ -8709,7 +8924,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Finanțarea, contribuția proprie, pragurile și termenele se verifică în documentația ediției urmărite.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8717,7 +8932,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se încadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului vizat",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8790,6 +9005,9 @@
       "finalCtaText": "Trimite checklistul completat, CAEN-ul, ideea și bugetul ca să verificăm unde pot apărea riscuri.",
       "contentSections": [
         {
+          "programStatusId": "start-up-nation"
+        },
+        {
           "title": "Condiții Start Up Nation fără presupuneri",
           "paragraphs": [
             "Checklistul separă ce poți pregăti intern de ce trebuie confirmat în procedură activa: profilul solicitantului, firmă, codul CAEN, documentele, bugetul și cheltuielile. Dacă o condiție nu poate fi dovedita, proiectul trebuie ajustat înainte de planul final."
@@ -8814,7 +9032,7 @@
       "finalPrimaryCta": "Trimite datele proiectului",
       "inlineCtaTitle": "Ce poți trimite pentru verificare",
       "inlineCtaText": "Trimite checklistul completat, CAEN-ul, ideea și bugetul ca să verificăm unde pot apărea riscuri.",
-      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul aplicabil proiectului, anexele apelului și sursele oficiale.",
       "cofinancingTitle": "Buget Start-Up Nation fără valori presupuse",
       "cofinancingRows": [
         [
@@ -8854,7 +9072,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Finanțarea, contribuția proprie, pragurile și termenele se verifică în documentația ediției urmărite.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8862,7 +9080,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se încadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului vizat",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8971,6 +9189,9 @@
       ],
       "contentSections": [
         {
+          "programStatusId": "start-up-nation"
+        },
+        {
           "title": "Cheltuieli eligibile Start Up Nation: legătura cu activitatea",
           "paragraphs": [
             "O cheltuiala este utilă în dosar doar dacă procedură o permite și dacă planul de afaceri explică rolul ei în activitatea finanțată. Echipamentele, software-ul, promovarea sau serviciile trebuie descrise prin livrabile și specificații, nu doar prin denumiri generale."
@@ -8993,7 +9214,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Finanțarea, contribuția proprie, pragurile și termenele se verifică în documentația ediției urmărite.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9001,7 +9222,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se încadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului vizat",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9110,6 +9331,9 @@
       ],
       "contentSections": [
         {
+          "programStatusId": "start-up-nation"
+        },
+        {
           "title": "Idei de afaceri Start Up Nation care pot fi aparate în dosar",
           "paragraphs": [
             "O idee bună devine proiect doar dacă poate fi legată de un cod CAEN, o piata, un flux de lucru, un buget și documente. Evita alegerea unei idei doar pentru ca pare populara; verifică mai întâi autorizarea, cheltuielile și capacitatea de implementare."
@@ -9124,7 +9348,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Finanțarea, contribuția proprie, pragurile și termenele se verifică în documentația ediției urmărite.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9132,7 +9356,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se încadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului vizat",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9241,6 +9465,9 @@
       ],
       "contentSections": [
         {
+          "programStatusId": "start-up-nation"
+        },
+        {
           "title": "Plan de afaceri Start Up Nation: conținut verificabil",
           "paragraphs": [
             "Planul trebuie să lege solicitantul, activitatea, clientii, costurile și implementarea. Dacă bugetul conține achiziții importante, planul trebuie să explice de ce sunt necesare și ce documente le susțin."
@@ -9263,7 +9490,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Finanțarea, contribuția proprie, pragurile și termenele se verifică în documentația ediției urmărite.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9271,7 +9498,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se încadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului vizat",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9342,6 +9569,9 @@
       ],
       "heroIcon": "ph-duotone ph-info",
       "contentSections": [
+        {
+          "programStatusId": "start-up-nation"
+        },
         {
           "title": "Cod CAEN Start Up Nation: verificare înainte de buget",
           "paragraphs": [
@@ -10313,18 +10543,15 @@
       "slug": "calendar-fonduri-europene",
       "output": "calendar-fonduri-europene/index.html",
       "category": "Calendar fonduri",
-      "title": "Calendar fonduri europene | pregătire",
-      "description": "Calendar fonduri europene: pregătire, apel activ, documente, depunere, clarificări și verificare din timp, fără a înlocui calendarele oficiale.",
-      "h1": "Calendar fonduri europene: pregătire fără grabă",
-      "quickAnswer": "Calendarul FABER nu înlocuiește calendarele oficiale. Îl folosim pentru a organiza pregătirea: programe în pregătire, apeluri active, verificare documente, depunere și clarificări. Un dosar pregătit din timp este mai ușor de verificat decât unul făcut pe fugă.",
+      "title": "Calendar fonduri europene 2026: termene și surse | FABER",
+      "description": "Consultă termenele și sursele pentru 27 de programe de finanțare. Calendar separat pentru pregătire, depunere și implementare, cu beneficiari și județe.",
+      "h1": "Calendar fonduri europene – termene și surse oficiale",
+      "quickAnswer": "Calendarul reunește termenele verificate pentru programele publice din registrul FABER. Depunerea este separată de pregătirea proiectelor, consultarea ghidurilor și implementarea contractelor. Pentru fiecare program sunt indicate beneficiarul, județele, documentul oficial și data verificării.",
       "programName": "Calendar fonduri europene",
       "heroIcon": "ph-duotone ph-arrows-clockwise",
       "contentSections": [
         {
-          "title": "e-MOVE și GAL-AFIR în calendar",
-          "paragraphs": [
-            "e-MOVE și GAL-AFIR se urmăresc cu status de verificat în surse oficiale: ghidul MTI/DGPET pentru e-MOVE și paginile AFIR/GAL pentru LEADER."
-          ]
+          "fundingCalendar": true
         }
       ],
       "finalCtaText": "Trimite programul urmărit și stadiul documentelor ca să stabilim ce trebuie pregătit înainte de deschiderea sau închiderea apelului.",
@@ -12252,7 +12479,12 @@
       ],
       "finalCtaTitle": "Verifică eligibilitatea firmei pentru PoCIDIF 2.1",
       "finalCtaText": "Trimite statutul IMM, certificatul constatator, codurile CAEN, locațiile, situațiile financiare și structura de grup pentru o verificare documentată.",
-      "finalPrimaryCta": "Solicită verificarea eligibilității"
+      "finalPrimaryCta": "Solicită verificarea eligibilității",
+      "contentSections": [
+        {
+          "programStatusId": "pocidif-21"
+        }
+      ]
     },
     {
       "slug": "cheltuieli-eligibile-pocidif-21",
@@ -12323,7 +12555,12 @@
       ],
       "finalCtaTitle": "Verifică bugetul PoCIDIF 2.1",
       "finalCtaText": "Trimite arhitectura soluției, activitățile CDI, lista de costuri, ofertele și contribuția proprie pentru verificarea încadrării pe tipuri de ajutor.",
-      "finalPrimaryCta": "Solicită analiza bugetului"
+      "finalPrimaryCta": "Solicită analiza bugetului",
+      "contentSections": [
+        {
+          "programStatusId": "pocidif-21"
+        }
+      ]
     },
     {
       "slug": "documente-punctaj-pocidif-21",
@@ -12394,7 +12631,12 @@
       ],
       "finalCtaTitle": "Verifică dosarul și punctajul PoCIDIF 2.1",
       "finalCtaText": "Trimite planul de afaceri, indicatorii, echipa, bugetul și dovezile de piață pentru o verificare înainte de depunere.",
-      "finalPrimaryCta": "Solicită verificarea dosarului"
+      "finalPrimaryCta": "Solicită verificarea dosarului",
+      "contentSections": [
+        {
+          "programStatusId": "pocidif-21"
+        }
+      ]
     }
   ],
   "$schema": "./program-registry.schema.json"

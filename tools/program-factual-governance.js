@@ -467,6 +467,8 @@ function applicationDateText(program, field) {
 }
 
 function applicationWindowText(program) {
+  const components = program?.presentation?.calendar?.components;
+  if (components?.length) return components.map(component => `${component.name} până la ${formatDateRo(component.endAt.slice(0, 10))}, ora ${component.endAt.slice(11, 19).replace(/:00$/, "")}`).join(" · ");
   if (program?.applicationStart && program?.applicationEnd) {
     return `${applicationDateText(program, "applicationStart")} – ${applicationDateText(program, "applicationEnd")}`;
   }
@@ -476,6 +478,10 @@ function applicationWindowText(program) {
 }
 
 function applicationWindowMarkup(program) {
+  const components = program?.presentation?.calendar?.components;
+  if (components?.length) {
+    return `<ul>${components.map(component => `<li>${escapeHtml(component.name)} până la <time datetime="${escapeHtml(component.endAt)}">${escapeHtml(formatDateRo(component.endAt.slice(0, 10)))}, ora ${escapeHtml(component.endAt.slice(11, 19).replace(/:00$/, ""))}</time></li>`).join("")}</ul>`;
+  }
   const dates = ["applicationStart", "applicationEnd"].filter((field) => program[field]);
   if (!dates.length) return escapeHtml(applicationWindowText(program));
   const markup = dates.map((field) =>

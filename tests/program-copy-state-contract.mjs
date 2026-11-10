@@ -16,4 +16,20 @@ for (const program of programs.filter(p => p.canonicalStatus === 'OPEN')) {
   const copy = $('[data-program-calendar], [data-answer-field="status"]').text();
   assert.doesNotMatch(copy, preOpeningClaim, `${program.pageUrl}: calendarul și răspunsul direct contrazic statutul aprobat`);
 }
-console.log('Program copy state PASS: open calls have no contradictory pre-opening claims in summaries or calendars.');
+for (const program of programs.filter(program => program.presentation?.guideRoutes?.length)) {
+  for (const route of program.presentation.guideRoutes) {
+    const $ = cheerio.load(fs.readFileSync(fileForRoute(fileURLToPath(root), route), 'utf8'));
+    const notice = $(`[data-guide-program-status="${program.id}"]`);
+    assert.equal(notice.length, 1, `${route}: lipsește contextul sesiunii din registru`);
+    assert(notice.text().includes(program.statusLabel), `${route}: statutul ghidului este nesincronizat`);
+    assert.equal(notice.find(`a[href="${program.pageUrl}"]`).length, 1);
+  }
+}
+const dr12 = programs.find(program => program.id === 'dr12-afir');
+const dr12Page = cheerio.load(fs.readFileSync(fileForRoute(fileURLToPath(root), dr12.pageUrl), 'utf8'));
+for (const component of dr12.presentation.calendar.components) {
+  assert(dr12Page(`[data-answer-field="applicationWindow"] time[datetime="${component.endAt}"]`).length
+    || dr12Page(`.program-factual-status__facts time[datetime="${component.endAt}"]`).length,
+    `${component.name}: termenul componentei trebuie afișat în rezumatul factual`);
+}
+console.log('Program copy state PASS: open-call summaries, component deadlines and guide session context.');
