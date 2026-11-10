@@ -942,7 +942,9 @@ function renderPage(program, content) {
   const faqs = [...content.faqs];
   if (program.applicationCode) {
     const window = applicationWindowText(program);
-    metrics.push([window, "interval de depunere în MySMIS"]);
+    const calendarDate = new Intl.DateTimeFormat("ro-RO", { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/Bucharest" });
+    const dates = [program.applicationStart, program.applicationEnd].map(date => calendarDate.format(new Date(date))).join(" – ");
+    metrics.push([dates, "interval de depunere în MySMIS", "program-metric--calendar"]);
     faqs.unshift([
       `Când se depun cererile pentru ${program.shortName}?`,
       `Cererile se transmit prin MySMIS în intervalul publicat de ADR Centru, ${window}. Codul apelului este ${program.applicationCode}.`
@@ -962,7 +964,7 @@ function renderPage(program, content) {
   <link rel="canonical" href="${canonical}"><link rel="icon" href="/favicon.png">
   <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta property="og:image:alt" content="${e(`${program.shortName} — FABER`)}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(program.metaTitle)}"><meta name="twitter:description" content="${e(program.metaDescription)}"><meta name="twitter:image" content="${SITE}/og-image.jpg"><meta name="twitter:image:alt" content="${e(`${program.shortName} — FABER`)}">
-  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20261109-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
+  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20261110-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 </head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">
 ${HEADER}
@@ -975,7 +977,7 @@ ${HEADER}
       <div class="program-hero__actions"><a class="program-button program-button--primary" href="${e(contactHref)}" data-analytics-program-family="${e(program.family)}">Verifică proiectul</a><a class="program-button" href="#raspuns-rapid">Vezi condițiile</a></div>
     </div><div class="program-hero__visual">${renderSvg(program.slug)}</div>
   </section>
-  <section class="program-metrics" aria-label="Repere de finanțare">${metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
+  <section class="program-metrics" aria-label="Repere de finanțare">${metrics.map(([value, label, className]) => `<div${className ? ` class="${e(className)}"` : ""}><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
   ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut verificat la ${e(program.verifiedAt)}</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
   ${renderMeasureNavigation(content)}
   <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
