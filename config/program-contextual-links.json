@@ -52,8 +52,8 @@
     },
     "consultanta_digitalizare": {
       "href": "/consultanta-pnrr-digitalizare",
-      "anchor": "structurează proiectul de digitalizare sau inovare",
-      "explanation": "Clarifică procesele, tehnologia, bugetul și documentele înainte de pregătirea cererii."
+      "anchor": "verifică implementarea proiectului PNRR de digitalizare",
+      "explanation": "Clarifică achizițiile, modificările, recepția și documentele de plată pentru proiectul contractat."
     },
     "consultanta_imm": {
       "href": "/consultant-fonduri-europene-imm",
@@ -69,12 +69,17 @@
   "serviceByParent": {
     "/afir": "consultanta_afir",
     "/fonduri-regionale": "consultanta_regionala",
-    "/fonduri-europene-digitalizare": "consultanta_digitalizare",
+    "/fonduri-europene-digitalizare": "consultanta_imm",
     "/finantari-panouri-fotovoltaice": "consultanta_generala",
     "/fonduri-europene-imm": "consultanta_imm"
   },
   "serviceByProgram": {
-    "start-up-nation": "consultanta_startup"
+    "start-up-nation": "consultanta_startup",
+    "digitalizare-imm": "consultanta_digitalizare",
+    "pnrr": "consultanta_digitalizare",
+    "pocidif-21": "consultanta_generala",
+    "apeluri-gal": "consultanta_afir",
+    "gal-afir-leader": "consultanta_afir"
   },
   "fallbackGuide": "documents_guide",
   "resources": {
@@ -148,6 +153,11 @@
       "anchor": "compară reperele PNRR pentru digitalizarea IMM",
       "explanation": "Separă programul, investițiile și documentele versiunii oficiale aplicabile."
     },
+    "pnrr_digital_costs": {
+      "href": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "anchor": "verifică documentarea cheltuielilor PNRR Digitalizare IMM",
+      "explanation": "Leagă achizițiile proiectului contractat de procese, livrabile și dovezile de utilizare."
+    },
     "ptj_documents": {
       "href": "/programul-tranzitie-justa-intrebari-documente",
       "anchor": "verifică întrebările și documentele pentru PTJ",
@@ -215,7 +225,7 @@
     },
     "digitalizare-imm": {
       "instrument": "eligibility_check",
-      "comparison": "adr_centru_digitalizare",
+      "comparison": "pnrr_digital_costs",
       "conversionAnchor": "Verifică încadrarea proiectului de digitalizare"
     },
     "modernizare-microintreprinderi-ne-2": {

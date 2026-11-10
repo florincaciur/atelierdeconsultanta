@@ -1,0 +1,442 @@
+[
+  {
+    "source": "/digitalizare-imm",
+    "match": "Beneficiarii urmăresc termenele din contract",
+    "target": "/consultanta-pnrr-digitalizare",
+    "sentence": "Pentru schimbări de soluție sau buget, vezi {{link}}.",
+    "anchor": "sprijinul pentru implementarea proiectelor PNRR de digitalizare",
+    "reason": "Oferă beneficiarilor contractați o cale către sprijin pentru modificări și recepție."
+  },
+  {
+    "source": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+    "match": "La final, păstrează documentația de utilizare",
+    "target": "/consultanta-pnrr-digitalizare",
+    "sentence": "Pentru dosarul de plată și verificarea dovezilor, consultă {{link}}.",
+    "anchor": "serviciul de implementare pentru Digitalizare IMM PNRR",
+    "reason": "Continuă de la dovezile de utilizare la dosarul de plată."
+  },
+  {
+    "source": "/digitalizare-imm-erp-crm-cloud",
+    "match": "ERP, CRM, cloud și echipamente IT pot fi eligibile",
+    "target": "/fonduri-europene-digitalizare",
+    "sentence": "Pentru o investiție nouă, compară {{link}} înainte să stabilești bugetul.",
+    "anchor": "programele de finanțare pentru digitalizare",
+    "reason": "Leagă alegerea tehnică de compararea apelurilor pentru investiții noi."
+  },
+  {
+    "source": "/cheltuieli-eligibile-digitalizare-imm",
+    "match": "Categoria de cheltuială, momentul achiziției",
+    "target": "/fonduri-europene-digitalizare",
+    "sentence": "Dacă nu ai ales apelul, pornește de la {{link}}.",
+    "anchor": "comparația finanțărilor pentru digitalizarea IMM-urilor",
+    "reason": "Direcționează cititorul care are categorii de cost, dar nu a ales apelul."
+  },
+  {
+    "source": "/cat-costa-consultanta-fonduri-europene-ghid",
+    "match": "Mai important decât suma",
+    "target": "/cum-alegi-consultant-fonduri-europene",
+    "sentence": "Înainte de semnare, folosește {{link}} și cere răspunsuri pentru aceleași etape.",
+    "anchor": "întrebările pentru compararea consultanților",
+    "reason": "Transformă comparația de preț în verificare de livrabile și responsabilități."
+  },
+  {
+    "source": "/cand-merita-consultant-fonduri-europene",
+    "match": "În acest caz, consultantul",
+    "target": "/cum-alegi-consultant-fonduri-europene",
+    "sentence": "Dacă decizi să externalizezi verificarea, cere răspunsuri la {{link}} înainte să accepți oferta.",
+    "anchor": "întrebările pentru alegerea consultantului",
+    "reason": "Continuă de la decizia de externalizare la alegerea furnizorului."
+  },
+  {
+    "source": "/digitalizare-imm-regiunea-centru-apel-2",
+    "match": "ERP pentru stocuri și comenzi",
+    "target": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+    "sentence": "Pentru o orientare generală, vezi {{link}}. Pentru Apelul 2 se aplică ghidul ADR Centru.",
+    "anchor": "cum verifici cheltuielile eligibile la digitalizarea unui IMM",
+    "reason": "Oferă răspunsul scurt despre tipuri de cheltuieli și menține aplicabilitatea ghidului ADR."
+  },
+  {
+    "source": "/cheltuieli-eligibile-digitalizare-imm",
+    "match": "Pentru fiecare poziție din buget",
+    "target": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+    "sentence": "Pentru o primă triere, vezi {{link}}.",
+    "anchor": "răspunsul despre cheltuielile eligibile la digitalizarea IMM-urilor",
+    "reason": "Oferă rezumatul pentru cititorul care începe inventarul bugetar."
+  },
+  {
+    "source": "/dr12-afir",
+    "match": "Anexele utile includ modelul contractului",
+    "target": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+    "sentence": "Pentru inventarul inițial, folosește {{link}}.",
+    "anchor": "lista scurtă de documente pentru DR-12",
+    "reason": "Distinge checklistul inițial de lista completă de anexe AFIR."
+  },
+  {
+    "source": "/dr-12-afir-instalarea-tinerilor-fermieri",
+    "match": "Unele documente expiră rapid",
+    "target": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+    "sentence": "Grupează-le cu {{link}} și notează separat ce trebuie obținut sau reînnoit.",
+    "anchor": "lista de acte pentru dosarul DR-12",
+    "reason": "Conectează verificarea valabilității cu inventarul actelor."
+  },
+  {
+    "source": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+    "match": "O simulare bună separă proiectul",
+    "target": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+    "sentence": "Pentru prima estimare, aplică {{link}}.",
+    "anchor": "formula de calcul a cofinanțării la fonduri europene",
+    "reason": "Leagă simularea detaliată de răspunsul cu formula de bază."
+  },
+  {
+    "source": "/fonduri-nerambursabile",
+    "match": "O valoare anunțată ca sprijin maxim",
+    "target": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+    "sentence": "Începe cu {{link}} și estimează separat numerarul necesar plăților.",
+    "anchor": "calculul contribuției proprii din cheltuielile eligibile",
+    "reason": "Ajută cititorul să distingă contribuția din buget de necesarul de numerar."
+  },
+  {
+    "source": "/dr12-afir",
+    "match": "Intervenția se aplică pe întreg teritoriul",
+    "target": "/dr-12-afir-instalarea-tinerilor-fermieri",
+    "sentence": "Pentru verificarea istoricului exploatației, consultă {{link}}.",
+    "anchor": "ghidul practic DR-12 pentru fermierii deja instalați",
+    "reason": "Conectează categoriile eligibile cu verificarea actelor de instalare și exploatație."
+  },
+  {
+    "source": "/dr12-vs-dr14",
+    "match": "Comparația se poate schimba atunci când actele",
+    "target": "/dr-12-afir-instalarea-tinerilor-fermieri",
+    "sentence": "Dacă analizezi DR-12, începe cu {{link}}.",
+    "anchor": "verificarea instalării și a documentelor exploatației pentru DR-12",
+    "reason": "Detaliază una dintre dovezile care pot schimba alegerea intervenției."
+  },
+  {
+    "source": "/dr12-vs-dr14",
+    "match": "Comparația se poate schimba atunci când actele",
+    "target": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+    "sentence": "Pentru DR-14, verifică {{link}}.",
+    "anchor": "erorile de eligibilitate întâlnite în dosarele fermelor mici",
+    "reason": "Detaliază riscurile de încadrare după compararea celor două intervenții."
+  },
+  {
+    "source": "/dr14",
+    "match": "DR 14 finanțează investiții în ferme de mici dimensiuni",
+    "target": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+    "sentence": "Înainte de a stabili investiția, parcurge {{link}}.",
+    "anchor": "verificările de eligibilitate și greșelile frecvente la DR-14",
+    "reason": "Leagă prezentarea intervenției de situațiile în care o fermă mică nu se încadrează."
+  },
+  {
+    "source": "/ghiduri",
+    "match": "O pagină de ghiduri este utilă doar",
+    "target": "/blog",
+    "sentence": "Pentru situații punctuale, caută în {{link}}.",
+    "anchor": "articolele despre buget, dosar și calendarul finanțărilor",
+    "reason": "Oferă acces la articolele punctuale după alegerea temei."
+  },
+  {
+    "source": "/fonduri-europene-agricultura",
+    "match": "valorile difera pentru fiecare interventie AFIR",
+    "target": "/blog-afir-fotovoltaice-ferme-2026",
+    "sentence": "Dacă investiția privește energia folosită în fermă, vezi {{link}} și verifică separat statutul sesiunii.",
+    "anchor": "ghidul fotovoltaicelor pentru autoconsumul fermelor",
+    "reason": "Leagă investiția agricolă de întrebările despre consum și dimensionare, fără a indica o depunere activă."
+  },
+  {
+    "source": "/ce-acte-sunt-necesare-fonduri-europene",
+    "match": "Problema nu ține de ofertă",
+    "target": "/greseli-fonduri-europene",
+    "sentence": "Verifică și {{link}}, inclusiv neconcordanțele dintre acte și investiție.",
+    "anchor": "greșelile care apar la pregătirea dosarului de finanțare",
+    "reason": "Generalizează exemplul spațiului la alte erori documentare."
+  },
+  {
+    "source": "/ghiduri",
+    "match": "Dacă un ghid nu răspunde direct la cazul",
+    "target": "/intrebari-frecvente",
+    "sentence": "Pentru o întrebare punctuală despre buget sau acte, începe cu {{link}}.",
+    "anchor": "răspunsurile scurte despre fonduri europene",
+    "reason": "Ajută cititorul să aleagă un răspuns scurt înaintea unui ghid lung."
+  },
+  {
+    "source": "/digitalizare-imm-pnrr",
+    "match": "Un proiect bun păstrează trasabilitate de la cerere",
+    "target": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+    "sentence": "Pentru fiecare achiziție, folosește {{link}}.",
+    "anchor": "ghidul de justificare a cheltuielilor Digitalizare IMM PNRR",
+    "reason": "Continuă de la traseul documentelor la verificarea pe tipuri de cheltuieli."
+  },
+  {
+    "source": "/resurse",
+    "match": "Folosește lista generală pentru actele solicitantului",
+    "target": "/resurse-utile",
+    "sentence": "Găsești ghidurile, anexele și comunicările în {{link}}.",
+    "anchor": "directorul portalurilor oficiale de finanțare",
+    "reason": "Separă modelele de lucru de documentația obligatorie a autorității."
+  },
+  {
+    "source": "/ghiduri",
+    "match": "Ghidurile de pe site sunt scrise prudent",
+    "target": "/resurse-utile",
+    "sentence": "Pentru ghidul și anexele aplicabile, caută instituția în {{link}}.",
+    "anchor": "directorul de surse oficiale pentru fonduri europene",
+    "reason": "Oferă traseul către instituția care publică documentația aplicabilă."
+  },
+  {
+    "source": "/acte-necesare-fonduri-europene-nerambursabile",
+    "match": "Lista de acte se adapteaza la program",
+    "target": "/resurse",
+    "sentence": "Pentru inventarul inițial, poți descărca {{link}}.",
+    "anchor": "checklisturile de documente pentru proiecte finanțate",
+    "reason": "Leagă gruparea actelor de checklisturile descărcabile."
+  },
+  {
+    "source": "/digitalizare-imm-erp-crm-cloud",
+    "match": "După rescriere, fiecare componentă are rol",
+    "target": "/resurse",
+    "sentence": "Poți grupa costurile componentelor în {{link}} din biblioteca de resurse.",
+    "anchor": "modelul Excel de buget pentru digitalizare",
+    "reason": "Oferă un instrument după exemplul de repartizare a cheltuielilor."
+  },
+  {
+    "source": "/start-up-nation-2026",
+    "match": "Ideea de afacere, codul CAEN, lista de echipamente",
+    "target": "/start-up-nation-2026-idei-afaceri",
+    "sentence": "Folosește {{link}} ca punct de plecare pentru o simulare, înainte să alegi echipamentele.",
+    "anchor": "exemplele de idei de afaceri pentru Start-Up Nation",
+    "reason": "Leagă analiza programului de exemple fără a indica sesiune deschisă."
+  },
+  {
+    "source": "/start-up-nation-2026-plan-de-afaceri",
+    "match": "Planul trebuie să lege solicitantul",
+    "target": "/start-up-nation-2026-idei-afaceri",
+    "sentence": "Dacă încă alegi activitatea, compară {{link}} înainte să redactezi planul.",
+    "anchor": "ideile pentru Start-Up Nation după piață, CAEN și costuri",
+    "reason": "Trimite la alegerea activității când cititorul nu poate construi încă un plan."
+  },
+  {
+    "source": "/contact",
+    "match": "Informațiile administrative sunt păstrate",
+    "target": "/termeni-si-conditii",
+    "sentence": "Pentru regulile de utilizare a site-ului, consultă {{link}}.",
+    "anchor": "termenii și condițiile FABER",
+    "reason": "Face termenii accesibili din informațiile administrative, în afara consimțământului formularului."
+  },
+  {
+    "source": "/despre-faber",
+    "match": "Pentru fiecare colaborare, oferta și contractul",
+    "target": "/termeni-si-conditii",
+    "sentence": "Pentru folosirea informațiilor publicate pe site, consultă {{link}}.",
+    "anchor": "termenii de utilizare a site-ului FABER",
+    "reason": "Oferă acces la termenii site-ului lângă explicația despre documentele colaborării."
+  },
+  {
+    "source": "/ghiduri",
+    "match": "Pentru o fermă, începe cu dimensiunea economică",
+    "target": "/webinarii",
+    "sentence": "Pentru explicațiile prezentate în cadrul întâlnirilor, vezi {{link}}.",
+    "anchor": "temele webinariilor despre finanțări",
+    "reason": "Leagă biblioteca de explicațiile pe teme, fără a anunța o întâlnire."
+  },
+  {
+    "source": "/consultanta-fonduri-europene",
+    "match": "Oferta delimitează exact etapa contractată",
+    "target": "/cand-merita-consultant-fonduri-europene",
+    "sentence": "Dacă încă decizi ce etapă să externalizezi, vezi {{link}}.",
+    "anchor": "când merită să apelezi la un consultant pentru fonduri europene",
+    "reason": "Leagă oferta pe etape de decizia cititorului privind externalizarea."
+  },
+  {
+    "source": "/cum-alegi-consultant-fonduri-europene",
+    "match": "Exemplu ipotetic. O firmă compară o ofertă",
+    "target": "/cand-merita-consultant-fonduri-europene",
+    "sentence": "Dacă ofertele acoperă etape diferite, stabilește mai întâi {{link}}.",
+    "anchor": "când merită să plătești pentru consultanță în proiect",
+    "reason": "Ajută cititorul să compare oferte pentru etapele de care chiar are nevoie."
+  },
+  {
+    "source": "/acte-necesare-fonduri-europene-nerambursabile",
+    "match": "Lista de acte se adapteaza la program",
+    "target": "/ce-acte-sunt-necesare-fonduri-europene",
+    "sentence": "Pentru o primă trecere în revistă, consultă {{link}}.",
+    "anchor": "lista scurtă de acte pentru un dosar de finanțare",
+    "reason": "Oferă rezumatul înainte de consultarea listelor detaliate pe programe."
+  },
+  {
+    "source": "/verificare-eligibilitate-fonduri-europene",
+    "match": "Separăm informațiile confirmate de documentele lipsă",
+    "target": "/ce-acte-sunt-necesare-fonduri-europene",
+    "sentence": "Pentru discuția inițială, vezi {{link}}.",
+    "anchor": "ce acte se verifică de obicei într-un dosar de finanțare",
+    "reason": "Pregătește solicitantul pentru verificare fără a transforma lista în cerință de trimitere."
+  },
+  {
+    "source": "/calendar-fonduri-europene",
+    "match": "Termenele de depunere sunt separate de pregătirea",
+    "target": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+    "sentence": "Dacă mai multe apeluri se potrivesc ca termen, folosește {{link}}.",
+    "anchor": "ghidul de alegere a programului după solicitant, investiție și buget",
+    "reason": "Ajută cititorul să compare potrivirea apelurilor după trierea calendarului."
+  },
+  {
+    "source": "/idei-afaceri-fonduri-europene",
+    "match": "După ce ai o direcție, primul pas este definirea investiției",
+    "target": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+    "sentence": "Cu aceste date, poți trece la {{link}}.",
+    "anchor": "alegerea programului de finanțare potrivit investiției",
+    "reason": "Leagă definirea ideii de alegerea apelului."
+  },
+  {
+    "source": "/eligibilitate-fonduri-europene",
+    "match": "Această pagină nu colectează date",
+    "target": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+    "sentence": "Pentru a aplica lista într-un caz concret, vezi {{link}}.",
+    "anchor": "exemplul de verificare a eligibilității unui proiect",
+    "reason": "Completează lista de criterii cu un exemplu de aplicare."
+  },
+  {
+    "source": "/fonduri-europene-agricultura",
+    "match": "Cum obțin fonduri europene pentru agricultură?",
+    "target": "/fonduri-europene-caen/0111-culturi-cereale",
+    "sentence": "Pentru o fermă de cereale, vezi {{link}}.",
+    "anchor": "ghidul de finanțare pentru CAEN 0111 și culturile de câmp",
+    "reason": "Particularizează verificarea investiției pentru culturi de câmp."
+  },
+  {
+    "source": "/fonduri-pentru-utilaje-agricole",
+    "match": "Utilajele agricole trebuie justificate prin exploatație",
+    "target": "/fonduri-europene-caen/0111-culturi-cereale",
+    "sentence": "Dacă achiziția deservește culturi de câmp, consultă {{link}}.",
+    "anchor": "verificările de investiție pentru CAEN 0111, culturi de cereale",
+    "reason": "Leagă dimensionarea utilajelor de activitatea concretă a fermei."
+  },
+  {
+    "source": "/digitalizare-imm-erp-crm-cloud",
+    "match": "ERP-ul, CRM-ul și cloud-ul trebuie explicate",
+    "target": "/fonduri-europene-caen/4321-instalatii-electrice",
+    "sentence": "Pentru o firmă de instalații electrice care își digitalizează ofertarea, vezi {{link}}.",
+    "anchor": "exemplele de investiții pentru CAEN 4321",
+    "reason": "Oferă un caz sectorial pentru digitalizarea ofertării și proiectării."
+  },
+  {
+    "source": "/proiectare-fonduri-europene",
+    "match": "Un buget preliminar poate ajuta la triere",
+    "target": "/fonduri-europene-caen/4321-instalatii-electrice",
+    "sentence": "Dacă solicitantul este chiar firma de instalații electrice, consultă {{link}}.",
+    "anchor": "ghidul investițiilor în dotările proprii pentru CAEN 4321",
+    "reason": "Distinge dotarea instalatorului de proiectarea lucrării pentru un beneficiar."
+  },
+  {
+    "source": "/idei-afaceri-fonduri-europene",
+    "match": "Al doilea criteriu este eligibilitatea tehnică",
+    "target": "/fonduri-europene-caen/5610-restaurante",
+    "sentence": "Pentru un restaurant, verifică {{link}} înainte de a construi bugetul.",
+    "anchor": "încadrarea CAEN pentru restaurante și unități mobile de alimentație",
+    "reason": "Aplică verificarea codului la un caz în care contează activitatea exactă și revizia."
+  },
+  {
+    "source": "/start-up-nation-2026-idei-afaceri",
+    "match": "Ideile de afaceri Start Up Nation 2026 trebuie alese",
+    "target": "/fonduri-europene-caen/5610-restaurante",
+    "sentence": "Pentru alimentație publică, consultă {{link}}.",
+    "anchor": "diferența dintre codurile CAEN pentru restaurante și unități mobile",
+    "reason": "Ajută cititorul să încadreze corect ideea de alimentație publică înainte de plan."
+  },
+  {
+    "source": "/eligibilitate-pocidif-21",
+    "match": "Pot aplica microîntreprinderi",
+    "target": "/fonduri-europene-caen/6201-dezvoltare-software",
+    "sentence": "Pentru activități de programare, verifică {{link}} înainte de a compara codul autorizat cu lista apelului.",
+    "anchor": "trecerea de la CAEN 6201 la 6210 și documentele activității",
+    "reason": "Leagă condiția privind sectorul TIC de corespondența codurilor, fără să extindă lista PoCIDIF."
+  },
+  {
+    "source": "/digitalizare-imm-erp-crm-cloud",
+    "match": "ERP, CRM, cloud și echipamentele IT se justifică",
+    "target": "/fonduri-europene-caen/6201-dezvoltare-software",
+    "sentence": "Dacă firma dezvoltă software pentru clienți, verifică separat {{link}}.",
+    "anchor": "încadrarea CAEN a activității de dezvoltare software",
+    "reason": "Separă dezvoltarea software pentru piață de cumpărarea unui ERP pentru uz intern."
+  },
+  {
+    "source": "/femeia-antreprenor-2026",
+    "match": "Pentru programele dedicate femeilor antreprenor",
+    "target": "/fonduri-europene-femei-antreprenor",
+    "sentence": "Pentru o investiție nouă, compară {{link}} și verifică statutul fiecărui apel.",
+    "anchor": "opțiunile de finanțare pentru femei antreprenor",
+    "reason": "Trimite de la apelul dedicat la alternative fără a sugera o ediție nouă."
+  },
+  {
+    "source": "/start-up-nation-2026-idei-afaceri",
+    "match": "Ideile de afaceri Start Up Nation 2026 trebuie alese",
+    "target": "/idei-afaceri-fonduri-europene",
+    "sentence": "Dacă investiția nu se potrivește ediției urmărite, compară {{link}}.",
+    "anchor": "idei de afaceri pentru alte finanțări nerambursabile",
+    "reason": "Păstrează o rută de explorare pentru ideile care nu se potrivesc Start-Up Nation."
+  },
+  {
+    "source": "/fonduri-europene-femei-antreprenor",
+    "match": "Aceasta este pagina generală pentru femei antreprenor",
+    "target": "/idei-afaceri-fonduri-europene",
+    "sentence": "Dacă investiția este încă la stadiul de idee, compară {{link}}.",
+    "anchor": "exemplele de afaceri după piață, buget și cod CAEN",
+    "reason": "Ajută persoana care compară opțiuni să își definească mai întâi proiectul."
+  },
+  {
+    "source": "/acte-necesare-fonduri-europene-nerambursabile",
+    "match": "Riscurile apar mai ales când documentele",
+    "target": "/consultant-fonduri-europene-imm",
+    "sentence": "Dacă solicitantul este un IMM, {{link}} poate ajuta la clarificarea documentelor care nu se potrivesc cu investiția.",
+    "anchor": "consultanța pentru verificarea dosarului și bugetului IMM",
+    "reason": "Continuă traseul Diaspora de la actele firmei la serviciul potrivit solicitantului IMM."
+  },
+  {
+    "source": "/blog-afir-fotovoltaice-ferme-2026",
+    "match": "Riscurile frecvente sunt dimensionarea",
+    "target": "/consultanta-afir",
+    "sentence": "Pentru verificarea documentelor exploatației și a investiției, vezi {{link}}.",
+    "anchor": "consultanța pentru proiecte AFIR",
+    "reason": "Continuă traseul autoconsumului agricol către serviciul dedicat dosarelor AFIR."
+  },
+  {
+    "source": "/cheltuieli-eligibile-digitalizare-imm",
+    "match": "Inventariază sistemele, datele, interfețele",
+    "target": "/consultant-fonduri-europene-imm",
+    "sentence": "După ce ai inventarul și costurile, {{link}} poate clarifica încadrarea proiectului în apelul ales.",
+    "anchor": "consultanța pentru finanțarea IMM-urilor",
+    "reason": "Leagă ghidul comun de serviciul IMM în traseele ADR Centru și SME Eco-Tech."
+  },
+  {
+    "source": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+    "match": "Pregătirea începe cu actele firmei",
+    "target": "/consultant-fonduri-europene-imm",
+    "sentence": "Pentru o investiție nouă, poți discuta actele și bugetul prin {{link}}.",
+    "anchor": "serviciul de consultanță pentru proiecte IMM",
+    "reason": "Oferă un serviciu potrivit ideilor noi, separat de apelul Femeia Antreprenor închis."
+  },
+  {
+    "source": "/fonduri-europene-nord-est",
+    "match": "Pentru o analiză inițială, sunt utile datele firmei",
+    "target": "/firma-consultanta-fonduri-europene",
+    "sentence": "Dacă ai aceste date, vezi {{link}}.",
+    "anchor": "ce include consultanța pentru o investiție regională",
+    "reason": "Continuă traseul celor două programe regionale de la profilul local la serviciul dedicat."
+  },
+  {
+    "source": "/cheltuieli-eligibile-pocidif-21",
+    "match": "O cheltuială nu devine eligibilă doar",
+    "target": "/consultanta-fonduri-europene",
+    "sentence": "Pentru un dosar deja depus, vezi {{link}}.",
+    "anchor": "ce poate acoperi consultanța la clarificări și contractare",
+    "reason": "Trimite proiectele deja depuse la sprijin pentru etapa curentă, fără a sugera depuneri noi."
+  },
+  {
+    "source": "/programul-tranzitie-justa-intrebari-documente",
+    "match": "Documentele de firmă, instituție sau organizație",
+    "target": "/firma-consultanta-fonduri-europene",
+    "sentence": "Pentru o investiție în zona eligibilă, vezi {{link}}.",
+    "anchor": "ce include analiza de consultanță a documentelor și investiției",
+    "reason": "Leagă ghidul documentelor PTJ de verificarea specifică proiectului regional."
+  }
+]
