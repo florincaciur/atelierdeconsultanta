@@ -170,6 +170,10 @@ async function checkCalculators(browser) {
   assert.equal(await animalQuantity.getAttribute("aria-invalid"), "true");
   await animalQuantity.fill("8");
   assert.equal(await total.getAttribute("data-so-value"), "11300");
+  await page.getByRole("button", { name: /adaugă cultură/iu }).click();
+  await page.locator("#culturi-body .area-input").last().fill("0.0123");
+  assert.match(await page.locator("#so-result-explanation").textContent(), /0,0123 hectare/);
+  assert(Math.abs(Number(await total.getAttribute("data-so-exact-value")) - (8 * 1412.53 + 0.0123 * 777.94)) < 1e-9);
   await context.close();
 }
 

@@ -53,13 +53,14 @@
     }
     var items = rows().map(function (row) {
       var meta = selectedMetadata(row);
-      var quantity = Number(row.querySelector(".area-input")?.value || 0);
+      var inputValue = row.querySelector(".area-input")?.value || "";
+      var quantity = Number(inputValue);
       var coefficient = Number(row.querySelector(".so-input")?.value || 0);
       if (!quantity || !coefficient) return "";
       var product = quantity * coefficient;
       return "<li><strong>" + meta.name.replace(/[&<>\"]/g, function (char) {
         return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" }[char];
-      }) + ":</strong> " + quantity.toLocaleString("ro-RO") + " " + meta.unitLabel + " × " + coefficient.toLocaleString("ro-RO", { maximumFractionDigits: 3 }) + " EUR = " + product.toLocaleString("ro-RO", { maximumFractionDigits: 2 }) + " EUR SO</li>";
+      }) + "</strong> · " + inputValue.replace(".", ",") + " " + meta.unitLabel + " × " + coefficient.toLocaleString("ro-RO", { maximumFractionDigits: 3 }) + " EUR = " + product.toLocaleString("ro-RO", { maximumFractionDigits: 8 }) + " EUR SO</li>";
     }).filter(Boolean);
     explanation.innerHTML = items.length
       ? "<h3>Cum a rezultat totalul</h3><ul>" + items.join("") + "</ul>"
