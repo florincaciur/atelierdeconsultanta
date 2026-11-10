@@ -171,7 +171,8 @@ for (const program of publicPrograms) {
     assert.equal(journey.find("svg[data-journey-svg] path").length, 2, `${program.slug}: traseul SVG trebuie să conțină linia de bază și progresul`);
   }
   assertFacts(program, factsFromElement($, factual.get(0)), "componenta factuală");
-  assert.equal(factual.find("a[data-analytics-event='source_document_click']").attr("href"), program.sourceUrl, `${program.slug}: link oficial diferit`);
+  assert.equal(factual.find("a[data-analytics-event='source_document_click']")
+    .filter((_, element) => $(element).attr("href") === program.sourceUrl).length, 1, `${program.slug}: link oficial diferit`);
   assert.equal($("[data-aeo-program-summary] [data-answer-field='verifiedAt'] time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);
   const summary = $("[data-aeo-program-summary]").first();
   assert(summary.length, `${program.slug}: lipsește rezumatul semantic answer-first`);

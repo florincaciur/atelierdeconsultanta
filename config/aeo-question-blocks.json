@@ -16,25 +16,28 @@
       "questions": [
         {
           "id": "este-deschis-apelul-dr12",
-          "question": "Este deschis apelul DR 12?",
-          "answer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere.",
-          "evidenceTitle": "Calendar pe componente în contorul AFIR",
+          "question": "Care componentă DR 12 primește cereri și până când?",
+          "answer": "AFIR afișează termene separate pentru Alte sectoare și Sector zootehnic. Fișa de depunere arată ora închiderii și starea fiecărei componente la ultima verificare. Pentru Alte sectoare, ora 00:00 înseamnă că termenul se încheie chiar la începutul zilei afișate. Înainte să trimiți cererea, verifică în contor dacă depunerea mai este posibilă.",
+          "evidenceTitle": "Cum citești fișa de depunere",
           "evidence": [
-            "Deschidere la 6 octombrie 2026, ora 09:00",
-            "Alte sectoare până la 11 noiembrie, ora 00:00",
-            "Sector zootehnic până la 2 decembrie, ora 15:59:59"
+            "Starea este cea afișată de AFIR la momentul verificării.",
+            "Data și ora de închidere se citesc separat pentru fiecare componentă."
           ],
           "selectionBasis": "GSC: „dr 12 afir lansare”, „dr 12 ghid final” și variante apropiate",
           "sources": [
             {
               "name": "AFIR",
               "document": "Contorul sesiunilor active DR-12",
-              "version": "Termene distincte pe componente, verificare 10.11.2026",
+              "version": "Termene pe componente, verificare după miezul nopții la 11.11.2026",
               "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
-              "verifiedAt": "2026-11-10"
+              "verifiedAt": "2026-11-11"
             }
           ],
           "detailLinks": [
+            {
+              "href": "/dr12-afir#dr12-afir-termene",
+              "label": "Vezi fișa termenelor și starea componentelor"
+            },
             {
               "href": "/dr12-vs-dr14",
               "label": "Compară prudent DR 12 cu DR 14"

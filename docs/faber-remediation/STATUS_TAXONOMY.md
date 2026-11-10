@@ -286,7 +286,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 |---|---|---|---|---|---|
 | `program-regional-nord-est` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel. |
 | `fonduri-regionale` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Catalogul agregă programe și apeluri cu stări diferite. |
-| `dr12-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 02.12.2026 | program_call | Sesiune activă confirmată în platforma AFIR și anunțul din 29.09.2026. |
+| `dr12-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 02.12.2026 | program_call | Contorul AFIR consultat după miezul nopții afișează în continuare închiderea componentei Alte sectoare la 11.11.2026, 00:00. Componenta Sector zootehnic are termen la 02.12.2026, 15:59:59. |
 | `dr14-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 16.11.2026 | session | Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă. |
 | `dr18-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 16.11.2026 | session | Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă. |
 | `start-up-nation` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri. |

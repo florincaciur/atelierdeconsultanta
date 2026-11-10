@@ -57,8 +57,8 @@ assert($("script[type='application/ld+json']").toArray().every((element) => !$(e
 assert(!html.includes(governance.humanReviewToken), "placeholderul DE_VALIDAT_UMAN a ajuns în HTML-ul public");
 
 const visible = $("body").text().replace(/\s+/gu, " ");
-assert(visible.includes("nu afirmă în prezent o afiliere sau o listare instituțională"), "lipsa listării confirmate nu este explicată transparent");
-assert(visible.includes("listată în nomenclatorul orientativ AFIR"), "formularea condiționată pentru nomenclatorul AFIR lipsește");
+assert(visible.includes("FABER nu prezintă o acreditare sau o recomandare instituțională AFIR"), "limita privind acreditarea și recomandarea instituțională lipsește");
+assert(visible.includes("dovezile verificabile ale furnizorului"), "verificarea dovezilor furnizorului nu este explicată");
 assert(visible.includes("Nu promitem aprobarea"), "limita privind aprobarea lipsește");
 assert(visible.includes("Nu echivalăm o listare cu o acreditare"), "limita privind acreditarea AFIR lipsește");
 assert(visible.includes("nu înseamnă acreditare din partea AFIR"), "clarificarea despre nomenclatorul AFIR lipsește");

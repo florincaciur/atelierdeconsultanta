@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:55:09.292Z",
+  "generatedAt": "2026-11-10T22:24:04.833Z",
   "targetRoutes": 10,
   "changedFiles": [
     "verificare-eligibilitate-fonduri-europene/index.html",
@@ -2053,6 +2053,22 @@
       "location": "visible-copy",
       "before": "Verifică profilul fermierului, minimum 12.000 SO, investiția și cofinanțarea conform ghidului final publicat de AFIR la 18.09.2026.",
       "after": "Verifică profilul fermierului, minimum 12.000 SO, investiția și contribuția proprie conform ghidului final publicat de AFIR la 18.09.2026.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": ". Cofinanțarea se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului.",
+      "after": ". Contribuția proprie se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "json-ld:$.@graph[6].mainEntity[1].name",
+      "before": "Ce finanțare și cofinanțare are DR12 AFIR?",
+      "after": "Ce finanțare și contribuție proprie are DR12 AFIR?",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "dr12-afir/index.html"
     }

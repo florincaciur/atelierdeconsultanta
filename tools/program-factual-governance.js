@@ -466,6 +466,19 @@ function applicationDateText(program, field) {
   return precise ? `${date}, ora ${precise.slice(11, 16)}` : date;
 }
 
+function componentDateTimeMarkup(value) {
+  const date = formatDateRo(value.slice(0, 10));
+  const time = value.includes("T") ? `, ora ${value.slice(11, 19).replace(/:00$/, "")}` : "";
+  return `<time datetime="${escapeHtml(value)}">${escapeHtml(date + time)}</time>`;
+}
+
+function componentStatusText(component) {
+  if (component.state === "OPEN") return "Deschisă la verificare";
+  if (component.state === "CLOSED") return "Închisă la verificare";
+  if (component.state === "DEADLINE_ELAPSED") return "Termen afișat expirat";
+  return "Stare neconfirmată";
+}
+
 function applicationWindowText(program) {
   const components = program?.presentation?.calendar?.components;
   if (components?.length) return components.map(component => `${component.name} până la ${formatDateRo(component.endAt.slice(0, 10))}, ora ${component.endAt.slice(11, 19).replace(/:00$/, "")}`).join(" · ");
@@ -478,9 +491,22 @@ function applicationWindowText(program) {
 }
 
 function applicationWindowMarkup(program) {
-  const components = program?.presentation?.calendar?.components;
-  if (components?.length) {
-    return `<ul>${components.map(component => `<li>${escapeHtml(component.name)} până la <time datetime="${escapeHtml(component.endAt)}">${escapeHtml(formatDateRo(component.endAt.slice(0, 10)))}, ora ${escapeHtml(component.endAt.slice(11, 19).replace(/:00$/, ""))}</time></li>`).join("")}</ul>`;
+  const calendar = program?.presentation?.calendar;
+  if (calendar?.components?.length) {
+    return `<p>Contor AFIR verificat la ${componentDateTimeMarkup(calendar.checkedAt || program.verifiedAt)} (ora României, Europe/Bucharest).</p>
+    <div class="table-wrap" role="region" aria-label="Termene de depunere pe componente" tabindex="0">
+      <table class="program-table"><caption>Depunerea cererilor ${escapeHtml(program.shortName)} pe componente</caption>
+        <thead><tr><th scope="col">Componentă</th><th scope="col">Deschidere</th><th scope="col">Închidere</th><th scope="col">Stare la verificare</th></tr></thead>
+        <tbody>${calendar.components.map(component => `<tr>
+          <th scope="row">${escapeHtml(component.name)}</th>
+          <td>${componentDateTimeMarkup(component.startAt || program.applicationStartAt || program.applicationStart)}</td>
+          <td>${componentDateTimeMarkup(component.endAt)}</td>
+          <td>${escapeHtml(componentStatusText(component))}</td>
+        </tr>`).join("")}</tbody>
+      </table>
+    </div>
+    <p class="source-note">Pe ecrane înguste, derulează tabelul orizontal pentru toate coloanele.</p>
+    <p>${escapeHtml(calendar.note)} Consultă <a href="${escapeHtml(calendar.components[0].sourceUrl || program.sourceUrl)}" target="_blank" rel="noopener noreferrer">contorul AFIR pentru starea curentă</a>.</p>`;
   }
   const dates = ["applicationStart", "applicationEnd"].filter((field) => program[field]);
   if (!dates.length) return escapeHtml(applicationWindowText(program));
@@ -551,7 +577,7 @@ function factualFaq(program) {
   ];
   const funding = fundingSummary(program);
   if (funding) items.push([`Ce finanțare și cofinanțare are ${program.shortName}?`, funding]);
-  if (program.applicationStart || program.applicationEnd) {
+  if (!program.presentation?.calendar?.components?.length && (program.applicationStart || program.applicationEnd)) {
     const label = program.status === "apel_deschis" ? "Depunerea este deschisă în perioada"
       : program.status === "apel_inchis" ? "Intervalul de depunere a fost"
         : "Perioada de depunere anunțată este";
@@ -598,7 +624,7 @@ function renderProgramFactualStatus(program, options = {}) {
     <div data-answer-field="applicant"><dt>Cine poate aplica</dt><dd>${escapeHtml(applicantSummaryText(program))}</dd></div>
     <div data-answer-field="grant"><dt>Grant / valoare</dt><dd${program.grantSummary ? " data-program-grant=\"\"" : ""}>${escapeHtml(grant)}</dd></div>
     <div data-answer-field="contribution"><dt>Intensitate / contribuție</dt><dd${program.cofinancingSummary ? " data-program-contribution=\"\"" : ""}>${escapeHtml(contribution)}</dd></div>
-    <div data-answer-field="deadline"><dt>Perioadă de depunere / termen</dt><dd>${applicationMarkup}</dd></div>
+    <div data-answer-field="deadline"><dt${program.presentation?.calendar?.components?.length ? ` id="${escapeHtml(program.id)}-termene"` : ""}>Perioadă de depunere / termen</dt><dd>${applicationMarkup}</dd></div>
     <div data-answer-field="verifiedAt"><dt>Verificat la</dt><dd><time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(formatDateRo(program.verifiedAt))}</time></dd></div>
   </dl>
   <p class="program-factual-status__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceVersion)}</a>, ${escapeHtml(program.sourceName)}.${meaningful}</p>
@@ -656,6 +682,8 @@ module.exports = {
   applicantSummaryText,
   applicationWindowMarkup,
   applicationWindowText,
+  componentDateTimeMarkup,
+  componentStatusText,
   catalogPrograms,
   carouselPrograms,
   cofinancingSummaryText,

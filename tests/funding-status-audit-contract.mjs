@@ -9,7 +9,9 @@ import { fileURLToPath } from "node:url";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const { auditFundingStatus, exitCode, isDate, markdownReport } = require("../tools/audit-funding-status.js");
+const { auditFundingStatus, currentFundingDate, exitCode, isDate, markdownReport } = require("../tools/audit-funding-status.js");
+assert.equal(currentFundingDate(new Date("2026-11-10T21:59:59Z")), "2026-11-10");
+assert.equal(currentFundingDate(new Date("2026-11-10T22:00:00Z")), "2026-11-11");
 const { loadData } = require("../tools/generate-status-governance-docs.js");
 const { policy } = require("../config/editorial-governance.json");
 const taxonomy = require("../config/program-status-taxonomy.json");

@@ -9,4 +9,7 @@
 .dr12-result [data-dr12-total] { font-size: 2.5rem; }
 .dr12-calculator :focus-visible { outline: 3px solid #b16400; outline-offset: 3px; }
 #dr12-punctaj { scroll-margin-top: 8rem; }
+#dr12-afir-termene { scroll-margin-top: 8rem; }
+body[data-program-id="dr12-afir"] .program-factual-status__facts > [data-answer-field="deadline"] { grid-column: 1 / -1; }
+body[data-program-id="dr12-afir"] [data-answer-field="deadline"] .program-table { min-width: 640px; }
 @media (max-width: 760px) { .dr12-calculator { grid-template-columns: minmax(0, 1fr); } }

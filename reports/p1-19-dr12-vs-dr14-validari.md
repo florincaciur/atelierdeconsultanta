@@ -1,10 +1,10 @@
 # P1.19 — Validări pentru „DR 12 vs DR 14”
 
-Revizie factuală și editorială: **10.11.2026**.
+Revizie factuală și editorială: **11.11.2026**.
 
 ## Surse oficiale folosite
 
-- DR 12: Ghidul final DR-12 și documentele AFIR ale sesiunii, verificare 04.11.2026 — https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/
+- DR 12: Ghidul final DR-12 și contorul AFIR, verificare 11.11.2026 — https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/
 - DR 12, document: https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf
 - DR 14: AFIR – sesiunile active și disponibilul pe componente, verificare 04.11.2026 — https://depunerepspac.afir.ro/Sesiune/Lista
 

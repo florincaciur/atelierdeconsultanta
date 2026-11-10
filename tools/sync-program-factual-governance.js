@@ -9,6 +9,8 @@ const {
   archivedRobotsDecision,
   carouselPrograms,
   cofinancingSummaryText,
+  componentDateTimeMarkup,
+  componentStatusText,
   fundingSummary,
   isPublicProgram,
   loadProgramConfig,
@@ -626,7 +628,7 @@ function renderFundingCalendar(programs) {
   const deadline = program => {
     const calendar = program.presentation.calendar;
     if (calendar.components?.length) {
-      return `<p>Deschidere ${time(program.applicationStartAt || program.applicationStart)}.</p><ul>${calendar.components.map(component => `<li><strong>${escapeHtml(component.name)}</strong> până la ${time(component.endAt)}.</li>`).join("")}</ul>`;
+      return `<ul>${calendar.components.map(component => `<li><strong>${escapeHtml(component.name)}</strong>: ${escapeHtml(componentStatusText(component))}. Închidere ${componentDateTimeMarkup(component.endAt)}.</li>`).join("")}</ul>`;
     }
     if (calendar.phase === "preparation" && program.consultationEnd) {
       return `<p>Observații la ghid până la ${time(program.consultationEnd)}.</p><p>Calendarul depunerii nu este publicat.</p>`;
@@ -640,12 +642,17 @@ function renderFundingCalendar(programs) {
       .sort((left, right) => nearestDeadline(left).localeCompare(nearestDeadline(right)) || left.name.localeCompare(right.name, "ro"));
     return `<tbody data-calendar-phase="${phase}"><tr><th scope="rowgroup" colspan="5">${label}</th></tr>${rows.map(program => {
       const calendar = program.presentation.calendar;
-      const note = calendar.components?.length ? calendar.components[0].note : calendar.note;
+      const components = calendar.components;
+      const sourceUrl = components?.[0]?.sourceUrl || program.sourceUrl;
+      const analytics = ` data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="${escapeHtml(sourceUrl)}"`;
+      const guide = components?.length
+        ? `<p><a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="${escapeHtml(program.sourceUrl)}">Ghidul și anexele AFIR</a></p>`
+        : "";
       return `<tr data-calendar-program="${escapeHtml(program.id)}">
         <th scope="row"><a href="${escapeHtml(program.pageUrl)}">${escapeHtml(program.shortName)}</a><p>${escapeHtml(program.statusLabel)}</p></th>
         <td>${escapeHtml(calendar.beneficiary)}</td><td>${escapeHtml(calendar.counties)}</td>
-        <td>${deadline(program)}<p>${escapeHtml(note)}</p></td>
-        <td><a href="${escapeHtml(program.sourceUrl)}" title="${escapeHtml(program.sourceName)}" target="_blank" rel="noopener noreferrer">${escapeHtml(new URL(program.sourceUrl).hostname.replace(/^www\./, ""))}</a><p>Verificat la ${time(program.verifiedAt)}.</p><details data-non-faq><summary>Versiunea documentului</summary><p>${escapeHtml(program.sourceVersion)}</p></details></td>
+        <td>${deadline(program)}<p>${escapeHtml(calendar.note)}</p></td>
+        <td><a href="${escapeHtml(sourceUrl)}" title="${escapeHtml(program.sourceName)}" target="_blank" rel="noopener noreferrer"${analytics}>${components?.length ? "Contor AFIR" : escapeHtml(new URL(sourceUrl).hostname.replace(/^www\./, ""))}</a><p>Verificat la ${components?.length ? componentDateTimeMarkup(calendar.checkedAt || program.verifiedAt) : time(program.verifiedAt)}.</p><details data-non-faq><summary>Versiunea documentului</summary><p>${escapeHtml(program.sourceVersion)}</p>${guide}</details></td>
       </tr>`;
     }).join("\n")}</tbody>`;
   }).join("\n");

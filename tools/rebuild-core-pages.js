@@ -508,7 +508,7 @@ function rewriteContact() {
     $("head").append('<link rel="stylesheet" href="/assets/contact-triage.css?v=20260721-1">');
   }
   $('script[src^="/assets/contact-triage.js?"]').remove();
-  $("head").append('<script src="/assets/contact-triage.js?v=20261110-1" defer></script>');
+  $("head").append('<script src="/assets/contact-triage.js?v=20261110-2" defer></script>');
   if (!$('link[href="/assets/site-refresh-2026.css?v=20260809-1"]').length) {
     $("head").append('<link rel="stylesheet" href="/assets/site-refresh-2026.css?v=20260809-1">');
   }

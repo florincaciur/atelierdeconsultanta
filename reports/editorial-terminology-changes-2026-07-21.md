@@ -2,7 +2,7 @@
 
 - Suprafețe țintă: 10
 - Fișiere HTML actualizate la această rulare: 2
-- Fragmente documentate cumulativ: 256
+- Fragmente documentate cumulativ: 258
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.
 - Statusurile și câmpurile factuale din registrul programelor sunt protejate.
@@ -265,3 +265,5 @@
 | /dr12-afir | dr12-afir/index.html:json-ld:$.@graph[5].mainEntity[11].acceptedAnswer.text | Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și cofinanțarea. Lista exactă se verifică în capitolul 4.1 și anexele ghidului. | Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și contribuția proprie. Lista exactă se verifică în capitolul 4.1 și anexele ghidului. | Lexic controlat P0.14 |
 | /dr12-afir | dr12-afir/index.html:visible-copy | — Actualizare după ghidul final: eligibilitate, cheltuieli, cofinanțare și calculator conform grilei 100/80/45. | — Actualizare după ghidul final: eligibilitate, cheltuieli, contribuție proprie și calculator conform grilei 100/80/45. | Lexic controlat P0.14 |
 | /dr12-afir | dr12-afir/index.html:visible-copy | Verifică profilul fermierului, minimum 12.000 SO, investiția și cofinanțarea conform ghidului final publicat de AFIR la 18.09.2026. | Verifică profilul fermierului, minimum 12.000 SO, investiția și contribuția proprie conform ghidului final publicat de AFIR la 18.09.2026. | Lexic controlat P0.14 |
+| /dr12-afir | dr12-afir/index.html:visible-copy | . Cofinanțarea se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului. | . Contribuția proprie se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului. | Lexic controlat P0.14 |
+| /dr12-afir | dr12-afir/index.html:json-ld:$.@graph[6].mainEntity[1].name | Ce finanțare și cofinanțare are DR12 AFIR? | Ce finanțare și contribuție proprie are DR12 AFIR? | Lexic controlat P0.14 |

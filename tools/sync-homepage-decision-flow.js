@@ -16,7 +16,7 @@ const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
 const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260919-1" data-homepage-decision-flow-style="p1_22">';
 const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260902-2" defer="" data-homepage-decision-flow-script="p1_22"></script>';
-const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style="">\n  <script src="/assets/contact-triage.js?v=20261110-1" defer="" data-home-contact-script=""></script>';
+const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style="">\n  <script src="/assets/contact-triage.js?v=20261110-2" defer="" data-home-contact-script=""></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -220,8 +220,8 @@ function synchronize(source, programs) {
   const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
   const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
   // The long-form asset stays in place when the hero's critical CSS is moved.
-  if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
-  else if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}`);
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}`);
+  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
   else output = output.replace(/<\/head>/i, `${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);
 }

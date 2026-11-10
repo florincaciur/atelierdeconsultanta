@@ -27,9 +27,27 @@ for (const program of programs.filter(program => program.presentation?.guideRout
 }
 const dr12 = programs.find(program => program.id === 'dr12-afir');
 const dr12Page = cheerio.load(fs.readFileSync(fileForRoute(fileURLToPath(root), dr12.pageUrl), 'utf8'));
-for (const component of dr12.presentation.calendar.components) {
-  assert(dr12Page(`[data-answer-field="applicationWindow"] time[datetime="${component.endAt}"]`).length
-    || dr12Page(`.program-factual-status__facts time[datetime="${component.endAt}"]`).length,
-    `${component.name}: termenul componentei trebuie afișat în rezumatul factual`);
+const calendar = dr12.presentation.calendar;
+const componentTable = dr12Page('[data-answer-field="deadline"] table');
+assert.equal(componentTable.length, 1, 'DR-12: fișa pe componente trebuie să fie disponibilă în HTML');
+assert.equal(componentTable.find('tbody tr').length, calendar.components.length);
+assert.equal(dr12Page(`[data-answer-field="deadline"] time[datetime="${calendar.checkedAt}"]`).length, 1);
+const fundingCalendar = cheerio.load(fs.readFileSync(fileForRoute(fileURLToPath(root), '/calendar-fonduri-europene'), 'utf8'));
+const fundingRow = fundingCalendar('[data-calendar-program="dr12-afir"]');
+const home = cheerio.load(fs.readFileSync(fileForRoute(fileURLToPath(root), '/'), 'utf8'));
+assert.equal(home('[data-hero-program-item][data-program-id="dr12-afir"]').attr('data-status-label'), dr12.statusLabel);
+assert(fundingRow.text().includes(dr12.statusLabel));
+for (const [i, component] of calendar.components.entries()) {
+  const row = componentTable.find('tbody tr').eq(i);
+  assert.equal(row.find('th[scope="row"]').text(), component.name);
+  assert.deepEqual(row.find('time').map((_, time) => dr12Page(time).attr('datetime')).get(), [component.startAt, component.endAt]);
+  const calendarItem = fundingRow.find(`li:has(time[datetime="${component.endAt}"])`);
+  assert(calendarItem.text().includes(row.find('td').last().text()));
+}
+if (calendar.components.some(component => component.endAt.includes('T00:00:00'))) {
+  for (const text of [dr12Page('[data-answer-field="deadline"]').text(), fundingRow.text()]) {
+    assert.match(text, /ora 00:00\b/u);
+    assert.match(text, /începutul zilei/u);
+  }
 }
 console.log('Program copy state PASS: open-call summaries, component deadlines and guide session context.');

@@ -18,7 +18,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 |---|---|---:|---:|---:|
 | Programul Regional Nord-Est | calendar_estimativ | 2026-11-03 | — | — |
 | Fonduri regionale | calendar_estimativ | 2026-11-10 | — | — |
-| DR12 AFIR | apel_deschis | 2026-11-10 | 2026-10-06 | 2026-12-02 |
+| DR12 AFIR | apel_deschis | 2026-11-11 | 2026-10-06 | 2026-12-02 |
 | DR14 AFIR | apel_deschis | 2026-11-10 | 2026-09-01 | 2026-11-16 |
 | DR18 AFIR | apel_deschis | 2026-11-10 | 2026-09-01 | 2026-11-16 |
 | Start-Up Nation | apel_inchis | 2026-11-10 | — | 2026-05-29 |

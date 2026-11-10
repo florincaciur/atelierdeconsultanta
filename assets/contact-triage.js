@@ -209,7 +209,7 @@
     renderErrorSummary(errors);
     window.requestAnimationFrame(function () {
       errors[0].field.focus({ preventScroll: true });
-      errors[0].field.scrollIntoView({ behavior: "auto", block: "center" });
+      errors[0].field.scrollIntoView({ behavior: "instant", block: "center" });
     });
     return false;
   }

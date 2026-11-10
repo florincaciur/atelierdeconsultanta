@@ -17,7 +17,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|---|---|---|
 | `program-regional-nord-est` | Autoritatea de Management pentru Programul Regional Nord-Est | `UNCONFIRMED` | 2026-08-18 | 2026-11-03 |
 | `fonduri-regionale` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-11-10 |
-| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-11-10 | 2026-11-10 |
+| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-11-11 | 2026-11-11 |
 | `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-11-10 | 2026-11-10 |
 | `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-11-10 | 2026-11-10 |
 | `start-up-nation` | Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului | `CLOSED` | 2026-11-10 | 2026-11-10 |
@@ -150,41 +150,41 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Autoritate | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) |
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
 | Temei / document | Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente — [document oficial](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
-| Stadiu | OPEN — Alte sectoare până la 11 noiembrie, ora 00:00 · zootehnic până la 2 decembrie |
+| Stadiu | OPEN — Alte sectoare: termen expirat · Zootehnic până la 2 dec., 15:59:59 |
 | Sesiune | [Anunț AFIR: sesiunea DR-12, 6 octombrie–2 decembrie 2026](https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/) (`registry:afir-dr12-session-2026`, verificat 2026-11-04)<br>[Contorul AFIR al sesiunilor active](https://depunerepspac.afir.ro/Sesiune/Lista) (`registry:afir-active-sessions-20261103`, verificat 2026-11-10) |
 | Data deschiderii | 06.10.2026 |
 | Deadline | 02.12.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
 | Grant maxim | 200.000 EUR / proiect |
 | Intensitate | rate: 80; scope: maximum pentru tinerii fermieri sub 41 de ani, șefi de exploatație cu competențe adecvate; rate: 65; scope: maximum pentru celelalte categorii eligibile |
 | Cofinanțare | Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă. |
 | Beneficiari | Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).; Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.; Fermieri instalați cu maximum 45 de ani inclusiv (înainte de 46). PFA, II, IF sau SRL în condițiile ghidului; persoanele fizice neautorizate nu sunt eligibile. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Condiții critice | Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.; Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.; Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.; Termenele sunt distincte pe componente. Alte sectoare până la 11.11.2026, ora 00:00. Sector zootehnic până la 02.12.2026, înainte de ora 16:00. Verifică disponibilul în contorul AFIR.; Costuri generale: maximum 10% cu construcții-montaj sau 3% pentru achiziții fără construcții-montaj; marketing maximum 5%. Minimum 50% materie primă proprie la procesare/condiționare/depozitare. Extrasul pentru cofinanțare se însoțește de angajamentul folosirii a minimum 50% din disponibil pentru proiect. |
+| CAEN | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Condiții critice | Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.; Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.; Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.; Termenele diferă între componente. Verifică disponibilul și ora închiderii în contorul AFIR.; Costuri generale: maximum 10% cu construcții-montaj sau 3% pentru achiziții fără construcții-montaj; marketing maximum 5%. Minimum 50% materie primă proprie la procesare/condiționare/depozitare. Extrasul pentru cofinanțare se însoțește de angajamentul folosirii a minimum 50% din disponibil pentru proiect. |
 | Documente | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/)<br>[Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf)<br>[OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/)<br>[Anunț AFIR: sesiunea DR-12, 6 octombrie–2 decembrie 2026](https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/)<br>[Contorul AFIR al sesiunilor active](https://depunerepspac.afir.ro/Sesiune/Lista) |
-| Indicatori | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 11.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/)<br>[Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf)<br>[OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/)<br>[Anunț AFIR: sesiunea DR-12, 6 octombrie–2 decembrie 2026](https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/)<br>[Contorul AFIR al sesiunilor active](https://depunerepspac.afir.ro/Sesiune/Lista) |
-| Latest official update | 2026-11-10 — [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
-| verifiedAt | 2026-11-10 |
-| Pagină oficială program/apel | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-11-10) |
-| Ghid | [Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-11-10) |
-| Anexe | [Cererea de finanțare și anexele DR-12](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-11-10) |
-| Schemă / ordin | [OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/) (`approval:evidence:3`, verificat 2026-11-10) |
+| Latest official update | 2026-11-11 — [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
+| verifiedAt | 2026-11-11 |
+| Pagină oficială program/apel | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-11-11) |
+| Ghid | [Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-11-11) |
+| Anexe | [Cererea de finanțare și anexele DR-12](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-11-11) |
+| Schemă / ordin | [OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/) (`approval:evidence:3`, verificat 2026-11-11) |
 | Anunț sesiune | [Anunț AFIR: sesiunea DR-12, 6 octombrie–2 decembrie 2026](https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/) (`registry:afir-dr12-session-2026`, verificat 2026-11-04)<br>[Contorul AFIR al sesiunilor active](https://depunerepspac.afir.ro/Sesiune/Lista) (`registry:afir-active-sessions-20261103`, verificat 2026-11-10) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (verificat 2026-11-10) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-11; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-11; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (verificat 2026-11-11) |
 | Chei surse repo | `dr12` |
 | Notes | Contorul AFIR separă închiderea componentei Alte sectoare la 11.11.2026, 00:00:00, de Sector zootehnic la 02.12.2026, 15:59:59. Comunicatul de lansare indică intervalul general și ora 16:00. |
 

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-11-10T14:09:51.788Z",
+  "generatedAt": "2026-11-10T22:25:36.574Z",
   "summary": {
-    "htmlFilesChecked": 249,
+    "htmlFilesChecked": 360,
     "indexablePagesChecked": 107,
     "filesWithIssues": 0,
     "organizationVariants": 1,
@@ -19,8 +19,8 @@
       "FinancialIncentive": 27,
       "CreativeWork": 33,
       "FAQPage": 72,
-      "Question": 467,
-      "Answer": 467,
+      "Question": 464,
+      "Answer": 464,
       "WebPageElement": 2,
       "Service": 12,
       "AdministrativeArea": 12,
@@ -74,12 +74,12 @@
         "FinancialIncentive": 1,
         "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
-        "2026-11-10",
-        "2026-11-10"
+        "2026-11-11",
+        "2026-11-11"
       ],
       "issues": []
     },
@@ -904,7 +904,7 @@
         "CreativeWork": 1
       },
       "modified": [
-        "2026-11-10"
+        "2026-11-11"
       ],
       "issues": []
     },
@@ -1024,8 +1024,8 @@
         "CreativeWork": 1
       },
       "modified": [
-        "2026-11-10",
-        "2026-11-10"
+        "2026-11-11",
+        "2026-11-11"
       ],
       "issues": []
     },
@@ -1531,7 +1531,7 @@
         "Answer": 7
       },
       "modified": [
-        "2026-07-22"
+        "2026-11-10"
       ],
       "issues": []
     },

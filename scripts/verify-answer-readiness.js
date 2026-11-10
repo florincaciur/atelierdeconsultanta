@@ -61,8 +61,14 @@ function inspectProgram(program) {
     }
   }
   const deadline = summary.find("[data-answer-field='deadline']");
-  for (const date of [program.applicationStart, program.applicationEnd].filter(Boolean)) {
-    assert.equal(deadline.find(`time[datetime='${date}']`).length, 1, `${program.pageUrl}: data absolută ${date} lipsește din termen`);
+  const components = program.presentation?.calendar?.components;
+  const dates = components?.length
+    ? components.flatMap(component => [component.startAt || program.applicationStartAt || program.applicationStart, component.endAt])
+    : [program.applicationStartAt || program.applicationStart, program.applicationEndAt || program.applicationEnd].filter(Boolean);
+  const datesRegion = components?.length ? deadline.find("tbody") : deadline;
+  for (const date of new Set(dates)) {
+    assert.equal(datesRegion.find(`time[datetime='${date}']`).length, dates.filter(value => value === date).length,
+      `${program.pageUrl}: data absolută ${date} lipsește din termen`);
   }
   const verified = summary.find("[data-answer-field='verifiedAt']");
   assert.equal(verified.length, 1, `${program.pageUrl}: verifiedAt lipsește sau este duplicat`);

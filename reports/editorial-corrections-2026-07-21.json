@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:57:54.230Z",
+  "generatedAt": "2026-11-10T22:28:52.620Z",
   "canonicalUrlCount": 107,
   "changes": [
     {
@@ -3526,6 +3526,14 @@
       "route": "/calendar-fonduri-europene",
       "sourceFile": "calendar-fonduri-europene/index.html",
       "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "sourceFile": "calendar-fonduri-europene/index.html",
+      "location": "visible-copy",
       "oldFragment": "procentul real se confirma în ghidul activ",
       "newFragment": "procentul real se confirmă în ghidul activ",
       "reason": "Diacritice și normă editorială română"
@@ -5368,6 +5376,14 @@
       "location": "visible-copy",
       "oldFragment": "Pregatirea trebuie inceputa înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizatii sau calcule de punctaj.",
       "newFragment": "Pregătirea trebuie începută înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizații sau calcule de punctaj.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "sourceFile": "cod-caen-start-up-nation-2026/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -30278,6 +30294,14 @@
       "route": "/start-up-nation-2026-cheltuieli-eligibile",
       "sourceFile": "start-up-nation-2026-cheltuieli-eligibile/index.html",
       "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "sourceFile": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "location": "visible-copy",
       "oldFragment": "procedura",
       "newFragment": "procedură",
       "reason": "Diacritice și normă editorială română"
@@ -30872,6 +30896,14 @@
       "location": "visible-copy",
       "oldFragment": "Pregatirea trebuie inceputa înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizatii sau calcule de punctaj.",
       "newFragment": "Pregătirea trebuie începută înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizații sau calcule de punctaj.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "sourceFile": "start-up-nation-2026-conditii/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -31518,6 +31550,14 @@
       "route": "/start-up-nation-2026-idei-afaceri",
       "sourceFile": "start-up-nation-2026-idei-afaceri/index.html",
       "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "sourceFile": "start-up-nation-2026-idei-afaceri/index.html",
+      "location": "visible-copy",
       "oldFragment": "procedura",
       "newFragment": "procedură",
       "reason": "Diacritice și normă editorială română"
@@ -32120,6 +32160,14 @@
       "location": "visible-copy",
       "oldFragment": "Pregatirea trebuie inceputa înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizatii sau calcule de punctaj.",
       "newFragment": "Pregătirea trebuie începută înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizații sau calcule de punctaj.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "sourceFile": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a doua se verifică separat.",
+      "newFragment": "Prima sesiune pentru persoane juridice este închisă. Înscrierea la cursurile anunțate pentru sesiunea a două se verifică separat.",
       "reason": "Diacritice și normă editorială română"
     },
     {

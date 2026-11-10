@@ -13,6 +13,8 @@ const TARGET = path.resolve(process.argv.slice(2).find((arg) => !arg.startsWith(
 const EXCLUDED_DIRS = new Set([
   ".git",
   ".github",
+  ".codex",
+  ".tmp",
   ".wrangler",
   "dist",
   "node_modules",

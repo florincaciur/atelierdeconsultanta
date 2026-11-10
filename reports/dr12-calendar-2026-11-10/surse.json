@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-11-10T22:00:30.078Z",
+  "sources": [
+    {
+      "id": "contor",
+      "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+      "checkedAt": "2026-11-10T22:00:29.846Z",
+      "status": 200,
+      "sha256": "06db6d99f7ed990212fbf01d266e6357b9efee87fe89d25402cf20e0da0e39d1",
+      "datesObserved": [
+        "06/10/2026 09:00:00",
+        "02/12/2026 15:59:59",
+        "11/11/2026 00:00:00",
+        "01/09/2026 09:00:00",
+        "16/11/2026 15:59:59"
+      ],
+      "componentDeadlines": [
+        {
+          "component": "Alte sectoare",
+          "endAt": "2026-11-11T00:00:00+02:00",
+          "present": true
+        },
+        {
+          "component": "Sector zootehnic",
+          "endAt": "2026-12-02T15:59:59+02:00",
+          "present": true
+        }
+      ]
+    },
+    {
+      "id": "anunt",
+      "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
+      "checkedAt": "2026-11-10T22:00:30.005Z",
+      "status": 200,
+      "sha256": "09390be3dd6ad6493f25e2a200de9e28a0c1c82ae91d4fea4cf4916dc90c8020",
+      "datesObserved": []
+    },
+    {
+      "id": "documente",
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "checkedAt": "2026-11-10T22:00:30.076Z",
+      "status": 200,
+      "sha256": "84530c128324242adecdc9083b91f87dd09c784d466f096dbf8cb74bb4ce5038",
+      "datesObserved": [
+        "18.09.2026",
+        "21.09.2026",
+        "06.11.2026",
+        "02.10.2026"
+      ],
+      "clarifications": [
+        {
+          "title": "Clarificare istoric șef exploatație DR-12 (06.11.2026)",
+          "url": "https://www.afir.ro/api/file/document?url=/media/nzghktz5/nota-clarificare-dr12_06112026.pdf&filename=Clarificare%20istoric%20%C8%99ef%20exploata%C8%9Bie%20DR-12%20(06.11.2026)&filetype=pdf"
+        },
+        {
+          "title": "AFIR - Nota îndrumare încadrare combină DR-12",
+          "url": "https://www.afir.ro/api/file/document?url=/media/ts2lxgba/nota-indrumare-incadrare-combina-dr-12.pdf&filename=AFIR%20-%20Nota%20%C3%AEndrumare%20%C3%AEncadrare%20combin%C4%83%20DR-12&filetype=pdf"
+        },
+        {
+          "title": "AFIR - Nota Clarificare DR-12 - modalitate aplicare CS6.2",
+          "url": "https://www.afir.ro/api/file/document?url=/media/gc4fe4ur/afir-nota-clarificare-dr-12-modalitate-aplicare-cs62.pdf&filename=AFIR%20-%20Nota%20Clarificare%20DR-12%20-%20modalitate%20aplicare%20CS6.2&filetype=pdf"
+        },
+        {
+          "title": "AFIR - Notă îndrumare DR-12 Fișa E1.2 (02.10.2026)",
+          "url": "https://www.afir.ro/api/file/document?url=/media/xyrjyjck/nota-indrumare-dr12-fisa-e12_02102026.pdf&filename=AFIR%20-%20Not%C4%83%20%C3%AEndrumare%20DR-12%20Fi%C8%99a%20E1.2%20(02.10.2026)&filetype=pdf"
+        },
+        {
+          "title": "AFIR Clarificare CS3.2 DR 12",
+          "url": "https://www.afir.ro/api/file/document?url=/media/h3elnf5d/afir_clarificare-cs32_dr-12.pdf&filename=AFIR%20Clarificare%20CS3.2%20DR%2012&filetype=pdf"
+        }
+      ]
+    }
+  ]
+}

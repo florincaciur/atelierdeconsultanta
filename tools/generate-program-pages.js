@@ -2852,7 +2852,7 @@ function pageHtml(page, config) {
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const dr14Css = ["dr14", "dr18"].includes(page.slug) ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260818-1" />` : "";
   const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
-  const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}${page.slug === "dr12-afir" ? '\n  <link rel="stylesheet" href="/assets/dr12-score.css?v=20260919">' : ""}`;
+  const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}${page.slug === "dr12-afir" ? '\n  <link rel="stylesheet" href="/assets/dr12-score.css?v=20261110">' : ""}`;
   const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}${page.slug === "dr12-afir" ? '\n  <script src="/assets/dr12-score.js?v=20260919" defer></script>' : ""}`;
   const primaryCta = heroPrimaryCtaFor(page);
   const secondaryCta = heroSecondaryCta(page);
@@ -2986,8 +2986,8 @@ function ensureFile(page, html, { writeLegacy = true } = {}) {
   fs.writeFileSync(canonicalFile, normalizedHtml, "utf8");
 
   const legacyFile = path.join(ROOT, page.output);
-  if (CANONICAL_DIRECTORY_ONLY_SLUGS.has(page.slug) && fs.existsSync(legacyFile)) {
-    fs.rmSync(legacyFile);
+  if (CANONICAL_DIRECTORY_ONLY_SLUGS.has(page.slug)) {
+    if (fs.existsSync(legacyFile)) fs.rmSync(legacyFile);
   } else if (writeLegacy && /\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
     fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
     fs.writeFileSync(legacyFile, normalizedHtml, "utf8");

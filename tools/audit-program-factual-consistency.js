@@ -250,7 +250,9 @@ function auditProgram(issues, program, context) {
     compare(issues, program, "identity-mismatch", "page-status", program.id, note.attr("data-program-id"), "Nota factuală indică alt program.");
     compare(issues, program, "status-mismatch", "page-status", program.status, note.attr("data-program-status"), "Nota factuală are alt status.");
     compare(issues, program, "label-mismatch", "page-status", program.statusLabel, note.attr("data-status-label"), "Nota factuală are altă etichetă de status.");
-    compare(issues, program, "source-mismatch", "page-status", program.officialSourceUrl, note.find("a[data-analytics-event='source_document_click']").attr("href"), "Sursa vizibilă diferă de config.");
+    const officialSource = note.find("a[data-analytics-event='source_document_click']")
+      .filter((_, element) => $(element).attr("href") === program.officialSourceUrl);
+    compare(issues, program, "source-mismatch", "page-status", program.officialSourceUrl, officialSource.attr("href"), "Sursa vizibilă diferă de config.");
     const noteText = normalizeText(note.text());
     const factualSurfaceText = $("body").attr("data-program-template-version") === "p1_11"
       ? normalizeText($(".program-template").text())

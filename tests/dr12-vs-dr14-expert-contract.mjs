@@ -53,10 +53,10 @@ assert($("[data-expert-direct-answer]").nextAll("[data-aeo-question-set]").first
 
 const statusText = $(".expert-status-panel").text().replace(/\s+/gu, " ").trim();
 assert(statusText.includes(config.statusStatement));
-assert.match(statusText, /Alte sectoare până la 11 noiembrie, ora 00:00/iu);
-assert.match(statusText, /zootehnic până la 2 decembrie/iu);
+assert.match(statusText, /termenul Alte sectoare.*a expirat/iu);
+assert.match(statusText, /Sector zootehnic.*2 decembrie 2026, ora 15:59:59/iu);
 assert.match(statusText, /DR-14.*16 noiembrie/iu);
-assert.match(statusText, /achiziții simple DR-14 este închisă/iu);
+assert.match(statusText, /achizițiile simple sunt închise/iu);
 
 const rows = $("[data-expert-comparison-table] tbody tr");
 assert.equal(rows.length, 10, "tabelul trebuie să aibă cele zece criterii contractuale");

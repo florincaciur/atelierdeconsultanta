@@ -445,12 +445,12 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-11",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2026-11-12",
+      "lastMeaningfulUpdate": "2026-11-11",
       "statusSnapshot": "apel_deschis",
       "changelog": [
         {
@@ -521,7 +521,13 @@
         },
         {
           "date": "2026-11-10",
-          "summary": "Calendar actualizat cu termene distincte pentru componenta Alte sectoare și sectorul zootehnic.",
+          "summary": "Fișa DR-12 separă termenele componentelor, starea la verificare și ora locală de închidere.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Reverificare după miezul nopții. Fișa DR-12 și calendarul disting termenul expirat pentru Alte sectoare de depunerea pentru Sector zootehnic.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
@@ -541,12 +547,12 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-      "sourceVersion": "DR 12: ghid final, Ediția I, Revizia 0, publicat la 18.09.2026; situația sesiunilor AFIR verificată la 19.09.2026",
-      "nextReviewAt": "2026-11-10",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "sourceVersion": "DR-12: ghid final publicat la 18.09.2026; contor AFIR verificat după miezul nopții din 11.11.2026",
+      "nextReviewAt": "2026-11-12",
+      "lastMeaningfulUpdate": "2026-11-11",
       "statusSnapshot": null,
       "changelog": [
         {
@@ -612,6 +618,12 @@
         {
           "date": "2026-11-10",
           "summary": "Actualizat contextul sesiunii și delimitarea pregătirii, depunerii și implementării.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Reverificare după miezul nopții. Fișa DR-12 și calendarul disting termenul expirat pentru Alte sectoare de depunerea pentru Sector zootehnic.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
@@ -2533,17 +2545,23 @@
       "reviewerRole": "Revizuire editorială și verificare documentară",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-11",
       "officialSourceName": "AFIR și autoritățile programelor din registrul public",
       "officialSourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "sourceVersion": "Calendarul celor 27 de înregistrări publice, verificare documentară 10.11.2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2026-11-12",
+      "lastMeaningfulUpdate": "2026-11-11",
       "statusSnapshot": null,
       "changelog": [
         {
           "date": "2026-11-10",
           "summary": "Adăugat tabelul HTML cu beneficiari, județe, termene și surse. Separat termenele DR-12 pe componente și etapele de pregătire, depunere și implementare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-11-11",
+          "summary": "Reverificare după miezul nopții. Fișa DR-12 și calendarul disting termenul expirat pentru Alte sectoare de depunerea pentru Sector zootehnic.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }

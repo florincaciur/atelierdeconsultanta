@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-11-10T22:35:43.352Z",
+  "layouts": [
+    {
+      "environment": "dist",
+      "width": 320,
+      "layout": {
+        "pageWidth": 320,
+        "viewport": 320,
+        "wrapper": 203,
+        "table": 640,
+        "grid": 234,
+        "focusable": 0
+      },
+      "javascript": false
+    },
+    {
+      "environment": "dist",
+      "width": 390,
+      "layout": {
+        "pageWidth": 390,
+        "viewport": 390,
+        "wrapper": 273,
+        "table": 640,
+        "grid": 304,
+        "focusable": 0
+      },
+      "javascript": false
+    },
+    {
+      "environment": "dist",
+      "width": 1440,
+      "layout": {
+        "pageWidth": 1440,
+        "viewport": 1440,
+        "wrapper": 1075,
+        "table": 1075,
+        "grid": 1118,
+        "focusable": 0
+      },
+      "javascript": false
+    }
+  ],
+  "calendarHeroParity": true,
+  "interceptedContact": true,
+  "liveLeadsSubmitted": 0
+}

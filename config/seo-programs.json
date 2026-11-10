@@ -187,10 +187,10 @@
       "status": "apel_deschis",
       "canonicalStatus": "OPEN",
       "statusScope": "program_call",
-      "statusRationale": "Sesiune activă confirmată în platforma AFIR și anunțul din 29.09.2026.",
-      "statusLabel": "Alte sectoare până la 11 noiembrie, ora 00:00 · zootehnic până la 2 decembrie",
+      "statusRationale": "Contorul AFIR consultat după miezul nopții afișează în continuare închiderea componentei Alte sectoare la 11.11.2026, 00:00. Componenta Sector zootehnic are termen la 02.12.2026, 15:59:59.",
+      "statusLabel": "Alte sectoare: termen expirat · Zootehnic până la 2 dec., 15:59:59",
       "publicationState": "public",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-11",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
@@ -220,15 +220,15 @@
         "ownContribution": "Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă."
       },
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "lastMeaningfulUpdate": "2026-11-11",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "DR-12 are termene distincte pe componente. Verifică data aplicabilă, grantul de maximum 200.000 EUR și eligibilitatea din ghidul final.",
-      "quickAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere.",
+      "quickAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. AFIR publică termene diferite pentru Alte sectoare și Sector zootehnic. Verifică fișa componentei și disponibilul în platforma AFIR înainte de transmitere. Pentru o investiție care deservește mai multe sectoare, verifică încadrarea din secțiunea 1.3 a ghidului înainte de a întocmi devizul. Compară datele folosite la calculul SO cu evidențele exploatației. După ce ai stabilit componenta și bugetul eligibil, consultă grila de punctaj și strânge documentele care susțin fiecare criteriu. Folosește cererea de finanțare și anexele publicate pentru această sesiune.",
       "metaTitle": "DR-12 AFIR 2026: calendar și termene pe componente",
-      "metaDescription": "DR-12 AFIR: alte sectoare până la 11 noiembrie, ora 00:00, zootehnic până la 2 decembrie 2026. Grant, eligibilitate, SO și documente oficiale.",
-      "editorialDisclaimer": "La verificarea din 10 noiembrie 2026, sesiunea este deschisă pe componente. Contorul AFIR indică închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a componentei zootehnice la 2 decembrie 2026, înainte de ora 16:00. Verifică situația componentei înainte de transmitere.",
+      "metaDescription": "Vezi termenele AFIR pentru Alte sectoare și Sector zootehnic în DR-12, ora exactă a închiderii, ghidul final, cheltuielile și punctajul.",
+      "editorialDisclaimer": "La verificare, depunerea este deschisă pentru Sector zootehnic. Pentru Alte sectoare, termenul afișat în contor a expirat.",
       "eligibleApplicants": [
         "Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).",
         "Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.",
@@ -238,7 +238,7 @@
         "Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.",
         "Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.",
         "Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.",
-        "Termenele sunt distincte pe componente. Alte sectoare până la 11.11.2026, ora 00:00. Sector zootehnic până la 02.12.2026, înainte de ora 16:00. Verifică disponibilul în contorul AFIR.",
+        "Termenele diferă între componente. Verifică disponibilul și ora închiderii în contorul AFIR.",
         "Costuri generale: maximum 10% cu construcții-montaj sau 3% pentru achiziții fără construcții-montaj; marketing maximum 5%. Minimum 50% materie primă proprie la procesare/condiționare/depozitare. Extrasul pentru cofinanțare se însoțește de angajamentul folosirii a minimum 50% din disponibil pentru proiect."
       ],
       "officialGuideKeys": [
@@ -300,14 +300,15 @@
           "phase": "submission",
           "beneficiary": "Fermieri instalați eligibili, inclusiv absolvenți sM 6.1",
           "counties": "Național",
-          "note": "Alte sectoare până la 11 noiembrie 2026, ora 00:00. Sector zootehnic până la 2 decembrie 2026, înainte de ora 16:00.",
+          "note": "Ora 00:00 este miezul nopții dintre 10 și 11 noiembrie. Pentru Alte sectoare, termenul se încheie la începutul zilei de 11 noiembrie.",
+          "checkedAt": "2026-11-11T00:00:29+02:00",
           "components": [
             {
               "name": "Alte sectoare",
               "startAt": "2026-10-06T09:00:00+03:00",
               "endAt": "2026-11-11T00:00:00+02:00",
-              "state": "OPEN",
-              "note": "Închiderea afișată în contor este la miezul nopții dintre 10 și 11 noiembrie.",
+              "state": "DEADLINE_ELAPSED",
+              "note": "Termenul afișat în contor, 11 noiembrie la ora 00:00, a expirat la verificare. Nu a fost identificat un termen ulterior.",
               "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
             },
             {
@@ -3457,14 +3458,6 @@
       ],
       "faq": [
         [
-          "Este deschis apelul DR 12?",
-          "La verificarea din 10 noiembrie 2026, sesiunea este deschisă pe componente. DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
-        ],
-        [
-          "Care este termenul de depunere pentru DR 12?",
-          "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
-        ],
-        [
           "Cine poate aplica și care este limita de vârstă?",
           "Sunt vizate trei categorii de șefi ai exploatației: tineri fermieri înainte de 41 de ani, beneficiari sM 6.1 cu planul finalizat indiferent de vârstă și fermieri instalați înainte de 46 de ani. Se aplică și celelalte condiții din ghid."
         ],
@@ -5518,7 +5511,7 @@
       "inlineCtaTitle": "Solicită verificare eligibilitate pentru Apel 2",
       "inlineCtaText": "Trimite datele firmei, codul CAEN, localitatea investiției și lista de achiziții. Verificăm rapid dacă proiectul merită pregătit și ce documente lipsesc înainte de depunere.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "factualGovernanceRef": "#/programs/modernizare-microîntreprinderi-ne-2"
+      "factualGovernanceRef": "#/programs/modernizare-microintreprinderi-ne-2"
     },
     {
       "slug": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
@@ -6052,7 +6045,7 @@
       "inlineCtaText": "Trimite instituția, clădirile vizate, consumul, documentele de proprietate sau administrare și bugetul estimat.",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
       "programId": "autoconsum-institutii-publice",
-      "factualGovernanceRef": "#/programs/autoconsum-instituții-publice"
+      "factualGovernanceRef": "#/programs/autoconsum-institutii-publice"
     },
     {
       "slug": "fonduri-europene",
@@ -7004,7 +6997,7 @@
       "inlineCtaText": "Trimite județul, codul apelului, forma solicitantului, activitatea, amplasamentul și investiția pentru o verificare inițială pe documentele aplicabile.",
       "decisionClose": "Dacă teritoriul, solicitantul, activitatea sau documentele nu corespund apelului, proiectul se ajustează înainte de depunere. Regulile finale rămân cele din ghid, anexele și sursele oficiale ale sesiunii.",
       "programId": "programul-tranzitie-justa",
-      "factualGovernanceRef": "#/programs/programul-tranziție-justa"
+      "factualGovernanceRef": "#/programs/programul-tranzitie-justa"
     },
     {
       "slug": "afir",

@@ -35,7 +35,13 @@ function officialEvidence(reference, program, data) {
   }
 }
 
-function auditFundingStatus(data, { today = new Date().toISOString().slice(0, 10), policy } = {}) {
+function currentFundingDate(now = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Bucharest", year: "numeric", month: "2-digit", day: "2-digit"
+  }).format(now);
+}
+
+function auditFundingStatus(data, { today = currentFundingDate(), policy } = {}) {
   if (!isDate(today)) throw new Error("today trebuie să fie o dată calendaristică YYYY-MM-DD validă.");
   if (!Array.isArray(data?.programs) || !data.programs.length) throw new Error("Registrul trebuie să conțină o listă nevidă programs.");
   if (!Array.isArray(data.taxonomy?.statuses) || !data.taxonomy.statuses.length) throw new Error("Taxonomia canonică lipsește.");
@@ -159,7 +165,7 @@ function markdownReport(report) {
   const lines = [
     "# Audit statusuri finanțare",
     "",
-    `Data auditului (UTC): ${report.asOf}. Programe: ${report.programsChecked}. HIGH: ${report.summary.high}; WARNING: ${report.summary.warning}.`,
+    `Data auditului (Europe/Bucharest): ${report.asOf}. Programe: ${report.programsChecked}. HIGH: ${report.summary.high}; WARNING: ${report.summary.warning}.`,
     "",
     `Praguri interne: OPEN ${report.policy.openCallReviewDays} zile; alte programe ${report.policy.programReviewDays} zile (${report.policy.source}).`,
     "Audit offline/read-only: nu reverifică documentele online și nu schimbă facts, statusuri, verifiedAt, dateModified sau lastmod.",
@@ -207,4 +213,4 @@ function main(args = process.argv.slice(2)) {
 
 if (require.main === module) main();
 
-module.exports = { auditFundingStatus, exitCode, isDate, markdownReport };
+module.exports = { auditFundingStatus, currentFundingDate, exitCode, isDate, markdownReport };
