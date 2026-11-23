@@ -7,6 +7,7 @@ const path = require("path");
 const { groupFor, parseRobots } = require("./crawler-policy");
 const { assetDigest, verifyHomepageContent } = require("./homepage-release-contract");
 const { fileForRoute } = require("./structured-data-utils");
+const { renderPlerdyHead } = require("./render-plerdy-head");
 
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://atelierdeconsultanta.ro";
@@ -150,9 +151,9 @@ async function main() {
   for (const route of criticalRoutes) pages.set(route, await verifyHtml(route));
 
   for (const [route, html] of pages) {
-    if (route === "/") continue;
-    const localSource = fs.readFileSync(fileForRoute(ROOT, route), "utf8");
-    if (assetDigest(html) !== assetDigest(localSource)) {
+    const file = fileForRoute(ROOT, route);
+    const rendered = renderPlerdyHead(fs.readFileSync(file, "utf8"), path.relative(ROOT, file));
+    if (assetDigest(html) !== assetDigest(rendered)) {
       throw new Error(`${route}: conținutul publicat diferă de sursa canonical din commit`);
     }
   }
