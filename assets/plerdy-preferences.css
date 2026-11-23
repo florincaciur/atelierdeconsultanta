@@ -1,0 +1,75 @@
+#plerdy-preferences {
+  margin: 0;
+  padding: .75rem 1rem;
+  background: #0d1f3c;
+  color: #fff;
+  text-align: center;
+  font: 1rem/1.5 system-ui, sans-serif;
+}
+
+#plerdy-preferences summary {
+  width: fit-content;
+  margin: auto;
+  padding: .625rem;
+  cursor: pointer;
+}
+
+#plerdy-preferences section {
+  max-width: 30rem;
+  margin: .5rem auto 0;
+  padding: 1rem;
+  border: 1px solid #b0bdd0;
+  border-radius: .625rem;
+  background: #fff;
+  color: #0d1f3c;
+  text-align: left;
+}
+
+#plerdy-preferences h2 {
+  margin: 0 0 .5rem;
+  color: inherit;
+  font: 700 1.125rem/1.35 system-ui, sans-serif;
+}
+
+#plerdy-preferences p {
+  margin: 0 0 .75rem;
+  color: inherit;
+  font: inherit;
+}
+
+#plerdy-preferences p[role="status"] {
+  margin: .5rem 0 0;
+}
+
+#plerdy-preferences p[role="status"]:empty {
+  margin: 0;
+}
+
+#plerdy-preferences a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.plerdy-preferences-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.plerdy-preferences-actions button {
+  flex: 1 1 auto;
+  min-height: 44px;
+  padding: .5rem .75rem;
+  border: 1px solid currentColor;
+  border-radius: .375rem;
+  background: #fff;
+  color: #0d1f3c;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#plerdy-preferences :focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}

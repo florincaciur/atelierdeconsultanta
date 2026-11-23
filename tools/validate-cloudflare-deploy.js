@@ -3,6 +3,7 @@ const path = require("path");
 const cp = require("child_process");
 const { collectSiteState } = require("./generate-sitemap");
 const { fileForRoute } = require("./structured-data-utils");
+const { renderPlerdyHead } = require("./render-plerdy-head");
 
 const ROOT = path.resolve(__dirname, "..");
 const ALLOWED_STATUS_CODES = new Set(["200", "301", "302", "303", "307", "308"]);
@@ -203,14 +204,19 @@ function validateReleaseManifest(directory, errors) {
 }
 
 function validateCanonicalHtmlParity(directory, errors) {
+  for (const asset of ["index.html", "assets/plerdy-preferences.css", "assets/plerdy-preferences.js"]) {
+    if (!fs.existsSync(path.join(directory, asset))) errors.push(`Deploy output is missing ${asset}`);
+  }
   for (const entry of collectSiteState().entries) {
-    if (entry.route === "/") continue;
     const route = entry.route.replace(/^\/+|\/+$/g, "");
     const canonicalSource = fileForRoute(ROOT, entry.route);
-    const expected = fs.readFileSync(canonicalSource);
-    const candidates = [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")].filter((candidate) => fs.existsSync(candidate));
-    for (const candidate of candidates) {
-      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${path.relative(ROOT, canonicalSource)}`);
+    const sourceHtml = fs.readFileSync(canonicalSource, "utf8");
+    const candidates = route
+      ? [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")]
+      : [path.join(directory, "index.html")];
+    for (const candidate of candidates.filter((file) => fs.existsSync(file))) {
+      const expected = renderPlerdyHead(sourceHtml, path.relative(directory, candidate));
+      if (expected !== fs.readFileSync(candidate, "utf8")) errors.push(`${path.relative(ROOT, candidate)} differs from rendered canonical source ${path.relative(ROOT, canonicalSource)}`);
     }
   }
 }

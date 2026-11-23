@@ -5,6 +5,7 @@ const { collectSiteState } = require("./generate-sitemap");
 const { auditSite } = require("./on-page-seo-audit");
 const { syncSite } = require("./sync-on-page-seo");
 const { fileForRoute } = require("./structured-data-utils");
+const { renderPlerdyHead } = require("./render-plerdy-head");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "dist");
@@ -221,6 +222,20 @@ function syncCanonicalHtmlAliases() {
   return synchronized;
 }
 
+function addPlerdyTracking() {
+  let pages = 0;
+  for (const entry of fs.readdirSync(OUT_DIR, { recursive: true, withFileTypes: true })) {
+    if (!entry.isFile() || path.extname(entry.name) !== ".html") continue;
+    const file = path.join(entry.parentPath, entry.name);
+    const html = fs.readFileSync(file, "utf8");
+    const withPlerdy = renderPlerdyHead(html, path.relative(OUT_DIR, file));
+    if (withPlerdy === html) continue;
+    fs.writeFileSync(file, withPlerdy, "utf8");
+    pages += 1;
+  }
+  return pages;
+}
+
 if (!OUT_DIR.startsWith(ROOT + path.sep)) {
   throw new Error(`Refusing to clean output outside repository: ${OUT_DIR}`);
 }
@@ -251,9 +266,10 @@ for (const route of CANONICAL_DIRECTORY_HTML_ROUTES) {
 }
 
 const synchronizedAliases = syncCanonicalHtmlAliases();
+const plerdyPages = addPlerdyTracking();
 fs.writeFileSync(path.join(OUT_DIR, "release.json"), `${JSON.stringify({
   commit: gitCommit(),
   builtAt: new Date().toISOString(),
 }, null, 2)}\n`, "utf8");
 
-console.log(`Cloudflare assets built in ${path.relative(ROOT, OUT_DIR)} (${files.length} files; ${synchronizedAliases} canonical HTML aliases synchronized).`);
+console.log(`Cloudflare assets built in ${path.relative(ROOT, OUT_DIR)} (${files.length} files; ${synchronizedAliases} canonical HTML aliases synchronized; Plerdy added to ${plerdyPages} HTML pages).`);
