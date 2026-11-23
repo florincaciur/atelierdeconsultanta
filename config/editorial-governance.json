@@ -449,10 +449,16 @@
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
-      "nextReviewAt": "2026-11-12",
+      "nextReviewAt": "2026-11-24",
       "lastMeaningfulUpdate": "2026-11-11",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-23",
+          "summary": "Contorul oficial AFIR (https://depunerepspac.afir.ro/Sesiune/Lista) confirmă fonduri epuizate pentru Alte sectoare și fonduri disponibile pentru Sector zootehnic, cu termenul afișat 2 decembrie 2026, ora 15:59:59.",
+          "reviewer": "Codex — verificare documentară la solicitarea utilizatorului",
+          "meaningful": false
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul DR12 AFIR a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
