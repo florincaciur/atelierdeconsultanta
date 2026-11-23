@@ -4,6 +4,7 @@ const cp = require("child_process");
 const { collectSiteState } = require("./generate-sitemap");
 const { fileForRoute } = require("./structured-data-utils");
 const { renderPlerdyHead } = require("./render-plerdy-head");
+const { privacyFile, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
 const ROOT = path.resolve(__dirname, "..");
 const ALLOWED_STATUS_CODES = new Set(["200", "301", "302", "303", "307", "308"]);
@@ -313,6 +314,10 @@ if (!config.assets || !config.assets.directory) {
     }
   }
   if (fs.existsSync(distDirectory)) {
+    const extensionPrivacy = path.join(distDirectory, privacyFile);
+    if (!fs.existsSync(extensionPrivacy) || fs.readFileSync(extensionPrivacy, "utf8") !== renderChromeExtensionPrivacy()) {
+      errors.push(`${path.relative(ROOT, extensionPrivacy)} does not match the Chrome extension privacy policy`);
+    }
     validateOfficialGuidesHeaders(distHeaders, errors);
     validateReleaseHeaders(distHeaders, errors);
     validateReleaseManifest(distDirectory, errors);

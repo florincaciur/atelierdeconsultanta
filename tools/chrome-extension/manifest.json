@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_name__",
+  "short_name": "__MSG_shortName__",
+  "version": "1.0.1",
+  "description": "__MSG_summary__",
+  "default_locale": "ro",
+  "homepage_url": "https://atelierdeconsultanta.ro/calendar-fonduri-europene",
+  "icons": {
+    "16": "icons/faber-16.png",
+    "32": "icons/faber-32.png",
+    "48": "icons/faber-48.png",
+    "128": "icons/faber-128.png"
+  },
+  "action": {
+    "default_title": "__MSG_name__",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://atelierdeconsultanta.ro/*"],
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src https://atelierdeconsultanta.ro; object-src 'none'; base-uri 'none'"
+  }
+}

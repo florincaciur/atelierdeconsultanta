@@ -8,6 +8,7 @@ const { groupFor, parseRobots } = require("./crawler-policy");
 const { assetDigest, verifyHomepageContent } = require("./homepage-release-contract");
 const { fileForRoute } = require("./structured-data-utils");
 const { renderPlerdyHead } = require("./render-plerdy-head");
+const { privacyRoute, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://atelierdeconsultanta.ro";
@@ -140,6 +141,10 @@ async function main() {
   if (process.argv.includes("--manifest-only")) {
     console.log(`Live deployment manifest verified: ${release.commit}.`);
     return;
+  }
+  const extensionPrivacy = await request(privacyRoute);
+  if (extensionPrivacy.status !== 200 || assetDigest(await extensionPrivacy.text()) !== assetDigest(renderChromeExtensionPrivacy())) {
+    throw new Error(`${privacyRoute}: politica de confidențialitate publicată diferă de sursa din commit`);
   }
   const programRoutes = sitemapProgramRoutes();
   const criticalRoutes = [...new Set([

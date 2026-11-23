@@ -6,6 +6,7 @@ const { auditSite } = require("./on-page-seo-audit");
 const { syncSite } = require("./sync-on-page-seo");
 const { fileForRoute } = require("./structured-data-utils");
 const { renderPlerdyHead } = require("./render-plerdy-head");
+const { privacyFile, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "dist");
@@ -267,6 +268,7 @@ for (const route of CANONICAL_DIRECTORY_HTML_ROUTES) {
 
 const synchronizedAliases = syncCanonicalHtmlAliases();
 const plerdyPages = addPlerdyTracking();
+fs.writeFileSync(path.join(OUT_DIR, privacyFile), renderChromeExtensionPrivacy(), "utf8");
 fs.writeFileSync(path.join(OUT_DIR, "release.json"), `${JSON.stringify({
   commit: gitCommit(),
   builtAt: new Date().toISOString(),

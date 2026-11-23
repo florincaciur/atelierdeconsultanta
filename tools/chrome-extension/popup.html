@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar Fonduri Europene – FABER</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.mjs"></script>
+</head>
+<body class="popup">
+  <header class="header">
+    <div class="brand"><img src="icons/faber-32.png" alt="" width="24" height="24"> FABER · Atelier de Consultanță</div>
+    <h1>Calendar fonduri europene</h1>
+    <div class="header-actions">
+      <a id="calendar-link" href="https://atelierdeconsultanta.ro/calendar-fonduri-europene" target="_blank" rel="noopener noreferrer">Vezi calendarul pe site ↗</a>
+      <button id="refresh" class="refresh" type="button">Actualizează</button>
+    </div>
+  </header>
+  <main>
+    <div class="filters">
+      <label class="search" for="search">Caută un apel</label>
+      <input id="search" type="search" placeholder="Program, beneficiar sau județ" autocomplete="off">
+      <div class="two-columns">
+        <label>Beneficiar
+          <select id="audience">
+            <option value="">Toți beneficiarii</option>
+            <option value="business">Întreprinderi și IMM-uri</option>
+            <option value="farming">Fermieri și cooperative</option>
+            <option value="public">Entități publice</option>
+            <option value="other">Alți beneficiari</option>
+          </select>
+        </label>
+        <label>Zonă
+          <select id="region"><option value="">Toate zonele</option></select>
+        </label>
+      </div>
+      <fieldset class="views">
+        <legend class="sr-only">Afișează apelurile</legend>
+        <label><input type="radio" name="view" value="all" checked><span>Toate</span></label>
+        <label><input type="radio" name="view" value="upcoming"><span>Termene viitoare</span></label>
+        <label><input type="radio" name="view" value="favorites"><span>Favorite</span></label>
+      </fieldset>
+      <p class="feedback" id="feedback" role="status">Se încarcă calendarul apelurilor…</p>
+      <p class="feedback" id="results" role="status"></p>
+    </div>
+    <ol id="programs" class="programs" aria-label="Apeluri de finanțare"></ol>
+    <p id="empty" class="empty" hidden></p>
+  </main>
+  <footer>
+    <span>Termene în ora României. Verifică sursa înainte de depunere.</span>
+    <a href="privacy.html" target="_blank" rel="noopener">Confidențialitate</a>
+  </footer>
+  <template id="program-template">
+    <li>
+      <article class="program">
+        <div class="program-top">
+          <span class="status"></span>
+          <button type="button" class="favorite" aria-pressed="false"><span aria-hidden="true">☆</span></button>
+        </div>
+        <h2></h2>
+        <p class="program-details"></p>
+        <ul class="deadlines" aria-label="Termene"></ul>
+        <div class="program-links">
+          <a class="official" target="_blank" rel="noopener noreferrer">Sursa oficială ↗</a>
+          <a class="guide" target="_blank" rel="noopener noreferrer">Fișa FABER ↗</a>
+        </div>
+        <small class="verified"></small>
+      </article>
+    </li>
+  </template>
+</body>
+</html>
