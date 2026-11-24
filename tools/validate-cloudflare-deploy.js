@@ -3,7 +3,6 @@ const path = require("path");
 const cp = require("child_process");
 const { collectSiteState } = require("./generate-sitemap");
 const { fileForRoute } = require("./structured-data-utils");
-const { renderPlerdyHead } = require("./render-plerdy-head");
 const { privacyFile, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -205,9 +204,7 @@ function validateReleaseManifest(directory, errors) {
 }
 
 function validateCanonicalHtmlParity(directory, errors) {
-  for (const asset of ["index.html", "assets/plerdy-preferences.css", "assets/plerdy-preferences.js"]) {
-    if (!fs.existsSync(path.join(directory, asset))) errors.push(`Deploy output is missing ${asset}`);
-  }
+  if (!fs.existsSync(path.join(directory, "index.html"))) errors.push("Deploy output is missing index.html");
   for (const entry of collectSiteState().entries) {
     const route = entry.route.replace(/^\/+|\/+$/g, "");
     const canonicalSource = fileForRoute(ROOT, entry.route);
@@ -216,8 +213,7 @@ function validateCanonicalHtmlParity(directory, errors) {
       ? [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")]
       : [path.join(directory, "index.html")];
     for (const candidate of candidates.filter((file) => fs.existsSync(file))) {
-      const expected = renderPlerdyHead(sourceHtml, path.relative(directory, candidate));
-      if (expected !== fs.readFileSync(candidate, "utf8")) errors.push(`${path.relative(ROOT, candidate)} differs from rendered canonical source ${path.relative(ROOT, canonicalSource)}`);
+      if (sourceHtml !== fs.readFileSync(candidate, "utf8")) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${path.relative(ROOT, canonicalSource)}`);
     }
   }
 }

@@ -7,7 +7,6 @@ const path = require("path");
 const { groupFor, parseRobots } = require("./crawler-policy");
 const { assetDigest, verifyHomepageContent } = require("./homepage-release-contract");
 const { fileForRoute } = require("./structured-data-utils");
-const { renderPlerdyHead } = require("./render-plerdy-head");
 const { privacyRoute, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -157,8 +156,8 @@ async function main() {
 
   for (const [route, html] of pages) {
     const file = fileForRoute(ROOT, route);
-    const rendered = renderPlerdyHead(fs.readFileSync(file, "utf8"), path.relative(ROOT, file));
-    if (assetDigest(html) !== assetDigest(rendered)) {
+    const sourceHtml = fs.readFileSync(file, "utf8");
+    if (assetDigest(html) !== assetDigest(sourceHtml)) {
       throw new Error(`${route}: conținutul publicat diferă de sursa canonical din commit`);
     }
   }
@@ -169,7 +168,9 @@ async function main() {
   // Also check the ordinary URL visitors use, not only a cache-busted response.
   const ordinaryHomepage = await request("/");
   if (ordinaryHomepage.status !== 200) throw new Error(`Homepage: HTTP ${ordinaryHomepage.status}`);
-  verifyHomepageContent(await ordinaryHomepage.text(), homepageSource);
+  if (assetDigest(await ordinaryHomepage.text()) !== assetDigest(homepageSource)) {
+    throw new Error("Homepage: conținutul URL-ului public diferă de sursa canonical din commit");
+  }
   const releaseAssets = new Set([...homepage.assets, ...[...pages.values()].flatMap(localAssets)]);
   for (const assetUrl of releaseAssets) {
     const response = await request(assetUrl);
