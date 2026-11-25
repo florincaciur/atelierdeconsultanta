@@ -1,17 +1,17 @@
 {
   "h1": "e-DRIVE 2026 – Măsura 1 pentru IMM-uri și Măsura 2 pentru transportatori",
   "eyebrow": "Fondul pentru Modernizare · Program-cheie 9",
-  "lead": "Două măsuri distincte pentru înlocuirea vehiculelor poluante cu vehicule electrice noi. Consultă beneficiarii, plafoanele, punctajul și documentele potrivite proiectului tău.",
+  "lead": "Măsura 1 sprijină înlocuirea flotelor IMM-urilor, iar Măsura 2 vizează transportatorii de pasageri. Compară condițiile din proiectele de ghid și verifică etapa în care se află depunerea.",
   "metrics": [
     ["30.000 €", "maximum pe vehicul M1 · ambele măsuri"],
     ["130.000 €", "maximum pe vehicul M2 · Măsura 1"],
     ["300.000 € / 4 mil. €", "plafon întreprindere · Măsura 1 / Măsura 2"],
-    ["18 noiembrie", "termen pentru observații, nu pentru proiecte"]
+    ["Calendar de depunere", "neanunțat de MTI la 25 noiembrie 2026"]
   ],
-  "answer": "MTI va anunța datele de depunere după aprobarea ghidurilor. e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026.",
+  "answer": "MTI va anunța datele de depunere după aprobarea ghidurilor. Consultarea s-a încheiat la 18 noiembrie 2026. Măsura 1 vizează IMM-urile care înlocuiesc vehicule M1 sau M2, iar Măsura 2 vizează transportatorii de pasageri care înlocuiesc vehicule M1, M2 sau M3. Plafoanele și punctajele de mai jos provin din proiectele de ghid.",
   "notice": {
-    "title": "Ghiduri în consultare publică până la 18 noiembrie 2026",
-    "text": "MTI a publicat la 3 noiembrie 2026 proiectele de ghid și anexele pentru ambele măsuri. Condițiile de mai jos descriu versiunea consultativă și pot fi modificate înaintea aprobării. Termenul de 18 noiembrie privește transmiterea observațiilor; nu este termen de depunere a cererilor de finanțare.",
+    "title": "Consultarea s-a încheiat. Calendarul de depunere urmează",
+    "text": "MTI a publicat proiectele de ghid și anexele la 3 noiembrie 2026. Observațiile s-au putut trimite până la 18 noiembrie. La verificarea din 25 noiembrie, MTI nu publicase ghidurile finale sau calendarul de depunere pentru Măsurile 1 și 2.",
     "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive"
   },
   "comparison": {
@@ -26,7 +26,7 @@
       ["Limita pe vehicul", "M1: 30.000 EUR; M2: 130.000 EUR", "M1: 30.000 EUR; M2 și M3: în limita costului suplimentar eligibil și a plafonului pe întreprindere"],
       ["Cost eligibil", "Costul achiziției fără TVA, în limitele pe vehicul și de minimis", "Diferența fără TVA între vehiculul electric și unul convențional comparabil"],
       ["Selecție", "Dimensiunea IMM-ului și asamblarea finală în UE", "Ajutor solicitat/vehicul, kilometri în România și asamblare finală în UE"],
-      ["Depunere", "Calendar neanunțat; ghid în consultare", "Calendar neanunțat; ghid în consultare"]
+      ["Depunere", "Calendar neanunțat · proiect de ghid", "Calendar neanunțat · proiect de ghid"]
     ]
   },
   "measures": [
@@ -40,6 +40,7 @@
       "groups": [
         {
           "title": "Cine poate solicita finanțare",
+          "reference": "Ghid Măsura 1, secțiunea 2.1",
           "items": [
             "Microîntreprinderi, întreprinderi mici și mijlocii cu personalitate juridică, constituite legal. Înregistrarea la ONRC în România trebuie realizată până la prima plată, în condițiile ghidului.",
             "Activitatea nu este limitată la un cod CAEN anume. Se verifică însă excluderile: producția agricolă primară, producția primară din pescuit și acvacultură, anumite activități de prelucrare și comercializare, ajutoarele legate de export sau condiționate de preferința pentru bunuri și servicii naționale și producția de energie nucleară.",
@@ -49,6 +50,7 @@
         },
         {
           "title": "Vehiculele și flota înlocuită",
+          "reference": "Ghid Măsura 1, secțiunile 1.3 și 2.1",
           "items": [
             "Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-in hybrid nu se încadrează.",
             "Regula generală cere ca vehiculul înlocuit să fie în proprietatea întreprinderii de cel puțin un an. Excepția prevăzută în proiectul de ghid permite o promisiune bilaterală autentică de vânzare-cumpărare la depunere, cu prezentarea noului talon înaintea semnării contractului de finanțare.",
@@ -58,6 +60,7 @@
         },
         {
           "title": "Cum se calculează finanțarea",
+          "reference": "Ghid Măsura 1, secțiunile 1.7 și 2.3",
           "items": [
             "Costul eligibil este costul de achiziție fără TVA. Ajutorul se limitează simultan la costul eligibil, plafonul de 30.000 EUR pentru M1 sau 130.000 EUR pentru M2 și plafonul de minimis rămas disponibil.",
             "Plafonul de 300.000 EUR privește întreprinderea unică și include ajutoarele de minimis deja acordate în orice perioadă de trei ani. Nu reprezintă o sumă disponibilă automat pentru fiecare firmă sau proiect.",
@@ -67,6 +70,7 @@
         },
         {
           "title": "Punctajul propus pentru Măsura 1",
+          "reference": "Măsura 1, anexa 2.2",
           "items": [
             "Dimensiunea întreprinderii: 80 puncte pentru microîntreprinderi, 70 pentru întreprinderi mici și 65 pentru întreprinderi mijlocii, dacă proiectele sunt conforme și eligibile.",
             "Asamblarea finală a vehiculului în Uniunea Europeană: 20 puncte, dovedite prin documente de origine sau declarația producătorului. Nu se acordă punctaj intermediar pentru acest criteriu.",
@@ -75,6 +79,7 @@
         },
         {
           "title": "Documente specifice Măsurii 1",
+          "reference": "Ghid Măsura 1 și anexele",
           "items": [
             "Cererea de finanțare (Anexa 1), declarația unică (Anexa 3), conformitatea cu regulile de minimis (Anexa 3.a), analiza de oportunitate și cost-eficacitate (Anexa 4) și bugetul proiectului (Anexa 6).",
             "Declarația privind tipul de întreprindere (Anexa 7), declarația privind conflictul de interese (Anexa 8), declarația DNSH și autoevaluarea (Anexele 9 și 9.1) și consimțământul pentru prelucrarea datelor (Anexa 10), după cerințele etapei.",
@@ -95,6 +100,7 @@
       "groups": [
         {
           "title": "Operatori și activități eligibile",
+          "reference": "Ghid Măsura 2, secțiunea 2.1",
           "items": [
             "Operatori de transport rutier de pasageri: microîntreprinderi, întreprinderi mici și mijlocii și întreprinderi mari cu personalitate juridică. Se verifică înregistrarea în România până la prima plată și condițiile juridice și financiare din ghid.",
             "Codurile CAEN Rev. 3 indicate sunt 4931 – transporturi terestre de pasageri, pe bază de grafic; 4932 – transporturi terestre de pasageri, ocazionale; 4933 – transporturi terestre de pasageri cu vehicule cu șofer, pe bază de comandă.",
@@ -105,6 +111,7 @@
         },
         {
           "title": "Vehicule și proceduri concurențiale",
+          "reference": "Ghid Măsura 2, secțiunile 1.3 și 2.1",
           "items": [
             "Sunt vizate vehicule M1, M2 și M3 noi, exclusiv electrice. Procedurile concurențiale se organizează separat pentru fiecare categorie; un proiect poate include unul sau mai multe vehicule din aceeași categorie.",
             "Vehiculul înlocuit trebuie să aparțină aceleiași categorii ca vehiculul nou. Regula generală cere proprietate și operare de cel puțin un an. Excepția cu promisiune bilaterală autentică păstrează obligația demonstrării operării anterioare și a dobândirii înaintea contractării.",
@@ -114,6 +121,7 @@
         },
         {
           "title": "Costul eligibil și contribuția beneficiarului",
+          "reference": "Ghid Măsura 2, secțiunile 1.7 și 2.3",
           "items": [
             "Cost eligibil = prețul fără TVA al vehiculului electric minus prețul fără TVA al unui vehicul convențional comparabil, din aceeași categorie, care respectă standardele UE și ar fi fost achiziționat fără ajutor.",
             "Intensitatea poate ajunge la 100% din acest cost suplimentar, în urma selecției concurențiale. Aceasta nu înseamnă acoperirea integrală a prețului vehiculului electric. Pentru M1 se aplică suplimentar limita de 30.000 EUR/vehicul.",
@@ -123,6 +131,7 @@
         },
         {
           "title": "Punctajul propus pentru Măsura 2",
+          "reference": "Măsura 2, anexa 2.2",
           "items": [
             "70 puncte: ajutorul de stat solicitat pe vehicul. Oferta se calculează prin împărțirea ajutorului total solicitat la numărul de vehicule. Oferta minimă primește 70 puncte, cea maximă 0, iar valorile intermediare se punctează conform formulei din Anexa 2.2.",
             "10 puncte: ponderea kilometrilor parcurși în România. Peste 70% primește 10 puncte; între 40% și 70% primește 5 puncte; sub 40% primește 0 puncte. Criteriul se calculează pentru fiecare vehicul, apoi se face media aritmetică pentru proiect, conform anexei consultative.",
@@ -132,6 +141,7 @@
         },
         {
           "title": "Documente specifice Măsurii 2",
+          "reference": "Ghid Măsura 2 și anexele",
           "items": [
             "Cererea de finanțare (Anexa 1), declarația unică (Anexa 3), declarația de conformitate cu ajutorul de stat (Anexa 3.a), analiza de oportunitate (Anexa 4), bugetul (Anexa 7) și declarația privind tipul de întreprindere (Anexa 8).",
             "Metodologia întreprinderii în dificultate (Anexa 6), declarația privind conflictul de interese (Anexa 9), DNSH și autoevaluarea (Anexele 10 și 10.1), consimțământul pentru date (Anexa 11) și centralizatorul kilometrilor (Anexa 13), potrivit cerințelor etapei.",
@@ -188,11 +198,11 @@
     ]
   ],
   "faqs": [
-    ["Programul e-DRIVE este deschis pentru depunere?", "Nu. La 3 noiembrie 2026 MTI a publicat ghidurile Măsurilor 1 și 2 în consultare până la 18 noiembrie 2026. Anunțul precizează că aceasta nu este lansarea apelurilor; calendarul depunerii va fi comunicat ulterior."],
+    ["Programul e-DRIVE este deschis pentru depunere?", "Consultarea s-a încheiat la 18 noiembrie 2026. La verificarea din 25 noiembrie, MTI nu publicase ghidurile finale sau calendarul de depunere pentru Măsurile 1 și 2."],
     ["Care este diferența dintre Măsura 1 și Măsura 2?", "Măsura 1 este de minimis pentru IMM-uri și vehicule M1/M2, în limita a 300.000 EUR pe întreprindere unică. Măsura 2 este ajutor de stat concurențial pentru transportatori de pasageri și M1/M2/M3, în limita a 4 milioane EUR pe întreprindere, pentru diferența de cost eligibilă."],
     ["Cât se poate solicita pentru un vehicul M2 în Măsura 1?", "Proiectul de ghid prevede maximum 130.000 EUR pentru un vehicul M2 nou exclusiv electric. Se aplică și plafonul disponibil de minimis de 300.000 EUR pe întreprindere unică în orice perioadă de trei ani, iar TVA este neeligibilă."],
     ["Ce coduri CAEN sunt prevăzute pentru Măsura 2?", "Proiectul de ghid indică CAEN Rev. 3 4931, 4932 și 4933, pentru transport rutier de pasageri. Se verifică separat licențele sau autorizațiile, condițiile financiare și eventualele compensații pentru serviciul public."],
-    ["Se finanțează o mașină electrică pe firmă?", "Măsura 1 include M1 noi exclusiv electrice pentru IMM-uri eligibile, cu maximum 30.000 EUR/vehicul, în limita de minimis. Sunt obligatorii înlocuirea unui vehicul eligibil și documentarea casării; condițiile sunt încă în consultare."],
+    ["Se finanțează o mașină electrică pe firmă?", "Măsura 1 include M1 noi exclusiv electrice pentru IMM-uri eligibile, cu maximum 30.000 EUR/vehicul, în limita de minimis. Proiectul de ghid cere înlocuirea unui vehicul eligibil și dovada casării."],
     ["Ce înseamnă finanțare de până la 100% în Măsura 2?", "Procentul privește diferența eligibilă fără TVA dintre vehiculul electric și alternativa convențională comparabilă. Nu privește întregul preț al vehiculului electric. Ajutorul este supus selecției concurențiale și plafoanelor aplicabile."],
     ["Sunt eligibile vehiculele hibride sau cumpărate în leasing?", "Nu. Proiectele de ghid vizează vehicule noi exclusiv electrice și exclud achizițiile în leasing și vehiculele second-hand."],
     ["Cum este propus punctajul pentru Măsura 1?", "Dimensiunea întreprinderii aduce 80 puncte pentru microîntreprinderi, 70 pentru firme mici sau 65 pentru firme mijlocii. Asamblarea finală în UE poate adăuga 20 puncte. Se aplică grila consultativă și regulile de departajare."],
@@ -203,7 +213,7 @@
     ["Unde se vor depune proiectele e-DRIVE?", "Proiectele de ghid indică platforma MySMIS 2021. Depunerea va fi posibilă numai potrivit ghidului aprobat și calendarului pe care MTI îl va comunica ulterior consultării."],
     [
       "Când se anunță calendarul de depunere e-DRIVE?",
-      "La 9 noiembrie 2026 nu sunt anunțate datele de depunere. Consultarea ghidurilor se încheie la 18 noiembrie. Proiectele prevăd lansarea în maximum 30 de zile de la publicarea ghidului în Monitorul Oficial, dar intervalul se poate aplica numai după aprobarea și publicarea formei finale."
+      "La 25 noiembrie 2026, MTI nu anunțase datele de depunere. Proiectele de ghid prevăd lansarea în maximum 30 de zile după publicarea ghidului în Monitorul Oficial. Calendarul va fi comunicat de MTI după aprobare."
     ]
   ],
   "answerHeading": "Când începe programul e-DRIVE 2026?",
@@ -213,6 +223,10 @@
       "example": true,
       "title": "Exemple de calcul pentru finanțarea e-DRIVE",
       "intro": "Sumele de mai jos sunt ilustrative și aplică regulile din proiectele de ghid publicate de MTI la 3 noiembrie 2026. Toate prețurile din exemple sunt fără TVA.",
+      "references": [
+        ["Ghid Măsura 1, secțiunile 1.7 și 2.3", "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2"],
+        ["Ghid Măsura 2, secțiunile 1.7 și 2.3", "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet"]
+      ],
       "rows": [
         [
           "Măsura 1 · două vehicule M1",
@@ -277,12 +291,14 @@
   ],
   "calendar": {
     "title": "Calendar e-DRIVE: consultare, aprobare și depunere",
-    "text": "La verificarea din 9 noiembrie 2026, ghidurile ambelor măsuri sunt în consultare publică. Datele de deschidere și închidere a depunerilor nu sunt anunțate.",
+    "text": "Consultarea s-a încheiat la 18 noiembrie 2026. La verificarea din 25 noiembrie, MTI nu publicase ghidurile finale sau calendarul de depunere pentru Măsurile 1 și 2.",
     "items": [
-      "3–18 noiembrie 2026: consultarea proiectelor de ghid. Termenul de 18 noiembrie privește observațiile transmise MTI.",
+      "Între 3 și 18 noiembrie 2026, MTI a primit observații asupra proiectelor de ghid.",
       "Proiectele de ghid prevăd lansarea apelurilor în maximum 30 de zile de la publicarea ghidului în Monitorul Oficial. Acest termen este condiționat de aprobarea și publicarea ghidului final; nu stabilește acum o dată de înscriere.",
       "Pentru Măsura 2, Ordinul MTI nr. 817/2026 modifică art. 12 alin. (2) al schemei și tratează aplicarea după 31 decembrie 2026. MTI trebuie să asigure armonizarea cu noile reglementări de exceptare pe categorii de ajutoare. În lipsa armonizării, după perioada de tranziție aplicabilă nu se pot încheia contracte sau acorda ajutoare până la adoptarea formei armonizate."
     ],
+    "guidePage": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-8/ghidul-solicitantului",
+    "callsPage": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-8/apeluri-de-proiecte",
     "schemeSource": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf"
   }
 }

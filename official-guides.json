@@ -335,14 +335,14 @@
     "programIds": [
       "dr12-afir"
     ],
-    "name": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
-    "title": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
+    "name": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
+    "title": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-    "accessedAt": "2026-11-11",
-    "programStatus": "apel_deschis",
-    "statusLabel": "Alte sectoare: termen expirat · Zootehnic până la 2 dec., 15:59:59",
-    "verifiedAt": "2026-11-11",
+    "accessedAt": "2026-11-25",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis — fonduri epuizate la ambele componente",
+    "verifiedAt": "2026-11-25",
     "isPrimaryFor": "dr12-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -461,10 +461,10 @@
     "title": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii – DGPET",
     "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
-    "accessedAt": "2026-11-10",
+    "accessedAt": "2026-11-25",
     "programStatus": "consultare_publica",
-    "statusLabel": "Apel în curs de lansare – ghiduri în consultare până la 18 noiembrie 2026",
-    "verifiedAt": "2026-11-10",
+    "statusLabel": "Proiecte de ghid publicate · calendar de depunere neanunțat",
+    "verifiedAt": "2026-11-25",
     "isPrimaryFor": "e-drive",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -635,20 +635,21 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "sme-eco-tech-procedura": {
-    "name": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
-    "title": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
+    "name": "Procedura SME Eco-Tech, aprobată prin Ordinul nr. 1.392/2025, în forma consolidată",
+    "title": "Procedura SME Eco-Tech, aprobată prin Ordinul nr. 1.392/2025, în forma consolidată",
     "institution": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
     "documentType": "procedură aprobată",
-    "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
-    "accessedAt": "2026-11-10",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/299281",
+    "accessedAt": "2026-11-25",
     "note": "Procedura aprobată prin Ordinul nr. 1.392/2025 se citește împreună cu ordinele de modificare din 2026.",
     "programIds": [
       "sme-eco-tech"
     ],
-    "verifiedAt": "2026-11-10",
+    "verifiedAt": "2026-11-25",
     "programStatus": "apel_deschis",
     "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
     "isPrimaryFor": "sme-eco-tech",
-    "sourceOfTruth": "config/seo-programs.json#programs"
+    "sourceOfTruth": "config/seo-programs.json#programs",
+    "syncFromProgramRegistry": false
   }
 }

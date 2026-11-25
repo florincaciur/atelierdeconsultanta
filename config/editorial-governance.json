@@ -445,14 +445,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-      "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
-      "nextReviewAt": "2026-11-24",
-      "lastMeaningfulUpdate": "2026-11-11",
-      "statusSnapshot": "apel_deschis",
+      "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
+      "nextReviewAt": "2027-01-24",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-24",
+          "summary": "Ambele componente s-au închis prin epuizarea fondurilor. Sectorul zootehnic s-a închis la 24 noiembrie, ora 00:41:18.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-23",
           "summary": "Contorul oficial AFIR (https://depunerepspac.afir.ro/Sesiune/Lista) confirmă fonduri epuizate pentru Alte sectoare și fonduri disponibile pentru Sector zootehnic, cu termenul afișat 2 decembrie 2026, ora 15:59:59.",
@@ -534,6 +540,12 @@
         {
           "date": "2026-11-11",
           "summary": "Reverificare după miezul nopții. Fișa DR-12 și calendarul disting termenul expirat pentru Alte sectoare de depunerea pentru Sector zootehnic.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-11-25",
+          "summary": "Am precizat diferența dintre termenul general AFIR și închiderile efective pe cele două componente.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
@@ -2149,14 +2161,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "nextReviewAt": "2026-12-09",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "consultare_publica",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Verificate la MTI secțiunile de ghiduri și apeluri după închiderea consultării. Actualizate calendarul, statutul, sursele din dreptul regulilor și metadatele.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Reverificate pachetele MTI ale ambelor măsuri față de publicațiile din 3 noiembrie. Adăugate surse pentru plafoane și punctaje, calendarul condiționat de aprobarea ghidurilor și modificarea art. 12 alin. (2) prin Ordinul 817/2026.",
@@ -2515,14 +2533,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "officialSourceUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
       "sourceVersion": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
       "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Verificate procedura consolidată, ordinele și prelungirea înscrierii. Adăugate răspunsuri despre ghid, CAEN, înscriere, grant și credit, cu surse și exemplu de calcul.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Publicate calendarul, eligibilitatea, mecanismul grant–credit și modificările procedurii până la Ordinul nr. 1.773/2026.",

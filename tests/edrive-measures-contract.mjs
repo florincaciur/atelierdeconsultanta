@@ -6,7 +6,7 @@ const require=createRequire(import.meta.url);
 const registry=require('../config/seo-programs.json').programs;
 const program=registry.find(p=>p.id==='e-drive');
 const $=cheerio.load(fs.readFileSync(new URL('../e-drive/index.html',import.meta.url),'utf8'));
-assert.equal(program.canonicalStatus,'PUBLIC_CONSULTATION');
+assert.equal(program.canonicalStatus,'CONSULTATIVE_GUIDE');
 assert.equal(program.consultationEnd,'2026-11-18');
 assert.equal(program.applicationStart,null,'Consultation must not become an application window');
 assert.equal(program.applicationEnd,null);
@@ -15,6 +15,7 @@ for(const id of ['masura-1','masura-2']) {
   assert.equal($(`main section#${id}`).length,1);
   assert($(`nav.edrive-navigation a[href="#${id}"]`).length,'Both measures must be reachable without JavaScript');
   assert.equal($(`#${id} h3`).length,5,'Each measure needs beneficiaries, fleet, finance, scoring and documents');
+  assert.equal($(`#${id} .edrive-measure__group a`).length, 5, 'Each group of rules needs a nearby guide citation');
 }
 const m1=$('#masura-1').text(),m2=$('#masura-2').text();
 assert.match(m1,/130\.000 EUR/);
@@ -24,7 +25,8 @@ assert.match(m2,/4931.*4932.*4933/s);
 assert.match(m2,/4 milioane EUR/);
 assert.match(m2,/70 puncte.*10 puncte.*20 puncte/s);
 assert.match(m2,/diferența.*cost/si);
-assert.match($('.edrive-notice').text(),/nu este termen de depunere/i);
+assert.match($('.edrive-notice').text(), /observațiile s-au putut trimite până la 18 noiembrie/i);
+assert.equal($('#calendar-depunere a[href$="/apeluri-de-proiecte"]').length, 1);
 assert($('a[href="https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip"]').length);
 assert.equal($('nav.edrive-navigation a[href="#calendar-depunere"]').length, 1);
 assert.match($('#calendar-depunere').text(), /maximum 30 de zile.*publicarea ghidului în Monitorul Oficial/s);

@@ -121,7 +121,8 @@ const centru = byId.get("digitalizare-imm-regiunea-centru-apel-2");
 const calendarHtml = fs.readFileSync(path.join(ROOT, "calendar-fonduri-europene", "index.html"), "utf8");
 const calendar = cheerio.load(calendarHtml);
 const centruBanner = banners.find((banner) => banner.programId === centru.id);
-assert.equal(syncCalendar(calendarHtml, programs), calendarHtml, "Calendarul ADR Centru trebuie generat din registru");
+const withoutContextualLinks = html => html.replace(/ <span data-editorial-context="[^"]+">[^]*?<\/span>/gu, "");
+assert.equal(withoutContextualLinks(syncCalendar(calendarHtml, programs)), withoutContextualLinks(calendarHtml), "Calendarul trebuie generat din registru");
 const calendarPrograms = programs.filter(program => isPublicProgram(program) && program.indexable !== false && !program.discovery?.redirectTarget);
 assert.equal(calendarPrograms.length, 27, "Revizuirea trebuie să acopere cele 27 de înregistrări publice");
 assert.deepEqual(new Set(calendar('[data-calendar-program]').map((_, row) => calendar(row).attr('data-calendar-program')).get()), new Set(calendarPrograms.map(program => program.id)), "Calendarul trebuie să acopere întregul registru public");
@@ -132,10 +133,10 @@ for (const program of calendarPrograms) {
   assert.equal(row.find(`a[href="${program.sourceUrl}"]`).length, 1, `${program.id}: sursa oficială trebuie să fie accesibilă din tabel`);
   assert(row.text().includes(program.sourceVersion), `${program.id}: versiunea sursei lipsește`);
 }
-const firstOpenCall = calendar('tbody[data-calendar-phase="submission"] [data-calendar-program]').first();
-assert.equal(firstOpenCall.attr('data-calendar-program'), 'dr12-afir', "Cel mai apropiat termen trebuie să includă componenta DR-12 Alte sectoare");
-assert.equal(firstOpenCall.find('time[datetime="2026-11-11T00:00:00+02:00"]').length, 1);
-assert.equal(firstOpenCall.find('time[datetime="2026-12-02T15:59:59+02:00"]').length, 1);
+const dr12Calendar = calendar('tbody[data-calendar-phase="implementation"] [data-calendar-program="dr12-afir"]');
+assert.equal(dr12Calendar.length, 1, "DR-12 a trecut în etapa de evaluare și implementare");
+assert.equal(dr12Calendar.find('time[datetime="2026-11-11T00:00:00+02:00"]').length, 1);
+assert.equal(dr12Calendar.find('time[datetime="2026-11-24T00:41:18+02:00"]').length, 1);
 assert.equal(calendar('[data-calendar-program="e-drive"] time[datetime="2026-11-18"]').length, 1, "Consultarea e-DRIVE trebuie afișată separat de depunere");
 const verification = JSON.parse(fs.readFileSync(path.join(ROOT, 'reports/funding-review-2026-11-10/official-sources.json'), 'utf8'));
 assert.deepEqual(new Set(verification.records.map(record => record.id)), new Set(calendarPrograms.map(program => program.id)), "Fiecare program public trebuie să aibă fișă de verificare");

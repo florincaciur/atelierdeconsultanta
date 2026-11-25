@@ -850,6 +850,14 @@ function renderList(items) { return `<ul>${items.map((item) => `<li>${e(item)}</
 function renderCards(items) { return items.map(([title, text], index) => `<article class="program-card reveal" style="--delay:${index * 70}ms"><span class="program-card__number" aria-hidden="true">0${index + 1}</span><h3>${e(title)}</h3><p>${e(text)}</p></article>`).join(""); }
 function renderDetails(items) { return items.map(([title, text]) => `<details class="program-detail"><summary>${e(title)}<span aria-hidden="true"></span></summary><div><p>${e(text)}</p></div></details>`).join(""); }
 
+function renderQuickQuestions(questions) {
+  if (!questions?.length) return "";
+  return '<dl class="program-quick-questions">' + questions.map(([question, answer, sourceLabel, href]) =>
+    '<div><dt><strong>' + e(question) + '</strong></dt><dd>' + e(answer) +
+    ' <a href="' + e(href) + '">' + e(sourceLabel) + '</a>.</dd></div>'
+  ).join("") + '</dl>';
+}
+
 function renderSvg(slug) {
   const vehicle = slug === "e-drive" || slug === "e-mobility-ro";
   const diaspora = slug === "diaspora-investeste-acasa";
@@ -887,8 +895,8 @@ function renderMeasures(content) {
   return (content.measures || []).map(measure => `<section class="program-section edrive-measure" id="${e(measure.id)}" aria-labelledby="${e(measure.id)}-title">
     <div class="edrive-measure__heading"><span class="edrive-measure__number" aria-hidden="true">${e(measure.number)}</span><div><p class="section-kicker">${e(measure.label)}</p><h2 id="${e(measure.id)}-title">${e(measure.title)}</h2><p>${e(measure.intro)}</p></div></div>
     <dl class="edrive-measure__funding">${measure.funding.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl>
-    <p class="edrive-measure__version">Condiții din proiectul de ghid publicat la 3 noiembrie 2026, în consultare publică.${measure.source ? ` <a href="${e(measure.source)}" target="_blank" rel="noopener noreferrer">Ghidul și anexele Măsurii ${e(Number(measure.number))} pe site-ul MTI</a>.` : ''}</p>
-    <div class="edrive-measure__groups">${measure.groups.map(group=>`<article class="edrive-measure__group"><h3>${e(group.title)}</h3>${renderList(group.items)}</article>`).join('')}</div>
+    <p class="edrive-measure__version">Condiții din proiectul de ghid publicat la 3 noiembrie 2026 pentru consultare publică.${measure.source ? ` <a href="${e(measure.source)}" target="_blank" rel="noopener noreferrer">Ghidul și anexele Măsurii ${e(Number(measure.number))} pe site-ul MTI</a>.` : ''}</p>
+    <div class="edrive-measure__groups">${measure.groups.map(group=>`<article class="edrive-measure__group"><h3>${e(group.title)}</h3><div>${renderList(group.items)}${group.reference ? `<p><a href="${e(measure.source)}">${e(group.reference)}</a></p>` : ""}</div></article>`).join('')}</div>
     <a class="program-button edrive-measure__cta" href="/contact#program_slug=e-drive&amp;source_page=%2Fe-drive">Solicită analiza pentru Măsura ${e(Number(measure.number))}</a>
   </section>`).join('\n');
 }
@@ -918,7 +926,7 @@ function renderFactSources(sources) {
 function renderApplicationCalendar(calendar, notice) {
   if (!calendar) return "";
   return `<section class="program-section" id="calendar-depunere">
-    <div class="section-heading"><h2>${e(calendar.title)}</h2><p>${e(calendar.text)}</p></div>
+    <div class="section-heading"><h2>${e(calendar.title)}</h2><p>${e(calendar.text)}</p><p>Verifică la MTI <a href="${e(calendar.guidePage)}">publicarea ghidurilor finale</a> și <a href="${e(calendar.callsPage)}">anunțurile de lansare</a>.</p></div>
     ${renderList(calendar.items)}
     <p><a href="${e(notice.url)}" target="_blank" rel="noopener noreferrer">Anunțul consultării MTI</a> ·
       <a href="${e(calendar.schemeSource)}" target="_blank" rel="noopener noreferrer">Ordinul MTI nr. 817/2026, pagina 5</a></p>
@@ -964,7 +972,7 @@ function renderPage(program, content) {
   <link rel="canonical" href="${canonical}"><link rel="icon" href="/favicon.png">
   <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta property="og:image:alt" content="${e(`${program.shortName} — FABER`)}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(program.metaTitle)}"><meta name="twitter:description" content="${e(program.metaDescription)}"><meta name="twitter:image" content="${SITE}/og-image.jpg"><meta name="twitter:image:alt" content="${e(`${program.shortName} — FABER`)}">
-  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20261110-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
+  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=${content.quickQuestions ? "20261125-1" : "20261110-1"}">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 </head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">
 ${HEADER}
@@ -980,7 +988,7 @@ ${HEADER}
   <section class="program-metrics" aria-label="Repere de finanțare">${metrics.map(([value, label, className]) => `<div${className ? ` class="${e(className)}"` : ""}><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
   ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut verificat la ${e(program.verifiedAt)}</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
   ${renderMeasureNavigation(content)}
-  <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
+  <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p>${renderQuickQuestions(content.quickQuestions)}<small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
   ${renderComparison(content.comparison, program)}
   ${renderFactSources(content.factSources)}
   ${renderMeasures(content)}

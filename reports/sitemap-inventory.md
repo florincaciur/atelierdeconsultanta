@@ -16,7 +16,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 ## Excluderi dupa motiv
 
 - meta_refresh: 2
-- missing_canonical: 5
+- missing_canonical: 7
 - noindex_meta: 63
 - redirect_source: 108
 
@@ -31,6 +31,8 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | /partials/preferred-source | partials/preferred-source.html | missing_canonical | - |
 | /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
 | /templates/dr18-final-content | templates/dr18-final-content.html | missing_canonical | - |
+| /tools/chrome-extension/popup | tools/chrome-extension/popup.html | missing_canonical | - |
+| /tools/chrome-extension/privacy | tools/chrome-extension/privacy.html | missing_canonical | - |
 | /404 | 404.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/admin | admin/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/afir | afir.html | noindex_meta | - |

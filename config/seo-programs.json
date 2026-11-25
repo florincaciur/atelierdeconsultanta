@@ -184,19 +184,19 @@
       "acronym": "DR-12",
       "fund": "Planul Strategic PAC 2023–2027 / FEADR",
       "family": "afir-agricultura",
-      "status": "apel_deschis",
-      "canonicalStatus": "OPEN",
+      "status": "apel_inchis",
+      "canonicalStatus": "CLOSED",
       "statusScope": "program_call",
-      "statusRationale": "Contorul AFIR consultat după miezul nopții afișează în continuare închiderea componentei Alte sectoare la 11.11.2026, 00:00. Componenta Sector zootehnic are termen la 02.12.2026, 15:59:59.",
-      "statusLabel": "Alte sectoare: termen expirat · Zootehnic până la 2 dec., 15:59:59",
+      "statusRationale": "AFIR afișează fonduri epuizate la ambele componente. Alte sectoare s-a închis la 11 noiembrie, iar Sector zootehnic la 24 noiembrie 2026.",
+      "statusLabel": "Apel închis — fonduri epuizate la ambele componente",
       "publicationState": "public",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-25",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-      "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR cu termene distincte pe componente",
+      "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
       "sourceType": "official",
       "applicationStart": "2026-10-06",
-      "applicationEnd": "2026-12-02",
+      "applicationEnd": "2026-11-24",
       "grantSummary": {
         "minimum": null,
         "maximum": {
@@ -220,15 +220,15 @@
         "ownContribution": "Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă."
       },
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "2026-11-11",
+      "lastMeaningfulUpdate": "2026-11-25",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "DR-12 are termene distincte pe componente. Verifică data aplicabilă, grantul de maximum 200.000 EUR și eligibilitatea din ghidul final.",
-      "quickAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. AFIR publică termene diferite pentru Alte sectoare și Sector zootehnic. Verifică fișa componentei și disponibilul în platforma AFIR înainte de transmitere. Pentru o investiție care deservește mai multe sectoare, verifică încadrarea din secțiunea 1.3 a ghidului înainte de a întocmi devizul. Compară datele folosite la calculul SO cu evidențele exploatației. După ce ai stabilit componenta și bugetul eligibil, consultă grila de punctaj și strânge documentele care susțin fiecare criteriu. Folosește cererea de finanțare și anexele publicate pentru această sesiune.",
-      "metaTitle": "DR-12 AFIR 2026: calendar și termene pe componente",
-      "metaDescription": "Vezi termenele AFIR pentru Alte sectoare și Sector zootehnic în DR-12, ora exactă a închiderii, ghidul final, cheltuielile și punctajul.",
-      "editorialDisclaimer": "La verificare, depunerea este deschisă pentru Sector zootehnic. Pentru Alte sectoare, termenul afișat în contor a expirat.",
+      "cardSummary": "DR-12: maximum 200.000 EUR pe proiect. Consultă ghidul, grila de punctaj și datele de închidere pe componente.",
+      "quickAnswer": "AFIR afișează fonduri epuizate la ambele componente. Alte sectoare s-a închis la 11 noiembrie, iar Sector zootehnic la 24 noiembrie 2026. DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. Pentru proiectele depuse, încadrarea se verifică după secțiunea 1.3 a ghidului. Corelează evidențele APIA și ANSVSA cu dimensiunea economică a exploatației. Verifică drepturile asupra amplasamentului și documentele care susțin fiecare criteriu de selecție. Plafonul de 200.000 EUR poate crește partea din buget acoperită de beneficiar. Fișa de punctaj arată ce document susține fiecare criteriu.",
+      "metaTitle": "DR-12 AFIR 2026: apel închis, ghid și punctaj",
+      "metaDescription": "DR-12 AFIR: apel închis la ambele componente prin epuizarea fondurilor. Vezi datele de închidere, eligibilitatea și calculatorul de punctaj.",
+      "editorialDisclaimer": "AFIR afișează fonduri epuizate la ambele componente. Alte sectoare s-a închis la 11 noiembrie, iar Sector zootehnic la 24 noiembrie 2026.",
       "eligibleApplicants": [
         "Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).",
         "Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.",
@@ -281,9 +281,14 @@
             }
           ],
           "corrigenda": [],
-          "clarifications": []
+          "clarifications": [
+            {
+              "ref": "registry:afir-dr12-epuizare-alte-sectoare-2026",
+              "label": "AFIR: fonduri epuizate pentru Alte sectoare"
+            }
+          ]
         },
-        "notes": "Contorul AFIR separă închiderea componentei Alte sectoare la 11.11.2026, 00:00:00, de Sector zootehnic la 02.12.2026, 15:59:59. Comunicatul de lansare indică intervalul general și ora 16:00."
+        "notes": "Antetul AFIR afișează termenul general de 2 decembrie 2026, ora 15:59:59. Ambele componente s-au închis anticipat, conform contorului de depunere. Alte sectoare s-a închis pe 11 noiembrie la începutul zilei, iar Sector zootehnic pe 24 noiembrie la 00:41:18."
       },
       "presentation": {
         "carousel": true,
@@ -297,30 +302,30 @@
         "heroOrder": 2,
         "navigationOrder": 5,
         "calendar": {
-          "phase": "submission",
+          "phase": "implementation",
           "beneficiary": "Fermieri instalați eligibili, inclusiv absolvenți sM 6.1",
           "counties": "Național",
-          "note": "Ora 00:00 este miezul nopții dintre 10 și 11 noiembrie. Pentru Alte sectoare, termenul se încheie la începutul zilei de 11 noiembrie.",
-          "checkedAt": "2026-11-11T00:00:29+02:00",
+          "note": "Antetul AFIR afișează termenul general de 2 decembrie 2026, ora 15:59:59. Ambele componente s-au închis anticipat, conform contorului de depunere. Alte sectoare s-a închis pe 11 noiembrie la începutul zilei, iar Sector zootehnic pe 24 noiembrie la 00:41:18.",
           "components": [
             {
               "name": "Alte sectoare",
               "startAt": "2026-10-06T09:00:00+03:00",
               "endAt": "2026-11-11T00:00:00+02:00",
-              "state": "DEADLINE_ELAPSED",
-              "note": "Termenul afișat în contor, 11 noiembrie la ora 00:00, a expirat la verificare. Nu a fost identificat un termen ulterior.",
+              "state": "CLOSED",
+              "note": "AFIR a anunțat epuizarea fondurilor. Ora 00:00 marchează începutul zilei de 11 noiembrie.",
               "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
             },
             {
               "name": "Sector zootehnic",
               "startAt": "2026-10-06T09:00:00+03:00",
-              "endAt": "2026-12-02T15:59:59+02:00",
-              "state": "OPEN",
-              "note": "Termenul comunicat public este 2 decembrie, ora 16:00.",
+              "endAt": "2026-11-24T00:41:18+02:00",
+              "state": "CLOSED",
+              "note": "Contorul componentei afișează fonduri epuizate și închiderea anticipată la 24 noiembrie, ora 00:41:18.",
               "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
             }
           ],
-          "label": "DR-12 · termene distincte pe componente"
+          "label": "Apel închis — fonduri epuizate la ambele componente",
+          "checkedAt": "2026-11-25"
         },
         "guideRoutes": [
           "/intrebari/ce-documente-sunt-necesare-pentru-dr12"
@@ -341,7 +346,7 @@
       },
       "fundingBasis": "final",
       "applicationStartAt": "2026-10-06T09:00:00+03:00",
-      "applicationEndAt": "2026-12-02T16:00:00+02:00"
+      "applicationEndAt": "2026-11-24T00:41:18+02:00"
     },
     {
       "id": "dr14-afir",
@@ -2472,12 +2477,12 @@
       "fund": "Fondul pentru Modernizare",
       "family": "mobilitate-energie",
       "status": "consultare_publica",
-      "canonicalStatus": "PUBLIC_CONSULTATION",
+      "canonicalStatus": "CONSULTATIVE_GUIDE",
       "statusScope": "scheme",
-      "statusRationale": "Anunțul MTI din 03.11.2026 confirmă consultarea ghidurilor Măsurilor 1 și 2 până la 18.11.2026 și precizează că apelurile nu sunt lansate.",
-      "statusLabel": "Apel în curs de lansare – ghiduri în consultare până la 18 noiembrie 2026",
+      "statusRationale": "Consultarea s-a încheiat la 18 noiembrie 2026. La verificarea din 25 noiembrie, MTI nu publicase ghidurile finale sau calendarul de depunere pentru Măsurile 1 și 2.",
+      "statusLabel": "Proiecte de ghid publicate · calendar de depunere neanunțat",
       "publicationState": "public",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
@@ -2506,21 +2511,21 @@
         "ownContribution": "Diferența până la prețul total, TVA și cheltuielile neeligibile; plafonul de minimis disponibil se verifică pentru întreprinderea unică."
       },
       "pageUrl": "/e-drive",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-25",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Măsura 1 pentru IMM-uri și Măsura 2 pentru transportatori. Ghiduri în consultare până la 18 noiembrie; calendarul depunerilor urmează după aprobare.",
-      "quickAnswer": "MTI va anunța datele de depunere după aprobarea ghidurilor. e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026.",
+      "cardSummary": "Proiecte de ghid pentru IMM-uri și transportatorii de pasageri. Consultarea s-a încheiat la 18 noiembrie. MTI urmează să anunțe calendarul.",
+      "quickAnswer": "MTI va anunța datele de depunere după aprobarea ghidurilor. Consultarea s-a încheiat la 18 noiembrie 2026. Măsura 1 vizează IMM-urile care înlocuiesc vehicule M1 sau M2, iar Măsura 2 vizează transportatorii de pasageri care înlocuiesc vehicule M1, M2 sau M3. Plafoanele și punctajele de mai jos provin din proiectele de ghid.",
       "metaTitle": "e-DRIVE 2026: ghid Măsura 1, Măsura 2 și calendar",
-      "metaDescription": "e-DRIVE 2026: ghidurile Măsurilor 1 și 2, plafoane, punctaj și calendar. Consultare până la 18 noiembrie; datele depunerii nu sunt încă anunțate.",
-      "editorialDisclaimer": "Ghidurile Măsurilor 1 și 2 sunt în consultare publică până la 18 noiembrie 2026. Condițiile sunt consultative; calendarul depunerii proiectelor va fi comunicat ulterior de MTI.",
+      "metaDescription": "e-DRIVE 2026: proiectele de ghid pentru Măsurile 1 și 2, plafoane, punctaj și exemple. Consultarea s-a încheiat. Calendarul de depunere urmează.",
+      "editorialDisclaimer": "Condițiile provin din proiectele de ghid publicate la 3 noiembrie 2026. MTI va comunica datele de depunere după aprobare.",
       "eligibleApplicants": [
         "Microîntreprinderi și IMM-uri eligibile în măsura 1, indiferent de codul CAEN, cu respectarea sectoarelor excluse de schema de minimis",
         "Operatori de transport rutier de persoane eligibili în măsura 2, pentru activitățile CAEN Rev. 3 prevăzute de schemă"
       ],
       "keyConditions": [
-        "Ghidurile sunt în consultare publică în perioada 03.11–18.11.2026; aceasta nu reprezintă lansarea apelurilor.",
+        "Consultarea ghidurilor s-a încheiat la 18.11.2026. La 25.11.2026, MTI nu publicase calendarul depunerii.",
         "Măsura 1: M1 și M2 noi exclusiv electrice; maximum 30.000 EUR/M1 și 130.000 EUR/M2, în limita a 300.000 EUR pe întreprindere unică în orice perioadă de trei ani.",
         "Măsura 2: M1, M2 și M3 pentru transportatori de pasageri; maximum 4 milioane EUR pe întreprindere și 30.000 EUR/M1; cost eligibil egal cu diferența față de alternativa convențională comparabilă.",
         "Casarea vehiculului înlocuit se documentează în maximum 60 de zile de la recepția vehiculului electric.",
@@ -2591,7 +2596,7 @@
           "phase": "preparation",
           "beneficiary": "IMM-uri pentru Măsura 1 și transportatori eligibili pentru Măsura 2",
           "counties": "Național, potrivit fiecărei măsuri",
-          "note": "Observații la ghiduri până la 18 noiembrie 2026. Calendarul depunerii cererilor urmează să fie comunicat."
+          "note": "MTI va anunța depunerea după aprobarea ghidurilor finale."
         }
       },
       "discovery": {
@@ -3222,10 +3227,10 @@
       "status": "apel_deschis",
       "canonicalStatus": "OPEN",
       "statusScope": "program_call",
-      "statusRationale": "Sesiunea deschisă la 26 mai 2026 a fost prelungită până la 30 decembrie 2026, ora 20:00, potrivit calendarului publicat de Instituția Prefectului – Județul Vrancea.",
+      "statusRationale": "Ministerul Economiei a prelungit înscrierile până la 30 decembrie 2026, ora 20:00, în limita bugetului.",
       "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
       "publicationState": "public",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "sourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "sourceUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
       "sourceVersion": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
@@ -3249,17 +3254,17 @@
             "scope": "maximum din cheltuielile eligibile"
           }
         ],
-        "ownContribution": "Credit de minimum 60% din cheltuielile eligibile, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat."
+        "ownContribution": "Credit de minimum 60% din cheltuielile eligibile, de cel puțin 400.860 lei, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat."
       },
       "pageUrl": "/sme-eco-tech",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "lastMeaningfulUpdate": "2026-11-25",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Grant de până la 267.240 lei pentru investiții verzi și digitale, combinat cu un credit de la o bancă parteneră.",
-      "quickAnswer": "Pot aplica microîntreprinderile și firmele mici sau mijlocii cu capital integral privat, înființate cel târziu la 31 decembrie 2021 și cu activitate eligibilă în România. Firma cere sprijin pentru un singur cod CAEN eligibil, principal sau secundar de la 1 ianuarie 2022 și autorizat la înscriere. Grantul acoperă până la 40% din costurile eligibile, în limita a 267.240 lei. Creditul de la o bancă parteneră acoperă cel puțin 60%.",
-      "metaTitle": "SME Eco-Tech 2026: grant, credit și eligibilitate | FABER",
-      "metaDescription": "SME Eco-Tech oferă IMM-urilor până la 267.240 lei pentru investiții verzi și digitale, cu credit bancar. Înscrieri până la 30 decembrie 2026, ora 20:00.",
+      "quickAnswer": "Pot aplica IMM-urile cu capital integral privat, înființate până la 31 decembrie 2021 inclusiv, cu activitate eligibilă în România și cifră de afaceri pozitivă în 2024. Grantul acoperă până la 40% din cheltuielile eligibile, în limita a 267.240 lei. Creditul bancar obligatoriu acoperă cel puțin 60% și este de minimum 400.860 lei.",
+      "metaTitle": "SME Eco-Tech 2026: ghid, cod CAEN, înscriere și grant",
+      "metaDescription": "SME Eco-Tech 2026: procedura oficială, coduri CAEN eligibile și înscriere până la 30 decembrie, ora 20:00. Grant de până la 267.240 lei și credit obligatoriu.",
       "editorialDisclaimer": "Verifică disponibilitatea bugetului și documentele pe platforma oficială înainte de înscriere.",
       "eligibleApplicants": [
         "Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România."
@@ -3284,7 +3289,7 @@
           ],
           "guide": [
             {
-              "ref": "guide:sme-eco-tech-procedura",
+              "ref": "registry:sme-eco-tech-procedura-consolidata",
               "label": "Procedura aprobată prin Ordinul nr. 1.392/2025"
             }
           ],

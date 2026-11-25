@@ -262,3 +262,17 @@
 .program-comparison thead th { background: #0d1f3c; color: white; }
 .program-comparison tbody th { font-weight: 650; }
 .program-comparison tbody tr:nth-child(even) { background: #f8fafc; }
+
+.program-quick-questions {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.program-quick-questions dd {
+  margin: 0.25rem 0 0;
+}
+
+.program-quick-questions a {
+  text-decoration: underline;
+}

@@ -1,12 +1,12 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-11-10**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-11-25**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
 - Pagini guvernate: **42**
 - Pagini publice cu metadate complete: **31**
-- Verificări expirate: **10**
+- Verificări expirate: **12**
 - Surse lipsă/incomplete: **1**
 - Reviewer lipsă: **0**
 - Contradicții program–pagină: **0**
@@ -24,8 +24,8 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/calculator-soc` | tool | public | — | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | DE_VALIDAT_UMAN | 2027-01-02 | nu | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | DE_VALIDAT_UMAN | 2026-11-10 | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-10 | DE_VALIDAT_UMAN | 2027-01-09 | nu | nu | nu | nu |
-| `/dr12-afir` | program | public | apel_deschis | 2026-05-19 | 2026-11-11 | 2026-11-11 | DE_VALIDAT_UMAN | 2026-11-12 | nu | nu | nu | nu |
-| `/dr12-vs-dr14` | guide | public | — | DE_VALIDAT_UMAN | 2026-11-11 | 2026-11-11 | DE_VALIDAT_UMAN | 2026-11-12 | nu | nu | nu | nu |
+| `/dr12-afir` | program | public | apel_inchis | 2026-05-19 | 2026-11-25 | 2026-11-25 | DE_VALIDAT_UMAN | 2027-01-24 | nu | nu | nu | nu |
+| `/dr12-vs-dr14` | guide | public | — | DE_VALIDAT_UMAN | 2026-11-11 | 2026-11-11 | DE_VALIDAT_UMAN | 2026-11-12 | nu | da | nu | nu |
 | `/dr14` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | DE_VALIDAT_UMAN | 2026-12-10 | nu | nu | nu | nu |
 | `/dr18` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | DE_VALIDAT_UMAN | 2026-12-10 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
@@ -52,13 +52,13 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/start-up-nation-2026-plan-de-afaceri` | guide | pending_validation | — | DE_VALIDAT_UMAN | 2026-11-10 | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/webinarii` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/diaspora-investeste-acasa` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-10 | DE_VALIDAT_UMAN | 2027-01-09 | nu | nu | nu | nu |
-| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-10 | DE_VALIDAT_UMAN | 2027-01-09 | nu | nu | nu | nu |
+| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-25 | 2026-11-25 | DE_VALIDAT_UMAN | 2026-12-09 | nu | nu | nu | nu |
 | `/e-mobility` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | DE_VALIDAT_UMAN | 2026-12-10 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | 2026-10-22 | 2026-12-10 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare-entitati-publice` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | 2026-09-11 | 2026-12-10 | nu | nu | nu | nu |
 | `/digitalizare-imm-regiunea-centru-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-10 | 2026-11-10 | 2026-10-30 | 2027-01-09 | nu | nu | nu | nu |
-| `/sme-eco-tech` | program | public | apel_deschis | 2026-11-09 | 2026-11-10 | 2026-11-10 | 2026-10-30 | 2026-12-10 | nu | nu | nu | nu |
-| `/calendar-fonduri-europene` | guide | public | — | DE_VALIDAT_UMAN | 2026-11-11 | 2026-11-11 | DE_VALIDAT_UMAN | 2026-11-12 | nu | nu | nu | nu |
+| `/sme-eco-tech` | program | public | apel_deschis | 2026-11-09 | 2026-11-25 | 2026-11-25 | 2026-10-30 | 2026-12-10 | nu | nu | nu | nu |
+| `/calendar-fonduri-europene` | guide | public | — | DE_VALIDAT_UMAN | 2026-11-11 | 2026-11-11 | DE_VALIDAT_UMAN | 2026-11-12 | nu | da | nu | nu |
 
 ## Reguli de prospețime
 

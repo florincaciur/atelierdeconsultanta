@@ -631,6 +631,9 @@ function renderFundingCalendar(programs) {
       return `<ul>${calendar.components.map(component => `<li><strong>${escapeHtml(component.name)}</strong>: ${escapeHtml(componentStatusText(component))}. Închidere ${componentDateTimeMarkup(component.endAt)}.</li>`).join("")}</ul>`;
     }
     if (calendar.phase === "preparation" && program.consultationEnd) {
+      if (program.canonicalStatus === "CONSULTATIVE_GUIDE") {
+        return `<p>Consultarea s-a încheiat la ${time(program.consultationEnd)}.</p><p>Calendarul depunerii nu este publicat.</p>`;
+      }
       return `<p>Observații la ghid până la ${time(program.consultationEnd)}.</p><p>Calendarul depunerii nu este publicat.</p>`;
     }
     if (!program.applicationStart && !program.applicationEnd) return "<p>Fără interval unic de depunere confirmat în sursa consultată.</p>";

@@ -9,10 +9,10 @@
       "approvalState": "approved",
       "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
       "approvedAt": "2026-11-04",
-      "verifiedAt": "2026-11-11",
-      "proposedStatus": "apel_deschis",
-      "proposedStatusLabel": "Alte sectoare: termen expirat · Zootehnic până la 2 dec., 15:59:59",
-      "proposedCopy": "DR-12, verificat la 2026-11-11. Depunerea este deschisă. Sector zootehnic are termen în contor la 02.12.2026, ora 15:59:59. Pentru Alte sectoare, termenul afișat de 11.11.2026, ora 00:00, a expirat. Sursa: contorul AFIR, consultat după miezul nopții.",
+      "verifiedAt": "2026-11-24",
+      "proposedStatus": "apel_inchis",
+      "proposedStatusLabel": "Apel închis — fonduri epuizate la ambele componente",
+      "proposedCopy": "DR12-AFIR, verificat la 2026-11-24. Depunerea nu este deschisă. AFIR afișează fonduri epuizate la ambele componente. Alte sectoare s-a închis la 11 noiembrie, iar Sector zootehnic la 24 noiembrie 2026. Sursa: AFIR.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
       "officialDocumentVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
@@ -27,11 +27,11 @@
         "https://depunerepspac.afir.ro/Sesiune/Lista"
       ],
       "applicationStart": "2026-10-06",
-      "applicationEnd": "2026-12-02",
+      "applicationEnd": "2026-11-24",
       "numericClaimsApproved": true,
       "observedBefore": "Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.",
       "unresolved": [
-        "Disponibilitatea bugetului și eventualele modificări se verifică în platforma AFIR înainte de depunere."
+        "Evaluarea și rezultatele proiectelor depuse se urmăresc în platforma AFIR."
       ],
       "publicationHoldUrls": [
         "/dr12-afir",

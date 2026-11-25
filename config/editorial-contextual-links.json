@@ -438,5 +438,37 @@
     "sentence": "Pentru o investiție în zona eligibilă, vezi {{link}}.",
     "anchor": "ce include analiza de consultanță a documentelor și investiției",
     "reason": "Leagă ghidul documentelor PTJ de verificarea specifică proiectului regional."
+  },
+  {
+    "source": "/consultant-fonduri-europene-imm",
+    "match": "Pentru IMM-uri, FABER compară programele regionale",
+    "target": "/sme-eco-tech",
+    "sentence": "Pentru investiții verzi sau digitale finanțate prin grant și credit obligatoriu, verifică {{link}}.",
+    "anchor": "ghidul SME Eco-Tech și condiția de cod CAEN",
+    "reason": "Leagă comparația programelor pentru IMM de condițiile finanțării mixte."
+  },
+  {
+    "source": "/fonduri-europene-digitalizare",
+    "match": "Alege solicitantul, regiunea și etapa pentru a restrânge lista de programe.",
+    "target": "/sme-eco-tech",
+    "sentence": "Pentru un proiect eligibil de cel puțin 668.100 lei, poți compara apelurile din catalog cu {{link}}.",
+    "anchor": "grantul și creditul bancar din SME Eco-Tech",
+    "reason": "Oferă un reper pentru firmele care compară granturile pentru digitalizare cu finanțarea mixtă."
+  },
+  {
+    "source": "/digitalizare-imm-regiunea-centru-apel-2",
+    "match": "ERP pentru stocuri și comenzi",
+    "target": "/sme-eco-tech",
+    "sentence": "Pentru o investiție eligibilă de cel puțin 668.100 lei, compară și {{link}}.",
+    "anchor": "echipamentele digitale finanțate prin SME Eco-Tech",
+    "reason": "Leagă exemplele de echipamente digitale de programul național cu grant și credit."
+  },
+  {
+    "source": "/consultant-fonduri-europene-imm",
+    "match": "Pentru IMM-uri, FABER compară programele regionale",
+    "target": "/e-drive",
+    "sentence": "Pentru înlocuirea flotei cu vehicule electrice, vezi {{link}}.",
+    "anchor": "Măsura 1 pentru IMM-uri din schema e-DRIVE",
+    "reason": "Leagă investițiile IMM de schema dedicată înlocuirii flotelor."
   }
 ]
