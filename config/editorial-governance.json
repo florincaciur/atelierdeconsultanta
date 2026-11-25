@@ -54,9 +54,15 @@
       "officialSourceUrl": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
       "sourceVersion": "Raport final de selecție Schema de Energie, sesiunea 03/2026, solar peste 1 MW, publicat la 03.11.2026; Ghidul V7 aprobat prin OMADR 180/09.06.2026",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Bilanțul consum–producție și rapoartele.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul AFIR Autoconsum Agroalimentar a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -132,9 +138,15 @@
       "officialSourceUrl": "https://gal.afir.ro/",
       "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Traseul de la localitate la apel și calendar.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Apeluri GAL a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -193,14 +205,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Energiei / AFIR",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
-      "statusSnapshot": "apel_deschis",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Dimensionarea solarului și a stocării integrate.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul PC1 – Autoconsum entități publice a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -378,9 +396,15 @@
       "officialSourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
       "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Recepția, costurile și dovada indicatorilor.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul Digitalizare IMM a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -449,10 +473,16 @@
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
-      "nextReviewAt": "2027-01-24",
+      "nextReviewAt": "2027-01-15",
       "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Dovezile și punctajul pe componente.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-24",
           "summary": "Ambele componente s-au închis prin epuizarea fondurilor. Sectorul zootehnic s-a închis la 24 noiembrie, ora 00:41:18.",
@@ -661,14 +691,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "sourceVersion": "Cerere DR-14 v1.1/25.08.2026, clarificare 21.08.2026 și comunicat AFIR de prelungire din 30.10.2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
-      "statusSnapshot": "apel_deschis",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Închiderea sesiunii și dovezile pentru grilă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul DR14 AFIR a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -763,14 +799,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
       "sourceVersion": "Ghidul final DR-18 și anunțul AFIR din 30.10.2026: prelungire până la 16.11.2026, prag 40 de puncte",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
-      "statusSnapshot": "apel_deschis",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Închiderea sesiunii și comparația intensităților.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul DR18 AFIR a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -882,9 +924,15 @@
       "officialSourceUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
       "sourceVersion": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Accesul privat, public și mixt pe submăsuri.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Adăugate trimiteri directe către explicațiile e-DRIVE pentru flotele IMM-urilor și transportatorii de pasageri, cu separarea vehiculelor de infrastructura de reîncărcare.",
@@ -955,14 +1003,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Economiei – platforma oficială MINIMIS",
       "officialSourceUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
       "sourceVersion": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-09-02",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Ediția 2024 și ordinea la evaluare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Femeia Antreprenor a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1021,14 +1075,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-09-10",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Stările și codurile apelurilor PC1 și PC9.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Fondul pentru Modernizare a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1081,14 +1141,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "MySMIS2021: apelurile pentru capacități regenerabile destinate autoconsumului sunt marcate FINALIZAT",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Edițiile PFM/320 și PFM/527 și autoconsumul.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Fondul pentru Modernizare – autoconsum a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1141,14 +1207,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "MySMIS2021: apelurile pentru noi capacități din surse regenerabile sunt marcate FINALIZAT",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Codul PFM/322 și ghidul de producție.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Fondul pentru Modernizare – energie regenerabilă a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1206,9 +1278,15 @@
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Registrul oficial MySMIS2021 al apelurilor validate 2021–2027",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Traseul după județ, ADR și beneficiar.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Fonduri regionale a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1266,9 +1344,15 @@
       "officialSourceUrl": "https://gal.afir.ro/",
       "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-09-02",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Exemplu de încadrare teritorială în strategia locală.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul GAL-AFIR / LEADER a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1398,9 +1482,15 @@
       "officialSourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
       "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Simulatorul și Anexa 10 la ghidul final.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul Modernizarea microîntreprinderilor – Apel 2 a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1482,9 +1572,15 @@
       "officialSourceUrl": "https://mfe.gov.ro/pnrr-dashboard/",
       "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-09-10",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Verificarea pe componentă, investiție și contract.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul PNRR a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1531,14 +1627,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene",
       "officialSourceUrl": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
       "sourceVersion": "Ghid PoCIDIF 2.1, Ordinul MIPE 965/23.06.2026, modificat prin Ordinul 1500/29.09.2026",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Exemplu de produs inovator și buget.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul PoCIDIF 2.1 a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1674,9 +1776,15 @@
       "officialSourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
       "sourceVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
       "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Indicatorul energetic și stadiul procedurii.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul PRO INFRA a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1753,14 +1861,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-09-10",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Codurile MySMIS pe județe și ITI.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Programul Tranziție Justă a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1843,14 +1957,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "officialSourceUrl": "https://economie.gov.ro/sesiunea-sun-editia-a-4-a-se-apropie-de-final-peste-16-000-persoane-au-finalizat-cursurile-de-formare-antreprenoriala/",
       "sourceVersion": "Start-Up Nation, ediția 2024 – comunicat MEDAT din 21.05.2026 privind închiderea primei sesiuni pentru persoane juridice",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Calendarul distinct pentru cursuri, firme și rambursare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Statutul Start-Up Nation a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -2083,14 +2203,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Banca de Investiții și Dezvoltare (BID)",
       "officialSourceUrl": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
       "sourceVersion": "Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Creditul, garanția, grantul și operaționalizarea.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul Diaspora Investește Acasă a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -2257,14 +2383,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
       "sourceVersion": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2026-11-28",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Harta CNAIR și exemplul de amplasament.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Adăugate trimiteri directe către explicațiile e-DRIVE pentru flotele IMM-urilor și transportatorii de pasageri, cu separarea vehiculelor de infrastructura de reîncărcare.",
@@ -2341,14 +2473,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Ministerul Energiei",
       "officialSourceUrl": "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/",
       "sourceVersion": "Anunț de lansare 14.08.2026 și prelungire 22.10.2026: depuneri 01.09–15.11.2026; ghid aprobat prin OME nr. 915/2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
-      "statusSnapshot": "apel_deschis",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Termenul și plafonul pe MWh pentru stocare autonomă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul PC1 Stocare stand-alone a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -2426,15 +2564,21 @@
       "attributionType": "organization",
       "personalNameConsent": false,
       "datePublished": "DE_VALIDAT_UMAN",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceUpdatedAt": "2026-09-11",
       "officialSourceName": "Ministerul Energiei / AFIR",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
-      "nextReviewAt": "2026-12-10",
-      "lastMeaningfulUpdate": "2026-11-10",
-      "statusSnapshot": "apel_deschis",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Conectarea și plafonul pentru stocarea la centrala existentă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul PC1 – Stocare entități publice a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -2497,14 +2641,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "ADR Centru",
       "officialSourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-10",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-25",
+          "summary": "Dovezile ERP și calendarul apelului.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-10",
           "summary": "Reverificare a ghidului, anexelor și termenelor. Exemplu ERP cu buget, audit și indicator de rezultat.",

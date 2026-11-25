@@ -269,6 +269,13 @@
       "url": "https://mfe.gov.ro/wp-content/uploads/2026/07/da09bb1133d05f75c137a6f1fa2cea4b.pdf",
       "publishedAt": "2026-09-29",
       "verifiedAt": "2026-11-10"
+    },
+    "sun-cursuri-sesiunea-2-2026": {
+      "title": "Start-Up Nation, sesiunea a doua de cursuri",
+      "authority": "Instituția Prefectului – Județul Vrancea",
+      "documentType": "informare oficială",
+      "url": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-noiembrie-2026/",
+      "verifiedAt": "2026-11-25"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

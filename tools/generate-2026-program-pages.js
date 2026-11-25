@@ -16,6 +16,8 @@ const HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html")
 const REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
 const FOOTER_CONTACT = renderFooterContact(loadLegalIdentity());
 
+const APPLIED_EXAMPLES = require("../config/program-applied-examples.json");
+
 const PAGE_CONTENT = {
   "digitalizare-imm-regiunea-centru-apel-2": require("../config/adr-centru-digitalizare-content.json"),
   "sme-eco-tech": require("../config/sme-eco-tech-content.json"),
@@ -38,10 +40,10 @@ const PAGE_CONTENT = {
       ],
       [
         "28.09–20.11.2026",
-        "depunere prin AFIR, în limita bugetului"
+        "perioada anunțată de AFIR"
       ]
     ],
-    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
+    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Termenul AFIR de închidere a depunerilor a fost 20 noiembrie 2026, ora 23:59.",
     "fit": [
       "Solicitantul se încadrează într-o categorie publică eligibilă și poate adopta actele interne necesare proiectului.",
       "Există un amplasament cu drepturi clare, consum documentat și condiții realiste pentru racordare, montaj și autorizare.",
@@ -50,7 +52,7 @@ const PAGE_CONTENT = {
     "caution": [
       "Proiectele numai cu baterii, numai cu pompe de căldură, de înlocuire sau de extindere necontorizată separat nu sunt eligibile pe această linie.",
       "Energia produsă trebuie utilizată 100% pentru autoconsum, iar energia stocată trebuie să provină 100% din instalația solară proprie.",
-      "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
+      "Depunerea s-a încheiat. Calendarul AFIR prevedea înscrieri între 28.09.2026, ora 10:00, și 20.11.2026, ora 23:59."
     ],
     "investments": [
       [
@@ -159,7 +161,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
+        "Depunerea s-a încheiat. Calendarul AFIR prevedea înscrieri între 28.09.2026, ora 10:00, și 20.11.2026, ora 23:59."
       ],
       [
         "Ce vechime poate avea studiul de fezabilitate?",
@@ -243,10 +245,10 @@ const PAGE_CONTENT = {
       ],
       [
         "28.09–20.11.2026",
-        "depunere prin AFIR, în limita bugetului"
+        "perioada anunțată de AFIR"
       ]
     ],
-    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
+    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Termenul AFIR de închidere a depunerilor a fost 20 noiembrie 2026, ora 23:59.",
     "fit": [
       "Entitatea publică se află într-o categorie eligibilă și deține o instalație de producere a energiei din surse regenerabile deja existentă.",
       "Bateria poate fi conectată în spatele aceluiași contor, în cadrul instalației de utilizare a locului de producere sau de producere și consum.",
@@ -360,7 +362,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
+        "Depunerea s-a încheiat. Calendarul AFIR prevedea înscrieri între 28.09.2026, ora 10:00, și 20.11.2026, ora 23:59."
       ],
       [
         "Până când trebuie finalizată investiția?",
@@ -750,7 +752,7 @@ const PAGE_CONTENT = {
         "termen prelungit în MySMIS 2021"
       ]
     ],
-    "answer": "PC1 Stocare stand-alone este deschis în MySMIS 2021 până la 15 noiembrie 2026, ora 23:59, prin prelungirea publicată de Ministerul Energiei la 22 octombrie. Apelul are 150 milioane EUR și finanțează instalații autonome noi de stocare în baterii, conectate la rețea, cu minimum 1 MW și raport capacitate/putere de cel puțin 2:1. Ajutorul poate ajunge la 15 milioane EUR pe întreprindere și 69.000 EUR/MWh, în limita costurilor eligibile și a procedurii concurențiale. Sunt eligibile întreprinderi de orice mărime, inclusiv firme noi cu capital social subscris și vărsat de minimum 100.000 lei, dacă respectă activitățile CAEN 35 și celelalte condiții. Implementarea este de maximum 48 de luni de la semnarea contractului.",
+    "answer": "Depunerea în MySMIS 2021 s-a încheiat la termenul prelungit de Ministerul Energiei, 15 noiembrie 2026, ora 23:59. Apelul are 150 milioane EUR și finanțează instalații autonome noi de stocare în baterii, conectate la rețea, cu minimum 1 MW și raport capacitate/putere de cel puțin 2:1. Ajutorul poate ajunge la 15 milioane EUR pe întreprindere și 69.000 EUR/MWh, în limita costurilor eligibile și a procedurii concurențiale. Sunt eligibile întreprinderi de orice mărime, inclusiv firme noi cu capital social subscris și vărsat de minimum 100.000 lei, dacă respectă activitățile CAEN 35 și celelalte condiții. Implementarea este de maximum 48 de luni de la semnarea contractului.",
     "fit": [
       "Activitatea și structura solicitantului se încadrează în condițiile domeniului energetic.",
       "Proiectul este o capacitate de stocare stand-alone și are o soluție credibilă de racordare.",
@@ -816,7 +818,7 @@ const PAGE_CONTENT = {
     "faqs": [
       [
         "Apelul PC1 stocare este deschis?",
-        "Da. Depunerea este deschisă în MySMIS 2021 din 1 septembrie 2026, ora 12:00, și este prelungită până la 15 noiembrie 2026, ora 23:59, prin anunțul Ministerului Energiei din 22 octombrie."
+        "Sesiunea din 2026 s-a încheiat. Termenul prelungit pentru depunere în MySMIS 2021 a fost 15 noiembrie, ora 23:59."
       ],
       [
         "Ce înseamnă stand-alone?",
@@ -856,6 +858,10 @@ function renderQuickQuestions(questions) {
     '<div><dt><strong>' + e(question) + '</strong></dt><dd>' + e(answer) +
     ' <a href="' + e(href) + '">' + e(sourceLabel) + '</a>.</dd></div>'
   ).join("") + '</dl>';
+}
+
+function renderProgramSection(section) {
+  return `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p>${section.references?.length ? `<ul>${section.references.map(([label, href]) => `<li><a href="${e(href)}">${e(label)}</a></li>`).join("")}</ul>` : ""}</div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`;
 }
 
 function renderSvg(slug) {
@@ -994,7 +1000,7 @@ ${HEADER}
   ${renderMeasures(content)}
   ${renderApplicationCalendar(content.calendar, content.notice)}
   ${renderContextualExplanation(content.contextualExplanation)}
-  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p>${section.references?.length ? `<ul>${section.references.map(([label, href]) => `<li><a href="${e(href)}">${e(label)}</a></li>`).join("")}</ul>` : ""}</div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`).join("\n")}
+  ${[...(content.sections || []), ...[APPLIED_EXAMPLES[program.slug]].filter(Boolean)].map(renderProgramSection).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
   <section class="program-section program-section--soft"><div class="section-heading">${content.investmentsHeading ? "" : `<p class="section-kicker">${content.measures ? "Obligații comune" : "Arhitectura proiectului"}</p>`}<h2>${e(content.investmentsHeading || (content.measures ? 'Implementarea și menținerea investiției' : 'Ce intră în analiza investiției'))}</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
   <section class="program-section program-section--documents" id="documente"><div class="section-heading"><p class="section-kicker">Documente necesare</p><h2>${content.measures ? 'Documente și verificări comune' : 'Documente de pregătit'}</h2><p>Verifică valabilitatea actelor și concordanța lor cu cererea de finanțare.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>
@@ -1037,4 +1043,4 @@ if (require.main === module) {
   catch (error) { console.error(`FAIL: ${error.message}`); process.exitCode = 1; }
 }
 
-module.exports = { PAGE_CONTENT, renderPage, renderSynchronizedPage, run };
+module.exports = { PAGE_CONTENT, renderPage, renderProgramSection, renderSynchronizedPage, run };

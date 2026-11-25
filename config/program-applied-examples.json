@@ -1,0 +1,152 @@
+{
+  "autoconsum-institutii-publice": {
+    "id": "exemplu-solar-stocare-integrata",
+    "title": "Cum dimensionezi panourile împreună cu bateria?",
+    "intro": "Exemplu ipotetic pentru o instituție cu un consum de 250 MWh/an și o centrală solară nouă de 0,20 MW. Studiul de fezabilitate verifică cât din producție poate fi folosit direct și cât trebuie mutat către orele cu consum.",
+    "example": true,
+    "references": [
+      [
+        "AFIR: ghid și anexe, autoconsum și capacitatea de stocare",
+        "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/"
+      ],
+      [
+        "AFIR: perioada sesiunii de depunere",
+        "https://www.afir.ro/info-la-zi/comunicat-derulare-sesiune-autoconsum-si-stocare-energie-electrica-beneficiari-publici/"
+      ]
+    ],
+    "rows": [
+      [
+        "Consum și producție",
+        "Pentru 200 MWh/an producție estimată, ipoteza de lucru este 150 MWh utilizați direct și 50 MWh de mutat către orele fără producție. Verificarea se face pe curbe de sarcină și de producție, inclusiv în weekend, cu limitele de încărcare și pierderile bateriei."
+      ],
+      [
+        "Putere și energie stocată",
+        "O baterie de 0,20 MW și 0,60 MWh are 0,60 ÷ 0,20 = 3 ore nominale. Puterea este cel puțin egală cu cea a centralei, iar durata este în intervalul de 2–4 ore. Schema monofilară arată încărcarea exclusiv din centrala solară nouă și destinația energiei pentru autoconsum."
+      ],
+      [
+        "Plafon și contribuție",
+        "Fără pompe de căldură, 0,20 MW × 900.000 EUR/MW = 180.000 EUR. La 195.000 EUR de costuri candidate fără TVA, rămân cel puțin 15.000 EUR peste plafon, sub rezerva eligibilității costurilor și a limitei de 10 milioane EUR pe beneficiar."
+      ]
+    ]
+  },
+  "fondul-modernizare-pc1-stocare-entitati-publice": {
+    "id": "exemplu-baterie-instalatie-existenta",
+    "title": "Cum legi bateria de centrala și consumul existente?",
+    "intro": "Exemplu ipotetic pentru un punct de consum public cu o instalație regenerabilă existentă de 0,30 MW. Bateria se conectează direct la instalație, în spatele contorului.",
+    "example": true,
+    "references": [
+      [
+        "AFIR: ghidul stocării la entități publice, cererea și grila VAE",
+        "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/"
+      ],
+      [
+        "Anunț AFIR: calendarul sesiunii",
+        "https://www.afir.ro/info-la-zi/comunicat-derulare-sesiune-autoconsum-si-stocare-energie-electrica-beneficiari-publici/"
+      ]
+    ],
+    "rows": [
+      [
+        "Durata raportată la centrala existentă",
+        "0,90 MWh ÷ 0,30 MW = 3 ore. Calculul se raportează la puterea centralei existente. Verifică separat puterea convertorului bateriei, surplusul disponibil la încărcare și consumul la descărcare."
+      ],
+      [
+        "Dovada în documentație",
+        "Confruntă puterea din actele centralei cu schema monofilară. Identifică punctul de consum, contorul, legătura directă cu centrala și traseul energiei din baterie către consumator. Folosește curbele de producție și consum pentru a justifica utilitatea capacității."
+      ],
+      [
+        "Plafon de ajutor",
+        "0,90 MWh × 200.000 EUR/MWh = 180.000 EUR, fără TVA. Dacă proiectul are 210.000 EUR costuri candidate, cel puțin 30.000 EUR rămân peste plafonul specific. Se aplică și limita de 10 milioane EUR pe beneficiar."
+      ]
+    ]
+  },
+  "fondul-modernizare-pc1-stocare": {
+    "id": "exemplu-plafon-mwh",
+    "title": "Cât poate acoperi grantul unui proiect stand-alone?",
+    "intro": "Apelul din 2026 a avut termenul prelungit la 15 noiembrie, ora 23:59. Exemplul se referă la o instalație autonomă nouă, racordată la rețea, cu 2 MW și 5 MWh.",
+    "example": true,
+    "references": [
+      [
+        "Ministerul Energiei: ghidul aprobat prin OME nr. 915/2026 și anexele",
+        "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/"
+      ],
+      [
+        "Ministerul Energiei: anunțul de prelungire",
+        "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx"
+      ]
+    ],
+    "rows": [
+      [
+        "Încadrare tehnică",
+        "Instalația depășește minimumul de 1 MW. Raportul 5 MWh ÷ 2 MW = 2,5 ore îndeplinește cerința de minimum 2:1. În documentație, verifică schema de racordare, capacitatea și puterea documentate."
+      ],
+      [
+        "Grant după plafonul pe MWh",
+        "5 MWh × 69.000 EUR/MWh = 345.000 EUR. Dacă toate costurile de 500.000 EUR ar fi eligibile în principiu, suma maximă cerută în exemplu rămâne 345.000 EUR, sub plafonul de 15 milioane EUR pe întreprindere."
+      ],
+      [
+        "Diferența suportată de întreprindere",
+        "Firma bugetează cel puțin 155.000 EUR din costurile considerate în exemplu. O cerere mai mică în oferta concurențială sau costurile neeligibile pot mări contribuția efectivă."
+      ]
+    ]
+  },
+  "e-mobility-ro": {
+    "id": "exemplu-amplasament-cnair",
+    "title": "Cum verifici un amplasament pentru Submăsura 1?",
+    "intro": "Exemplu ipotetic pentru o stație cu acces public pentru vehicule ușoare, la 2,4 km pe șosea de o ieșire TEN-T. Apelul Submăsurii 1 este PFM/1233/PFM_P9/NA/P9_OS3/FM_9.3.",
+    "example": true,
+    "references": [
+      [
+        "MTI: harta sectoarelor de drum administrate de CNAIR",
+        "https://mtransporturi.maps.arcgis.com/apps/webappviewer/index.html?id=af599b237eb1476e8f20b6620b553d99"
+      ],
+      [
+        "Ghidul Submăsurii 1, OMTI 886/2026, secțiunile 1.3 și 2.2",
+        "https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip"
+      ],
+      [
+        "MTI: calendarul aprobat prin OMTI 904/2026",
+        "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1"
+      ]
+    ],
+    "rows": [
+      [
+        "Localizează ieșirea pe hartă",
+        "Identifică sectorul eligibil pe hartă. Atașează planul cadastral, ieșirea și traseul rutier până la amplasament. Cei 2,4 km se încadrează în limita de 3 km numai dacă pornesc de la o ieșire eligibilă și sunt măsurați pe șosea."
+      ],
+      [
+        "Demonstrează puterea totală",
+        "Patru puncte de 150 kW însumează 600 kW dacă stația poate susține simultan puterea totală. Două puncte de câte 150 kW satisfac minimul pe punct, dar la numai 300 kW disponibili nu îndeplinesc pragul total de 600 kW. Verifică puterea cerută în documentația de racordare."
+      ],
+      [
+        "Alege documentele submăsurii",
+        "Calendarul 28 septembrie – 27 noiembrie 2026, ora 23:59 la închidere, aparține infrastructurii de reîncărcare din Submăsura 1. Pentru vehicule grele sau producție regenerabilă cu stocare, verifică cerințele tehnice și submăsura înainte de a dimensiona proiectul."
+      ]
+    ]
+  },
+  "diaspora-investeste-acasa": {
+    "id": "garantie-credit-si-grant",
+    "title": "Cum se leagă garanția BID, creditul și grantul?",
+    "intro": "Mecanismul trece printr-o bancă parteneră. Firma trebuie să îndeplinească atât condițiile programului, cât și normele de creditare ale băncii.",
+    "example": true,
+    "references": [
+      [
+        "BID: garanția, creditul, grantul și lista băncilor după operaționalizare",
+        "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa"
+      ]
+    ],
+    "rows": [
+      [
+        "Creditul",
+        "Pentru un credit de investiții ipotetic de 100.000 EUR, banca decide aprobarea și condițiile împrumutului. Contribuția proprie a firmei se verifică separat, în funcție de proiect."
+      ],
+      [
+        "Garanția",
+        "La o acoperire de 80%, garanția pentru bancă ar fi de până la 80.000 EUR. Firma rămâne obligată să ramburseze creditul potrivit contractului."
+      ],
+      [
+        "Grantul și depunerea",
+        "Pentru același credit, 60% × 100.000 EUR = 60.000 EUR grant maxim teoretic, sub limita de 200.000 EUR. BID prezintă programul în curs de operaționalizare și prevede publicarea listei băncilor partenere la finalul acestei etape."
+      ]
+    ]
+  }
+}

@@ -167,6 +167,9 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   const factualContext = hubRecord
     ? `\n\n  <section class="program-family-hub-factual" aria-label="Context factual al hub-ului">${renderProgramFactualStatus(hubRecord)}</section>`
     : "";
+  const regionalGuide = hub.id === "regional-adr"
+    ? fs.readFileSync(path.join(ROOT, "templates", "regional-adr-editorial.html"), "utf8").trim() + "\n\n  "
+    : "";
   const nextStepConfig = loadNextStepConfig();
   const nextStepSlug = Object.keys(nextStepConfig.pages).find((slug) => nextStepConfig.pages[slug].route === hub.route);
   const contextualNextStep = !hubRecord && nextStepSlug ? `\n\n${renderNextStepBlock(nextStepSlug, nextStepConfig)}` : "";
@@ -215,7 +218,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
     </div>
   </section>
 
-  <section class="program-family-how" id="cum-alegi" aria-labelledby="program-family-how-title">
+  ${regionalGuide}<section class="program-family-how" id="cum-alegi" aria-labelledby="program-family-how-title">
     <div>
       <p class="program-family-kicker">Verificare prudentă</p>
       <h2 id="program-family-how-title">Cum alegi</h2>

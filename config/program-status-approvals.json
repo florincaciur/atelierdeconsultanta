@@ -77,10 +77,10 @@
       "approvalState": "approved",
       "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
       "approvedAt": "2026-11-04",
-      "verifiedAt": "2026-11-10",
-      "proposedStatus": "apel_deschis",
-      "proposedStatusLabel": "Depuneri până la 16 noiembrie · achizițiile simple sunt închise",
-      "proposedCopy": "Depuneri până la 16 noiembrie; componenta achiziții simple este închisă — verificat la 2026-11-10. Sursa: Agenția pentru Finanțarea Investițiilor Rurale (AFIR), Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026. Depunerea este deschisă.",
+      "verifiedAt": "2026-11-24",
+      "proposedStatus": "apel_inchis",
+      "proposedStatusLabel": "Apel închis — depunerile s-au încheiat la 16 noiembrie 2026",
+      "proposedCopy": "DR14-AFIR, verificat la 2026-11-24. Depunerea nu este deschisă. Termenul prelungit pentru zootehnie, legumicultură și alte sectoare a fost 16 noiembrie 2026, ora 16:00. Componenta Achiziții simple s-a închis la 6 octombrie prin epuizarea fondurilor. Sursa: AFIR.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
       "officialDocumentVersion": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
@@ -91,14 +91,15 @@
         "https://stportalafirprod.blob.core.windows.net/media/media/otup004l/anunt_cerereproiecte_dr_14_.pdf",
         "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
         "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
-        "https://depunerepspac.afir.ro/Sesiune/Lista"
+        "https://depunerepspac.afir.ro/Sesiune/Lista",
+        "https://www.afir.ro/comunicate/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/"
       ],
       "applicationStart": "2026-09-01",
       "applicationEnd": "2026-11-16",
       "numericClaimsApproved": true,
       "observedBefore": "Pagina și suprafețele globale indicau în mod depășit o variantă consultativă, fără valorile confirmate în ghidul final.",
       "unresolved": [
-        "Disponibilitatea bugetului și eventualele modificări se verifică în platforma AFIR înainte de depunere."
+        "Evaluarea și rezultatele proiectelor depuse se urmăresc în platforma AFIR."
       ],
       "publicationHoldUrls": [
         "/dr14",
