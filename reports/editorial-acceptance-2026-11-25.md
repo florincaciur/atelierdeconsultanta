@@ -30,7 +30,7 @@ Verificare la 25 noiembrie 2026, pe criteriile PR‑03–PR‑29 din auditul edi
 | PR-26 | [/gal-afir](https://atelierdeconsultanta.ro/gal-afir#gal-exemplu-incadrare) | Încadrarea Hărman în GAL și alegerea fișei potrivite solicitantului. | GAL Ținutul Bârsei · strategia 2023–2027 și portalul AFIR |
 | PR-27 | [/fonduri-regionale](https://atelierdeconsultanta.ro/fonduri-regionale#rute-adr-pe-judet) | Opt trasee ADR, județe și exemplu de alegere a apelului după beneficiar. | Site-urile celor opt ADR și MySMIS |
 | PR-28 | [/pnrr](https://atelierdeconsultanta.ro/pnrr#pnrr-componenta-contract-document) | Traseu de la componentă și investiție la ghid, ordin, instrucțiune și contract. | MIPE · tabloul PNRR, ordinul și instrucțiunile aplicabile |
-| PR-29 | [/programul-tranzitie-justa](https://atelierdeconsultanta.ro/programul-tranzitie-justa#ptj-mysmis-judete-solicitanti) | Șase județe, șapte apeluri pentru microîntreprinderi, inclusiv ITI Valea Jiului, cu intervalul și codul MySMIS. | MySMIS · fișele celor șapte apeluri și sursele PTJ |
+| PR-29 | [/programul-tranzitie-justa](https://atelierdeconsultanta.ro/programul-tranzitie-justa#ptj-mysmis-judete-solicitanti) | Șase județe, șapte apeluri pentru microîntreprinderi, inclusiv ITI Valea Jiului, cu intervalul și codurile MySMIS. Exemplul din Mureș compară și relansarea pentru IMM-uri. | MySMIS · fișele celor șapte apeluri și sursele PTJ |
 
 În exemplul PNRR, [fișa de implementare](https://atelierdeconsultanta.ro/digitalizare-imm-pnrr#dosar-receptie-pnrr) detaliază și ordonează dovezile de recepție.
 
