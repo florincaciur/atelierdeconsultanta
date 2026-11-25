@@ -254,40 +254,49 @@ function escapeHtml(value) {
     .replace(/"/gu, "&quot;");
 }
 
+function renderEditorialByline(record) {
+  const author = record?.attributionType === "person" && record.personalNameConsent === true && record.authorProfileUrl
+    ? `<a href="${escapeHtml(record.authorProfileUrl)}">${escapeHtml(record.author)}</a>`
+    : escapeHtml(PUBLISHER_NAME);
+  return `<p class="editorial-governance__byline">Material de ${author}. <a href="/metodologie-verificare-eligibilitate#metodologie-editoriala">Cum verificăm informațiile</a>.</p>`;
+}
+
 function renderEditorialGovernance(record) {
   if (!record) return "";
-  if (!isCompleteRecord(record)) {
-    return `<!-- EDITORIAL_GOVERNANCE_START -->
-<section class="editorial-governance editorial-governance--pending" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="${escapeHtml(record.governanceState)}">
-  <p><strong>Metadate editoriale în validare:</strong> proveniența sau datele acestei pagini nu sunt încă publicate ca informații confirmate.</p>
+  const byline = renderEditorialByline(record);
+  if (!isCompleteRecord(record)) return `<!-- EDITORIAL_GOVERNANCE_START -->
+<section class="editorial-governance" aria-label="Autor și metodologie" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="${escapeHtml(record.governanceState)}">
+  ${byline}
 </section>
 <!-- EDITORIAL_GOVERNANCE_END -->`;
-  }
+
   const changes = record.changelog
-    .slice()
-    .filter((change) => !/migr|snapshot|registrul|guvernan|reverificat.*schimbare editorială/iu.test(change.summary))
+    .filter((change) => change.meaningful === true)
     .sort((left, right) => right.date.localeCompare(left.date))
     .slice(0, 4)
-    .map((change) => `<li><time datetime="${escapeHtml(change.date)}">${escapeHtml(change.date)}</time> — ${escapeHtml(change.summary)}</li>`)
+    .map((change) => `<li><time datetime="${escapeHtml(change.date)}">${escapeHtml(change.date)}</time> · ${escapeHtml(change.summary)}</li>`)
     .join("\n      ");
   const publication = isIsoDate(record.datePublished)
-    ? `<span>Publicat la <time datetime="${escapeHtml(record.datePublished)}">${escapeHtml(record.datePublished)}</time>.</span> `
+    ? ` Publicat la <time datetime="${escapeHtml(record.datePublished)}">${escapeHtml(record.datePublished)}</time>.`
     : "";
   const sourceUpdate = isIsoDate(record.officialSourceUpdatedAt)
     ? ` <span>Sursa oficială a fost actualizată la <time datetime="${escapeHtml(record.officialSourceUpdatedAt)}">${escapeHtml(record.officialSourceUpdatedAt)}</time>.</span>`
     : "";
-  return `<!-- EDITORIAL_GOVERNANCE_START -->
-<section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="public">
-  <p class="editorial-governance__verified"><strong>Verificat la <time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time>.</strong></p>
-  <p>${publication}Actualizat editorial la <time datetime="${escapeHtml(record.lastMeaningfulUpdate)}">${escapeHtml(record.lastMeaningfulUpdate)}</time>. Publicat de: ${escapeHtml(PUBLISHER_NAME)}.</p>
-  <p>Sursa oficială: <a href="${escapeHtml(record.officialSourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">${escapeHtml(record.officialSourceName)} — ${escapeHtml(record.sourceVersion)}</a>.${sourceUpdate}</p>
-  <p><a href="#editorial-changelog-${escapeHtml(record.id)}">Vezi modificările</a>.</p>
+  const history = changes ? `
   <details id="editorial-changelog-${escapeHtml(record.id)}" class="editorial-governance__changelog">
-    <summary>Istoric editorial</summary>
+    <summary>Istoricul modificărilor</summary>
     <ol>
-      ${changes || `<li><time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time> — Verificarea statutului, calendarului și documentelor oficiale.</li>`}
+      ${changes}
     </ol>
-  </details>
+  </details>` : "";
+  return `<!-- EDITORIAL_GOVERNANCE_START -->
+<section class="editorial-governance" aria-label="Autor, sursă și actualizări" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="public">
+  ${byline}
+  <p>Pagina a fost actualizată la <time datetime="${escapeHtml(record.lastMeaningfulUpdate)}">${escapeHtml(record.lastMeaningfulUpdate)}</time>.${publication}</p>
+  <dl class="editorial-governance__sources">
+    <div><dt>Document consultat</dt> <dd><a href="${escapeHtml(record.officialSourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">${escapeHtml(record.sourceVersion)}</a></dd></div>
+    <div><dt>Sursă verificată la</dt> <dd><time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time>.${sourceUpdate}</dd></div>
+  </dl>${history}
 </section>
 <!-- EDITORIAL_GOVERNANCE_END -->`;
 }
@@ -307,6 +316,7 @@ module.exports = {
   normalizeRoute,
   programContradictions,
   recordIssues,
+  renderEditorialByline,
   renderEditorialGovernance,
   reviewExpired,
   reviewIntervalDays,

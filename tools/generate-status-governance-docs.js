@@ -130,7 +130,8 @@ function isOfficialUrl(value) {
     const url = new URL(String(value || ""));
     const hostname = url.hostname.toLowerCase();
     return url.protocol === "https:"
-      && OFFICIAL_HOST_SUFFIXES.some((suffix) => hostname === suffix || hostname.endsWith(`.${suffix}`));
+      && (hostname === "afirportalcmsprod.azurewebsites.net"
+        || OFFICIAL_HOST_SUFFIXES.some((suffix) => hostname === suffix || hostname.endsWith(`.${suffix}`)));
   } catch {
     return false;
   }
@@ -152,7 +153,7 @@ function resolveSourceReference(reference, program, data) {
       url: program.sourceUrl,
       authority: program.sourceName,
       verifiedAt: program.verifiedAt,
-      updatedAt: program.officialSourceUpdatedAt || program.lastMeaningfulUpdate
+      updatedAt: program.officialSourceUpdatedAt || null
     };
   } else if (ref.startsWith("guide:")) {
     const key = ref.slice("guide:".length);

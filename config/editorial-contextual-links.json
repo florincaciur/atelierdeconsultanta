@@ -17,7 +17,7 @@
   },
   {
     "source": "/digitalizare-imm-erp-crm-cloud",
-    "match": "ERP, CRM, cloud și echipamente IT pot fi eligibile",
+    "match": "Pentru buget, identifică în ghid categoria fiecărei cheltuieli",
     "target": "/fonduri-europene-digitalizare",
     "sentence": "Pentru o investiție nouă, compară {{link}} înainte să stabilești bugetul.",
     "anchor": "programele de finanțare pentru digitalizare",
@@ -313,7 +313,7 @@
   },
   {
     "source": "/digitalizare-imm-erp-crm-cloud",
-    "match": "ERP-ul, CRM-ul și cloud-ul trebuie explicate",
+    "match": "Descrie în ofertă procesul pe care vrei să îl schimbi.",
     "target": "/fonduri-europene-caen/4321-instalatii-electrice",
     "sentence": "Pentru o firmă de instalații electrice care își digitalizează ofertarea, vezi {{link}}.",
     "anchor": "exemplele de investiții pentru CAEN 4321",
@@ -353,7 +353,7 @@
   },
   {
     "source": "/digitalizare-imm-erp-crm-cloud",
-    "match": "ERP, CRM, cloud și echipamentele IT se justifică",
+    "match": "Licențele, abonamentele, echipamentele și serviciile pot avea reguli diferite",
     "target": "/fonduri-europene-caen/6201-dezvoltare-software",
     "sentence": "Dacă firma dezvoltă software pentru clienți, verifică separat {{link}}.",
     "anchor": "încadrarea CAEN a activității de dezvoltare software",

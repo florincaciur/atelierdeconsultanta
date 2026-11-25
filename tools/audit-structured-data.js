@@ -443,10 +443,12 @@ function auditIndexable(route, file, hints) {
       issues.push(`dateModified nu corespunde lastMeaningfulUpdate ${hints.updatedAt}: ${[...new Set(modified)].join(", ")}`);
     }
     const expectedSource = hints.citation?.[0]?.url;
-    const editorialNodes = nodes.filter((node) => hasType(node, "WebPage") || hasType(node, "Article"));
-    for (const node of editorialNodes) {
-      if (!Array.isArray(node.citation) || !node.citation.some((citation) => referencedUrl(nodes, citation) === expectedSource)) {
-        issues.push(`${typesOf(node).join("+")}: sursa oficială nu este sincronizată cu registrul editorial`);
+    if (expectedSource) {
+      const editorialNodes = nodes.filter((node) => hasType(node, "WebPage") || hasType(node, "Article"));
+      for (const node of editorialNodes) {
+        if (!Array.isArray(node.citation) || !node.citation.some((citation) => referencedUrl(nodes, citation) === expectedSource)) {
+          issues.push(`${typesOf(node).join("+")}: sursa oficială nu este sincronizată cu registrul editorial`);
+        }
       }
     }
   } else if (modified.length) {

@@ -66,7 +66,7 @@ if (!policy || policy.publicCaseStudies !== 0 || policy.publicTestimonials !== 0
 const methodologyBlock = `
       <section id="metodologie-editoriala" aria-labelledby="metodologie-editoriala-title" data-trust-methodology="task-24">
         <h2 id="metodologie-editoriala-title">Cum verificăm și publicăm informația editorială</h2>
-        <p>FABER pornește de la sursa primară aplicabilă și separă explicit ce este confirmat de ceea ce este încă orientativ. Rezumatul nostru ajută la înțelegerea programului, dar nu înlocuiește ghidul, schema, ordinul, anexele, corrigenda, clarificările sau comunicările instituției emitente.</p>
+        <p>FABER citește documentele emise pentru apelul în cauză și indică ediția folosită. Pentru fiecare regulă, urmărim ghidul, ordinul și anexele aplicabile, inclusiv modificările publicate de instituția care gestionează apelul.</p>
 
         <h3>Prioritatea surselor</h3>
         <ol class="process-list">
@@ -85,22 +85,23 @@ const methodologyBlock = `
           <div><dt>Status neconfirmat</dt><dd>Dacă sursa lipsește, este contradictorie sau nu stabilește etapa, publicăm incertitudinea în locul unei deducții.</dd></div>
         </dl>
 
-        <h3>Verificare, <code>verifiedAt</code> și incertitudine</h3>
-        <p>Pentru fiecare status verificăm instituția, URL-ul, tipul și versiunea documentului, caracterul final ori consultativ și datele explicite de depunere. <code>verifiedAt</code> este data la care informația a fost reverificată efectiv în sursa indicată; nu este data buildului, a deploy-ului sau o dată dedusă din Git. Când documentele nu permit o concluzie, informația rămâne condiționată ori cu status neconfirmat.</p>
+        <h3>Data sursei și data paginii</h3>
+        <p>Data verificării sursei arată când am consultat documentul. Data actualizării paginii arată când am schimbat explicația, exemplul sau altă informație din pagină. Când documentele lasă o condiție neclară, indicăm ce trebuie confirmat la instituția care gestionează apelul.</p>
 
         <h3>Cum corectăm o eroare</h3>
         <p>Oprim promovarea informației, corectăm registrul factual și toate suprafețele generate, consemnăm schimbarea materială în istoricul editorial și reverificăm sursa înainte de republicare. Nu rescriem retroactiv istoricul și nu folosim o etichetă mai favorabilă până la clarificare.</p>
 
         <h3>Responsabilitate editorială</h3>
-        <p>Publisherul public este FABER – Atelier de Consultanță. Un autor sau reviewer nominal este afișat numai după confirmarea identității, rolului și acordului de publicare; până atunci, responsabilitatea este atribuită organizațional, fără profiluri personale inventate. Erorile sau neconcordanțele pot fi semnalate prin <a href="/contact">pagina de contact</a>, iar sursele folosite sunt prezentate în <a href="/surse-oficiale-fonduri-europene">registrul de surse oficiale</a>.</p>
+        <p>Materialele sunt semnate de FABER – Atelier de Consultanță. Menționăm numele unui autor sau revizor după confirmarea identității, rolului și acordului său de publicare. Erorile sau neconcordanțele pot fi semnalate prin <a href="/contact">pagina de contact</a>, iar sursele folosite sunt prezentate în <a href="/surse-oficiale-fonduri-europene">registrul de surse oficiale</a>.</p>
       </section>`;
 
 const reviewedLabel = formatRoDate(policy.reviewedAt);
+const updatedLabel = formatRoDate(policy.editorialModifiedAt);
 const evidenceBlock = `
       <section id="politica-dovezi" aria-labelledby="politica-dovezi-title" data-trust-evidence="task-24">
-        <h2 id="politica-dovezi-title">Starea dovezilor publice</h2>
+        <h2 id="politica-dovezi-title">Exemplele din această pagină</h2>
         <div class="case-note" data-publication-state="methodology-only" data-approved-case-count="${policy.publicCaseStudies}" data-approved-testimonial-count="${policy.publicTestimonials}">
-          <p><strong>Stare verificată la <time datetime="${policy.reviewedAt}">${reviewedLabel}</time>:</strong> această pagină nu publică încă niciun studiu de caz drept rezultat real verificat al unui client și niciun testimonial. Conținutul de mai jos este o metodologie și un model de analiză, nu dovada unui proiect FABER finalizat.</p>
+          <p>Exemplele de mai jos sunt ipotetice. La verificarea din <time datetime="${policy.reviewedAt}">${reviewedLabel}</time>, registrul FABER nu conținea studii de caz sau testimoniale aprobate pentru publicare.</p>
         </div>
 
         <h3>Când poate deveni public un studiu de caz</h3>
@@ -113,14 +114,13 @@ const evidenceBlock = `
           <li>formulare care explică limitele și nu promite rezultate viitoare.</li>
         </ul>
 
-        <h3>Testimoniale și review schema</h3>
-        <p>Un testimonial poate fi adăugat numai pe baza textului aprobat, cu autorul, funcția, compania și permisiunea documentate sau cu anonimizarea acceptată explicit. Nu publicăm citate reconstruite, evaluări agregate ori markup <code>Review</code>/<code>AggregateRating</code> fără dovezi și eligibilitate pentru acel tip de date structurate.</p>
-        <p><strong>Principiu de publicare:</strong> mai puține dovezi reale sunt preferabile unui volum artificial. Studiile de caz și testimonialele nu garantează finanțarea și nu înlocuiesc documentația oficială aplicabilă fiecărui proiect.</p>
+        <h3>Cum publicăm testimonialele</h3>
+        <p>Pentru un testimonial, folosim citatul aprobat de autor. Acordul precizează dacă putem publica numele, funcția și compania sau dacă textul rămâne anonim.</p>
       </section>`;
 
 function syncMethodology() {
   let html = read(METHODOLOGY_FILE);
-  html = syncEditorialDate(html, METHODOLOGY_FILE, policy.reviewedAt, reviewedLabel);
+  html = syncEditorialDate(html, METHODOLOGY_FILE, policy.editorialModifiedAt, updatedLabel);
   html = upsertBlock(
     html,
     METHODOLOGY_START,
@@ -134,19 +134,19 @@ function syncMethodology() {
 
 function syncCases() {
   let html = read(CASES_FILE);
-  html = syncEditorialDate(html, CASES_FILE, policy.reviewedAt, reviewedLabel);
+  html = syncEditorialDate(html, CASES_FILE, policy.editorialModifiedAt, updatedLabel);
   const replacements = [
     ["Studii de caz anonimizate: proiecte pregătite pentru fonduri europene", "Studii de caz fonduri europene: metodologia și criteriile FABER"],
-    ["Studii de caz anonimizate despre proiecte pregătite pentru fonduri europene: fermă AFIR, Start-Up Nation, digitalizare IMM și program regional.", "Metodologia FABER pentru studii de caz și testimoniale: dovezi, permisiuni, etape și rezultate publicabile fără exemple inventate."],
+    ["Studii de caz anonimizate despre proiecte pregătite pentru fonduri europene: fermă AFIR, Start-Up Nation, digitalizare IMM și program regional.", "Cum verifică FABER proiectele, rezultatele și acordul beneficiarului înainte de a publica un studiu de caz sau un testimonial."],
     ["Exemple anonimizate care arată metoda de analiza: eligibilitate, documente, cofinanțare, CAEN, punctaj și riscuri.", "Criterii pentru studii de caz și testimoniale reale, publicate numai cu dovezi și permisiune."],
-    ["<span class=\"eyebrow\">Studii de caz anonimizate</span>", "<span class=\"eyebrow\">Metodologie și dovezi publicabile</span>"],
-    ["<p>Exemple construite pentru a arată metoda de analiza: ce verificam, ce riscuri apar și cum se poate ajusta un proiect înainte de depunere.</p>", "<p>Criterii transparente pentru publicarea unor studii de caz și testimoniale reale, fără a transforma scenarii de analiză în rezultate ale clienților.</p>"],
-    ["<p class=\"intro\">Aceste studii de caz sunt anonimizate și folosesc descrieri anonimizate acolo unde datele clientului trebuie confirmate. Nu publicam nume, localitati exacte, valori, statusuri sau rezultate fără acord și fără documente interne care să susțină informația.</p>", "<p class=\"intro\">Pagina explică structura folosită pentru verificarea și publicarea viitoarelor studii de caz. Nu prezentăm scenariile de analiză drept proiecte reale și nu publicăm nume, localități exacte, valori, etape sau rezultate fără acord și documente justificative.</p>"],
+    ["<span class=\"eyebrow\">Studii de caz anonimizate</span>", ""],
+    ["<p>Exemple construite pentru a arată metoda de analiza: ce verificam, ce riscuri apar și cum se poate ajusta un proiect înainte de depunere.</p>", "<p>Ce documente verificăm înainte de a publica un rezultat și cum cerem acordul beneficiarului.</p>"],
+    ["<p class=\"intro\">Aceste studii de caz sunt anonimizate și folosesc descrieri anonimizate acolo unde datele clientului trebuie confirmate. Nu publicam nume, localitati exacte, valori, statusuri sau rezultate fără acord și fără documente interne care să susțină informația.</p>", "<p class=\"intro\">Fișa unui studiu de caz indică proiectul, serviciul prestat, etapa și documentul care confirmă rezultatul.</p>"],
     ["<h2>Ce putem invata din aceste cazuri</h2>", "<h2>Ce poți învăța din structura de analiză</h2>"],
     ["<h2>Cum folosim aceste exemple în analiza unui proiect nou</h2>", "<h2>Cum folosim această structură în analiza unui proiect nou</h2>"],
     ["<h2>Programe relevante pentru cazurile de mai sus</h2>", "<h2>Programe relevante pentru scenariile de verificare</h2>"],
     ["<p>Nu toate programele sunt active în acelasi timp și nu toate permit aceleași cheltuieli. Pentru orientare inițială, cele patru modele de caz trimit către pagini interne care pot fi verificate mai departe în funcție de solicitant și investiție.</p>", "<p>Nu toate programele sunt active în același timp și nu toate permit aceleași cheltuieli. Pentru orientare inițială, scenariile de verificare trimit către pagini interne care trebuie confirmate în funcție de solicitant și investiție.</p>"],
-    ["<section class=\"faq-item\"><h3>Sunt aceste studii de caz rezultate reale publicate?</h3><p>Pagină folosește exemple anonimizate și structuri de lucru. Rezultatele reale, valorile și numele clientilor se publică doar după verificare interna și acord explicit.</p></section>", "<section class=\"faq-item\"><h3>Sunt publicate aici rezultate reale ale clienților FABER?</h3><p>Nu în versiunea curentă. Pagina publică metodologia și structuri de verificare; un caz real, o valoare sau un nume va apărea numai după verificare internă și acord explicit.</p></section>"]
+    ["<section class=\"faq-item\"><h3>Sunt aceste studii de caz rezultate reale publicate?</h3><p>Pagină folosește exemple anonimizate și structuri de lucru. Rezultatele reale, valorile și numele clientilor se publică doar după verificare interna și acord explicit.</p></section>", "<section class=\"faq-item\"><h3>Sunt publicate aici rezultate reale ale clienților FABER?</h3><p>Exemplele de pe pagină arată cum documentăm un proiect. Publicăm rezultate, valori și nume după verificarea documentelor și obținerea acordului beneficiarului.</p></section>"]
   ];
   for (const [previous, next] of replacements) html = replaceLiteral(html, previous, next, CASES_FILE);
   html = upsertBlock(

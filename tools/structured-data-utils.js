@@ -226,6 +226,13 @@ function loadPageHints(root) {
     }
   }
 
+  const trustPolicyPath = path.join(root, "config", "about-faber-governance.json");
+  const trustPolicy = fs.existsSync(trustPolicyPath) ? JSON.parse(fs.readFileSync(trustPolicyPath, "utf8")).trustEvidencePolicy : null;
+  if (/^\d{4}-\d{2}-\d{2}$/u.test(String(trustPolicy?.editorialModifiedAt || ""))) {
+    for (const route of ["/metodologie-verificare-eligibilitate", "/studii-de-caz-fonduri-europene"]) {
+      hints.set(route, { ...hints.get(route), updatedAt: trustPolicy.editorialModifiedAt });
+    }
+  }
   return hints;
 }
 

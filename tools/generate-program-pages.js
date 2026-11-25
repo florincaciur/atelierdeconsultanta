@@ -549,7 +549,7 @@ function renderHeroSummary(page) {
     ["Documente", docs],
     ["Risc", risk]
   ];
-  return `<div class="hero-summary" aria-label="Rezumat vizual pentru ${esc(program)}">
+  return `<div class="hero-summary" aria-label="Date esențiale pentru ${esc(program)}">
       ${items.map(([label, value]) => `<span class="hero-summary__item"><strong>${esc(label)}</strong><em>${esc(value)}</em></span>`).join("\n      ")}
     </div>`;
 }
@@ -582,7 +582,11 @@ function renderFamilyCards(page) {
     "Ce verifici": compactTextList(page.mandatory, "program, documente si investitie", 2),
     Greseli: compactTextList(page.commonMistakes || page.ineligibleExpenses, "presupuneri neverificate", 2),
     Pasi: compactTextList(page.steps, "verificare, buget, depunere", 2),
-    Beneficiar: compactTextList(page.audience, "beneficiar anonimizat", 2),
+    "Beneficiar public": "Verifică în fișa intervenției dacă primăria sau instituția apare între solicitanții eligibili.",
+    "Beneficiar privat": "Compară forma juridică, activitatea și punctul de lucru cu cerințele fișei locale.",
+    DR36: "Caută intervenția în strategia GAL și descarcă ghidul apelului din portalul AFIR.",
+    Implementare: "Urmărește termenul din contract și indicatorii asumați în cererea aprobată.",
+    Beneficiar: compactTextList(page.audience, "categoria de solicitant", 2),
     Problema: "incadrare, documente sau buget de clarificat",
     Interventie: "analiza FABER pe documente si surse oficiale",
     Rezultat: "decizie prudenta, ajustare sau pas urmator",
@@ -595,9 +599,9 @@ function renderFamilyCards(page) {
     Resurse: "linkuri interne si surse oficiale",
     "Urmator pas": "verificare concreta pe cazul tau"
   };
-  return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Repere vizuale ${esc(program)}">
+  return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Criterii pentru ${esc(program)}">
         <h2 class="design-card-grid__title">Repere pentru verificare</h2>
-        ${labels.map((label) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc(detailByLabel[label] || `Verificare pentru ${program}`)}</p></article>`).join("\n        ")}
+        ${labels.filter((label) => detailByLabel[label]).map((label) => `<article class="mini-card design-card"><h3>${esc(label)}</h3><p>${esc(detailByLabel[label])}</p></article>`).join("\n        ")}
       </section>`;
 }
 

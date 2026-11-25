@@ -76,6 +76,8 @@ for (const record of records) {
   assert.equal(body.attr("data-governance-state"), record.governanceState, `${record.route}: stare editorială diferită în HTML`);
   assert(section.length, `${record.route}: lipsește componenta editorială vizibilă`);
 
+  assert.equal(section.find(".editorial-governance__byline a").last().attr("href"), "/metodologie-verificare-eligibilitate#metodologie-editoriala", record.route);
+  assert.doesNotMatch(section.text(), /metadate editoriale în validare/iu, record.route);
   const structuredNodes = schemaNodes($);
   const nodeById = new Map();
   const indexNode = (value) => {
@@ -93,9 +95,9 @@ for (const record of records) {
     assert.equal(body.attr("data-official-source-updated-at"), isIsoDate(record.officialSourceUpdatedAt) ? record.officialSourceUpdatedAt : undefined, `${record.route}: officialSourceUpdatedAt diferă în HTML`);
     assert.equal(body.attr("data-next-review-at"), undefined, `${record.route}: nextReviewAt intern a fost expus în HTML`);
     assert.equal(body.attr("data-last-meaningful-update"), undefined, `${record.route}: atributul editorial legacy nu a fost eliminat`);
-    assert(section.text().includes(`Verificat la ${record.verifiedAt}`), `${record.route}: lipsește data vizibilă de verificare`);
-    assert(section.text().includes(`Actualizat editorial la ${record.lastMeaningfulUpdate}`), `${record.route}: lipsește dateModified vizibil`);
-    assert(section.text().includes("Publicat de: FABER – Atelier de Consultanță"), `${record.route}: editorul real nu este vizibil`);
+    assert(section.text().includes(`Sursă verificată la ${record.verifiedAt}`), `${record.route}: lipsește data vizibilă de verificare`);
+    assert(section.text().includes(`Pagina a fost actualizată la ${record.lastMeaningfulUpdate}`), `${record.route}: lipsește dateModified vizibil`);
+    assert(section.text().includes("Material de FABER – Atelier de Consultanță"), `${record.route}: editorul real nu este vizibil`);
     assert(!section.text().includes(record.reviewer), `${record.route}: reviewerul fără profil confirmat a fost publicat`);
     assert(!section.text().includes(record.reviewerRole), `${record.route}: rolul reviewerului fără confirmare a fost publicat`);
     assert.equal(section.text().includes(`Publicat la ${record.datePublished}`), isIsoDate(record.datePublished), `${record.route}: vizibilitatea datePublished este incorectă`);
@@ -106,7 +108,7 @@ for (const record of records) {
     }
     assert.doesNotMatch(section.text(), /următoarea revizuire|nextReviewAt/iu, `${record.route}: eticheta revizuirii interne apare în conținutul public`);
     assert.equal(section.find("a[data-analytics-event='source_document_click']").attr("href"), record.officialSourceUrl, `${record.route}: sursa vizibilă diferă`);
-    assert(section.find("details.editorial-governance__changelog").length, `${record.route}: lipsește linkul/istoricul «Vezi modificările»`);
+    assert.equal(section.find("details.editorial-governance__changelog").length, Number(record.changelog.some(change => change.meaningful)), `${record.route}: lipsește linkul/istoricul «Vezi modificările»`);
     assert(eligible.length, `${record.route}: pagina publică nu are un nod JSON-LD editorial eligibil`);
     for (const node of eligible) {
       assert.equal(node.dateModified, record.lastMeaningfulUpdate, `${record.route}: dateModified nu provine din lastMeaningfulUpdate`);
@@ -123,7 +125,7 @@ for (const record of records) {
         assert.equal(node.author?.["@type"], "Person", `${record.route}: autorul nominal trebuie publicat ca Person`);
         assert.equal(node.author?.url, record.authorProfileUrl, `${record.route}: profilul autorului diferă`);
       } else {
-        assert.equal(node.author, undefined, `${record.route}: autor organizațional duplicat/neidentificabil în JSON-LD`);
+        assert.equal(node.author?.["@id"], ["Article", "BlogPosting", "TechArticle"].includes(node["@type"]) ? "https://atelierdeconsultanta.ro/#organization" : undefined, `${record.route}: atribuirea organizațională în JSON-LD diferă`);
         assert.equal(node.reviewedBy, undefined, `${record.route}: reviewer organizațional nu trebuie transformat într-o persoană fictivă`);
       }
     }
@@ -139,7 +141,7 @@ for (const record of records) {
     for (const node of eligible) {
       assert.equal(node.dateModified, undefined, `${record.route}: dateModified neverificat a rămas în JSON-LD`);
       assert.equal(node.datePublished, undefined, `${record.route}: datePublished neverificat a rămas în JSON-LD`);
-      assert.equal(node.author, undefined, `${record.route}: autor neverificat a rămas în JSON-LD`);
+      assert.equal(node.author?.["@id"], ["Article", "BlogPosting", "TechArticle"].includes(node["@type"]) ? "https://atelierdeconsultanta.ro/#organization" : undefined, `${record.route}: atribuirea organizațională în JSON-LD diferă`);
       assert.equal(node.reviewedBy, undefined, `${record.route}: reviewer neverificat a rămas în JSON-LD`);
     }
   }

@@ -3,7 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { serializeJsonLd } = require("./schema-helpers");
+const { ORGANIZATION_ID, serializeJsonLd } = require("./schema-helpers");
 const { normalizeJsonLdValue } = require("./normalize-copy-ro");
 const {
   ROOT,
@@ -48,6 +48,9 @@ function addEditorialProperties(node, record) {
   if (!eligible) return;
   delete node.author;
   delete node.reviewedBy;
+  if (types.has("Article") || types.has("BlogPosting") || types.has("TechArticle")) {
+    node.author = {"@id": ORGANIZATION_ID};
+  }
   delete node.datePublished;
   delete node.dateModified;
   if (!isCompleteRecord(record)) {
@@ -56,9 +59,7 @@ function addEditorialProperties(node, record) {
   }
   if (isIsoDate(record.datePublished)) node.datePublished = record.datePublished;
   node.dateModified = record.lastMeaningfulUpdate;
-  // Profilurile Person nu sunt publicate până când numele, rolul, acordul și
-  // URL-ul profilului vizibil nu sunt aprobate împreună. Pentru atribuirea
-  // organizațională, publisher/provider indică deja entitatea canonică.
+  // Numele personale cer acord și un profil public.
   if (record.attributionType === "person" && record.personalNameConsent === true && record.authorProfileUrl) {
     node.author = { "@type": "Person", name: record.author, url: record.authorProfileUrl };
     if (record.reviewerProfileUrl) {

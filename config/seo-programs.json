@@ -1834,7 +1834,7 @@
       "verifiedAt": "2026-11-10",
       "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
       "sourceUrl": "https://gal.afir.ro/",
-      "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
+      "sourceVersion": "Catalogul apelurilor locale AFIR GAL",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
@@ -1931,7 +1931,7 @@
       "verifiedAt": "2026-11-10",
       "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
       "sourceUrl": "https://gal.afir.ro/",
-      "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
+      "sourceVersion": "Catalogul apelurilor locale AFIR GAL",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
@@ -4933,7 +4933,7 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Program concret, hub general și articol suport",
+          "title": "Documentele ediției Femeia Antreprenor 2024",
           "paragraphs": [
             "Pagina aceasta rămâne rută pentru programul Femeia Antreprenor 2026. Pentru compararea cu alte opțiuni folosește hubul fonduri pentru femei antreprenor; pentru întrebări informaționale despre condiții, idei și riscuri folosește articolul suport."
           ],
@@ -5648,9 +5648,9 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Pagina aplicată pentru autoconsum, nu hub general",
+          "title": "Ghiduri pentru proiectele de autoconsum",
           "paragraphs": [
-            "Pentru orientare între apeluri pornește din hubul Fondul de Modernizare. Pe această pagină verificarea se restrânge la consum, dimensionarea instalației, amplasament, racordare, stocare și documente tehnice. Pentru capacitate nouă de energie regenerabilă folosește pagina dedicată, iar pentru încadrare preliminară vezi consultanță generală."
+            "Pentru autoconsum, dimensionează centrala după profilul de consum și verifică amplasamentul, racordarea și stocarea în studiul de fezabilitate."
           ],
           "links": [
             {
@@ -5794,7 +5794,7 @@
         {
           "title": "Capacitate nouă, separat de autoconsum",
           "paragraphs": [
-            "Pagina aceasta tratează proiecte de capacitate nouă pentru energie regenerabilă: amplasament, racordare, putere instalată, avize, criterii tehnice și obligații de exploatare. Pentru orientarea între apeluri revino la hubul Fondul de Modernizare, iar pentru autoconsum și fotovoltaice folosește pagina aplicată separata."
+            "Pentru o capacitate nouă de producție, verifică amplasamentul, soluția de racordare, puterea instalată, avizele și obligațiile din ghidul ediției. Dacă proiectul prevede autoconsum, consultă ghidul apelului dedicat."
           ],
           "links": [
             {
@@ -6819,7 +6819,7 @@
       "heroIcon": "ph-duotone ph-desktop",
       "contentSections": [
         {
-          "title": "Pagină-cadru PNRR versus pagina aplicată de digitalizare",
+          "title": "De la componenta PNRR la contractul proiectului",
           "paragraphs": [
             "Aceasta este pagina-cadru pentru PNRR: explică de ce fiecare concluzie trebuie legată de o componentă, de o investiție și de un apel concret. Pentru proiectele digitale, pagina aplicată Digitalizare IMM / PNRR pornește de la procesele firmei, soluțiile IT, cheltuielile și documentele care pot susține investiția.",
             "Un beneficiar nu ar trebui să construiască bugetul folosind numai informații generale despre PNRR. Ghidul, anexele, clarificările și platforma de depunere a apelului identificat formează împreună setul de reguli care trebuie verificat."
@@ -10299,7 +10299,7 @@
       "heroIcon": "ph-duotone ph-info",
       "contentSections": [
         {
-          "title": "Hub general, program concret și consultanță",
+          "title": "Alegerea unui program după profilul firmei",
           "paragraphs": [
             "Pagină generală ajută la orientare între programe pentru femei antreprenor, fonduri IMM și verificarea documentelor. Când intentia este programul dedicat, ruta principală rămâne Femeia Antreprenor 2026; când întrebarea este despre idei, condiții sau riscuri, articolul suport completează pagină de program."
           ],
@@ -12328,8 +12328,8 @@
       ],
       "faq": [
         [
-          "Ce finanteaza PoCIDIF 2.1?",
-          "Apelul finanțează proiecte ale IMM-urilor TIC care dezvoltă prin cercetare, dezvoltare și inovare servicii, aplicații sau produse noi ori semnificativ îmbunătățite, folosesc tehnologii avansate și includ introducerea rezultatului pe piață."
+          "Ce finanțează PoCIDIF 2.1?",
+          "Apelul a vizat IMM-uri TIC care folosesc tehnologii avansate și fac cercetare sau dezvoltare pentru un produs, un serviciu ori o aplicație nouă sau semnificativ îmbunătățită. Proiectul trebuie să prevadă lansarea rezultatului pe piață."
         ],
         [
           "Ce intensitate poate avea finanțarea?",

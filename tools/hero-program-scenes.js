@@ -48,6 +48,33 @@ function sceneArtwork(program = {}) {
   return familyScenes.generic;
 }
 
+const sceneDescriptions = {
+  "sme-eco-tech": "Un ecran cu un grafic și o plantă în ghiveci.",
+  "autoconsum-institutii-publice": "Panouri fotovoltaice și o baterie lângă o clădire publică.",
+  "fondul-modernizare-pc1-stocare-entitati-publice": "Două baterii lângă o clădire și tabloul ei electric.",
+  "pro-infra": "O fabrică, o macara și o cale ferată.",
+  "pocidif-21": "Un prototip între două unități conectate.",
+  "digitalizare-imm": "Un calculator și un telefon afișează interfețe de lucru.",
+  "modernizare-microintreprinderi-ne-2": "O macara lângă o clădire în construcție.",
+  "dr12-afir": "O clădire de fermă și plante pe un teren cultivat.",
+  "dr14-afir": "Un tractor traversează un câmp cultivat.",
+  "dr18-afir": "O seră cu două plante înflorite.",
+  "afir-energie-autoconsum": "Panouri fotovoltaice lângă o clădire agricolă.",
+  "e-move-ro": "Un camion electric lângă o stație de încărcare."
+};
+
+function sceneDescription(program) {
+  if (sceneDescriptions[program.id]) return sceneDescriptions[program.id];
+  const family = String(program.family || "");
+  if (/afir|agricultur|leader/iu.test(family)) return sceneDescriptions["dr12-afir"];
+  if (/mobilitate/iu.test(family)) return "Vehicul electric și punct de încărcare.";
+  if (/energie/iu.test(family)) return "Panouri fotovoltaice și traseul de alimentare.";
+  if (/digital|pnrr/iu.test(family)) return "Ecran cu interfețe conectate.";
+  if (/regional|tranzitie/iu.test(family)) return sceneDescriptions["modernizare-microintreprinderi-ne-2"];
+  if (/antrepren/iu.test(family)) return "Spațiu comercial lângă o clădire.";
+  return "Document cu câmpuri pentru datele proiectului.";
+}
+
 function renderProgramScenes(programs) {
   return `<div class="hero-program-visuals" id="hero-program-visuals" aria-hidden="true">
     <div class="hero-program-gridfloor"></div>
@@ -57,4 +84,4 @@ function renderProgramScenes(programs) {
   </div>`;
 }
 
-module.exports = { renderProgramScenes, sceneArtwork };
+module.exports = { renderProgramScenes, sceneArtwork, sceneDescription };

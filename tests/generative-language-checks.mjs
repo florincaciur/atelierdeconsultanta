@@ -32,6 +32,10 @@ for (const label of requiredRules) {
 }
 
 assert.equal(normalizeRomanianCopy("Pot verifica documentele."), "Pot verifica documentele.");
+assert.equal(normalizeRomanianCopy("A doua cerere"), "A doua cerere");
+assert.equal(normalizeRomanianCopy("sesiunii a doua"), "sesiunii a doua");
+assert.equal(normalizeRomanianCopy("doua cereri"), "două cereri");
+assert.equal(normalizeRomanianCopy("sistem plug-in"), "sistem plug-in");
 assert.equal(normalizeRomanianCopy("Nu completa acest câmp"), "Nu completa acest câmp");
 assert.equal(normalizeRomanianCopy("documentație completa"), "documentație completă");
 assert.equal(normalizeRomanianCopy("Pot schimba concluzia."), "Pot schimba concluzia.");

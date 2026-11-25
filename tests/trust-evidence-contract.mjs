@@ -81,7 +81,7 @@ for (const slug of ["studii-de-caz", "portofoliu", "testimoniale"]) {
 
 const methodology = cheerio.load(readPublic(routeFile("/metodologie-verificare-eligibilitate")));
 assert.equal(methodology("#metodologie-editoriala").length, 1, "Metodologia editorială publică lipsește sau este duplicată.");
-assertEditorialDate(methodology, "Metodologie editorială", policy.reviewedAt);
+assertEditorialDate(methodology, "Metodologie editorială", policy.editorialModifiedAt);
 const methodologyText = normalizedText(methodology, "#metodologie-editoriala");
 for (const required of [
   "Prioritatea surselor",
@@ -91,10 +91,10 @@ for (const required of [
   "Schemă aprobată",
   "Apel deschis",
   "Status neconfirmat",
-  "verifiedAt este data la care informația a fost reverificată efectiv",
+  "Data verificării sursei arată când am consultat documentul",
   "Cum corectăm o eroare",
   "Responsabilitate editorială",
-  "nu înlocuiește ghidul"
+  "Data actualizării paginii arată când am schimbat explicația"
 ]) {
   assert(methodologyText.includes(required), `Metodologie editorială: lipsește „${required}”.`);
 }
@@ -102,19 +102,19 @@ assert.equal(methodology("h1").length, 1, "Metodologia trebuie să păstreze un 
 
 const cases = cheerio.load(readPublic(routeFile("/studii-de-caz-fonduri-europene")));
 assert.equal(cases("#politica-dovezi").length, 1, "Politica dovezilor lipsește sau este duplicată.");
-assertEditorialDate(cases, "Studii de caz", policy.reviewedAt);
+assertEditorialDate(cases, "Studii de caz", policy.editorialModifiedAt);
 assert.equal(cases("[data-publication-state='methodology-only']").attr("data-approved-case-count"), "0", "Pagina trebuie să declare zero cazuri aprobate.");
 assert.equal(cases("[data-publication-state='methodology-only']").attr("data-approved-testimonial-count"), "0", "Pagina trebuie să declare zero testimoniale aprobate.");
 assert.equal(cases("h1").length, 1, "Pagina de studii de caz trebuie să păstreze un singur H1.");
 assert.equal(cases("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene", "Canonicalul studiilor de caz s-a schimbat.");
 const casesText = normalizedText(cases);
 for (const required of [
-  "nu publică încă niciun studiu de caz drept rezultat real verificat al unui client și niciun testimonial",
-  "metodologie și un model de analiză",
+  "registrul FABER nu conținea studii de caz sau testimoniale aprobate pentru publicare",
+  "Exemplele de mai jos sunt ipotetice",
   "Când poate deveni public un studiu de caz",
   "analiză preliminară, eligibilitate, pregătire, depunere, clarificări, contractare, implementare sau finalizare",
-  "Testimoniale și review schema",
-  "mai puține dovezi reale sunt preferabile unui volum artificial"
+  "Cum publicăm testimonialele",
+  "folosim citatul aprobat de autor"
 ]) {
   assert(casesText.includes(required), `Politica dovezilor: lipsește „${required}”.`);
 }

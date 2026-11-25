@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { loadData: loadSourceData, resolveSourceReference } = require("./generate-status-governance-docs");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "seo-programs.json");
@@ -594,6 +595,17 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
+let sourceData;
+
+function programDocumentLink(program, roles, label) {
+  const references = roles.flatMap((role) => program.officialSources?.roles?.[role] || []);
+  if (!references.length) return "";
+  sourceData ??= loadSourceData();
+  const source = resolveSourceReference(references[0], program, sourceData);
+  if (!isOfficialUrl(source.url)) return "";
+  return ` <a class="program-factual-status__document" href="${escapeHtml(source.url)}">${escapeHtml(label)}</a>`;
+}
+
 function renderProgramFactualStatus(program, options = {}) {
   if (!program) return "";
   if (!isPublicProgram(program)) {
@@ -614,20 +626,24 @@ function renderProgramFactualStatus(program, options = {}) {
   const grant = grantAnswerText(program);
   const contribution = contributionAnswerText(program);
   const applicationMarkup = applicationWindowMarkup(program);
-  const meaningful = isIsoDate(program.lastMeaningfulUpdate, { nullable: false })
-    ? ` Ultima actualizare relevantă: <time datetime="${escapeHtml(program.lastMeaningfulUpdate)}">${escapeHtml(program.lastMeaningfulUpdate)}</time>.`
+  const eligibilitySource = programDocumentLink(program, ["guide", "schemeOrder"], "Condițiile din documentul oficial");
+  const fundingSource = summaryHasValues(program.grantSummary) || summaryHasValues(program.cofinancingSummary)
+    ? programDocumentLink(program, ["guide", "schemeOrder"], "Plafoane și contribuție în documentul oficial")
+    : "";
+  const deadlineSource = program.applicationEnd && !program.presentation?.calendar?.components?.length
+    ? ` <a class="program-factual-status__document" href="${escapeHtml(program.sourceUrl)}">Sursa calendarului</a>`
     : "";
   return `<!-- PROGRAM_FACTUAL_STATUS_START -->
 <section class="program-factual-status" aria-label="Răspuns direct și date esențiale ale programului" data-aeo-program-summary="" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
   <p data-aeo-primary-answer="" data-aeo-direct-answer="" data-answer-field="status"><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
   <dl class="program-factual-status__facts" aria-label="Cine poate aplica, finanțare, contribuție, termen și data verificării">
-    <div data-answer-field="applicant"><dt>Cine poate aplica</dt><dd>${escapeHtml(applicantSummaryText(program))}</dd></div>
-    <div data-answer-field="grant"><dt>Grant / valoare</dt><dd${program.grantSummary ? " data-program-grant=\"\"" : ""}>${escapeHtml(grant)}</dd></div>
-    <div data-answer-field="contribution"><dt>Intensitate / contribuție</dt><dd${program.cofinancingSummary ? " data-program-contribution=\"\"" : ""}>${escapeHtml(contribution)}</dd></div>
-    <div data-answer-field="deadline"><dt${program.presentation?.calendar?.components?.length ? ` id="${escapeHtml(program.id)}-termene"` : ""}>Perioadă de depunere / termen</dt><dd>${applicationMarkup}</dd></div>
-    <div data-answer-field="verifiedAt"><dt>Verificat la</dt><dd><time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(formatDateRo(program.verifiedAt))}</time></dd></div>
+    <div data-answer-field="applicant"><dt>Cine poate aplica</dt><dd>${escapeHtml(applicantSummaryText(program))}${eligibilitySource}</dd></div>
+    <div data-answer-field="grant"><dt>Valoarea finanțării</dt><dd${program.grantSummary ? " data-program-grant=\"\"" : ""}>${escapeHtml(grant)}</dd></div>
+    <div data-answer-field="contribution"><dt>Intensitatea ajutorului și contribuția proprie</dt><dd${program.cofinancingSummary ? " data-program-contribution=\"\"" : ""}>${escapeHtml(contribution)}${fundingSource}</dd></div>
+    <div data-answer-field="deadline"><dt${program.presentation?.calendar?.components?.length ? ` id="${escapeHtml(program.id)}-termene"` : ""}>Depunere</dt><dd>${applicationMarkup}${deadlineSource}</dd></div>
+    <div data-answer-field="verifiedAt"><dt>Sursă verificată la</dt><dd><time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(formatDateRo(program.verifiedAt))}</time></dd></div>
   </dl>
-  <p class="program-factual-status__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceVersion)}</a>, ${escapeHtml(program.sourceName)}.${meaningful}</p>
+  <p class="program-factual-status__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceVersion)}</a>, ${escapeHtml(program.sourceName)}.</p>
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->`;
 }

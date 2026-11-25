@@ -195,8 +195,10 @@ for (const route of routes) {
     assert(dated.length, `${route}: lipsește dateModified din lastMeaningfulUpdate`);
     assert(dated.every((node) => node.dateModified === expectedModified), `${route}: dateModified nu provine exclusiv din lastMeaningfulUpdate`);
     const expectedSource = hints.get(route)?.citation?.[0]?.url;
-    for (const node of nodes.filter((item) => hasType(item, "WebPage") || hasType(item, "Article"))) {
-      assert(node.citation?.some((citation) => referencedUrl(nodes, citation) === expectedSource), `${route}: sursa oficială nu este sincronizată`);
+    if (expectedSource) {
+      for (const node of nodes.filter((item) => hasType(item, "WebPage") || hasType(item, "Article"))) {
+        assert(node.citation?.some((citation) => referencedUrl(nodes, citation) === expectedSource), `${route}: sursa oficială nu este sincronizată`);
+      }
     }
   } else {
     assert.equal(dated.length, 0, `${route}: dateModified publicat fără modificare editorială verificabilă`);

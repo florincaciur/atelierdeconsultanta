@@ -39,11 +39,13 @@ const {
   visibleFaqItems
 } = require("./structured-data-utils");
 const { buildInventory } = require("./generate-route-inventory");
+const { isCompleteRecord, loadEditorialGovernance, renderEditorialByline } = require("./editorial-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
 const CONTENT_TYPES = new Set(["Article", "BlogPosting", "NewsArticle", "Service", "GovernmentService", "WebApplication"]);
 const PROGRAMS = loadProgramConfig().programs;
+const EDITORIAL = loadEditorialGovernance().byRoute;
 
 function isBrandedOrganization(node) {
   if (!node || typeof node !== "object" || !hasType(node, "Organization")) return false;
@@ -99,7 +101,8 @@ function contentEntity(pageKind, options) {
       headline: name,
       description,
       datePublished: dates.datePublished,
-      dateModified: dates.dateModified
+      dateModified: dates.dateModified,
+      author: options.author || { "@id": ORGANIZATION_ID }
     });
     for (const key of ["about", "articleSection", "image", "keywords", "wordCount"]) {
       if (existing?.[key] !== undefined) schema[key] = existing[key];
@@ -202,7 +205,10 @@ function synchronizedGraph(html, route, hints) {
       };
     });
   }
-  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: citations.references });
+  const editorialRecord = EDITORIAL.get(route);
+  const confirmedPerson = isCompleteRecord(editorialRecord) && editorialRecord.attributionType === "person" && editorialRecord.personalNameConsent === true && editorialRecord.authorProfileUrl;
+  const author = confirmedPerson ? { "@type": "Person", name: editorialRecord.author, url: editorialRecord.authorProfileUrl } : null;
+  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: citations.references, author });
   if (content && citations.references.length && !content.citation) content.citation = citations.references;
   if (content) pageNode.mainEntity = { "@id": content["@id"] };
   if (factualProgram) {
@@ -273,7 +279,11 @@ function main() {
       } catch (error) {
         throw new Error(`${route}: ${error.message}`);
       }
-      const next = replaceScripts(html, serialized);
+      let next = replaceScripts(html, serialized);
+      if (!EDITORIAL.has(route) && pageKindForPath(route, hints.get(route) || {}) === PAGE_KINDS.ARTICLE && !$(".editorial-governance__byline").length) {
+        const eol = next.includes("\r\n") ? "\r\n" : "\n";
+        next = next.replace(/<\/main>/iu, (closing) => renderEditorialByline() + eol + closing);
+      }
       if (next === html) continue;
       changed.push(path.relative(ROOT, file).split(path.sep).join("/"));
       if (!CHECK_ONLY) fs.writeFileSync(file, next, "utf8");

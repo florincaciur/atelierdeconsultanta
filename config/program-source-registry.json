@@ -225,10 +225,11 @@
     },
     "sme-eco-tech-procedura-consolidata": {
       "title": "SME Eco-Tech – procedura de implementare consolidată",
-      "institution": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "authority": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "documentType": "procedură aprobată",
       "url": "https://legislatie.just.ro/Public/DetaliiDocument/299281",
-      "accessedAt": "2026-11-25"
+      "publishedAt": null,
+      "verifiedAt": "2026-11-25"
     },
     "sme-eco-tech-minister": {
       "title": "SME Eco-Tech – documentele programului",
@@ -275,6 +276,39 @@
       "authority": "Instituția Prefectului – Județul Vrancea",
       "documentType": "informare oficială",
       "url": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-noiembrie-2026/",
+      "verifiedAt": "2026-11-25",
+      "publishedAt": null
+    },
+    "afir-dr12-epuizare-alte-sectoare-2026": {
+      "title": "Fondurile pentru componenta Alte sectoare (DR-12) au fost epuizate",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "comunicat oficial",
+      "url": "https://www.afir.ro/api/file?filename=CP+Epuizare+DR+12+Comp.+ALTE+SECTOARE+11.11.26&filetype=pdf&url=%2Fmedia%2F42bnwq11%2Fcp_epuizare_dr-12_comp-alte-sectoare_111126.pdf",
+      "publishedAt": "2026-11-11",
+      "verifiedAt": "2026-11-24"
+    },
+    "afir-dr14-dr18-extension-mirror": {
+      "title": "Comunicat AFIR: termenul prelungit DR-14 și DR-18 la 16 noiembrie, ora 16:00",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "comunicat oficial",
+      "url": "https://afirportalcmsprod.azurewebsites.net/comunicate/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-25"
+    },
+    "afir-dr14-simple-close-mirror": {
+      "title": "Comunicat AFIR: epuizarea fondurilor la DR-14 Achiziții simple",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "comunicat oficial",
+      "url": "https://afirportalcmsprod.azurewebsites.net/comunicate/fondurile-alocate-interventiei-dr-14-pentru-componenta-achizitii-simple-au-fost-epuizate/",
+      "publishedAt": "2026-10-06",
+      "verifiedAt": "2026-11-25"
+    },
+    "afir-public-energy-status-mirror": {
+      "title": "AFIR: calendarul celor două apeluri publice pentru autoconsum și stocare",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "comunicat oficial",
+      "url": "https://afirportalcmsprod.azurewebsites.net/comunicate/stadiu-depuneri-proiecte-energie-stocare-si-autoconsum-beneficiari-publici/",
+      "publishedAt": "2026-10-05",
       "verifiedAt": "2026-11-25"
     }
   },
