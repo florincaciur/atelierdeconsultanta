@@ -38,6 +38,7 @@ function findPublicHtmlFiles(directory = ROOT, relativeDirectory = "") {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     if (entry.isDirectory()) {
       if (EXCLUDED_DIRECTORIES.has(entry.name.toLowerCase())) continue;
+      if (relativeDirectory === "tools" && entry.name === "chrome-extension") continue;
       files.push(...findPublicHtmlFiles(path.join(directory, entry.name), path.posix.join(relativeDirectory, entry.name)));
       continue;
     }
