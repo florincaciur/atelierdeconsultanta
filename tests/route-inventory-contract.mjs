@@ -26,7 +26,14 @@ assert.deepEqual(inventory.publicFragments.map((item) => item.route).sort(), [
   "/partials/preferred-source",
   "/templates/dr14-final-content",
   "/templates/dr18-final-content",
+  "/templates/regional-adr-editorial",
+  "/tools/chrome-extension/popup",
+  "/tools/chrome-extension/privacy",
 ]);
+for (const fragment of inventory.publicFragments.filter((item) => /^\/(?:partials|templates|tools)\//u.test(item.route))) {
+  assert.equal(fragment.expectedHttp, 404, fragment.route);
+  assert.equal(fragment.indexable, "nu", fragment.route);
+}
 assert.ok(fs.existsSync(REPORT), "ROUTE_INVENTORY.md trebuie generat și versionat.");
 assert.deepEqual(checkReportCoverage(inventory), [], "Raportul versionat trebuie să acopere toate rutele și redirecturile descoperite.");
 

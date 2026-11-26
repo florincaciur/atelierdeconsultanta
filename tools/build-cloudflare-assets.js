@@ -4,6 +4,7 @@ const path = require("path");
 const { collectSiteState } = require("./generate-sitemap");
 const { auditSite } = require("./on-page-seo-audit");
 const { syncSite } = require("./sync-on-page-seo");
+const { synchronizedHtml } = require("./sync-breadcrumbs");
 const { fileForRoute } = require("./structured-data-utils");
 const { privacyFile, renderChromeExtensionPrivacy } = require("./chrome-extension-privacy");
 
@@ -20,8 +21,10 @@ const EXCLUDED_DIRS = new Set([
   "dist",
   "node_modules",
   "outreach",
+  "partials",
   "reports",
   "scripts",
+  "templates",
   "tools",
   "archive",
 ]);
@@ -214,8 +217,9 @@ function syncCanonicalHtmlAliases() {
       path.join(OUT_DIR, `${route}.html`),
       path.join(OUT_DIR, route, "index.html"),
     ].filter((candidate) => fs.existsSync(candidate));
+    const canonicalHtml = synchronizedHtml(fs.readFileSync(canonicalSource, "utf8"), entry.route);
     for (const candidate of candidates) {
-      fs.copyFileSync(canonicalSource, candidate);
+      fs.writeFileSync(candidate, canonicalHtml, "utf8");
       synchronized += 1;
     }
   }

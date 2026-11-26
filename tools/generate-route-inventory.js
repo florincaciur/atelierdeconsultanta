@@ -28,8 +28,10 @@ const LIVE_CHECK_PATHS = [
   "/admin",
   "/404",
   "/partials/global-header",
+  "/partials/preferred-source",
   "/templates/dr14-final-content",
   "/templates/dr18-final-content",
+  "/templates/regional-adr-editorial",
   "/start-up-nation",
   "/definitely-missing-route-task-01",
 ];
@@ -435,15 +437,18 @@ function buildInventory() {
 
   const publicFragments = state.excluded
     .filter((item) => item.reason === "missing_canonical")
-    .map((item) => ({
-      route: item.route,
-      sourceFile: item.sourceFile,
-      expectedHttp: 200,
-      indexable: item.route.startsWith("/google") ? "tehnic; header de verificat pe ruta curată" : "da (neintenționat)",
-      issue: item.route.startsWith("/google")
-        ? "Fișier de verificare; normalizarea globală redirecționează forma .html."
-        : "Fișier copiat de build și servit public fără document HTML complet, canonical sau noindex.",
-    }));
+    .map((item) => {
+      const internal = /^(?:partials|templates|tools)\//u.test(item.sourceFile);
+      return {
+        route: item.route,
+        sourceFile: item.sourceFile,
+        expectedHttp: internal ? 404 : 200,
+        indexable: internal ? "nu" : "tehnic",
+        issue: internal
+          ? "Fișier de generare sau instrument intern, exclus din pachetul Cloudflare."
+          : "Fișier de verificare; normalizarea redirecționează forma .html.",
+      };
+    });
 
   const technicalRoutes = [
     ["/robots.txt", "robots policy", "200", "nu"],
@@ -635,7 +640,7 @@ function renderInventory(inventory, live) {
     `- Redirecturi exacte: **${inventory.exactRedirects.length}** reguli / **${exactUniqueSources}** surse distincte; redirecturi dinamice de normalizare: **${inventory.dynamicRedirects.length}**.`,
     `- Canonical declarate de mai multe fișiere HTML: **${inventory.canonicalDuplicates.length}** grupuri; acestea sunt inventariate separat și nu sunt confundate cu duplicate în setul publicat.`,
     `- Rute indexabile fără incoming links: **${inventory.orphanRoutes.length}**; rute indexabile lipsă din sitemap: **${inventory.routesWithoutSitemap.length}** (\`${inventory.routesWithoutSitemap.map((route) => route.route).join(", ") || "—"}\`); URL-uri sitemap fără rută: **${inventory.sitemapWithoutRoute.length}**.`,
-    `- Fragmente/fișiere HTML fără canonical descoperite de scanarea repo: **${inventory.publicFragments.length}**; trei sunt servite live ca HTML 200 și indexabile neintenționat.`,
+    `- Fragmente/fișiere HTML fără canonical descoperite de scanarea repo: **${inventory.publicFragments.length}**. Fișierele folosite la generarea paginilor sunt excluse din pachetul Cloudflare.`,
     "",
     "Tipurile sunt derivate din registry, `data-analytics-page-type`, schema și forma rutei:",
     "",
@@ -716,7 +721,7 @@ function renderInventory(inventory, live) {
     "",
     "Workerul de domeniu normalizează suplimentar HTTP→HTTPS, `www`→apex, `.html`, `/index.html`, slash final, query-ul istoric de căutare și query-urile de contact. `_redirects` rămâne fallback-ul static reviewable.",
     "",
-    "## Suprafețe HTML publice necanonice / noindex",
+    "## Fișiere HTML necanonice și fragmente de generare",
     "",
     "| Rută | Sursă | HTTP | Indexabilitate | Metadata/schema | Problemă |",
     "|---|---|---:|---|---|---|",
@@ -739,7 +744,7 @@ function renderInventory(inventory, live) {
     `- Homepage/catalog: **${inventory.programReconciliation.filter((program) => program.homepage).length}** programe configurate pe homepage, **${inventory.programReconciliation.filter((program) => program.listed).length}** listate și **${inventory.banners.filter((banner) => banner.active !== false).length}** bannere active.`,
     `- Bannere fără program: **${inventory.bannerWithoutProgram.length}**; programe listate fără banner: **${inventory.listedWithoutBanner.length}**.`,
     "- Suprafețe publice servite dar intenționat în afara sitemap-ului: redirecturile, `/404`, `/admin`, endpointurile tehnice și fișierele non-page.",
-    "- Suprafețe HTML publice neintenționat indexabile și fără canonical: `/partials/global-header`, `/templates/dr14-final-content`, `/templates/dr18-final-content`. Acestea provin din politica de copiere a build-ului, nu din router sau sitemap.",
+    "- Fragmentele din `/partials/` și `/templates/` sunt excluse din pachetul public.",
     "",
     "## Verificare live",
     "",
@@ -764,7 +769,7 @@ function renderInventory(inventory, live) {
     "## Probleme și priorități rămase (fără remediere în Task 01)",
     "",
     "- **P0 existent:** `/contact` păstrează inconsistența de stare legală, iar Clarity nu are un gate de consent identificabil (`T00-003`, `T00-004`).",
-    "- **P1:** cele trei fragmente `/partials/*` și `/templates/*` sunt HTML 200 indexabil, fără canonical/noindex și fără rol de pagină publică. Politica build trebuie să le excludă sau să le protejeze într-un task separat.",
+    "- Pachetul Cloudflare exclude fișierele de generare din `/partials/` și `/templates/`.",
     "- **P1:** registry-ul de pagini conține definiții pentru rute care sunt acum 301; trebuie consolidat fără pierderea URL equity.",
     "- `/gdpr` și variantele sale răspund 301 direct către politica de confidențialitate.",
     "- **P1 existent:** fișierele fizice duplicate și listele de precedență canonical rămân surse paralele (`T00-007`, `T00-008`).",

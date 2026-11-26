@@ -14,7 +14,7 @@ Snapshot live: nu a fost cerut la această regenerare; vezi ultima secțiune ver
 - Redirecturi exacte: **131** reguli / **131** surse distincte; redirecturi dinamice de normalizare: **9**.
 - Canonical declarate de mai multe fișiere HTML: **51** grupuri; acestea sunt inventariate separat și nu sunt confundate cu duplicate în setul publicat.
 - Rute indexabile fără incoming links: **0**; rute indexabile lipsă din sitemap: **0** (`—`); URL-uri sitemap fără rută: **0**.
-- Fragmente/fișiere HTML fără canonical descoperite de scanarea repo: **5**; trei sunt servite live ca HTML 200 și indexabile neintenționat.
+- Fragmente/fișiere HTML fără canonical descoperite de scanarea repo: **8**. Fișierele folosite la generarea paginilor sunt excluse din pachetul Cloudflare.
 
 Tipurile sunt derivate din registry, `data-analytics-page-type`, schema și forma rutei:
 
@@ -469,17 +469,20 @@ Pentru aceste rute, title/H1/canonical/schema/breadcrumb/FAQ nu se aplică: răs
 
 Workerul de domeniu normalizează suplimentar HTTP→HTTPS, `www`→apex, `.html`, `/index.html`, slash final, query-ul istoric de căutare și query-urile de contact. `_redirects` rămâne fallback-ul static reviewable.
 
-## Suprafețe HTML publice necanonice / noindex
+## Fișiere HTML necanonice și fragmente de generare
 
 | Rută | Sursă | HTTP | Indexabilitate | Metadata/schema | Problemă |
 |---|---|---:|---|---|---|
 | `/404` | `404.html` | 404 explicit și ca fallback pentru URL inexistent | nu (meta + X-Robots-Tag) | title/H1, fără canonical și fără sitemap | Comportament intenționat; workerul păstrează navigația utilă și emite `noindex, follow`. |
 | `/admin` | `admin/index.html` | 200 | nu (meta + X-Robots-Tag) | title/H1, fără sitemap | Panou client-side public; nu este o zonă autentificată server-side. Necesită review separat de securitate/operare. |
-| `/google8bbb9999c523a3bd` | `google8bbb9999c523a3bd.html` | 200 | tehnic; header de verificat pe ruta curată | lipsesc canonical/metadata/schema de pagină | Fișier de verificare; normalizarea globală redirecționează forma .html. |
-| `/partials/global-header` | `partials/global-header.html` | 200 | da (neintenționat) | lipsesc canonical/metadata/schema de pagină | Fișier copiat de build și servit public fără document HTML complet, canonical sau noindex. |
-| `/partials/preferred-source` | `partials/preferred-source.html` | 200 | da (neintenționat) | lipsesc canonical/metadata/schema de pagină | Fișier copiat de build și servit public fără document HTML complet, canonical sau noindex. |
-| `/templates/dr14-final-content` | `templates/dr14-final-content.html` | 200 | da (neintenționat) | lipsesc canonical/metadata/schema de pagină | Fișier copiat de build și servit public fără document HTML complet, canonical sau noindex. |
-| `/templates/dr18-final-content` | `templates/dr18-final-content.html` | 200 | da (neintenționat) | lipsesc canonical/metadata/schema de pagină | Fișier copiat de build și servit public fără document HTML complet, canonical sau noindex. |
+| `/google8bbb9999c523a3bd` | `google8bbb9999c523a3bd.html` | 200 | tehnic | lipsesc canonical/metadata/schema de pagină | Fișier de verificare; normalizarea redirecționează forma .html. |
+| `/partials/global-header` | `partials/global-header.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/partials/preferred-source` | `partials/preferred-source.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/templates/dr14-final-content` | `templates/dr14-final-content.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/templates/dr18-final-content` | `templates/dr18-final-content.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/templates/regional-adr-editorial` | `templates/regional-adr-editorial.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/tools/chrome-extension/popup` | `tools/chrome-extension/popup.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
+| `/tools/chrome-extension/privacy` | `tools/chrome-extension/privacy.html` | 404 | nu | lipsesc canonical/metadata/schema de pagină | Fișier de generare sau instrument intern, exclus din pachetul Cloudflare. |
 
 ## Endpointuri și fișiere publice non-page
 
@@ -516,7 +519,7 @@ Activele CSS/JS/imagini nu sunt enumerate individual; tabelul include endpointur
 - Homepage/catalog: **16** programe configurate pe homepage, **26** listate și **16** bannere active.
 - Bannere fără program: **0**; programe listate fără banner: **0**.
 - Suprafețe publice servite dar intenționat în afara sitemap-ului: redirecturile, `/404`, `/admin`, endpointurile tehnice și fișierele non-page.
-- Suprafețe HTML publice neintenționat indexabile și fără canonical: `/partials/global-header`, `/templates/dr14-final-content`, `/templates/dr18-final-content`. Acestea provin din politica de copiere a build-ului, nu din router sau sitemap.
+- Fragmentele din `/partials/` și `/templates/` sunt excluse din pachetul public.
 
 ## Verificare live
 
@@ -525,7 +528,7 @@ Nu s-a executat verificarea live în această regenerare.
 ## Probleme și priorități rămase (fără remediere în Task 01)
 
 - **P0 existent:** `/contact` păstrează inconsistența de stare legală, iar Clarity nu are un gate de consent identificabil (`T00-003`, `T00-004`).
-- **P1:** cele trei fragmente `/partials/*` și `/templates/*` sunt HTML 200 indexabil, fără canonical/noindex și fără rol de pagină publică. Politica build trebuie să le excludă sau să le protejeze într-un task separat.
+- Pachetul Cloudflare exclude fișierele de generare din `/partials/` și `/templates/`.
 - **P1:** registry-ul de pagini conține definiții pentru rute care sunt acum 301; trebuie consolidat fără pierderea URL equity.
 - `/gdpr` și variantele sale răspund 301 direct către politica de confidențialitate.
 - **P1 existent:** fișierele fizice duplicate și listele de precedență canonical rămân surse paralele (`T00-007`, `T00-008`).
