@@ -76,7 +76,8 @@
   vertical-align: top;
 }
 
-.editorial-cluster__table thead th {
+.editorial-cluster .editorial-cluster__table thead th {
+  color: #18243a;
   background: var(--color-surface-muted, #f5f1e8);
 }
 

@@ -10,7 +10,7 @@ const { loadPageHints } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "editorial-clusters.json");
-const CSS_HREF = "/assets/editorial-clusters.css?v=20260721-1";
+const CSS_HREF = "/assets/editorial-clusters.css?v=20261126-1";
 const CHECK_ONLY = process.argv.includes("--check");
 const PAGE_HINTS = loadPageHints(ROOT);
 const TARGET_ROUTE = process.argv.find((value) => value.startsWith("--route="))?.slice("--route=".length) || "";
