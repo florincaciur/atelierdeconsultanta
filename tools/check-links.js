@@ -253,6 +253,7 @@ function validateSpecialLinks(inventory, root, externalPolicy) {
 function validateExternalPolicy(inventory, policy) {
   const errors = [];
   const exact = new Set((policy.allowedExactHosts || []).map((host) => host.toLowerCase()));
+  const officialSourceUrls = new Set(policy.officialSourceUrls || []);
   const hostAllowed = (host) => exact.has(host) || (policy.allowedHostSuffixes || []).some((suffix) => host.endsWith(suffix));
   for (const record of inventory.records.values()) {
     const url = new URL(record.url);
@@ -260,7 +261,7 @@ function validateExternalPolicy(inventory, policy) {
       (occurrence) => occurrence.route && !(occurrence.roles || []).includes("schema")
     );
     if (publicOccurrences.length && url.protocol !== "https:") errors.push(`link public extern fără HTTPS: ${record.url}`);
-    if (publicOccurrences.length && !hostAllowed(url.hostname.toLowerCase())) errors.push(`domeniu public extern neaprobat: ${url.hostname}`);
+    if (publicOccurrences.length && !hostAllowed(url.hostname.toLowerCase()) && !officialSourceUrls.has(url.origin + url.pathname + url.search)) errors.push(`domeniu public extern neaprobat: ${url.hostname}`);
     if (record.official && url.protocol !== "https:") errors.push(`sursă oficială fără HTTPS: ${record.url}`);
   }
   return errors;
