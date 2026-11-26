@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cp = require("child_process");
 const cheerio = require("cheerio");
+const { fileForRoute } = require("./structured-data-utils");
 const {
   DOCUMENT_CATEGORIES,
   classificationCounts,
@@ -71,9 +72,7 @@ function htmlFileForRoute(root, route) {
   if (!clean) return "index.html";
   if (decodedRoute.endsWith("/")) return `${clean}index.html`;
   if (path.posix.extname(clean)) return clean;
-  const directoryIndex = `${clean}/index.html`;
-  if (fs.existsSync(path.join(root, directoryIndex))) return directoryIndex;
-  return `${clean}.html`;
+  return toPosix(path.relative(root, fileForRoute(root, encodeURI(decodedRoute))));
 }
 
 function sourceUrlForFile(sourceFile) {

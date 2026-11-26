@@ -474,9 +474,15 @@
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "sourceVersion": "Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente",
       "nextReviewAt": "2027-01-15",
-      "lastMeaningfulUpdate": "2026-11-25",
+      "lastMeaningfulUpdate": "2026-11-26",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Citirea contorului AFIR și diferența dintre termenul planificat și închiderea efectivă pe componente.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-25",
           "summary": "Dovezile și punctajul pe componente.",
@@ -696,9 +702,15 @@
       "officialSourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "sourceVersion": "Cerere DR-14 v1.1/25.08.2026, clarificare 21.08.2026 și comunicat AFIR de prelungire din 30.10.2026",
       "nextReviewAt": "2027-01-15",
-      "lastMeaningfulUpdate": "2026-11-25",
+      "lastMeaningfulUpdate": "2026-11-26",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Contorul AFIR și referința pentru termenul prelungit, lângă informațiile despre sesiune.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-25",
           "summary": "Închiderea sesiunii și dovezile pentru grilă.",
@@ -1008,9 +1020,15 @@
       "officialSourceUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
       "sourceVersion": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
       "nextReviewAt": "2027-01-15",
-      "lastMeaningfulUpdate": "2026-11-25",
+      "lastMeaningfulUpdate": "2026-11-26",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Ediția 2024 și ordinea de evaluare în MINIMIS, cu o explicație separată pentru 2026.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-25",
           "summary": "Ediția 2024 și ordinea la evaluare.",

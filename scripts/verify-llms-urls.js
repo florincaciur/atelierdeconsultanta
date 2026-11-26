@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const { sitemapUrls } = require("../tools/sitemap-utils");
+const { fileForRoute } = require("../tools/structured-data-utils");
 const { isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -11,6 +12,8 @@ const SITE = "https://atelierdeconsultanta.ro";
 const REQUIRED_PATHS = [
   "/dr12-afir",
   "/dr14",
+  "/sme-eco-tech",
+  "/femeia-antreprenor-2026",
   "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/afir-autoconsum-agroalimentar",
   "/pro-infra",
@@ -22,10 +25,6 @@ const REQUIRED_PATHS = [
   "/metodologie-verificare-eligibilitate",
   "/surse-oficiale-fonduri-europene"
 ];
-
-function localFile(pathname) {
-  return pathname === "/" ? path.join(ROOT, "index.html") : path.join(ROOT, pathname.slice(1), "index.html");
-}
 
 function redirectSources() {
   const sources = new Set();
@@ -79,7 +78,7 @@ function main() {
     if (unique.has(canonical)) errors.push(`URL duplicat în llms.txt: ${canonical}`);
     unique.add(canonical);
 
-    const file = localFile(pathname);
+    const file = fileForRoute(ROOT, pathname);
     if (!fs.existsSync(file)) { errors.push(`Lipsește pagina locală pentru ${canonical}`); continue; }
     const html = fs.readFileSync(file, "utf8");
     const canonicalMatch = html.match(/<link\b[^>]*rel=["'][^"']*canonical[^"']*["'][^>]*href=["']([^"']+)["']/i)

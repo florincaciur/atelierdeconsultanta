@@ -122,9 +122,9 @@ function validateLlms(actualSet) {
   return errors;
 }
 
-function validateLastmodDistribution(entries, threshold) {
+function validateLastmodDistribution(entries, threshold, evidencedLastmods = new Map()) {
   const counts = new Map();
-  for (const entry of entries.filter((item) => item.lastmod)) counts.set(entry.lastmod, (counts.get(entry.lastmod) || 0) + 1);
+  for (const entry of entries.filter((item) => item.lastmod && evidencedLastmods.get(item.url) !== item.lastmod)) counts.set(entry.lastmod, (counts.get(entry.lastmod) || 0) + 1);
   return [...counts.entries()]
     .filter(([, count]) => count >= threshold)
     .map(([date, count]) => `${count} URLs share lastmod ${date}; probable global build/deploy stamp`);
@@ -173,7 +173,8 @@ function validateLocal() {
     }
   }
 
-  errors.push(...validateLastmodDistribution(parsed.entries, policy.suspiciousSharedLastmodThreshold));
+  const evidencedLastmods = new Map(state.entries.filter((entry) => entry.lastmod).map((entry) => [entry.url, entry.lastmod]));
+  errors.push(...validateLastmodDistribution(parsed.entries, policy.suspiciousSharedLastmodThreshold, evidencedLastmods));
   errors.push(...validateRobots(actualUrls));
   errors.push(...validateLlms(actualSet));
   for (const report of ["reports/sitemap-inventory.csv", "reports/sitemap-inventory.md"]) {

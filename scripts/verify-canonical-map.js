@@ -118,6 +118,7 @@ function walkHtml(directory = ROOT, files = []) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     if (entry.isDirectory() && EXCLUDED_DIRS.has(entry.name)) continue;
     const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory() && toPosix(path.relative(ROOT, fullPath)) === "tools/chrome-extension") continue;
     if (entry.isDirectory()) walkHtml(fullPath, files);
     else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) files.push(fullPath);
   }

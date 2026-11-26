@@ -80,4 +80,8 @@ assert.equal(
   "CI guard must reject a build-wide shared lastmod stamp"
 );
 
+const evidencedBatch = new Map(globalStampFixture.map(entry => [entry.url, entry.lastmod]));
+assert.deepEqual(validateLastmodDistribution(globalStampFixture, policy.suspiciousSharedLastmodThreshold, evidencedBatch), [],
+  "The same date is valid when each URL has an independently verified editorial change");
+
 console.log(`Sitemap contract passed: ${parsed.entries.length} URLs, ${parsed.entries.filter((entry) => entry.lastmod).length} verified lastmod values.`);

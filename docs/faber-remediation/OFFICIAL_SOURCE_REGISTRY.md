@@ -17,11 +17,11 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|---|---|---|
 | `program-regional-nord-est` | Autoritatea de Management pentru Programul Regional Nord-Est | `UNCONFIRMED` | 2026-08-18 | 2026-11-03 |
 | `fonduri-regionale` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-11-25 | 2026-11-10 |
-| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CLOSED` | 2026-11-25 | 2026-11-25 |
-| `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CLOSED` | 2026-11-25 | 2026-11-25 |
+| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CLOSED` | 2026-11-26 | 2026-11-25 |
+| `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CLOSED` | 2026-11-26 | 2026-11-25 |
 | `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CLOSED` | 2026-11-25 | 2026-11-25 |
 | `start-up-nation` | Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului | `CLOSED` | 2026-11-25 | 2026-11-25 |
-| `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-11-25 | 2026-11-25 |
+| `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-11-26 | 2026-11-25 |
 | `digitalizare-imm` | Ministerul Investițiilor și Proiectelor Europene | `CLOSED` | 2026-11-25 | 2026-11-10 |
 | `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `CLOSED` | 2026-11-25 | 2026-11-10 |
 | `fondul-modernizare-autoconsum` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-11-25 | 2026-11-25 |
@@ -175,7 +175,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/)<br>[Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf)<br>[OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/)<br>[Anunț AFIR: sesiunea DR-12, 6 octombrie–2 decembrie 2026](https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/)<br>[Contorul AFIR al sesiunilor active](https://depunerepspac.afir.ro/Sesiune/Lista)<br>[AFIR: fonduri epuizate pentru Alte sectoare](https://www.afir.ro/api/file?filename=CP+Epuizare+DR+12+Comp.+ALTE+SECTOARE+11.11.26&filetype=pdf&url=%2Fmedia%2F42bnwq11%2Fcp_epuizare_dr-12_comp-alte-sectoare_111126.pdf) |
-| Latest official update | 2026-11-25 — [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
+| Latest official update | 2026-11-26 — [Ghid DR-12, Ediția I, Revizia 0, OMADR 268/17.09.2026, și contorul AFIR: fonduri epuizate la ambele componente](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
 | verifiedAt | 2026-11-25 |
 | Pagină oficială program/apel | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-11-25) |
 | Ghid | [Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-11-24) |
@@ -223,7 +223,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina AFIR pentru sesiuni de primire proiecte](https://depunerepspac.afir.ro/Sesiune/Lista)<br>[Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/)<br>[AFIR: prelungirea sesiunilor DR-14 și DR-18 până la 16 noiembrie](https://www.afir.ro/comunicate/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/)<br>[AFIR: comunicatul de prelungire, copie oficială](https://afirportalcmsprod.azurewebsites.net/comunicate/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/)<br>[AFIR: fonduri epuizate la Achiziții simple](https://afirportalcmsprod.azurewebsites.net/comunicate/fondurile-alocate-interventiei-dr-14-pentru-componenta-achizitii-simple-au-fost-epuizate/) |
-| Latest official update | 2026-11-25 — [Cerere DR-14 v1.1/25.08.2026, clarificare 21.08.2026 și comunicat AFIR de prelungire din 30.10.2026](https://depunerepspac.afir.ro/Sesiune/Lista) |
+| Latest official update | 2026-11-26 — [Cerere DR-14 v1.1/25.08.2026, clarificare 21.08.2026 și comunicat AFIR de prelungire din 30.10.2026](https://depunerepspac.afir.ro/Sesiune/Lista) |
 | verifiedAt | 2026-11-25 |
 | Pagină oficială program/apel | [Pagina AFIR pentru sesiuni de primire proiecte](https://depunerepspac.afir.ro/Sesiune/Lista) (`program`, verificat 2026-11-25) |
 | Ghid | [Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) (`approval:evidence:1`, verificat 2026-11-24) |
@@ -332,12 +332,12 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Chei surse repo | `startup` |
 | Notes | Depunerea persoanelor juridice este închisă. Registrul nu consemnează separat finalizarea întregii proceduri. |
 
-## `femeia-antreprenor` — Femeia Antreprenor 2026 — ediție neconfirmată
+## `femeia-antreprenor` — Femeia Antreprenor: evaluarea ediției 2024 și stadiul pentru 2026
 
 | Câmp | Valoare auditabilă |
 |---|---|
 | Stable program ID | `femeia-antreprenor` |
-| Denumire oficială | Femeia Antreprenor 2026 — ediție neconfirmată |
+| Denumire oficială | Femeia Antreprenor: evaluarea ediției 2024 și stadiul pentru 2026 |
 | Acronim | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Autoritate | Ministerul Economiei – platforma oficială MINIMIS |
 | Fond / program | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
@@ -367,7 +367,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
-| Latest official update | 2026-11-25 — [Femeia Antreprenor 2024 – ordinea finală la evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
+| Latest official update | 2026-11-26 — [Femeia Antreprenor 2024 – ordinea finală la evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
 | verifiedAt | 2026-11-25 |
 | Pagină oficială program/apel | [Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) (`program`, verificat 2026-11-25) |
 | Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |

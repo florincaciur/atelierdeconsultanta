@@ -634,6 +634,22 @@
     "verifiedAt": "2026-11-25",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
+  "sme-eco-tech-termen": {
+    "documentType": "anunț de prelungire a înscrierilor",
+    "programIds": [
+      "sme-eco-tech"
+    ],
+    "name": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
+    "title": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
+    "institution": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+    "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
+    "accessedAt": "2026-11-25",
+    "verifiedAt": "2026-11-25",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
+    "isPrimaryFor": "sme-eco-tech",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
   "sme-eco-tech-procedura": {
     "name": "Procedura SME Eco-Tech, aprobată prin Ordinul nr. 1.392/2025, în forma consolidată",
     "title": "Procedura SME Eco-Tech, aprobată prin Ordinul nr. 1.392/2025, în forma consolidată",

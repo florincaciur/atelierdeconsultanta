@@ -9,6 +9,7 @@ const {
   discoverHtmlDocuments
 } = require("./site-document-classifier");
 const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
+const { fileForRoute } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -111,7 +112,7 @@ function fileForPath(pathname) {
   } else if (path.posix.extname(clean)) {
     candidates.push(clean);
   } else {
-    candidates.push(path.posix.join(clean, "index.html"), `${clean}.html`);
+    candidates.push(toPosix(path.relative(ROOT, fileForRoute(ROOT, pathname))));
   }
   return candidates.find((candidate) => fs.existsSync(path.join(ROOT, candidate))) || "";
 }

@@ -354,16 +354,19 @@ function syncLlmsText(source, programs) {
     const escaped = `https://atelierdeconsultanta.ro${program.pageUrl}`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     output = output.replace(new RegExp(`^[-*] [^\\r\\n]*${escaped}(?=[)\\s]|$)[^\\r\\n]*(?:\\r?\\n  [^\\r\\n]*)?\\r?\\n?`, "gm"), "");
   }
-    const entries = programs
-      .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
-    .map((program) => `- [${program.shortName}](https://atelierdeconsultanta.ro${program.pageUrl})\n  ${program.shortName} — ${program.statusLabel}. ${program.editorialDisclaimer || ""}`)
+  const priorityRoutes = ["/sme-eco-tech", "/dr12-afir", "/dr14", "/femeia-antreprenor-2026"];
+  const publicPrograms = programs.filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget);
+  const priorityPrograms = priorityRoutes.map((route) => publicPrograms.find((program) => program.pageUrl === route)).filter(Boolean);
+  const entries = [...priorityPrograms, ...publicPrograms.filter((program) => !priorityRoutes.includes(program.pageUrl))]
+    .map((program) => `- [${program.shortName}](https://atelierdeconsultanta.ro${program.pageUrl})\n  ${program.statusLabel}. ${program.editorialDisclaimer || ""}`.trimEnd())
     .join("\n\n");
-    const latest = programs
-      .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
-      .reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
-  output = output.replace(/^Ultima actualizare:\s*\d{4}-\d{2}-\d{2}\s*$/mu, `Ultima actualizare: ${latest}`);
-  const block = `${markerStart}\n## Guvernanță factuală a programelor\n\n- Sursa unică de adevăr: ${REGISTRY_REF}.\n- Statusurile și valorile nu sunt deduse din URL-uri sau din texte editoriale locale.\n- Înregistrările pending_validation sunt excluse din suprafețele publice.\n- Ultima verificare din registrul public: ${latest}\n\n${entries}\n${markerEnd}`;
-  return `${output}\n\n${block}\n`;
+  const latest = publicPrograms.reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
+  output = output.replace(/^Ultima actualizare:[ \t]*\d{4}-\d{2}-\d{2}[ \t]*$/mu, `Ultima actualizare: ${latest}`);
+  const block = `${markerStart}\n## Fișele programelor de finanțare\n\nUltima verificare din registrul public: ${latest}\n\n${entries}\n${markerEnd}`;
+  output = output.replace(/\r\n/g, "\n").replace(/\n{3,}/g, "\n\n");
+  const position = output.indexOf("## Încredere și metodologie");
+  if (position === -1) return `${output}\n\n${block}\n`;
+  return `${output.slice(0, position).trimEnd()}\n\n${block}\n\n${output.slice(position)}\n`;
 }
 
 function replaceTagAttribute(tag, attribute, value) {
