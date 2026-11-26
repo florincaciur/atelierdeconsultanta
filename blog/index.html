@@ -733,6 +733,7 @@
 <!-- BREADCRUMB_END -->
 
 <!-- ========================= HUB SECTION ========================= -->
+  <main id="main-content" tabindex="-1">
   <div id="hub-section">
 
     <div class="hub-hero">
@@ -971,7 +972,7 @@
   </div>
 
   <!-- ========================= ARTICLE VIEW ========================= -->
-  <main id="main-content" style="display:none" tabindex="-1">
+  <div id="blog-post" style="display:none">
     <div class="post-hero">
       <div class="post-category" id="post-category">Ghid</div>
       <div class="post-icon" id="post-icon">•</div>
@@ -1050,6 +1051,7 @@
   </ul>
   </section>
 
+  </div>
   </main>
 
   <!-- ARTICOLE SIMILARE -->
@@ -1096,7 +1098,7 @@
 
     const hubEl       = document.getElementById('hub-section');
     const loadingEl   = document.getElementById('loading-state');
-    const mainEl      = document.getElementById('main-content');
+    const postEl      = document.getElementById('blog-post');
     const notFoundEl  = document.getElementById('not-found-state');
     const relatedEl   = document.getElementById('related-section');
 
@@ -1218,7 +1220,7 @@
     }
 
     loadingEl.style.display = 'none';
-    mainEl.style.display    = 'block';
+    postEl.style.display    = 'block';
 
   })();
 

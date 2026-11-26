@@ -118,7 +118,7 @@ function enhanceRegion(region, pageTitle, usedIds) {
 
   output = output.replace(/<h2\b[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2\b|$)/gi, (full, title, body) => {
     const label = stripMarkup(title);
-    if (!isSecondaryHeading(label)) return full;
+    if (!isSecondaryHeading(label) || /^\s*<\//u.test(body)) return full;
     return `<details class="long-form-secondary-detail long-form-secondary-section"><summary>${title}</summary><div class="long-form-secondary-detail__body">${body.trim()}</div></details>`;
   });
 

@@ -78,8 +78,22 @@ try {
         await page.evaluate(async () => {
           document.documentElement.style.scrollBehavior = "auto";
           for (const node of document.querySelectorAll("[data-site-reveal]")) {
+            const rect = node.getBoundingClientRect();
+            if (!rect.width || !rect.height || node.classList.contains("is-visible")) continue;
             node.scrollIntoView({ block: "center", behavior: "instant" });
-            await new Promise((resolve) => window.setTimeout(resolve, 50));
+            await new Promise((resolve) => {
+              const observer = new MutationObserver(() => {
+                if (node.classList.contains("is-visible")) finish();
+              });
+              const timer = window.setTimeout(finish, 1000);
+              function finish() {
+                observer.disconnect();
+                window.clearTimeout(timer);
+                resolve();
+              }
+              observer.observe(node, { attributes: true, attributeFilter: ["class"] });
+              if (node.classList.contains("is-visible")) finish();
+            });
           }
           window.scrollTo({ top: 0, behavior: "instant" });
           await new Promise((resolve) => window.setTimeout(resolve, 50));

@@ -392,7 +392,7 @@ body[data-program-id="dr18-afir"] .aeo-question-set { grid-template-columns: min
   .dr14-facts, .dr14-so-grid, .dr14-eligibility-grid, .dr14-faq { grid-template-columns: 1fr; }
   .dr18-score-grid { grid-template-columns: 1fr; }
   .dr14-facts article + article { border-left: 0; border-top: 1px solid var(--dr14-line); }
-  .dr14-tabs__list, .dr14-score__switcher { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dr14-tabs__list, .dr14-score__switcher { grid-template-columns: repeat(auto-fit, minmax(min(100%, 7em), 1fr)); }
   .dr14-score { padding: .75rem; }
   .dr14-score__body { gap: 1rem; padding: 1rem 0 0; }
   .dr14-score__criterion { grid-template-columns: minmax(0, 1fr) auto; padding: .85rem; }
