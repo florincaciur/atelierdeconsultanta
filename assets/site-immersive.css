@@ -105,6 +105,13 @@ body[data-site-immersive]:not(.page-family-home) main > :is(section, article) > 
 :where(body[data-site-immersive]:not(.page-family-home) [id]) { scroll-margin-top: 5.5rem; }
 body[data-site-immersive] :where(h1, h2, h3, h4, .footer-contact-direct a, a[href^='mailto:']) { overflow-wrap: anywhere; }
 
+body.page-family-home #footer .footer-heading {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: .03em;
+  overflow-wrap: normal;
+}
+
 body[data-site-immersive] :is(footer, .footer) a,
 body[data-site-immersive] .editorial-governance__byline a {
   text-decoration-line: underline;
