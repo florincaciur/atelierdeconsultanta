@@ -22,7 +22,7 @@ const expected = {
     links: ["/fonduri-europene-nord-est", "/por-adr-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"]
   },
   "/fonduri-europene-nord-est": {
-    title: "Fonduri europene Nord-Est: programe regionale, AFIR și IMM | FABER",
+    title: "Fonduri europene Nord-Est: programe pentru IMM și ferme",
     h1: "Fonduri europene în regiunea Nord-Est",
     intro: /după județ.*tipul beneficiarului.*programul activ/i,
     links: ["/fonduri-regionale", "/por-adr-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"]

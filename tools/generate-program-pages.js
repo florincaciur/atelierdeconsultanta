@@ -264,7 +264,7 @@ const DESIGN_FAMILY_PROFILES = {
     secondary: "Vezi sursa oficiala"
   },
   cluster: {
-    badge: "FABER | resursa | actualizare",
+    badge: "",
     icon: "ph-duotone ph-info",
     image: "/assets/hero/hero-business.webp",
     cards: ["Program", "Solicitant", "Documente", "Riscuri"],
@@ -272,7 +272,7 @@ const DESIGN_FAMILY_PROFILES = {
     secondary: "Vezi documentele"
   },
   service: {
-    badge: "Serviciu FABER | proces | livrabile",
+    badge: "",
     icon: "ph-duotone ph-magnifying-glass",
     image: "/assets/hero/hero-business.webp",
     cards: ["Verificare", "Strategie", "Dosar", "Clarificari"],
@@ -280,7 +280,7 @@ const DESIGN_FAMILY_PROFILES = {
     secondary: "Vezi documentele"
   },
   editorial: {
-    badge: "Ghid editorial | actualizat | surse citate",
+    badge: "",
     icon: "ph-duotone ph-file-text",
     image: "/assets/hero/hero-business.webp",
     cards: ["Ce trebuie să știi", "Ce verifici", "Greșeli", "Pași"],
@@ -288,7 +288,7 @@ const DESIGN_FAMILY_PROFILES = {
     secondary: "Citeste ghidul"
   },
   trust: {
-    badge: "Dovada sociala | caz anonimizat | rezultat",
+    badge: "",
     icon: "ph-duotone ph-bank",
     image: "/assets/hero/hero-business.webp",
     cards: ["Beneficiar", "Problema", "Interventie", "Rezultat"],
@@ -304,7 +304,7 @@ const DESIGN_FAMILY_PROFILES = {
     secondary: "Vezi metodologia"
   },
   generic: {
-    badge: "FABER | resursa | actualizare",
+    badge: "",
     icon: "ph-duotone ph-info",
     image: "/assets/hero/hero-business.webp",
     cards: ["Context", "Verificare", "Resurse", "Urmator pas"],
@@ -414,7 +414,7 @@ function heroIconFor(page) {
 }
 
 function heroBadgeFor(page) {
-  return page.heroBadge || designProfileFor(page).badge || page.category;
+  return page.heroBadge ?? designProfileFor(page).badge ?? page.category;
 }
 
 function guideSourceForPage(page) {
@@ -2874,7 +2874,7 @@ function pageHtml(page, config) {
       })
     : `<header ${heroAttrs(page)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
-    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>
+    ${heroBadgeFor(page) ? `<span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>` : ""}
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
     <div class="hero-actions">

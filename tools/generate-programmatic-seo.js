@@ -107,12 +107,13 @@ function heroBadgeForRoute(route, category = "") {
   if (family === "digital") return "PNRR/MIPE | digitalizare | ghid verificat";
   if (family === "afir") return "AFIR | status apel | verificare documente";
   if (family === "energy") return "Energie | autoconsum | avize";
-  if (family === "service") return "Serviciu FABER | proces | livrabile";
-  if (family === "editorial") return "Ghid editorial | actualizat | surse citate";
-  return category || "FABER | resursa | actualizare";
+  if (family === "service") return "";
+  if (family === "editorial") return "";
+  return category;
 }
 
 function renderHeroSummary({ route, category, summary }) {
+  if (route.startsWith("/intrebari/")) return "";
   const family = designFamilyForRoute(route, category);
   const items = family === "caen"
     ? [["Cod", route.split("/").filter(Boolean).pop().slice(0, 4)], ["Status", "depinde de apelul activ"], ["Documente", "CAEN, buget, spatiu"], ["Risc", "program incompatibil"]]
@@ -277,7 +278,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
   ${renderBreadcrumb(route, h1)}
   <header ${heroAttrs(route, category)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconForRoute(route, category))}"></i></span>
-    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeForRoute(route, category))}</span>
+    ${heroBadgeForRoute(route, category) ? `<span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeForRoute(route, category))}</span>` : ""}
     <h1>${esc(h1)}</h1>
     <p>${esc(description)}</p>
     <div class="hero-actions">
@@ -288,7 +289,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
   </header>
   <main class="container">
     <article class="panel">
-      <h2>Ce trebuie să știi</h2>
+      ${route.startsWith("/intrebari/") ? "" : "<h2>Ce trebuie să știi</h2>"}
       <p class="intro">${esc(summary)}</p>
       ${body}
       <h2>Intrebari frecvente</h2>
@@ -340,7 +341,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
 
 function caenPage(item) {
   const route = `/fonduri-europene-caen/${item.code}-${item.slug}`;
-  const title = `Fonduri europene pentru CAEN ${item.code} - ${item.label}`;
+  const title = item.title || `Fonduri europene pentru CAEN ${item.code} - ${item.label}`;
   const description = `Ghid pentru CAEN ${item.code}: programe posibile, investitii eligibile, documente, punctaj si checklist pentru ${item.label}.`;
   const faq = configuredFaq(item, [
     [`Pot obtine fonduri europene pentru CAEN ${item.code}?`, `Da, daca activitatea ${item.label} este eligibila in apelul activ si solicitantul indeplineste conditiile programului.`],
@@ -385,7 +386,7 @@ function caenPage(item) {
 
 function localPage(item, consulting) {
   const route = consulting ? `/consultanta-fonduri-europene-${item.slug}` : `/fonduri-europene-${item.slug}`;
-  const title = consulting ? `Consultanta fonduri europene ${item.city}` : `Fonduri europene ${item.county}`;
+  const title = consulting ? `Consultanta fonduri europene ${item.city}` : (item.fundingTitle || `Fonduri europene ${item.county}`);
   const description = consulting
     ? `Consultanta pentru fonduri europene in ${item.city}: programe active, documente, eligibilitate, buget si pregatirea dosarului.`
     : `Ghid fonduri europene pentru ${item.county}: programe active, regiune, IMM-uri, agricultura, digitalizare, energie si documente.`;
@@ -538,11 +539,8 @@ function regionalPage(item) {
 
 function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
-  const title = `Raspuns rapid: ${item.question}`;
-  const answer = publicText(item.answer);
-  const description = answer.length <= 155
-    ? answer
-    : `${answer.slice(0, 152).replace(/\s+\S*$/u, "").trim()}…`;
+  const title = publicText(item.question);
+  const description = publicText(item.description || item.answer);
   const faq = configuredFaq(item, [
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],
@@ -550,21 +548,8 @@ function faqPage(item) {
     ["Cum pot primi analiza pe cazul meu?", "Trimite datele proiectului prin pagina de contact pentru o verificare initiala."],
     ["Cand trebuie actualizat raspunsul?", "Raspunsul trebuie actualizat cand se publica un ghid nou, apar clarificari oficiale sau documentele solicitantului schimba incadrarea."]
   ]);
-  let body = `
-      <h2>Ce trebuie să știi</h2>
-      <p>${esc(item.answer)}</p>
-      <h2>Ce inseamna in practica</h2>
-      <p>Intrebarea trebuie verificata in contextul programului, solicitantului si investitiei. Aceeasi regula poate avea efecte diferite pentru o firma, o ferma sau o institutie publica.</p>
-      <h2>Checklist de verificare</h2>
-      <ul>
-        <li>identifica programul si apelul activ;</li>
-        <li>verifica solicitantul si documentele;</li>
-        <li>confirma cheltuielile eligibile si neeligibile;</li>
-        <li>calculeaza cofinantarea si calendarul;</li>
-        <li>cere o analiza daca exista incertitudini.</li>
-      </ul>`;
-  body = appendConfiguredBody(body, item);
-  return { route, content: html({ title, description, h1: title, route, category: "Intrebare frecventa", summary: item.answer, body, faq, related: item.related }) };
+  const body = configuredBody(item);
+  return { route, content: html({ title, description, h1: title, route, category: "Întrebare frecventă", summary: item.answer, body, faq, related: item.related }) };
 }
 
 function updateSitemap(routes, updatedAt, excludedRoutes = []) {

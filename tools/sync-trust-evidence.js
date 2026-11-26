@@ -136,7 +136,7 @@ function syncCases() {
   let html = read(CASES_FILE);
   html = syncEditorialDate(html, CASES_FILE, policy.editorialModifiedAt, updatedLabel);
   const replacements = [
-    ["Studii de caz anonimizate: proiecte pregătite pentru fonduri europene", "Studii de caz fonduri europene: metodologia și criteriile FABER"],
+    ["Studii de caz anonimizate: proiecte pregătite pentru fonduri europene", "Studii de caz FABER: documente și criterii de publicare"],
     ["Studii de caz anonimizate despre proiecte pregătite pentru fonduri europene: fermă AFIR, Start-Up Nation, digitalizare IMM și program regional.", "Cum verifică FABER proiectele, rezultatele și acordul beneficiarului înainte de a publica un studiu de caz sau un testimonial."],
     ["Exemple anonimizate care arată metoda de analiza: eligibilitate, documente, cofinanțare, CAEN, punctaj și riscuri.", "Criterii pentru studii de caz și testimoniale reale, publicate numai cu dovezi și permisiune."],
     ["<span class=\"eyebrow\">Studii de caz anonimizate</span>", ""],

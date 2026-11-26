@@ -81,7 +81,7 @@ function designProfileFor(page) {
     startup: ["Antreprenoriat | ghid | status oficial", "ph-duotone ph-rocket-launch", ["Eligibilitate", "CAEN", "Buget", "Plan afaceri"]],
     energy: ["Energie | autoconsum | avize", "ph-duotone ph-sun", ["Consum", "Avize", "Capacitate", "Buget"]],
     service: ["Serviciu FABER | proces | livrabile", "ph-duotone ph-magnifying-glass", ["Verificare", "Strategie", "Dosar", "Clarificari"]],
-    editorial: ["Ghid editorial | actualizat | surse citate", "ph-duotone ph-file-text", ["Ce trebuie să știi", "Ce verifici", "Greșeli", "Pași"]],
+    editorial: ["Ghiduri FABER", "ph-duotone ph-file-text", ["Ce trebuie să știi", "Ce verifici", "Greșeli", "Pași"]],
     trust: ["Dovada sociala | caz anonimizat | rezultat", "ph-duotone ph-bank", ["Beneficiar", "Problema", "Interventie", "Rezultat"]],
     cluster: ["FABER | resursa | actualizare", "ph-duotone ph-info", ["Program", "Solicitant", "Documente", "Riscuri"]]
   };
@@ -603,7 +603,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
   ${renderBreadcrumb(page)}
   <header class="hero hero--${esc(family)}" data-design-family="${esc(family)}">
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIcon)}"></i></span>
-    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(designProfileFor(page)[0])}</span>
+    ${family === "editorial" ? "" : `<span class="eyebrow design-badge design-badge--${esc(family)}">${esc(designProfileFor(page)[0])}</span>`}
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.summary)}</p>
     <div class="hero-actions">
