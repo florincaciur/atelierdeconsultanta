@@ -1385,7 +1385,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
 | Clarificări | [Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://legislatie.just.ro/Public/DetaliiDocumentAfis/313400) (`registry:sme-eco-tech-ordin-1241`, verificat 2026-11-09) |
 | Sursă primară în registry-ul operațional | [Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (verificat 2026-11-25) |
-| Chei surse repo | `sme-eco-tech-procedura` |
+| Chei surse repo | `sme-eco-tech-termen`, `sme-eco-tech-procedura` |
 | Notes | Consultă procedura împreună cu modificările din 2026 și verifică disponibilul pe platforma de înscriere. |
 
 ## Jurnalul schimbărilor factuale din reverificare

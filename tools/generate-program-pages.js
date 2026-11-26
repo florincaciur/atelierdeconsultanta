@@ -2852,9 +2852,9 @@ function pageHtml(page, config) {
       : ` data-program-id="${escAttr(factualProgram.id)}" data-publication-state="pending_validation" data-program-registry="config/seo-programs.json#programs"`
     : "";
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
-  const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
+  const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css?v=20261126-1" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
-  const dr14Css = ["dr14", "dr18"].includes(page.slug) ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260818-1" />` : "";
+  const dr14Css = ["dr14", "dr18"].includes(page.slug) ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20261126-1" />` : "";
   const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}${page.slug === "dr12-afir" ? '\n  <link rel="stylesheet" href="/assets/dr12-score.css?v=20261110">' : ""}`;
   const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}${page.slug === "dr12-afir" ? '\n  <script src="/assets/dr12-score.js?v=20260919" defer></script>' : ""}`;

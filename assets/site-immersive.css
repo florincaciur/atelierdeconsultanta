@@ -93,3 +93,25 @@ body[data-site-immersive]:not(.page-family-home) main > :is(section, article) > 
     transition: none !important;
   }
 }
+
+/* Leave room for the fixed navigation when a fragment or focus scrolls into view. */
+:where(body[data-site-immersive]:not(.page-family-home) [id]) { scroll-margin-top: 5.5rem; }
+body[data-site-immersive] :where(h1, h2, h3, h4, .footer-contact-direct a, a[href^='mailto:']) { overflow-wrap: anywhere; }
+
+body[data-site-immersive] :is(footer, .footer) a,
+body[data-site-immersive] .editorial-governance__byline a {
+  text-decoration-line: underline;
+  text-underline-offset: .16em;
+}
+
+body[data-site-immersive] table[tabindex='0']:focus-visible,
+body[data-site-immersive] :is(.table-scroll, .table-wrap)[tabindex='0']:focus-visible {
+  outline: 3px solid var(--site-im-orange);
+  outline-offset: 3px;
+}
+
+body[data-site-immersive] .breadcrumb[data-breadcrumb] a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+}

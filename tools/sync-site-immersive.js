@@ -11,7 +11,7 @@ const { seoSignature } = require("./sync-program-visuals");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const CSS_HREF = "/assets/site-immersive.css?v=20260901-1";
+const CSS_HREF = "/assets/site-immersive.css?v=20261126-1";
 const JS_SRC = "/assets/site-immersive.js?v=20260913-1";
 const HEAD_START = "SITE_IMMERSIVE_HEAD_START";
 const HEAD_END = "SITE_IMMERSIVE_HEAD_END";

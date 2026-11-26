@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "dr12-vs-dr14-expert.json");
 const PROGRAMS_PATH = path.join(ROOT, "config", "seo-programs.json");
 const REPORT_PATH = path.join(ROOT, "reports", "p1-19-dr12-vs-dr14-validari.md");
-const STYLE_HREF = "/assets/dr12-vs-dr14-expert.css?v=20260722-1";
+const STYLE_HREF = "/assets/dr12-vs-dr14-expert.css?v=20261126-1";
 const AEO_START = "<!-- P1_18_AEO_QUESTIONS_START -->";
 const AEO_END = "<!-- P1_18_AEO_QUESTIONS_END -->";
 const TOC_START = "<!-- P1_09_LONG_FORM_TOC_START -->";

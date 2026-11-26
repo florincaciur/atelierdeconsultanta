@@ -1,10 +1,12 @@
 .tool-suite {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   margin: 28px 0;
 }
 
 .tool-panel {
+  min-width: 0;
   border: 1px solid var(--gray-200, #e8edf5);
   border-radius: var(--radius-sm, 8px);
   background: #fff;
@@ -24,6 +26,7 @@
 
 .tool-field {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 6px;
 }
 
@@ -35,6 +38,8 @@
 
 .tool-field input,
 .tool-field select {
+  min-width: 0;
+  max-width: 100%;
   min-height: 42px;
   border: 1px solid var(--gray-200, #e8edf5);
   border-radius: var(--radius-sm, 8px);
@@ -43,6 +48,7 @@
 }
 
 .tool-result {
+  overflow-wrap: anywhere;
   margin-top: 14px;
   border-radius: var(--radius-sm, 8px);
   background: #f8f9fb;
