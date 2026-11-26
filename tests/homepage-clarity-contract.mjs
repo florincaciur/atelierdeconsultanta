@@ -28,7 +28,8 @@ assert.equal(config.reviewedAt, "2026-08-31", "revizia copy-ului homepage trebui
 assert.equal($("#hero.im-hero").attr("data-homepage-revision"), "immersive-20260902-2", "build-ul trebuie să păstreze designul imersiv curent");
 assert.equal($("#hero .im-lead").length, 1, "introducerea imersivă trebuie să rămână compactă");
 assert.equal($("#hero .im-about .im-detail-copy").length, 1, "explicația completă rămâne în HTML și poate fi extinsă");
-assert.match($("#hero .im-lead").text(), /Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar\./u);
+assert.match($("#hero .im-lead").text(), /verifică eligibilitatea și pregătește documentația pentru proiecte cu fonduri europene/u);
+assert.match($("#hero .im-lead").text(), /proiectarea tehnică sau implementarea/u);
 const expectedPrograms = carouselPrograms(loadProgramConfig().programs);
 assert.equal($("[data-program-scene]").length, expectedPrograms.length);
 assert.equal($(".im-method-sculpture .im-slab").length, 5);

@@ -1,7 +1,5 @@
 "use strict";
 
-const { positioning } = require("../config/editorial-terminology.json");
-
 // This presentation layer is called by the existing homepage generator. The
 // program registry, attribution, links and structured data stay authoritative.
 function renderSculpture(className = "") {
@@ -26,7 +24,7 @@ function immersiveHero(hero) {
   result = result.replace('<div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>', '<div class="hero-badge"><span class="dot" aria-hidden="true"></span>Atelierul în care ideile prind contur</div>');
   result = result.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/, (detail) => {
     const expanded = detail.replace('class="hero-subtitle"', 'class="im-detail-copy"').replace(/ data-aeo-(?:primary|direct)-answer=""/g, "");
-    return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină proiecte cu fonduri europene, de la verificarea inițială a eligibilității la documentație și implementare. Fără promisiunea aprobării finanțării. ' + positioning + '</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
+    return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță verifică eligibilitatea și pregătește documentația pentru proiecte cu fonduri europene. Echipa poate sprijini și proiectarea tehnică sau implementarea.</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
   });
   result = result.replace('    </section>', `      <div class="im-hero-bottom"><a href="#homepage-method" class="im-scroll-link"><span class="im-scroll-icon" aria-hidden="true">↓</span> Derulează. Descoperă. Construiește.</a><span>De la întrebare la un plan documentat.</span><span class="im-edition">FABER — 01 / 05</span></div>\n    </section>`);
   result = result.replace('Derulează. Descoperă. Construiește.', 'Vezi etapele proiectului');
