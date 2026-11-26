@@ -83,8 +83,8 @@ function syncHtml(html) {
   }
   for (const [field, value] of [
     ["twitter:card", firstMeta($, "twitter:card") || "summary_large_image"],
-    ["twitter:title", firstMeta($, "twitter:title") || ogTitle],
-    ["twitter:description", firstMeta($, "twitter:description") || ogDescription],
+    ["twitter:title", ogTitle],
+    ["twitter:description", ogDescription],
     ["twitter:image", firstMeta($, "twitter:image") || ogImage],
     ["twitter:image:alt", firstMeta($, "twitter:image:alt") || ogImageAlt]
   ]) head = syncMeta(head, field, "name", value);

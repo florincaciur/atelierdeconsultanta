@@ -133,6 +133,9 @@ function auditRoute(root, route, programs) {
   for (const field of REQUIRED_TWITTER_FIELDS) {
     const value = exactMeta($, `head meta[name='twitter:${field}' i], head meta[property='twitter:${field}' i]`, `twitter:${field}`, errors);
     if (field === "image" && value) auditShareImage(root, value, "twitter:image", errors);
+    if ((field === "title" || field === "description") && value && og[field] && value !== og[field]) {
+      errors.push(`twitter:${field} diferă de og:${field}`);
+    }
   }
 
   const headingLevels = auditHeadings($, errors);

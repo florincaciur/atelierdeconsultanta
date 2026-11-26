@@ -69,24 +69,24 @@
     },
     {
       "route": "/femeia-antreprenor-2026",
-      "primaryIntent": "condițiile și pregătirea dosarului pentru programul național Femeia Antreprenor",
-      "primaryQuery": "Femeia Antreprenor 2026",
+      "primaryIntent": "verificarea poziției dosarului din ediția 2024 și a unei eventuale ediții noi",
+      "primaryQuery": "Femeia Antreprenor 2024",
       "secondaryQueries": [
-        "condiții Femeia Antreprenor",
-        "buget Femeia Antreprenor",
+        "Femeia Antreprenor 2026",
+        "ordine evaluare Femeia Antreprenor",
         "punctaj Femeia Antreprenor"
       ],
-      "title": "Femeia Antreprenor: evaluarea 2024 și stadiul pentru 2026",
-      "description": "Consultă ordinea finală la evaluare pentru ediția 2024, punctajul și numărul RUE în MINIMIS. O ediție 2026 rămâne neconfirmată.",
-      "ogTitle": "Femeia Antreprenor: evaluarea 2024 și stadiul pentru 2026",
-      "ogDescription": "Consultă ordinea finală la evaluare pentru ediția 2024, punctajul și numărul RUE în MINIMIS. O ediție 2026 rămâne neconfirmată.",
+      "title": "Femeia Antreprenor 2024: ordinea finală la evaluare",
+      "description": "Caută în MINIMIS numărul RUE și punctajul din ordinea finală a ediției 2024. O nouă sesiune pentru 2026 rămâne neconfirmată.",
+      "ogTitle": "Femeia Antreprenor 2024: ordinea finală la evaluare",
+      "ogDescription": "Caută în MINIMIS numărul RUE și punctajul din ordinea finală a ediției 2024. O nouă sesiune pentru 2026 rămâne neconfirmată.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       ],
       "factualStatus": "unknown",
       "lastReviewed": "2026-11-25",
-      "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026.",
+      "notes": "MINIMIS publică ordinea finală la evaluare pentru ediția 2024. O ediție nouă trebuie confirmată prin anunțul oficial.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
       "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare"
@@ -102,9 +102,9 @@
         "ghid energie AFIR 2026"
       ],
       "title": "AFIR Autoconsum Agro-Alim 2026: apel în curs de contractare",
-      "description": "Autoconsum Agro-Alim AFIR: apel în curs de contractare, fără depuneri noi. Raport final de selecție peste 1 MW din 3 noiembrie 2026, Ghid V7 și documente.",
+      "description": "Consultă ghidul AFIR V7 pentru autoconsum agroalimentar. Depunerile s-au încheiat, iar raportul din 3 noiembrie privește componenta solară de peste 1 MW.",
       "ogTitle": "AFIR Autoconsum Agro-Alim 2026: apel în curs de contractare",
-      "ogDescription": "Autoconsum Agro-Alim AFIR: apel în curs de contractare, fără depuneri noi. Raport final de selecție peste 1 MW din 3 noiembrie 2026, Ghid V7 și documente.",
+      "ogDescription": "Consultă ghidul AFIR V7 pentru autoconsum agroalimentar. Depunerile s-au încheiat, iar raportul din 3 noiembrie privește componenta solară de peste 1 MW.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/"
@@ -126,9 +126,9 @@
         "investiții microîntreprinderi ADR Nord-Est"
       ],
       "title": "Modernizarea microîntreprinderilor – Apel 2 închis (2026)",
-      "description": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, contribuție de minimum 10%, punctaj și documente pentru evaluare.",
+      "description": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Consultă grila oficială și simulatorul pentru a verifica pragul de 70 de puncte.",
       "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 închis (2026)",
-      "ogDescription": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, contribuție de minimum 10%, punctaj și documente pentru evaluare.",
+      "ogDescription": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Consultă grila oficială și simulatorul pentru a verifica pragul de 70 de puncte.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
