@@ -937,14 +937,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-26",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
       "officialSourceUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
-      "sourceVersion": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
-      "nextReviewAt": "2027-01-09",
-      "lastMeaningfulUpdate": "2026-11-25",
+      "sourceVersion": "Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)",
+      "nextReviewAt": "2027-01-25",
+      "lastMeaningfulUpdate": "2026-11-26",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Actualizate racordarea, durabilitatea și condițiile tehnice conform OMTI 1.161/2026. Adăugate răspunsurile MTI la consultarea Submăsurii 3.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-25",
           "summary": "Accesul privat, public și mixt pe submăsuri.",
@@ -1007,7 +1013,7 @@
         }
       ],
       "datePublished": "DE_VALIDAT_UMAN",
-      "officialSourceUpdatedAt": "2026-09-02"
+      "officialSourceUpdatedAt": "2026-11-18"
     },
     {
       "id": "femeia-antreprenor-2026",
@@ -2311,7 +2317,7 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
@@ -2319,6 +2325,12 @@
       "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "consultare_publica",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Statutul e-DRIVE a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        },
         {
           "date": "2026-11-25",
           "summary": "Verificate la MTI secțiunile de ghiduri și apeluri după închiderea consultării. Actualizate calendarul, statutul, sursele din dreptul regulilor și metadatele.",
@@ -2407,7 +2419,7 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
       "sourceVersion": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
@@ -2415,6 +2427,12 @@
       "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Statutul e-Mobility RO a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        },
         {
           "date": "2026-11-25",
           "summary": "Harta CNAIR și exemplul de amplasament.",
@@ -2707,7 +2725,7 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "officialSourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "officialSourceUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
       "sourceVersion": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
@@ -2715,6 +2733,12 @@
       "lastMeaningfulUpdate": "2026-11-25",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Statutul SME Eco-Tech a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        },
         {
           "date": "2026-11-25",
           "summary": "Verificate procedura consolidată, ordinele și prelungirea înscrierii. Adăugate răspunsuri despre ghid, CAEN, înscriere, grant și credit, cu surse și exemplu de calcul.",

@@ -228,20 +228,20 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "emove": {
-    "name": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
-    "title": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
+    "name": "Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)",
+    "title": "Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)",
     "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
     "documentType": "schemă de ajutor de stat aprobată și modificată",
     "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
-    "accessedAt": "2026-11-10",
-    "note": "Pagina MTI include OMTI 1318/2025 și modificările OMTI 755/2026 și OMTI 821/2026. Depunerea necesită un ghid și un calendar proprii fiecărei submăsuri.",
+    "accessedAt": "2026-11-26",
+    "note": "Pagina MTI include OMTI 1.161/2026. Pentru Submăsura 3 au fost publicate răspunsurile la consultarea proiectului de ghid.",
     "programIds": [
       "e-move-ro"
     ],
     "isPrimaryFor": "e-move-ro",
     "programStatus": "ghid_aprobat_nedeschis",
     "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-10",
+    "verifiedAt": "2026-11-26",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pocidif-21": {
@@ -461,10 +461,10 @@
     "title": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii – DGPET",
     "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
-    "accessedAt": "2026-11-25",
+    "accessedAt": "2026-11-26",
     "programStatus": "consultare_publica",
     "statusLabel": "Proiecte de ghid publicate · calendar de depunere neanunțat",
-    "verifiedAt": "2026-11-25",
+    "verifiedAt": "2026-11-26",
     "isPrimaryFor": "e-drive",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -476,10 +476,10 @@
     "title": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
     "institution": "Ministerul Transporturilor și Infrastructurii – DGPET",
     "url": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
-    "accessedAt": "2026-11-25",
+    "accessedAt": "2026-11-26",
     "programStatus": "apel_deschis",
     "statusLabel": "Submăsura 1 deschisă – depuneri până la 27 noiembrie 2026",
-    "verifiedAt": "2026-11-25",
+    "verifiedAt": "2026-11-26",
     "isPrimaryFor": "e-mobility-ro",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -643,8 +643,8 @@
     "title": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
     "institution": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
     "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
-    "accessedAt": "2026-11-25",
-    "verifiedAt": "2026-11-25",
+    "accessedAt": "2026-11-26",
+    "verifiedAt": "2026-11-26",
     "programStatus": "apel_deschis",
     "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
     "isPrimaryFor": "sme-eco-tech",
@@ -656,12 +656,12 @@
     "institution": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
     "documentType": "procedură aprobată",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/299281",
-    "accessedAt": "2026-11-25",
+    "accessedAt": "2026-11-26",
     "note": "Procedura aprobată prin Ordinul nr. 1.392/2025 se citește împreună cu ordinele de modificare din 2026.",
     "programIds": [
       "sme-eco-tech"
     ],
-    "verifiedAt": "2026-11-25",
+    "verifiedAt": "2026-11-26",
     "programStatus": "apel_deschis",
     "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
     "isPrimaryFor": "sme-eco-tech",

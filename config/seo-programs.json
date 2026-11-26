@@ -2023,13 +2023,13 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "APPROVED_SCHEME",
       "statusScope": "scheme",
-      "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
+      "statusRationale": "OMTI 1.161/2026 modifică schema. MTI a publicat centralizatorul Submăsurii 3 la 25.11.2026 și comunică publicarea ulterioară a ghidului final.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-26",
       "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
       "sourceUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
-      "sourceVersion": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
+      "sourceVersion": "Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
@@ -2052,13 +2052,13 @@
         "ownContribution": "Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
       },
       "pageUrl": "/e-move",
-      "lastMeaningfulUpdate": "2026-11-25",
+      "lastMeaningfulUpdate": "2026-11-26",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Schema e-MOVE RO a fost actualizată în august 2026; depunerea nu este deschisă și nu există un calendar operațional publicat.",
+      "cardSummary": "Schema e-MOVE RO a fost modificată în noiembrie. MTI a publicat răspunsurile la consultarea Submăsurii 3. Calendarul de depunere nu este anunțat.",
       "metaTitle": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
-      "metaDescription": "e-MOVE RO: stații de încărcare, energie regenerabilă și stocare. Schema include OMTI 821/2026; calendarul depunerii proiectelor nu este anunțat.",
+      "metaDescription": "e-MOVE RO: stații de încărcare, producție regenerabilă și stocare. Vezi regulile din OMTI 1.161/2026 și stadiul Submăsurii 3.",
       "editorialDisclaimer": "Calendarul, alocarea și condițiile unei depuneri se confirmă prin documentele oficiale ale fiecărei submăsuri.",
       "eligibleApplicants": [
         "Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; întreprinderile nou-înființate sunt excluse."
@@ -2080,13 +2080,13 @@
           "programPage": [
             {
               "ref": "program",
-              "label": "Schema e-MOVE RO în Portalul Legislativ"
+              "label": "Pagina MTI a schemei e-MOVE RO și ordinele de modificare"
             }
           ],
           "guide": [
             {
-              "ref": "guide:emove",
-              "label": "Ghidul e-MOVE RO publicat spre consultare, referit de sursa oficială"
+              "ref": "registry:emove-ghid-submasura3",
+              "label": "MTI: proiectul de ghid și centralizatorul Submăsurii 3"
             }
           ],
           "annexes": [],
@@ -2098,13 +2098,22 @@
             {
               "ref": "registry:emove-amendment-821-2026",
               "label": "OMTI 821/2026 – modificarea schemei e-MOVE RO"
+            },
+            {
+              "ref": "registry:emove-amendment-1161-2026",
+              "label": "OMTI 1.161/2026 – racordare, durabilitate și condiții tehnice"
             }
           ],
           "sessionAnnouncement": [],
           "corrigenda": [],
-          "clarifications": []
+          "clarifications": [
+            {
+              "ref": "registry:emove-clarificari-submasura3",
+              "label": "MTI: răspunsurile la consultarea Submăsurii 3, 25 noiembrie 2026"
+            }
+          ]
         },
-        "notes": "Pagina MTI a Schemei 5 include OMTI 821/2026. Pagina dedicată ghidului nu publică un calendar curent de depunere; aprobarea schemei nu ține locul anunțului de apel."
+        "notes": "OMTI 1.161/2026 modifică schema. Centralizatorul din 25 noiembrie privește proiectul de ghid pentru Submăsura 3."
       },
       "presentation": {
         "carousel": true,
@@ -2120,7 +2129,7 @@
           "phase": "preparation",
           "beneficiary": "Întreprinderi și alte categorii prevăzute de schemă",
           "counties": "Amplasamentele eligibile din schema e-MOVE RO",
-          "note": "Schema este aprobată și modificată. Un calendar de depunere nu a fost identificat în pagina oficială de apeluri consultată."
+          "note": "Submăsura 3 are centralizatorul răspunsurilor la consultare din 25 noiembrie 2026. MTI va publica separat ghidul final și calendarul depunerii."
         }
       },
       "discovery": {
@@ -2136,8 +2145,8 @@
         ],
         "listed": true
       },
-      "officialSourceUpdatedAt": "2026-09-02",
-      "quickAnswer": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități, prin submăsuri cu reguli distincte. Schema aprobată prin OMTI 1318/2025 include modificările OMTI 755/2026 și OMTI 821/2026. Investiția poate include stații de încărcare și, potrivit submăsurii, producție regenerabilă și stocare. Existența schemei nu deschide depunerea: calendarul, platforma, alocarea și ghidul aplicabil trebuie confirmate prin anunțul apelului. Programul este distinct de e-Mobility RO, al cărui apel pentru Submăsura 1 are un calendar separat."
+      "officialSourceUpdatedAt": "2026-11-18",
+      "quickAnswer": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități. OMTI 1.161/2026 modifică regulile de racordare, durabilitate și investițiile din fiecare submăsură. Pe 25 noiembrie, MTI a publicat răspunsurile la consultarea ghidului Submăsurii 3. Ghidul final al acestei submăsuri și calendarul de depunere rămân în așteptarea publicării."
     },
     {
       "id": "pocidif-21",
@@ -2510,7 +2519,7 @@
       "statusRationale": "Consultarea s-a încheiat la 18 noiembrie 2026. La verificarea din 25 noiembrie, MTI nu publicase ghidurile finale sau calendarul de depunere pentru Măsurile 1 și 2.",
       "statusLabel": "Proiecte de ghid publicate · calendar de depunere neanunțat",
       "publicationState": "public",
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
@@ -2658,7 +2667,7 @@
       "statusRationale": "Anunțul MTI din 26.09.2026 confirmă ghidul aprobat și calendarul Submăsurii 1: 28.09–27.11.2026.",
       "statusLabel": "Submăsura 1 deschisă – depuneri până la 27 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
       "sourceVersion": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
@@ -2722,6 +2731,10 @@
             {
               "ref": "registry:emobility-sm1-guide-2026",
               "label": "Ghidul aprobat al Submăsurii 1 și anexele"
+            },
+            {
+              "ref": "registry:emobility-886-legislatia",
+              "label": "Portal Legislativ: Ghidul Submăsurii 1, aprobat prin OMTI 886/2026"
             }
           ],
           "annexes": [
@@ -2740,6 +2753,10 @@
             {
               "ref": "program",
               "label": "MTI: depuneri 28 septembrie–27 noiembrie 2026"
+            },
+            {
+              "ref": "registry:emobility-904-calendar",
+              "label": "OMTI 904/2026 – calendarul Submăsurii 1"
             }
           ],
           "corrigenda": [],
@@ -3259,7 +3276,7 @@
       "statusRationale": "Ministerul Economiei a prelungit înscrierile până la 30 decembrie 2026, ora 20:00, în limita bugetului.",
       "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
       "publicationState": "public",
-      "verifiedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26",
       "sourceName": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
       "sourceUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
       "sourceVersion": "Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00",
@@ -11562,7 +11579,7 @@
       "faq": [
         [
           "Ce finanțează e-MOVE RO?",
-          "Schema e-MOVE RO aprobată prin OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, vizează infrastructura de încărcare electrică și, potrivit submăsurii, producția regenerabilă și stocarea asociată."
+          "Schema e-MOVE RO aprobată prin OMTI 1318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/2026, vizează infrastructura de încărcare electrică și, potrivit submăsurii, producția regenerabilă și stocarea asociată."
         ],
         [
           "Ce trebuie verificat mai întâi?",
@@ -11574,7 +11591,7 @@
         ],
         [
           "Este obligatorie stocarea?",
-          "Nu trebuie presupus. Stocarea se include doar dacă este permisă, justificată tehnic și legată de proiect."
+          "Stocarea face parte din proiectul integrat pentru Submăsurile 2 și 3. La Submăsura 3, minimum 75% din energia pe care bateria o absoarbe anual trebuie să provină din instalația regenerabilă conectată direct."
         ],
         [
           "Ce riscuri apar la e-MOVE?",
@@ -11639,7 +11656,7 @@
         },
         {
           "title": "Calendarul fiecărei submăsuri",
-          "body": "Schema este aprobată și actualizată prin OMTI 821/2026. Pentru depunere sunt necesare ghidul aplicabil submăsurii, anexele, alocarea și calendarul publicat de MTI. Condițiile unei submăsuri nu se transferă automat celorlalte."
+          "body": "Submăsura 3 are centralizatorul răspunsurilor la consultare din 25 noiembrie 2026. MTI va publica separat ghidul final și calendarul depunerii."
         },
         {
           "title": "Întrebări tehnice înainte de alegerea locatiei",
@@ -11772,7 +11789,7 @@
         "approach": "FABER verifică dreptul asupra locatiei, racordarea, avizele, fluxul de utilizare, ofertele și cofinanțarea înainte de redactare.",
         "result": "Dacă locația sau racordarea nu pot fi dovedite, proiectul se ajustează sau se amana până la clarificarea documentelor."
       },
-      "decisionIntro": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități, prin submăsuri cu reguli distincte. Schema aprobată prin OMTI 1318/2025 include modificările OMTI 755/2026 și OMTI 821/2026. Investiția poate include stații de încărcare și, potrivit submăsurii, producție regenerabilă și stocare. Existența schemei nu deschide depunerea: calendarul, platforma, alocarea și ghidul aplicabil trebuie confirmate prin anunțul apelului. Programul este distinct de e-Mobility RO, al cărui apel pentru Submăsura 1 are un calendar separat.",
+      "decisionIntro": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități. OMTI 1.161/2026 modifică regulile de racordare, durabilitate și investițiile din fiecare submăsură. Pe 25 noiembrie, MTI a publicat răspunsurile la consultarea ghidului Submăsurii 3. Ghidul final al acestei submăsuri și calendarul de depunere rămân în așteptarea publicării.",
       "finalCtaText": "Verifică documentele de amplasament, racordare și operare înainte de dimensionarea bugetului e-MOVE.",
       "heroPrimaryCta": "Verifică eligibilitatea e-MOVE",
       "finalPrimaryCta": "Verifică eligibilitatea e-MOVE",

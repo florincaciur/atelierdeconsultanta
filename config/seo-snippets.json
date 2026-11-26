@@ -171,15 +171,15 @@
         "energie regenerabilă e-MOVE"
       ],
       "title": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
-      "description": "e-MOVE RO: stații de încărcare, energie regenerabilă și stocare. Schema include OMTI 821/2026; calendarul depunerii proiectelor nu este anunțat.",
+      "description": "e-MOVE RO: stații de încărcare, producție regenerabilă și stocare. Vezi regulile din OMTI 1.161/2026 și stadiul Submăsurii 3.",
       "ogTitle": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
-      "ogDescription": "e-MOVE RO: stații de încărcare, energie regenerabilă și stocare. Schema include OMTI 821/2026; calendarul depunerii proiectelor nu este anunțat.",
+      "ogDescription": "e-MOVE RO: stații de încărcare, producție regenerabilă și stocare. Vezi regulile din OMTI 1.161/2026 și stadiul Submăsurii 3.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
       ],
       "factualStatus": "approved",
-      "lastReviewed": "2026-11-10",
+      "lastReviewed": "2026-11-26",
       "notes": "Calendarul, alocarea și condițiile unei depuneri se confirmă prin documentele oficiale ale fiecărei submăsuri.",
       "publicationState": "public",
       "programStatus": "ghid_aprobat_nedeschis",

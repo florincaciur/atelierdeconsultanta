@@ -310,6 +310,46 @@
       "url": "https://afirportalcmsprod.azurewebsites.net/comunicate/stadiu-depuneri-proiecte-energie-stocare-si-autoconsum-beneficiari-publici/",
       "publishedAt": "2026-10-05",
       "verifiedAt": "2026-11-25"
+    },
+    "emove-amendment-1161-2026": {
+      "title": "OMTI 1.161/17.11.2026 – Monitorul Oficial nr. 961/18.11.2026, pp. 15–16",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "ordin de modificare a schemei",
+      "url": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._961_4.pdf",
+      "publishedAt": "2026-11-18",
+      "verifiedAt": "2026-11-26"
+    },
+    "emove-clarificari-submasura3": {
+      "title": "MTI: centralizatorul propunerilor și răspunsurilor privind Submăsura 3",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "centralizator de consultare pentru proiectul de ghid",
+      "url": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-centralizatorului-de-propuneri-si-clarificari-aferent-ghidului-solicitantului-pentru-schema-de-ajutor-de-stat-e-move-ro-submasura-3",
+      "publishedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26"
+    },
+    "emove-ghid-submasura3": {
+      "title": "e-MOVE RO – proiectul de ghid și răspunsurile la consultarea Submăsurii 3",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "proiect de ghid și răspunsuri la consultare",
+      "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5/ghidul-solicitantului",
+      "publishedAt": "2026-11-25",
+      "verifiedAt": "2026-11-26"
+    },
+    "emobility-886-legislatia": {
+      "title": "Ghidul solicitantului e-Mobility RO, Submăsura 1, OMTI 886/21.09.2026",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "ghid final; Monitorul Oficial nr. 819 bis",
+      "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/314947",
+      "publishedAt": "2026-09-25",
+      "verifiedAt": "2026-11-26"
+    },
+    "emobility-904-calendar": {
+      "title": "OMTI 904/2026 – calendarul apelului e-Mobility RO, Submăsura 1",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "ordin pentru calendarul depunerii",
+      "url": "https://fonduri.mt.ro/documente/OMTI_904_din_2026.pdf",
+      "publishedAt": "2026-09-26",
+      "verifiedAt": "2026-11-26"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

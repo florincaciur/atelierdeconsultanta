@@ -32,17 +32,17 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `pro-infra` | Ministerul Transporturilor și Infrastructurii | `APPROVED_SCHEME` | 2026-11-25 | 2026-11-10 |
 | `apeluri-gal` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-11-25 | 2026-11-10 |
 | `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-11-25 | 2026-11-10 |
-| `e-move-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-11-25 | 2026-11-10 |
+| `e-move-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-11-26 | 2026-11-26 |
 | `pocidif-21` | Ministerul Investițiilor și Proiectelor Europene | `CLOSED` | 2026-11-25 | 2026-11-25 |
 | `pnrr` | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR | `UNCONFIRMED` | 2026-11-25 | 2026-11-10 |
 | `diaspora-investeste-acasa` | Banca de Investiții și Dezvoltare (BID) | `APPROVED_SCHEME` | 2026-11-25 | 2026-11-25 |
-| `e-drive` | Ministerul Transporturilor și Infrastructurii – DGPET | `CONSULTATIVE_GUIDE` | 2026-11-25 | 2026-11-25 |
-| `e-mobility-ro` | Ministerul Transporturilor și Infrastructurii – DGPET | `OPEN` | 2026-11-25 | 2026-11-25 |
+| `e-drive` | Ministerul Transporturilor și Infrastructurii – DGPET | `CONSULTATIVE_GUIDE` | 2026-11-25 | 2026-11-26 |
+| `e-mobility-ro` | Ministerul Transporturilor și Infrastructurii – DGPET | `OPEN` | 2026-11-25 | 2026-11-26 |
 | `fondul-modernizare-pc1-stocare` | Ministerul Energiei | `CLOSED` | 2026-11-25 | 2026-11-25 |
 | `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-11-25 | 2026-11-25 |
 | `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-11-25 | 2026-11-25 |
 | `digitalizare-imm-regiunea-centru-apel-2` | ADR Centru | `SCHEDULED` | 2026-11-25 | 2026-11-25 |
-| `sme-eco-tech` | Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului | `OPEN` | 2026-11-25 | 2026-11-25 |
+| `sme-eco-tech` | Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului | `OPEN` | 2026-11-25 | 2026-11-26 |
 
 ## `program-regional-nord-est` — Programul Regional Nord-Est 2021–2027
 
@@ -869,44 +869,44 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | e-MOVE RO |
 | Autoritate | Ministerul Transporturilor și Infrastructurii / Portal Legislativ |
 | Fond / program | Fondul pentru Modernizare |
-| Temei / document | Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026 — [document oficial](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) |
+| Temei / document | Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026) — [document oficial](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) |
 | Stadiu | APPROVED_SCHEME — Schemă actualizată – depunerea nu este deschisă |
-| Sesiune | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Grant maxim | 25.000.000 EUR / beneficiar |
 | Intensitate | rate: 100; scope: maximum, în condițiile schemei actualizate și ale procedurii competitive |
 | Cofinanțare | Diferența față de ajutorul aplicabil și cheltuielile neeligibile. |
 | Beneficiari | Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; întreprinderile nou-înființate sunt excluse. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Condiții critice | Solicitantul și amplasamentul trebuie să îndeplinească regulile submăsurii; întreprinderile nou-înființate sunt excluse.; Submăsura 1: infrastructură de reîncărcare pentru flota proprie, acces public sau utilizare mixtă.; Submăsura 2: infrastructură pentru flota proprie, integrată cu producție regenerabilă și stocare.; Submăsura 3: infrastructură accesibilă publicului sau mixtă, cu producție regenerabilă și stocare integrate.; Maximum 25 milioane EUR pe întreprindere, cumulat pentru toate procedurile, și cel mult 40% din bugetul schemei.; Infrastructura nu se amplasează pe autostrăzile, drumurile expres și drumurile naționale TEN-T administrate de CNAIR; aeroporturile au excepția prevăzută de schemă.; Investiția trebuie finalizată cel târziu la 30 iunie 2030; momentul începerii lucrărilor respectă efectul stimulativ. |
-| Documente | [Schema e-MOVE RO în Portalul Legislativ](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) |
-| Indicatori | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Schema e-MOVE RO în Portalul Legislativ](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) |
-| Latest official update | 2026-09-02 — [Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) |
-| verifiedAt | 2026-11-10 |
-| Pagină oficială program/apel | [Schema e-MOVE RO în Portalul Legislativ](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (`program`, verificat 2026-11-10) |
-| Ghid | [Ghidul e-MOVE RO publicat spre consultare, referit de sursa oficială](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (`guide:emove`, verificat 2026-11-10) |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Schemă / ordin | [Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (`guide:emove`, verificat 2026-11-10)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) (`registry:emove-amendment-821-2026`, verificat 2026-11-04) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (verificat 2026-11-10) |
+| Documente | [Pagina MTI a schemei e-MOVE RO și ordinele de modificare](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5)<br>[MTI: proiectul de ghid și centralizatorul Submăsurii 3](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5/ghidul-solicitantului)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf)<br>[OMTI 1.161/2026 – racordare, durabilitate și condiții tehnice](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._961_4.pdf)<br>[MTI: răspunsurile la consultarea Submăsurii 3, 25 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-centralizatorului-de-propuneri-si-clarificari-aferent-ghidului-solicitantului-pentru-schema-de-ajutor-de-stat-e-move-ro-submasura-3) |
+| Indicatori | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Pagina MTI a schemei e-MOVE RO și ordinele de modificare](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5)<br>[MTI: proiectul de ghid și centralizatorul Submăsurii 3](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5/ghidul-solicitantului)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf)<br>[OMTI 1.161/2026 – racordare, durabilitate și condiții tehnice](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._961_4.pdf)<br>[MTI: răspunsurile la consultarea Submăsurii 3, 25 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-centralizatorului-de-propuneri-si-clarificari-aferent-ghidului-solicitantului-pentru-schema-de-ajutor-de-stat-e-move-ro-submasura-3) |
+| Latest official update | 2026-11-18 — [Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) |
+| verifiedAt | 2026-11-26 |
+| Pagină oficială program/apel | [Pagina MTI a schemei e-MOVE RO și ordinele de modificare](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (`program`, verificat 2026-11-26) |
+| Ghid | [MTI: proiectul de ghid și centralizatorul Submăsurii 3](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5/ghidul-solicitantului) (`registry:emove-ghid-submasura3`, verificat 2026-11-26) |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Schemă / ordin | [Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (`guide:emove`, verificat 2026-11-26)<br>[OMTI 821/2026 – modificarea schemei e-MOVE RO](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) (`registry:emove-amendment-821-2026`, verificat 2026-11-04)<br>[OMTI 1.161/2026 – racordare, durabilitate și condiții tehnice](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._961_4.pdf) (`registry:emove-amendment-1161-2026`, verificat 2026-11-26) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Clarificări | [MTI: răspunsurile la consultarea Submăsurii 3, 25 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-centralizatorului-de-propuneri-si-clarificari-aferent-ghidului-solicitantului-pentru-schema-de-ajutor-de-stat-e-move-ro-submasura-3) (`registry:emove-clarificari-submasura3`, verificat 2026-11-26) |
+| Sursă primară în registry-ul operațional | [Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)](https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5) (verificat 2026-11-26) |
 | Chei surse repo | `emove` |
-| Notes | Pagina MTI a Schemei 5 include OMTI 821/2026. Pagina dedicată ghidului nu publică un calendar curent de depunere; aprobarea schemei nu ține locul anunțului de apel. |
+| Notes | OMTI 1.161/2026 modifică schema. Centralizatorul din 25 noiembrie privește proiectul de ghid pentru Submăsura 3. |
 
 ## `pocidif-21` — PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate
 
@@ -1063,40 +1063,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Fondul pentru Modernizare |
 | Temei / document | Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026 — [document oficial](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) |
 | Stadiu | CONSULTATIVE_GUIDE — Proiecte de ghid publicate · calendar de depunere neanunțat |
-| Sesiune | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Buget | 56.900.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Grant maxim | 4.000.000 EUR / beneficiar, în cadrul măsurii competitive |
 | Intensitate | rate: 100; scope: Măsura 1: cost de achiziție fără TVA, în plafoane; Măsura 2: numai diferența de cost eligibilă, prin selecție concurențială |
 | Cofinanțare | Diferența până la prețul total, TVA și cheltuielile neeligibile; plafonul de minimis disponibil se verifică pentru întreprinderea unică. |
 | Beneficiari | Măsura 1: microîntreprinderi, întreprinderi mici și mijlocii. Măsura 2: operatori de transport rutier de pasageri, inclusiv întreprinderi mari, CAEN Rev. 3 4931, 4932 și 4933. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Condiții critice | Consultarea ghidurilor s-a încheiat la 18.11.2026. La 25.11.2026, MTI nu publicase calendarul depunerii.; Măsura 1: M1 și M2 noi exclusiv electrice; maximum 30.000 EUR/M1 și 130.000 EUR/M2, în limita a 300.000 EUR pe întreprindere unică în orice perioadă de trei ani.; Măsura 2: M1, M2 și M3 pentru transportatori de pasageri; maximum 4 milioane EUR pe întreprindere și 30.000 EUR/M1; cost eligibil egal cu diferența față de alternativa convențională comparabilă.; Casarea vehiculului înlocuit se documentează în maximum 60 de zile de la recepția vehiculului electric.; TVA, informarea, publicitatea și auditul financiar nu sunt eligibile. Leasingul și vehiculele second-hand sunt excluse.; Ghidurile prevăd implementare de maximum 30 de luni de la depunere, fără depășirea datei de 30.06.2030, și durabilitate de cinci ani.; Buget total 56,9 milioane EUR: 15 milioane EUR pentru Măsura 1 și 41,9 milioane EUR pentru Măsura 2.; Măsura 2: până la 100% din diferența de cost eligibilă; criteriul kilometrajului utilizează pragurile 40% și 70%, iar prefinanțarea propusă este de până la 40%, cu garantare.; Conversia propusă de ghiduri utilizează cursul InforEuro din iunie 2026, 5,2481 lei/EUR. |
 | Documente | [Anunțul MTI de consultare a ghidurilor e-DRIVE](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive)<br>[Ghidurile Măsurilor 1 și 2 – versiuni consultative](https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip)<br>[Publicația MTI și documentele Măsurii 1 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2)<br>[Publicația MTI și documentele Măsurii 2 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet)<br>[Ordinul MTI nr. 742/2026 – actualizarea schemei e-DRIVE](https://legislatie.just.ro/Public/DetaliiDocument/313289)<br>[Ordinul MTI nr. 817/2026 – art. 12 alin. (2), aplicabil Măsurii 2](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) |
-| Indicatori | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Anunțul MTI de consultare a ghidurilor e-DRIVE](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive)<br>[Ghidurile Măsurilor 1 și 2 – versiuni consultative](https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip)<br>[Publicația MTI și documentele Măsurii 1 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2)<br>[Publicația MTI și documentele Măsurii 2 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet)<br>[Ordinul MTI nr. 742/2026 – actualizarea schemei e-DRIVE](https://legislatie.just.ro/Public/DetaliiDocument/313289)<br>[Ordinul MTI nr. 817/2026 – art. 12 alin. (2), aplicabil Măsurii 2](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) |
 | Latest official update | 2026-11-25 — [Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) |
-| verifiedAt | 2026-11-25 |
-| Pagină oficială program/apel | [Anunțul MTI de consultare a ghidurilor e-DRIVE](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) (`program`, verificat 2026-11-25) |
+| verifiedAt | 2026-11-26 |
+| Pagină oficială program/apel | [Anunțul MTI de consultare a ghidurilor e-DRIVE](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) (`program`, verificat 2026-11-26) |
 | Ghid | [Ghidurile Măsurilor 1 și 2 – versiuni consultative](https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip) (`registry:edrive-draft-guides-20261103`, verificat 2026-11-09)<br>[Publicația MTI și documentele Măsurii 1 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2) (`registry:edrive-m1-draft-20261103`, verificat 2026-11-09)<br>[Publicația MTI și documentele Măsurii 2 din 3 noiembrie 2026](https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet) (`registry:edrive-m2-draft-20261103`, verificat 2026-11-09) |
 | Anexe | [Anexele celor două ghiduri, inclusiv grilele de selecție și modelele de contract](https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip) (`registry:edrive-draft-guides-20261103`, verificat 2026-11-09) |
 | Schemă / ordin | [Ordinul MTI nr. 742/2026 – actualizarea schemei e-DRIVE](https://legislatie.just.ro/Public/DetaliiDocument/313289) (`registry:edrive-scheme-742-2026`, verificat 2026-11-04)<br>[Ordinul MTI nr. 817/2026 – art. 12 alin. (2), aplicabil Măsurii 2](https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf) (`registry:edrive-scheme-817-2026`, verificat 2026-11-09) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) (verificat 2026-11-25) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive) (verificat 2026-11-26) |
 | Chei surse repo | `e-drive` |
 | Notes | Consultarea ghidurilor nu este sesiune de finanțare. Anunțul MTI precizează că data depunerilor va fi comunicată ulterior aprobării. |
 
@@ -1111,40 +1111,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Fondul pentru Modernizare |
 | Temei / document | Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026 — [document oficial](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) |
 | Stadiu | OPEN — Submăsura 1 deschisă – depuneri până la 27 noiembrie 2026 |
-| Sesiune | [MTI: depuneri 28 septembrie–27 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-25) |
+| Sesiune | [MTI: depuneri 28 septembrie–27 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-26)<br>[OMTI 904/2026 – calendarul Submăsurii 1](https://fonduri.mt.ro/documente/OMTI_904_din_2026.pdf) (`registry:emobility-904-calendar`, verificat 2026-11-26) |
 | Data deschiderii | 28.09.2026 |
 | Deadline | 27.11.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Buget | 49.500.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Grant maxim | 30.000.000 EUR / beneficiar |
 | Intensitate | rate: 100; scope: maximum posibil prin procedura competitivă, în condițiile schemei |
 | Cofinanțare | Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile. |
 | Beneficiari | Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; schema exclude întreprinderile nou-înființate. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Condiții critice | Submăsura 1: depuneri 28.09–27.11.2026; bugetul apelului este 49,5 milioane EUR, distinct de bugetul total de 299 milioane EUR al schemei.; Infrastructura trebuie amplasată pe autostrăzi, drumuri expres ori drumuri naționale sau în proximitatea admisă a unei ieșiri TEN-T.; Proiectul poate include infrastructură de reîncărcare și, în condițiile schemei, producție regenerabilă și stocare asociată.; Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei.; Plafon de 30 milioane EUR/beneficiar; limita suplimentară de 40% din buget nu înlocuiește acest plafon.; Amplasament pe drumurile eligibile ori la cel mult 3 km pe șosea de cea mai apropiată ieșire TEN-T.; Stocarea absoarbe anual cel puțin 75% din energia produsă de instalațiile regenerabile conectate direct, conform condițiilor schemei. |
-| Documente | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1)<br>[Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip)<br>[Schema e-Mobility RO, actualizată prin OMTI 746/2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
-| Indicatori | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Surse oficiale | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1)<br>[Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip)<br>[Schema e-Mobility RO, actualizată prin OMTI 746/2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
+| Documente | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1)<br>[Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip)<br>[Portal Legislativ: Ghidul Submăsurii 1, aprobat prin OMTI 886/2026](https://legislatie.just.ro/Public/DetaliiDocumentAfis/314947)<br>[Schema e-Mobility RO, actualizată prin OMTI 746/2026](https://legislatie.just.ro/Public/DetaliiDocument/313291)<br>[OMTI 904/2026 – calendarul Submăsurii 1](https://fonduri.mt.ro/documente/OMTI_904_din_2026.pdf) |
+| Indicatori | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Surse oficiale | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1)<br>[Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip)<br>[Portal Legislativ: Ghidul Submăsurii 1, aprobat prin OMTI 886/2026](https://legislatie.just.ro/Public/DetaliiDocumentAfis/314947)<br>[Schema e-Mobility RO, actualizată prin OMTI 746/2026](https://legislatie.just.ro/Public/DetaliiDocument/313291)<br>[OMTI 904/2026 – calendarul Submăsurii 1](https://fonduri.mt.ro/documente/OMTI_904_din_2026.pdf) |
 | Latest official update | 2026-11-25 — [Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) |
-| verifiedAt | 2026-11-25 |
-| Pagină oficială program/apel | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-25) |
-| Ghid | [Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip) (`registry:emobility-sm1-guide-2026`, verificat 2026-11-03) |
+| verifiedAt | 2026-11-26 |
+| Pagină oficială program/apel | [MTI: ghidul și calendarul Submăsurii 1](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-26) |
+| Ghid | [Ghidul aprobat al Submăsurii 1 și anexele](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip) (`registry:emobility-sm1-guide-2026`, verificat 2026-11-03)<br>[Portal Legislativ: Ghidul Submăsurii 1, aprobat prin OMTI 886/2026](https://legislatie.just.ro/Public/DetaliiDocumentAfis/314947) (`registry:emobility-886-legislatia`, verificat 2026-11-26) |
 | Anexe | [Anexele ghidului Submăsurii 1](https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip) (`registry:emobility-sm1-guide-2026`, verificat 2026-11-03) |
 | Schemă / ordin | [Schema e-Mobility RO, actualizată prin OMTI 746/2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) (`registry:emobility-scheme-2026`, verificat 2026-11-04) |
-| Anunț sesiune | [MTI: depuneri 28 septembrie–27 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-25) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (verificat 2026-11-25) |
+| Anunț sesiune | [MTI: depuneri 28 septembrie–27 noiembrie 2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (`program`, verificat 2026-11-26)<br>[OMTI 904/2026 – calendarul Submăsurii 1](https://fonduri.mt.ro/documente/OMTI_904_din_2026.pdf) (`registry:emobility-904-calendar`, verificat 2026-11-26) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026](https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1) (verificat 2026-11-26) |
 | Chei surse repo | `e-mobility-ro` |
 | Notes | Calendarul 28.09.2026, ora 12:00–27.11.2026, ora 23:59 privește Submăsura 1. Nu se extinde automat asupra altor submăsuri. Se verifică modificările MTI înainte de depunere. |
 
@@ -1354,37 +1354,37 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Sesiune | [MEDAT: prelungirea înscrierilor până la 30 decembrie 2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (`registry:sme-eco-tech-prelungire`, verificat 2026-11-10) |
 | Data deschiderii | 26.05.2026 |
 | Deadline | 30.12.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Grant maxim | 267.240 RON / beneficiar |
 | Intensitate | rate: 40; scope: maximum din cheltuielile eligibile |
 | Cofinanțare | Credit de minimum 60% din cheltuielile eligibile, de cel puțin 400.860 lei, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat. |
 | Beneficiari | Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Condiții critice | Societate înregistrată conform Legii nr. 31/1990, cu capital integral privat și cifră de afaceri pozitivă în 2024.; Firmă înființată cel târziu la 31 decembrie 2021, cu sediu sau punct de lucru și activitate în România.; Un cod CAEN din lista eligibilă, principal sau secundar cel puțin de la 1 ianuarie 2022 și autorizat la depunere.; Proiect cu buget eligibil de minimum 668.100 lei și posibilitatea contractării creditului de la o bancă parteneră.; Cel puțin 40% din cheltuielile eligibile se alocă investițiilor verzi sau digitale prevăzute de procedură. |
 | Documente | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/)<br>[Procedura aprobată prin Ordinul nr. 1.392/2025](https://legislatie.just.ro/Public/DetaliiDocument/299281)<br>[Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://legislatie.just.ro/Public/DetaliiDocumentAfis/315832)<br>[MEDAT: prelungirea înscrierilor până la 30 decembrie 2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/)<br>[Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://legislatie.just.ro/Public/DetaliiDocumentAfis/313400) |
-| Indicatori | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 25.11.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 26.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/)<br>[Procedura aprobată prin Ordinul nr. 1.392/2025](https://legislatie.just.ro/Public/DetaliiDocument/299281)<br>[Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://legislatie.just.ro/Public/DetaliiDocumentAfis/315832)<br>[MEDAT: prelungirea înscrierilor până la 30 decembrie 2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/)<br>[Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://legislatie.just.ro/Public/DetaliiDocumentAfis/313400) |
 | Latest official update | 2026-10-30 — [Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) |
-| verifiedAt | 2026-11-25 |
+| verifiedAt | 2026-11-26 |
 | Pagină oficială program/apel | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/) (`registry:sme-eco-tech-minister`, verificat 2026-11-09) |
 | Ghid | [Procedura aprobată prin Ordinul nr. 1.392/2025](https://legislatie.just.ro/Public/DetaliiDocument/299281) (`registry:sme-eco-tech-procedura-consolidata`, verificat 2026-11-25) |
 | Anexe | [Documentele și anexele publicate de minister](https://economie.gov.ro/programul-sme-eco-tech/) (`registry:sme-eco-tech-minister`, verificat 2026-11-09) |
 | Schemă / ordin | [Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://legislatie.just.ro/Public/DetaliiDocumentAfis/315832) (`registry:sme-eco-tech-ordin-1773`, verificat 2026-11-09) |
 | Anunț sesiune | [MEDAT: prelungirea înscrierilor până la 30 decembrie 2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (`registry:sme-eco-tech-prelungire`, verificat 2026-11-10) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-25; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-26; nu se presupune inexistența documentului. |
 | Clarificări | [Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://legislatie.just.ro/Public/DetaliiDocumentAfis/313400) (`registry:sme-eco-tech-ordin-1241`, verificat 2026-11-09) |
-| Sursă primară în registry-ul operațional | [Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (verificat 2026-11-25) |
+| Sursă primară în registry-ul operațional | [Comunicarea MEDAT din 22.09.2026 de prelungire a înscrierilor până la 30.12.2026, ora 20:00](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (verificat 2026-11-26) |
 | Chei surse repo | `sme-eco-tech-termen`, `sme-eco-tech-procedura` |
 | Notes | Consultă procedura împreună cu modificările din 2026 și verifică disponibilul pe platforma de înscriere. |
 

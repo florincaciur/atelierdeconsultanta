@@ -351,7 +351,7 @@
     "e-move": {
       "route": "/e-move",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități, prin submăsuri cu reguli distincte. Schema aprobată prin OMTI 1318/2025 include modificările OMTI 755/2026 și OMTI 821/2026. Investiția poate include stații de încărcare și, potrivit submăsurii, producție regenerabilă și stocare. Existența schemei nu deschide depunerea: calendarul, platforma, alocarea și ghidul aplicabil trebuie confirmate prin anunțul apelului. Programul este distinct de e-Mobility RO, al cărui apel pentru Submăsura 1 are un calendar separat.",
+      "directAnswer": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități. OMTI 1.161/2026 modifică regulile de racordare, durabilitate și investițiile din fiecare submăsură. Pe 25 noiembrie, MTI a publicat răspunsurile la consultarea ghidului Submăsurii 3. Ghidul final al acestei submăsuri și calendarul de depunere rămân în așteptarea publicării.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -387,14 +387,14 @@
         }
       ],
       "source": {
-        "document": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
+        "document": "Schema e-MOVE RO aprobată prin OMTI 1.318/2025, cu modificările ulterioare, inclusiv OMTI 1.161/17.11.2026 (Monitorul Oficial nr. 961 din 18.11.2026)",
         "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
         "status": "Schemă actualizată – depunerea nu este deschisă. Calendarul, alocarea și condițiile unei depuneri se confirmă prin documentele oficiale ale fiecărei submăsuri.",
         "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Aceasta este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-11-10",
+      "lastReviewed": "2026-11-26",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }
