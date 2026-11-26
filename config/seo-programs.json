@@ -10570,15 +10570,41 @@
       "title": "Calendar fonduri europene 2026: termene și surse | FABER",
       "description": "Consultă termenele și sursele pentru 27 de programe de finanțare. Calendar separat pentru pregătire, depunere și implementare, cu beneficiari și județe.",
       "h1": "Calendar fonduri europene – termene și surse oficiale",
-      "quickAnswer": "Calendarul reunește termenele verificate pentru programele publice din registrul FABER. Depunerea este separată de pregătirea proiectelor, consultarea ghidurilor și implementarea contractelor. Pentru fiecare program sunt indicate beneficiarul, județele, documentul oficial și data verificării.",
+      "quickAnswer": "Compară termenele după etapa programului, beneficiari și județe. Fiecare rând indică documentul oficial și data la care a fost verificat.",
       "programName": "Calendar fonduri europene",
       "heroIcon": "ph-duotone ph-arrows-clockwise",
-      "contentSections": [
+      "hideHeroSummary": true,
+      "hideFamilyCards": true,
+      "heroCtas": [
         {
-          "fundingCalendar": true
+          "href": "#calendar-apeluri",
+          "label": "Vezi termenele"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare inițială a proiectului"
         }
       ],
-      "finalCtaText": "Trimite programul urmărit și stadiul documentelor ca să stabilim ce trebuie pregătit înainte de deschiderea sau închiderea apelului.",
+      "contentSections": [
+        {
+          "title": "Cum citești termenele",
+          "paragraphs": [
+            "Alege programul după beneficiarul și județul în care se face investiția. La rubrica Termen, verifică etapa și componenta. Apoi deschide sursa din același rând și citește anunțul și eventualele modificări publicate de autoritate.",
+            "În etapa de pregătire sau consultare poți strânge documentele și urmări ghidul. Pentru depunere, confirmă data, ora și platforma în anunțul sesiunii. În implementare, urmărește termenele din contract și instrucțiunile autorității."
+          ]
+        },
+        {
+          "fundingCalendar": true
+        },
+        {
+          "title": "Când să închei pregătirea dosarului",
+          "paragraphs": [
+            "Exemplu de planificare. Dacă depunerea se închide joi la 16:00, iar verificarea durează două zile lucrătoare, încheie pregătirea marți la 16:00. Exemplul presupune o săptămână fără sărbători legale. Poți începe mai devreme dacă aștepți un document de la altă instituție. Data din sursa oficială rămâne termenul de depunere."
+          ]
+        }
+      ],
+      "finalCtaTitle": "Verificare inițială a proiectului",
+      "finalCtaText": "Spune-ne programul, localitatea investiției și ce documente ai. Îți indicăm ce trebuie verificat înainte de termen.",
       "heroPrimaryCta": "Verifică eligibilitatea",
       "finalPrimaryCta": "Trimite datele proiectului",
       "inlineCtaTitle": "Ce poți trimite pentru verificare",

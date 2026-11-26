@@ -2729,6 +2729,12 @@ function renderDr18SearchIntentContent(page) {
 }
 
 function renderMainContent(page) {
+  if (page.slug === "calendar-fonduri-europene") {
+    return [
+      renderContentSections(page.contentSections),
+      renderOfficialSources(page.sourceKeys, { id: "calendar-fonduri-europene-official-sources" })
+    ].join("\n");
+  }
   const pocidifHtml = renderPocidifContent(page);
   if (pocidifHtml) return pocidifHtml;
   if (page.slug === "dr12-afir") {
