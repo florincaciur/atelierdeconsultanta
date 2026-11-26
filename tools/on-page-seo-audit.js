@@ -130,12 +130,9 @@ function auditRoute(root, route, programs) {
   if (og.url && og.url !== canonical) errors.push(`og:url diferă de canonical: ${og.url}`);
   if (og.image) auditShareImage(root, og.image, "og:image", errors);
 
-  const twitterElements = $("head meta").filter((_, element) => /^twitter:/iu.test($(element).attr("name") || $(element).attr("property") || ""));
-  if (twitterElements.length) {
-    for (const field of REQUIRED_TWITTER_FIELDS) {
-      const value = exactMeta($, `head meta[name='twitter:${field}' i], head meta[property='twitter:${field}' i]`, `twitter:${field}`, errors);
-      if (field === "image" && value) auditShareImage(root, value, "twitter:image", errors);
-    }
+  for (const field of REQUIRED_TWITTER_FIELDS) {
+    const value = exactMeta($, `head meta[name='twitter:${field}' i], head meta[property='twitter:${field}' i]`, `twitter:${field}`, errors);
+    if (field === "image" && value) auditShareImage(root, value, "twitter:image", errors);
   }
 
   const headingLevels = auditHeadings($, errors);

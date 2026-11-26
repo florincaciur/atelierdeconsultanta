@@ -66,7 +66,6 @@ function syncHtml(html) {
   const ogType = firstMeta($, "og:type") || ($("article").length ? "article" : "website");
   const ogImage = firstMeta($, "og:image") || DEFAULT_SHARE_IMAGE;
   const ogImageAlt = firstMeta($, "og:image:alt") || shareAlt;
-  const hasTwitter = $("head meta").toArray().some((node) => /^twitter:/iu.test($(node).attr("name") || $(node).attr("property") || ""));
 
   let head = originalHead;
   const robots = firstMeta($, "robots") || "index, follow";
@@ -82,15 +81,13 @@ function syncHtml(html) {
     ["og:url", canonical], ["og:image", ogImage], ["og:image:alt", ogImageAlt]]) {
     head = syncMeta(head, field, "property", value);
   }
-  if (hasTwitter) {
-    for (const [field, value] of [
-      ["twitter:card", firstMeta($, "twitter:card") || "summary_large_image"],
-      ["twitter:title", firstMeta($, "twitter:title") || ogTitle],
-      ["twitter:description", firstMeta($, "twitter:description") || ogDescription],
-      ["twitter:image", firstMeta($, "twitter:image") || ogImage],
-      ["twitter:image:alt", firstMeta($, "twitter:image:alt") || ogImageAlt]
-    ]) head = syncMeta(head, field, "name", value);
-  }
+  for (const [field, value] of [
+    ["twitter:card", firstMeta($, "twitter:card") || "summary_large_image"],
+    ["twitter:title", firstMeta($, "twitter:title") || ogTitle],
+    ["twitter:description", firstMeta($, "twitter:description") || ogDescription],
+    ["twitter:image", firstMeta($, "twitter:image") || ogImage],
+    ["twitter:image:alt", firstMeta($, "twitter:image:alt") || ogImageAlt]
+  ]) head = syncMeta(head, field, "name", value);
   return syncHeadingHierarchy(html.replace(originalHead, head));
 }
 
