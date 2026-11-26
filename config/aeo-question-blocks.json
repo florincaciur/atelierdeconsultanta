@@ -198,7 +198,7 @@
         {
           "id": "diferenta-dr12-dr14",
           "question": "Care este diferența dintre DR 12 și DR 14?",
-          "answer": "DR 12 vizează consolidarea fermelor de minimum 12.000 SO, pentru categoriile de fermieri eligibile, cu grant de maximum 200.000 EUR și depuneri până la 2 decembrie 2026. DR 14 vizează ferme mici, cu grant de maximum 50.000 EUR și termen prelungit până la 16 noiembrie 2026; componenta de achiziții simple este închisă. Alegerea depinde de profil, SO, investiție, componentă și documentele disponibile.",
+          "answer": "DR-12 vizează consolidarea fermelor de minimum 12.000 SO, cu grant de până la 200.000 EUR. DR-14 vizează ferme mici, cu grant de până la 50.000 EUR. La DR-12, fondurile s-au epuizat la ambele componente. La DR-14, achizițiile simple s-au închis la 6 octombrie, iar celelalte componente la 16 noiembrie 2026. Compară profilul, SO, investiția și documentele în ghidurile finale.",
           "evidenceTitle": "Comparația pornește de la cinci controale",
           "evidence": [
             "profilul și istoricul solicitantului",
@@ -220,6 +220,20 @@
               "version": "Ghid oficial final DR 14, referință verificată în registrul programului la 06.09.2026",
               "url": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
               "verifiedAt": "2026-09-06"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Contorul AFIR",
+              "version": "Închiderea componentelor Alte sectoare și Sector zootehnic din DR-12",
+              "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+              "verifiedAt": "2026-11-26"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Prelungirea sesiunilor DR-14 și DR-18",
+              "version": "Comunicatul oficial de prelungire din 30 octombrie 2026",
+              "url": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
+              "verifiedAt": "2026-11-25"
             }
           ],
           "detailLinks": [

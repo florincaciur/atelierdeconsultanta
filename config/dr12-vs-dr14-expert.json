@@ -2,19 +2,19 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-11-11",
+  "reviewedAt": "2026-11-26",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
   "metaDescription": "Compară DR-12 și DR-14 după solicitant, SO și investiție. Verifică termenele distincte pe componente și documentele AFIR înainte de depunere.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. Pentru depunere, verifică fișa DR-12 cu termene distincte pentru Alte sectoare și Sector zootehnic. La verificarea din 10 noiembrie, DR-14 avea componente cu termen la 16 noiembrie, ora 16:00, iar achizițiile simple erau închise din 6 octombrie.",
-  "statusStatement": "Verificat la 11 noiembrie 2026. În DR-12, termenul Alte sectoare afișat în contor a expirat. Pentru Sector zootehnic, termenul afișat este 2 decembrie 2026, ora 15:59:59. În DR-14, componentele active au termen la 16 noiembrie, înainte de ora 16:00; achizițiile simple sunt închise.",
+  "directAnswer": "DR-12 sprijină consolidarea exploatațiilor fermierilor din categoriile eligibile, cu până la 200.000 EUR pe proiect. DR-14 sprijină investițiile în ferme mici, cu până la 50.000 EUR pe proiect. Sesiunea DR-12 s-a închis la ambele componente după epuizarea fondurilor. La DR-14, achizițiile simple s-au închis la 6 octombrie, iar celelalte componente la 16 noiembrie 2026. Compară solicitantul, dimensiunea SO și investiția în ghidurile finale AFIR.",
+  "statusStatement": "DR-12 s-a închis după epuizarea fondurilor la ambele componente. Alte sectoare s-a închis la 11 noiembrie, iar Sectorul zootehnic la 24 noiembrie 2026. La DR-14, Achiziții simple s-a închis la 6 octombrie. Zootehnicul, legumicultura și celelalte sectoare au avut termenul prelungit până la 16 noiembrie 2026, ora 16:00.",
   "programs": [
     {
       "slug": "dr12-afir",
       "shortName": "DR 12",
-      "status": "apel_deschis",
-      "verifiedAt": "2026-11-11",
-      "sourceLabel": "Ghidul final DR-12 și contorul AFIR, verificare 11.11.2026",
+      "status": "apel_inchis",
+      "verifiedAt": "2026-11-25",
+      "sourceLabel": "AFIR · ghidul final DR-12 și contorul pentru cele două componente",
       "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "guideUrl": "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf",
       "canonicalUrl": "/dr12-afir"
@@ -22,9 +22,9 @@
     {
       "slug": "dr14-afir",
       "shortName": "DR 14",
-      "status": "apel_deschis",
-      "verifiedAt": "2026-11-10",
-      "sourceLabel": "AFIR – sesiunile active și disponibilul pe componente, verificare 04.11.2026",
+      "status": "apel_inchis",
+      "verifiedAt": "2026-11-25",
+      "sourceLabel": "AFIR · situația sesiunii DR-14 și calendarul pe componente",
       "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "guideUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
       "canonicalUrl": "/dr14"
@@ -68,8 +68,8 @@
     },
     {
       "label": "Calendar",
-      "dr12": "Deschidere la 6 octombrie 2026, ora 09:00. Alte sectoare până la 11 noiembrie 2026, ora 00:00. Sector zootehnic până la 2 decembrie 2026, înainte de ora 16:00.",
-      "dr14": "Componente active prelungite până la 16 noiembrie 2026, ora 16:00; componenta achiziții simple este închisă din 6 octombrie."
+      "dr12": "Deschidere la 6 octombrie 2026, ora 09:00. Alte sectoare s-a închis la 11 noiembrie, iar Sectorul zootehnic la 24 noiembrie 2026, după epuizarea fondurilor.",
+      "dr14": "Achiziții simple s-a închis la 6 octombrie 2026. Celelalte componente au ajuns la termenul prelungit de 16 noiembrie 2026, ora 16:00."
     },
     {
       "label": "Documente-cheie",
@@ -86,7 +86,7 @@
     "încadrarea solicitantului concret, istoricul instalării și controlul exploatației",
     "calculul SO și concordanța registrelor cu documentele fermei",
     "încadrarea cheltuielilor și dovezile pentru fiecare criteriu de punctaj",
-    "data deschiderii și intervalul oficial de depunere pentru DR 12",
-    "eventualele erate, clarificări și închideri anticipate pentru sesiunea DR 14"
+    "calendarul și documentele oficiale ale unei sesiuni viitoare pentru DR 12",
+    "calendarul și documentele oficiale ale unei sesiuni viitoare pentru DR 14"
   ]
 }

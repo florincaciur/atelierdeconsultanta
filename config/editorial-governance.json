@@ -601,14 +601,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-25",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-      "sourceVersion": "DR-12: ghid final publicat la 18.09.2026; contor AFIR verificat după miezul nopții din 11.11.2026",
-      "nextReviewAt": "2026-11-12",
-      "lastMeaningfulUpdate": "2026-11-11",
+      "sourceVersion": "Ghidurile finale DR-12 și DR-14, contorul AFIR și comunicatul AFIR de prelungire pentru DR-14",
+      "nextReviewAt": "2027-01-15",
+      "lastMeaningfulUpdate": "2026-11-26",
       "statusSnapshot": null,
       "changelog": [
+        {
+          "date": "2026-11-26",
+          "summary": "Închiderea sesiunilor DR-12 și DR-14 pe componente și sursele AFIR.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Calendarele DR-12 și DR-14, componentele active și sursele AFIR au fost reverificate.",

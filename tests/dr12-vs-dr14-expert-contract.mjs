@@ -53,10 +53,10 @@ assert($("[data-expert-direct-answer]").nextAll("[data-aeo-question-set]").first
 
 const statusText = $(".expert-status-panel").text().replace(/\s+/gu, " ").trim();
 assert(statusText.includes(config.statusStatement));
-assert.match(statusText, /termenul Alte sectoare.*a expirat/iu);
-assert.match(statusText, /Sector zootehnic.*2 decembrie 2026, ora 15:59:59/iu);
-assert.match(statusText, /DR-14.*16 noiembrie/iu);
-assert.match(statusText, /achizițiile simple sunt închise/iu);
+assert.match(statusText, /Alte sectoare.*închis la 11 noiembrie/iu);
+assert.match(statusText, /Sectorul zootehnic la 24 noiembrie 2026/iu);
+assert.match(statusText, /DR-14.*16 noiembrie 2026/iu);
+assert.match(statusText, /Achiziții simple s-a închis la 6 octombrie/iu);
 
 const rows = $("[data-expert-comparison-table] tbody tr");
 assert.equal(rows.length, 10, "tabelul trebuie să aibă cele zece criterii contractuale");
@@ -76,7 +76,7 @@ for (const value of ["200.000", "80%", "65%"]) {
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
 assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid final/iu);
-assert.match($("[data-comparison-row='Calendar']").text(), /2 decembrie 2026/iu);
+assert.match($("[data-comparison-row='Calendar']").text(), /24 noiembrie 2026/iu);
 assert.match($("[data-comparison-row='Calendar']").text(), /16 noiembrie 2026/iu);
 
 const scenarios = $("[data-hypothetical='true']");
