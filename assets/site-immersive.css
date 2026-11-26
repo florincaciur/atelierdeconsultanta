@@ -9,6 +9,13 @@ body[data-site-immersive] {
   --site-im-ease: cubic-bezier(.22, .68, 0, 1.01);
 }
 
+@media (max-width: 760px) {
+  body[data-site-immersive] .preferred-source-cta {
+    grid-template-columns: minmax(0, 1fr);
+    overflow-wrap: anywhere;
+  }
+}
+
 .site-immersive-progress {
   position: fixed;
   inset: 0 0 auto;
