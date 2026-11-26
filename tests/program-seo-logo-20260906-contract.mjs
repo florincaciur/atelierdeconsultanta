@@ -44,7 +44,7 @@ for (const source of findPublicHtmlFiles()) {
 assert.ok(checked >= 100, 'Check public navbar coverage');
 
 const cases = [
-  ['/dr14', [/Sesiune deschisă|depuneri deschise|Depunerea este deschisă/i, /16 noiembrie/, /50\.000/, /montaj/i], [/Nu încă\./i]],
+  ['/dr14', [/16 noiembrie/, /50\.000/, /montaj/i], [/Nu încă\./i]],
   ['/dr12-afir', [/200\.000/, /ghid final/i, /12\.000/], [/Pentru query-ul/i]],
   ['/investitii-modernizarea-microintreprinderilor-apel-2', [/100\.000/, /300\.000/, /28 septembrie 2026/i], []],
   ['/e-drive', [/30\.000/, /300\.000/, /4 milioane/, /60 de zile/], []],
@@ -62,7 +62,11 @@ for (const [route, expected, forbidden] of cases) {
   assert.equal($('head > title').length, 1);
   assert.equal($('link[rel=canonical]').attr('href'), `https://atelierdeconsultanta.ro${route}`);
   assert.doesNotMatch($('meta[name=robots]').attr('content') || '', /noindex|nosnippet/);
-  assert.equal($('[data-aeo-program-summary]').first().attr('data-verified-at'), programRegistry.find(program => program.pageUrl === route).verifiedAt);
+  const program = programRegistry.find(entry => entry.pageUrl === route);
+  const summary = $('[data-aeo-program-summary]').first();
+  assert.equal(summary.attr('data-verified-at'), program.verifiedAt);
+  assert.equal(summary.attr('data-program-status'), program.status);
+  assert.ok(summary.text().includes(program.statusLabel), route + ': visible status must match the registry');
   $('script[type="application/ld+json"]').each((_, el) => assert.doesNotThrow(() => JSON.parse($(el).html())));
 }
 
