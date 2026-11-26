@@ -11,6 +11,7 @@ const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta
 const policy = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "external-link-policy.json"), "utf8"));
 const allowedHosts = new Set(policy.allowedExactHosts.map((host) => host.toLowerCase()));
 const approvedChannels = new Set(policy.approvedChannelUrls);
+const officialSourceUrls = new Set(policy.officialSourceUrls);
 
 function hostAllowed(host) {
   const normalized = host.toLowerCase();
@@ -29,7 +30,7 @@ for (const relativePath of findPublicHtmlFiles()) {
     try { url = new URL(href); } catch { issues.push(`${relativePath}: URL extern invalid ${href}`); return; }
     if (SITE_HOSTS.has(url.hostname.toLowerCase())) return;
     if (policy.scanPolicy.requireHttps && url.protocol !== "https:") issues.push(`${relativePath}: link extern fără HTTPS ${href}`);
-    if (!hostAllowed(url.hostname)) issues.push(`${relativePath}: domeniu extern neaprobat ${url.hostname}`);
+    if (!hostAllowed(url.hostname) && !officialSourceUrls.has(url.origin + url.pathname + url.search)) issues.push(`${relativePath}: domeniu extern neaprobat ${url.hostname}`);
     if (["wa.me", "www.instagram.com"].includes(url.hostname.toLowerCase()) && !approvedChannels.has(`${url.origin}${url.pathname}${url.pathname.endsWith("/") ? "" : ""}`)) {
       const normalized = `${url.origin}${url.pathname}`;
       if (!approvedChannels.has(normalized) && !approvedChannels.has(`${normalized}/`)) issues.push(`${relativePath}: canal extern neaprobat ${href}`);

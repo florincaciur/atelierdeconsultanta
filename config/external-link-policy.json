@@ -36,7 +36,14 @@
     "www.instagram.com",
     "www.madr.ro",
     "www.mt.ro",
-    "www.onrc.ro"
+    "www.onrc.ro",
+    "adrvest.ro",
+    "regionordvest.ro",
+    "www.adrbi.ro",
+    "www.adrcentru.ro",
+    "www.adroltenia.ro",
+    "www.adrse.ro",
+    "ptj.adrcentru.ro"
   ],
   "allowedHostSuffixes": [
     ".gov.ro",
@@ -51,5 +58,10 @@
     "anchorsOnly": true,
     "skipNoindexPages": true,
     "requireHttps": true
-  }
+  },
+  "officialSourceUrls": [
+    "https://mtransporturi.maps.arcgis.com/apps/webappviewer/index.html?id=af599b237eb1476e8f20b6620b553d99",
+    "https://tinutulbarsei.ro/wp-content/uploads/2025/07/SDL-2023-2027-GAL-Tinutul-Barsei-3.pdf",
+    "https://tinutulbarsei.ro/dr-36-apel-de-selectie-nr-2-masura-investitii-publice-in-tinutul-barsei/"
+  ]
 }
