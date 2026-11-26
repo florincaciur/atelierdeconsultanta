@@ -12,9 +12,9 @@
         "firmă consultanță fonduri europene"
       ],
       "title": "Consultanță fonduri europene și proiectare | FABER",
-      "description": "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.",
+      "description": "FABER oferă consultanță, proiectare și sprijin la implementare pentru firme și fermieri. Verifică eligibilitatea și consultă ghidurile și calculatoarele AFIR.",
       "ogTitle": "Consultanță fonduri europene și proiectare | FABER",
-      "ogDescription": "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.",
+      "ogDescription": "FABER oferă consultanță, proiectare și sprijin la implementare pentru firme și fermieri. Verifică eligibilitatea și consultă ghidurile și calculatoarele AFIR.",
       "sourceOfTruth": [
         "index.html",
         "official-guides.json:fonduri-europene"
@@ -171,9 +171,9 @@
         "energie regenerabilă e-MOVE"
       ],
       "title": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
-      "description": "e-MOVE RO: stații de încărcare, producție regenerabilă și stocare. Vezi regulile din OMTI 1.161/2026 și stadiul Submăsurii 3.",
+      "description": "Vezi cum reglementează OMTI 1.161/2026 stațiile de încărcare, producția regenerabilă și stocarea. Verifică stadiul Submăsurii 3.",
       "ogTitle": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
-      "ogDescription": "e-MOVE RO: stații de încărcare, producție regenerabilă și stocare. Vezi regulile din OMTI 1.161/2026 și stadiul Submăsurii 3.",
+      "ogDescription": "Vezi cum reglementează OMTI 1.161/2026 stațiile de încărcare, producția regenerabilă și stocarea. Verifică stadiul Submăsurii 3.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
@@ -197,7 +197,7 @@
       "title": "Despre FABER: operator, metodă și limite",
       "description": "Află cine este operatorul FABER, cum este verificat un proiect, ce limite are consultanța și ce dovezi sunt necesare înainte de publicarea rezultatelor.",
       "ogTitle": "FABER: consultanță prudentă înainte de dosar",
-      "ogDescription": "Entitatea juridică, metoda în cinci pași și limitele asumate public de FABER, prezentate din date aprobate și documente verificabile.",
+      "ogDescription": "Află cine este operatorul FABER, cum este verificat un proiect, ce limite are consultanța și ce dovezi sunt necesare înainte de publicarea rezultatelor.",
       "sourceOfTruth": [
         "tools/rebuild-core-pages.js",
         "despre-faber/index.html"
@@ -216,7 +216,7 @@
         "pregătire dosar fonduri europene"
       ],
       "title": "Consultanță fonduri europene: eligibilitate și dosar | FABER",
-      "description": "Verificăm solicitantul, programul, bugetul și documentele; pregătim cererea și clarificările numai după verificarea inițială a eligibilității.",
+      "description": "Verificăm solicitantul, programul, bugetul și documentele. Pregătim cererea și răspunsurile la clarificări după verificarea inițială a eligibilității.",
       "ogTitle": "Consultanță pentru un proiect care poate fi susținut | FABER",
       "ogDescription": "De la verificarea eligibilității la dosar și clarificări, fiecare etapă pornește din documentele reale ale solicitantului.",
       "sourceOfTruth": [
@@ -251,7 +251,7 @@
     {
       "route": "/proiectare-fonduri-europene",
       "title": "Servicii de proiectare: SF, DALI, DTAC și PT | FABER",
-      "description": "Proiectare pentru construcții și investiții cu fonduri europene: SF, DALI, DTAC, proiect tehnic și deviz. Vezi datele necesare pentru o ofertă.",
+      "description": "Află când ai nevoie de studiu de fezabilitate, DALI, DTAC, proiect tehnic sau deviz. Vezi ce date să pregătești pentru o ofertă de proiectare.",
       "primaryQuery": "servicii de proiectare",
       "secondaryQueries": [
         "proiectare fonduri europene",
@@ -259,7 +259,7 @@
         "proiect tehnic constructii"
       ],
       "ogTitle": "Servicii de proiectare: SF, DALI, DTAC și PT | FABER",
-      "ogDescription": "Proiectare pentru construcții și investiții cu fonduri europene: SF, DALI, DTAC, proiect tehnic și deviz. Vezi datele necesare pentru o ofertă.",
+      "ogDescription": "Află când ai nevoie de studiu de fezabilitate, DALI, DTAC, proiect tehnic sau deviz. Vezi ce date să pregătești pentru o ofertă de proiectare.",
       "primaryIntent": "servicii de proiectare și documentație tehnică pentru investiții",
       "sourceOfTruth": [
         "tools/sync-search-quality.js"
@@ -271,14 +271,14 @@
     {
       "route": "/studiu-fezabilitate-fonduri-europene",
       "title": "Studiu de fezabilitate pentru fonduri europene | FABER",
-      "description": "Studiu de fezabilitate pentru investiții cu fonduri europene: tema, variante tehnice, deviz și indicatori. Vezi ce documente pregătești pentru ofertă.",
+      "description": "Vezi cum se fundamentează variantele tehnice, devizul și indicatorii într-un studiu de fezabilitate. Află ce acte să pregătești pentru ofertă.",
       "primaryQuery": "studiu de fezabilitate fonduri europene",
       "secondaryQueries": [
         "studiu de fezabilitate",
         "proiectare SF"
       ],
       "ogTitle": "Studiu de fezabilitate pentru fonduri europene | FABER",
-      "ogDescription": "Studiu de fezabilitate pentru investiții cu fonduri europene: tema, variante tehnice, deviz și indicatori. Vezi ce documente pregătești pentru ofertă.",
+      "ogDescription": "Vezi cum se fundamentează variantele tehnice, devizul și indicatorii într-un studiu de fezabilitate. Află ce acte să pregătești pentru ofertă.",
       "primaryIntent": "servicii de proiectare și documentație tehnică pentru investiții",
       "sourceOfTruth": [
         "tools/sync-search-quality.js"
@@ -290,9 +290,9 @@
     {
       "route": "/consultanta-pnrr-digitalizare",
       "title": "Consultanță PNRR Digitalizare IMM și implementare | FABER",
-      "description": "Consultanță pentru proiecte PNRR de digitalizare contractate: buget, achiziții și raportare. Pentru investiții noi, compară programele disponibile.",
+      "description": "Oferim consultanță pentru bugetul, achizițiile și raportarea proiectelor PNRR de digitalizare contractate. Pentru investiții noi, verifică alte apeluri.",
       "ogTitle": "Consultanță PNRR Digitalizare IMM și implementare | FABER",
-      "ogDescription": "Consultanță pentru proiecte PNRR de digitalizare contractate: buget, achiziții și raportare. Pentru investiții noi, compară programele disponibile.",
+      "ogDescription": "Oferim consultanță pentru bugetul, achizițiile și raportarea proiectelor PNRR de digitalizare contractate. Pentru investiții noi, verifică alte apeluri.",
       "primaryQuery": "consultanță PNRR digitalizare IMM",
       "primaryIntent": "consultanță PNRR digitalizare IMM",
       "secondaryQueries": [
@@ -308,9 +308,9 @@
     {
       "route": "/consultanta-afir",
       "title": "Consultanță AFIR: dosare agricole și proiectare | FABER",
-      "description": "Consultanță AFIR pentru ferme: verificarea exploatației, calcul SO, dosar și documente tehnice. Vezi ce date pregătești pentru analiza investiției.",
+      "description": "Verificăm exploatația, dimensiunea economică SO și documentele pentru dosarele AFIR. Vezi ce date să pregătești pentru analiza investiției.",
       "ogTitle": "Consultanță AFIR: dosare agricole și proiectare | FABER",
-      "ogDescription": "Consultanță AFIR pentru ferme: verificarea exploatației, calcul SO, dosar și documente tehnice. Vezi ce date pregătești pentru analiza investiției.",
+      "ogDescription": "Verificăm exploatația, dimensiunea economică SO și documentele pentru dosarele AFIR. Vezi ce date să pregătești pentru analiza investiției.",
       "primaryQuery": "consultanță AFIR",
       "primaryIntent": "consultanță AFIR",
       "secondaryQueries": [
@@ -344,9 +344,9 @@
     {
       "route": "/cum-alegi-consultant-fonduri-europene",
       "title": "Cum alegi un consultant pentru fonduri europene | FABER",
-      "description": "Alege consultantul pentru fonduri europene după livrabile, experiență verificabilă, contract și costuri. Întrebări concrete pentru compararea ofertelor.",
+      "description": "Compară livrabilele, costurile și experiența verificabilă a consultanților pentru fonduri europene. Vezi ce întrebări să pui înainte de semnare.",
       "ogTitle": "Cum alegi un consultant pentru fonduri europene | FABER",
-      "ogDescription": "Alege consultantul pentru fonduri europene după livrabile, experiență verificabilă, contract și costuri. Întrebări concrete pentru compararea ofertelor.",
+      "ogDescription": "Compară livrabilele, costurile și experiența verificabilă a consultanților pentru fonduri europene. Vezi ce întrebări să pui înainte de semnare.",
       "primaryQuery": "cum alegi consultant fonduri europene",
       "primaryIntent": "cum alegi consultant fonduri europene",
       "secondaryQueries": [
@@ -362,9 +362,9 @@
     {
       "route": "/start-up-nation-2026-plan-de-afaceri",
       "title": "Plan de afaceri Start-Up Nation 2026: structură | FABER",
-      "description": "Plan de afaceri Start-Up Nation: activitate, piață, buget, venituri și locuri de muncă. Vezi structura și verificările înainte de depunere.",
+      "description": "Vezi cum corelezi activitatea, piața, veniturile și locurile de muncă în planul de afaceri Start-Up Nation. Verifică bugetul înainte de depunere.",
       "ogTitle": "Plan de afaceri Start-Up Nation 2026: structură | FABER",
-      "ogDescription": "Plan de afaceri Start-Up Nation: activitate, piață, buget, venituri și locuri de muncă. Vezi structura și verificările înainte de depunere.",
+      "ogDescription": "Vezi cum corelezi activitatea, piața, veniturile și locurile de muncă în planul de afaceri Start-Up Nation. Verifică bugetul înainte de depunere.",
       "primaryQuery": "plan de afaceri Start Up Nation 2026",
       "primaryIntent": "plan de afaceri Start Up Nation 2026",
       "secondaryQueries": [
@@ -380,9 +380,9 @@
     {
       "route": "/consultant-fonduri-europene-imm",
       "title": "Consultant fonduri europene pentru IMM | FABER",
-      "description": "Consultanță pentru IMM: alegerea programului, eligibilitate, buget și dosar. Vezi documentele necesare și etapele colaborării pentru investiția firmei.",
+      "description": "Află cum verificăm eligibilitatea și bugetul unei investiții IMM. Vezi ce documente pregătești și ce include fiecare etapă a consultanței.",
       "ogTitle": "Consultant fonduri europene pentru IMM | FABER",
-      "ogDescription": "Consultanță pentru IMM: alegerea programului, eligibilitate, buget și dosar. Vezi documentele necesare și etapele colaborării pentru investiția firmei.",
+      "ogDescription": "Află cum verificăm eligibilitatea și bugetul unei investiții IMM. Vezi ce documente pregătești și ce include fiecare etapă a consultanței.",
       "primaryQuery": "consultant fonduri europene IMM",
       "primaryIntent": "consultant fonduri europene IMM",
       "secondaryQueries": [
