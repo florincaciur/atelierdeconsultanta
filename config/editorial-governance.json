@@ -317,13 +317,13 @@
       "changelog": [
         {
           "date": "2026-11-10",
-          "summary": "Publicate în HTML cele 46 de categorii SOC 2020 și patru calcule reproductibile. Verificată conversia efectivului de păsări și validarea cantităților. Documentul AFIR are același SHA-256.",
+          "summary": "Publicate în HTML cele 46 de categorii SOC 2020 și patru calcule reproductibile. Verificată conversia efectivului de păsări și validarea cantităților. Documentul oficial AFIR folosit la calcul a fost același.",
           "reviewer": "Echipa editorială și tehnică FABER",
           "meaningful": true
         },
         {
           "date": "2026-11-03",
-          "summary": "Reverificată lista AFIR SOC 2020: documentul oficial are același SHA-256; coeficienții și formula rămân neschimbate.",
+          "summary": "Verificarea listei oficiale AFIR SOC 2020 a confirmat aceeași versiune a coeficienților.",
           "reviewer": "Echipa editorială și tehnică FABER",
           "meaningful": false
         },
@@ -335,7 +335,7 @@
         },
         {
           "date": "2026-07-22",
-          "summary": "Metodologia a fost documentată, coeficienții legacy au fost înlocuiți cu setul oficial AFIR SOC 2020, iar verdictul automat de program a fost eliminat; formula de calcul a rămas neschimbată.",
+          "summary": "Metodologia a fost documentată, coeficienții folosiți anterior au fost înlocuiți cu setul oficial AFIR SOC 2020, iar verdictul automat de program a fost eliminat; formula de calcul a rămas neschimbată.",
           "reviewer": "Echipa editorială și tehnică FABER",
           "meaningful": true
         }

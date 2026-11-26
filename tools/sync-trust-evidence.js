@@ -89,7 +89,7 @@ const methodologyBlock = `
         <p>Data verificării sursei arată când am consultat documentul. Data actualizării paginii arată când am schimbat explicația, exemplul sau altă informație din pagină. Când documentele lasă o condiție neclară, indicăm ce trebuie confirmat la instituția care gestionează apelul.</p>
 
         <h3>Cum corectăm o eroare</h3>
-        <p>Oprim promovarea informației, corectăm registrul factual și toate suprafețele generate, consemnăm schimbarea materială în istoricul editorial și reverificăm sursa înainte de republicare. Nu rescriem retroactiv istoricul și nu folosim o etichetă mai favorabilă până la clarificare.</p>
+        <p>Dacă o condiție este citată greșit sau se schimbă, verificăm documentul aplicabil și corectăm toate paginile care explică acea condiție. Istoricul paginii arată ce s-a schimbat și la ce dată.</p>
 
         <h3>Responsabilitate editorială</h3>
         <p>Materialele sunt semnate de FABER – Atelier de Consultanță. Menționăm numele unui autor sau revizor după confirmarea identității, rolului și acordului său de publicare. Erorile sau neconcordanțele pot fi semnalate prin <a href="/contact">pagina de contact</a>, iar sursele folosite sunt prezentate în <a href="/surse-oficiale-fonduri-europene">registrul de surse oficiale</a>.</p>
