@@ -137,8 +137,8 @@ function syncCases() {
   html = syncEditorialDate(html, CASES_FILE, policy.editorialModifiedAt, updatedLabel);
   const replacements = [
     ["Studii de caz anonimizate: proiecte pregătite pentru fonduri europene", "Studii de caz FABER: documente și criterii de publicare"],
-    ["Studii de caz anonimizate despre proiecte pregătite pentru fonduri europene: fermă AFIR, Start-Up Nation, digitalizare IMM și program regional.", "Cum verifică FABER proiectele, rezultatele și acordul beneficiarului înainte de a publica un studiu de caz sau un testimonial."],
-    ["Exemple anonimizate care arată metoda de analiza: eligibilitate, documente, cofinanțare, CAEN, punctaj și riscuri.", "Criterii pentru studii de caz și testimoniale reale, publicate numai cu dovezi și permisiune."],
+    ["Studii de caz anonimizate despre proiecte pregătite pentru fonduri europene: fermă AFIR, Start-Up Nation, digitalizare IMM și program regional.", "Cum verifică FABER proiectele, rezultatele și acordul beneficiarului înainte de a publica un studiu de caz sau un testimonial.", { legacyMetadata: true }],
+    ["Exemple anonimizate care arată metoda de analiza: eligibilitate, documente, cofinanțare, CAEN, punctaj și riscuri.", "Criterii pentru studii de caz și testimoniale reale, publicate numai cu dovezi și permisiune.", { legacyMetadata: true }],
     ["<span class=\"eyebrow\">Studii de caz anonimizate</span>", ""],
     ["<p>Exemple construite pentru a arată metoda de analiza: ce verificam, ce riscuri apar și cum se poate ajusta un proiect înainte de depunere.</p>", "<p>Ce documente verificăm înainte de a publica un rezultat și cum cerem acordul beneficiarului.</p>"],
     ["<p class=\"intro\">Aceste studii de caz sunt anonimizate și folosesc descrieri anonimizate acolo unde datele clientului trebuie confirmate. Nu publicam nume, localitati exacte, valori, statusuri sau rezultate fără acord și fără documente interne care să susțină informația.</p>", "<p class=\"intro\">Fișa unui studiu de caz indică proiectul, serviciul prestat, etapa și documentul care confirmă rezultatul.</p>"],
@@ -148,7 +148,10 @@ function syncCases() {
     ["<p>Nu toate programele sunt active în acelasi timp și nu toate permit aceleași cheltuieli. Pentru orientare inițială, cele patru modele de caz trimit către pagini interne care pot fi verificate mai departe în funcție de solicitant și investiție.</p>", "<p>Nu toate programele sunt active în același timp și nu toate permit aceleași cheltuieli. Pentru orientare inițială, scenariile de verificare trimit către pagini interne care trebuie confirmate în funcție de solicitant și investiție.</p>"],
     ["<section class=\"faq-item\"><h3>Sunt aceste studii de caz rezultate reale publicate?</h3><p>Pagină folosește exemple anonimizate și structuri de lucru. Rezultatele reale, valorile și numele clientilor se publică doar după verificare interna și acord explicit.</p></section>", "<section class=\"faq-item\"><h3>Sunt publicate aici rezultate reale ale clienților FABER?</h3><p>Exemplele de pe pagină arată cum documentăm un proiect. Publicăm rezultate, valori și nume după verificarea documentelor și obținerea acordului beneficiarului.</p></section>"]
   ];
-  for (const [previous, next] of replacements) html = replaceLiteral(html, previous, next, CASES_FILE);
+  for (const [previous, next, { legacyMetadata = false } = {}] of replacements) {
+    if (legacyMetadata && !html.includes(previous)) continue;
+    html = replaceLiteral(html, previous, next, CASES_FILE);
+  }
   html = upsertBlock(
     html,
     EVIDENCE_START,
