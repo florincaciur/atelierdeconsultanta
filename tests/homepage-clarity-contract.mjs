@@ -70,7 +70,8 @@ slides.each((index, slide) => {
 });
 
 assert.equal($("head > title").text().trim(), "Consultanță fonduri europene și proiectare | FABER");
-assert.equal($("meta[name='description']").attr("content"), "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.");
+const homepageSnippet = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-snippets.json"), "utf8")).pages.find((page) => page.route === "/");
+assert.equal($("meta[name='description']").attr("content"), homepageSnippet.description);
 assert.equal($("meta[name='keywords']").attr("content"), "fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene");
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/");
 const robotsDirectives = $("meta[name='robots']").attr("content").split(',').map(value => value.trim());
