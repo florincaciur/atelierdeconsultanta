@@ -245,7 +245,10 @@
           "href": "/sme-eco-tech",
           "label": "SME Eco-Tech: investiții în eficiență energetică"
         }
-      ]
+      ],
+      "beneficiarySummaries": {
+        "fondul-modernizare-pc1-stocare-entitati-publice": "Entități publice cu o instalație regenerabilă existentă. Lista categoriilor eligibile se găsește în ghidul PC1 pentru stocare."
+      }
     },
     {
       "id": "antreprenoriat-gal",

@@ -128,14 +128,14 @@ function coverageText(program, filters) {
     .join(", ") || "Acoperirea se confirmă în ghid";
 }
 
-function renderCard(program, filters) {
+function renderCard(program, filters, beneficiarySummary = beneficiaryText(program)) {
   const discovery = program.discovery;
   return `<article class="program-family-card" data-program-card="" data-program-id="${esc(program.id)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" data-applicant-types="${esc(discovery.applicantTypes.join(" "))}" data-regions="${esc(discovery.regions.join(" "))}" data-investment-types="${esc(discovery.investmentTypes.join(" "))}" data-status="${esc(program.status)}">
   <div class="program-family-card__body">
     <h3><a href="${esc(program.pageUrl)}">${esc(program.shortName || program.name)}</a></h3>
     <p class="program-family-card__status"><strong>${esc(statusStatement(program))}</strong> Verificat la <time datetime="${esc(program.verifiedAt)}">${esc(dateLabel(program.verifiedAt))}</time>.</p>
     <p class="program-family-card__scope"><strong>Acoperire:</strong> ${esc(coverageText(program, filters))}</p>
-    <p><strong>Beneficiar:</strong> ${esc(beneficiaryText(program))}</p>
+    <p><strong>Beneficiar:</strong> ${esc(beneficiarySummary)}</p>
     <p>${esc(program.cardSummary)}</p>
   </div>
   <div class="program-family-card__footer">
@@ -210,7 +210,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   <section class="program-family-results" aria-labelledby="program-family-results-title">
     <h2 id="program-family-results-title">Programe din familia ${esc(hub.label)}</h2>
     <div class="program-family-grid" id="hub-program-list" data-program-list="">
-      ${programs.map((program) => renderCard(program, filters)).join("\n      ")}
+      ${programs.map((program) => renderCard(program, filters, hub.beneficiarySummaries?.[program.id])).join("\n      ")}
     </div>
     <div class="program-family-empty" data-program-empty="" hidden="">
       <h3>Niciun program nu corespunde filtrelor selectate</h3>
