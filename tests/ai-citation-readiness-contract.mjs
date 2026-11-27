@@ -147,7 +147,8 @@ for (const route of ["/gal-afir", "/femeia-antreprenor-2026", "/calculator-soc",
   const route = "/femeia-antreprenor-2026";
   const $ = loadPage(route);
   const text = clean($("main").text());
-  assert.match(clean($("head > title").first().text()), /Femeia Antreprenor.*2024.*2026/iu);
+  assert.match(clean($("head > title").first().text()), /Femeia Antreprenor.*2024.*evaluare/iu);
+  assert.match(meta($, "meta[name='description']"), /nouă sesiune pentru 2026 rămâne neconfirmată/iu);
   assert.match(clean($("h1").text()), /Femeia Antreprenor.*2024.*2026/iu);
   assert.equal($("main a[href='https://minimis.imm.gov.ro/fa2024/ordine_evaluare']").length > 0, true);
   assert.match(text, /ediție 2026 rămâne neconfirmată/iu, `${route}: trebuie delimitată ediția 2026 neconfirmată`);

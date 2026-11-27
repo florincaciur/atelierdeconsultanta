@@ -574,7 +574,7 @@ function renderFamilyCards(page) {
     Consum: "consum, amplasament si dimensionare",
     Avize: "documente tehnice si aprobari necesare",
     Capacitate: "puterea instalata sau dimensiunea investitiei",
-    Verificare: "date primite si incadrare initiala",
+    Verificare: "forma juridică, activitatea și amplasamentul proiectului",
     Strategie: "program, punctaj, buget si calendar",
     Dosar: "documente, anexe, oferte si formulare",
     Clarificari: "raspunsuri si ajustari dupa evaluare",
@@ -596,8 +596,8 @@ function renderFamilyCards(page) {
     Program: page.programName || page.h1,
     Riscuri: compactTextList(page.ineligibleExpenses || page.commonMistakes, "riscuri la evaluare", 2),
     Context: page.category || "resursa FABER",
-    Resurse: "linkuri interne si surse oficiale",
-    "Urmator pas": "verificare concreta pe cazul tau"
+    Resurse: "ghidurile apelurilor și documentele instituțiilor",
+    "Urmator pas": "eligibilitatea se verifică în documentele apelului"
   };
   return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Criterii pentru ${esc(program)}">
         <h2 class="design-card-grid__title">Repere pentru verificare</h2>
@@ -757,7 +757,7 @@ function renderKeywordIntent(page) {
   const keywords = keywordsForPage(page);
   if (!keywords.length) return "";
   const chunks = keywords.slice(0, 6).map((keyword) => `<li>${esc(keyword)}</li>`).join("\n");
-  return `<h2>Situatii frecvente cautate de beneficiari</h2>
+  return `<h2>Situații întâlnite la pregătirea dosarului</h2>
       <p>Verifică întrebările de mai jos în raport cu documentele și etapa proiectului.</p>
       <ul>${chunks}</ul>`;
 }
@@ -2823,7 +2823,7 @@ ${keywordHtml}
       <ul>${li(page.scoring)}</ul>
 ${dr14ScoreHtml}
       <p>In practica, punctajul se estimeaza inainte de depunere si se revizuieste dupa fiecare modificare de buget, investitie sau document. Daca o cheltuiala importanta nu sustine criteriile de selectie, ea trebuie justificata foarte clar sau eliminata.</p>
-      <h2>Pasi pentru pregatirea cererii</h2>
+      <h2>Pași pentru pregătirea cererii</h2>
       <ol>${li(page.steps)}</ol>
       <p>Pregatirea buna inseamna timp pentru clarificari, nu doar completarea formularelor. Documentele expirate, semnaturile lipsa, ofertele incomplete si fisierele incarcate gresit pot bloca proiecte care altfel ar avea o logica solida.</p>
       <h2>Evaluare, contractare si plata</h2>
